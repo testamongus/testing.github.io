@@ -57,7 +57,6 @@ import numberEncoding from './penguinmod/extensions/numericalencoding.png';
 import customExtensionIcon from './custom/custom.svg';
 
 import filesExtensionIcon from './penguinmod/extensions/files.png';
-import numberEncoding from './penguinmod/extensions/numericalencoding.png'
 import jgWebsiteRequestsExtensionIcon from './penguinmod/extensions/websiteRequests.png';
 import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
 import jgRuntimeExtensionIcon from './penguinmod/extensions/runtime.png';
@@ -157,17 +156,6 @@ const menuItems = [
         customInsetColor: '#B200FF',
         insetIconURL: jg3dInsetExtensionIcon,
         description: 'Use the magic of 3D to spice up your project.',
-        featured: true
-    },
-    {
-        name: 'Numerical Encoding',
-        extensionId: 'src/lib/libraries/extensions/numberEncode.js',
-        tags: ['turbowarp'],
-        extDeveloper: 'cs2627883',
-        iconURL: numberEncoding,
-        insetIconURL: turbowarpIcon,
-        description: 'Encode strings as numbers for cloud variables.',
-        customInsetColor: '#D9F0FF',
         featured: true
     },
     {
