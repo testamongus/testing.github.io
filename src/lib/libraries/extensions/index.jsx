@@ -56,6 +56,7 @@ import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
 import customExtensionIcon from './custom/custom.svg';
 
 import filesExtensionIcon from './penguinmod/extensions/files.png';
+import numberEncoding from './penguinmod/extensions/numericalencoding.png'
 import jgWebsiteRequestsExtensionIcon from './penguinmod/extensions/websiteRequests.png';
 import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
 import jgRuntimeExtensionIcon from './penguinmod/extensions/runtime.png';
