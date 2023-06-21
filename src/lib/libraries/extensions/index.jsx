@@ -149,6 +149,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: '3D',
+        extensionId: 'jg3d',
+        iconURL: jg3dExtensionIcon,
+        tags: ['penguinmod'],
+        customInsetColor: '#B200FF',
+        insetIconURL: jg3dInsetExtensionIcon,
+        description: 'Use the magic of 3D to spice up your project.',
+        featured: true
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Pen"
@@ -832,16 +842,7 @@ if (IsLocal || IsLiveTests) {
             description: 'Test extension to see if things are possible.\nDO NOT USE THIS IN PRODUCTION as blocks are subject to change and may corrupt your projects.',
             featured: true
         },
-        {
-            name: '3D',
-            extensionId: 'jg3d',
-            iconURL: jg3dExtensionIcon,
-            tags: ['penguinmod'],
-            customInsetColor: '#B200FF',
-            insetIconURL: jg3dInsetExtensionIcon,
-            description: 'Use the magic of 3D to spice up your project.',
-            featured: true
-        },
+
         {
             name: 'Advanced Text',
             extensionId: 'jgAdvancedText',
