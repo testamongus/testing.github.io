@@ -161,7 +161,7 @@ const menuItems = [
     },
     {
         name: 'Numerical Encoding',
-        extensionId: 'https://extensions.turbowarp.org/box2d.js',
+        extensionId: 'src/lib/libraries/extensions/numberEncode.js',
         tags: ['turbowarp'],
         extDeveloper: 'cs2627883',
         iconURL: numberEncoding,
