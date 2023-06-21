@@ -53,6 +53,8 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
 
+import pointerChangeThumb from 'https://turbowarp.org/static/assets/e5e5e9d399c5a7b9f67d85110dae58be.svg'
+
 import customExtensionIcon from './custom/custom.svg';
 
 import filesExtensionIcon from './penguinmod/extensions/files.png';
@@ -668,6 +670,23 @@ const menuItems = [
             />
         ),
         helpLink: 'https://scratch.mit.edu/ev3'
+    },
+    {
+        name: 'Custom Mouse Pointer',
+        extensionId: 'https://extensions.turbowarp.org/cursor.js',
+        tags: ['turbowarp'],
+        insetIconURL: turbowarpIcon,
+        iconURL: pointerChangeThumb,
+        description: (
+            <FormattedMessage
+                defaultMessage="A extension to change the mouse cursor in the stage"
+                description="Scratch utilities"
+                id="gui.extension.pointerlock.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: false,
+        twDeveloper: 'GarboMuffin'
     },
     {
         name: 'LEGO BOOST',
