@@ -52,6 +52,7 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
+import numberEncoding from './penguinmod/extensions/numericalencoding.png';
 
 import customExtensionIcon from './custom/custom.svg';
 
@@ -156,6 +157,17 @@ const menuItems = [
         customInsetColor: '#B200FF',
         insetIconURL: jg3dInsetExtensionIcon,
         description: 'Use the magic of 3D to spice up your project.',
+        featured: true
+    },
+    {
+        name: 'Numerical Encoding',
+        extensionId: 'https://extensions.turbowarp.org/box2d.js',
+        tags: ['turbowarp'],
+        extDeveloper: 'cs2627883',
+        iconURL: numberEncoding,
+        insetIconURL: turbowarpIcon,
+        description: 'Encode strings as numbers for cloud variables.',
+        customInsetColor: '#D9F0FF',
         featured: true
     },
     {
