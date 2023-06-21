@@ -71,7 +71,7 @@ const handleClickAddonSettings = () => {
 
 const messages = defineMessages({
     defaultTitle: {
-        defaultMessage: 'A mod of TurboWarp',
+        defaultMessage: 'A mod of PenguinMod',
         description: 'Title of homepage',
         id: 'tw.guiDefaultTitle'
     }
@@ -116,8 +116,8 @@ const Footer = () => (
             <div className={styles.footerText}>
                 <FormattedMessage
                     // eslint-disable-next-line max-len
-                    defaultMessage="PenguinMod and TurboWarp are not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
-                    description="Disclaimer that PenguinMod and TurboWarp are not connected to Scratch"
+                    defaultMessage="PenguinMod, Snail IDE, and TurboWarp are not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
+                    description="Disclaimer that PenguinMod, Snail IDE, and TurboWarp are not connected to Scratch"
                     id="tw.footer.disclaimer"
                 />
             </div>
@@ -170,14 +170,14 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://discord.gg/NZ9MBMYTZh">
+                    <a href="https://scratch.mit.edu/users/Mr_rudy/">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/PenguinMod">
+                    <a href="https://github.com/Snail-IDE/snail-ide.github.io/">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"
@@ -189,6 +189,13 @@ const Footer = () => (
                             defaultMessage="Privacy Policy"
                             description="Link to privacy policy"
                             id="tw.privacy"
+                        />
+                    </a>
+                    <a href="https://scratch.mit.edu/studios/33532977/">
+                        <FormattedMessage
+                            defaultMessage="Scratch Studio"
+                            description="Link to privacy policy"
+                            id="tw.snail-studio"
                         />
                     </a>
                 </div>
@@ -209,9 +216,9 @@ class Interface extends React.Component {
     }
     handleUpdateProjectTitle(title, isDefault) {
         if (isDefault || !title) {
-            document.title = `PenguinMod - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
+            document.title = `Snail IDE - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
         } else {
-            document.title = `${title} - PenguinMod`;
+            document.title = `${title} - Snail IDE`;
         }
     }
     render() {
@@ -312,7 +319,7 @@ class Interface extends React.Component {
                             <VoteFrame id={projectId} darkmode={this.props.isDark}></VoteFrame>
                             {isHomepage && window.FetchedProjectRemixes ? (
                                 <div>
-                                    {/* i have absolutely no interest in figuring out how the hell to get this to work properly */}
+                                    {/* i have absolutely no interest in figuring out how the heck to get this to work properly */}
                                     <div style={{ display: "none" }}>{window.ForceProjectRemixListUpdate}</div>
                                     <p>Remixes of <b>{window.LastFetchedProject.name}</b></p>
                                     <div className={styles.remixList}>
