@@ -53,8 +53,6 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
 
-import pointerChangeThumb from 'https://turbowarp.org/static/assets/e5e5e9d399c5a7b9f67d85110dae58be.svg'
-
 import customExtensionIcon from './custom/custom.svg';
 
 import filesExtensionIcon from './penguinmod/extensions/files.png';
