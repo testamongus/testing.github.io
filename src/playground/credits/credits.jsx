@@ -77,7 +77,7 @@ const Credits = () => (
             <h2>Contributors</h2>
             <p>
                 Snail IDE is made by a small bunch of developers.
-                A list is below, but you can also check <a href="https://github.com/orgs/PenguinMod/people">our GitHub</a> incase this one is out of date.
+                A list is below, but you can also check <a href="https://github.com/orgs/Snail-IDE/people">our GitHub</a> incase this one is out of date.
             </p>
             <UserList users={UserData.pmDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>
