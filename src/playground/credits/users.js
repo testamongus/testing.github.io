@@ -124,7 +124,8 @@ const pmDevelopers = [
     'jwklong',
     'MaterArc',
     'RedMan13',
-    'showierdata9978'
+    'showierdata9978',
+    'nmsderp'
 ].map(fromHardcodedGithub);
 
 const logoArtists = Promise.all([
