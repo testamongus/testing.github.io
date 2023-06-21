@@ -672,23 +672,6 @@ const menuItems = [
         helpLink: 'https://scratch.mit.edu/ev3'
     },
     {
-        name: 'Custom Mouse Pointer',
-        extensionId: 'https://extensions.turbowarp.org/cursor.js',
-        tags: ['turbowarp'],
-        insetIconURL: turbowarpIcon,
-        iconURL: pointerChangeThumb,
-        description: (
-            <FormattedMessage
-                defaultMessage="A extension to change the mouse cursor in the stage"
-                description="Scratch utilities"
-                id="gui.extension.pointerlock.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: false,
-        twDeveloper: 'GarboMuffin'
-    },
-    {
         name: 'LEGO BOOST',
         extensionId: 'boost',
         collaborator: 'LEGO',
