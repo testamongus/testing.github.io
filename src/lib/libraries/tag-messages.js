@@ -142,7 +142,7 @@ export default defineMessages({
         id: 'gui.libraryTags.guns'
     },
     penguinmod: {
-        defaultMessage: 'PenguinMod',
+        defaultMessage: 'PenguinMod/Snail IDE',
         description: 'Tag for filtering a library by PenguinMod',
         id: 'gui.libraryTags.penguinmod'
     },
