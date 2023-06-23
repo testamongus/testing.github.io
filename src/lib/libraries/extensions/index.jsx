@@ -148,6 +148,18 @@ const menuItems = [
         ),
         featured: true
     },
+
+    {
+        name: 'Numerical Encoding',
+        extensionId: 'cs2627883NumericalEncoding',
+        iconURL: customExtensionIcon,
+        tags: ['turbowarp'],
+        customInsetColor: '#B200FF',
+        insetIconURL: twIcon,
+        description: 'Turn words to numbers and back.',
+        featured: true
+    },
+    
     {
         name: '3D',
         extensionId: 'jg3d',
