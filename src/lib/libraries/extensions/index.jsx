@@ -151,12 +151,13 @@ const menuItems = [
 
     {
         name: 'Numerical Encoding',
-        extensionId: 'cs2627883NumericalEncoding',
-        iconURL: customExtensionIcon,
+        extensionId: 'https://extensions.turbowarp.org/box2d.js',
         tags: ['turbowarp'],
-        customInsetColor: '#B200FF',
-        insetIconURL: twIcon,
-        description: 'Turn words to numbers and back.',
+        extDeveloper: 'cs2627883',
+        iconURL: griffpatchPhysicsThumb,
+        insetIconURL: griffpatchPhysicsIcon,
+        description: 'Turn words to numbers and back',
+        customInsetColor: '#D9F0FF',
         featured: true
     },
     
