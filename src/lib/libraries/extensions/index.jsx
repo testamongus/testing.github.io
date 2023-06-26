@@ -154,8 +154,8 @@ const menuItems = [
         extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
         tags: ['turbowarp'],
         extDeveloper: 'cs2627883',
-        iconURL: griffpatchPhysicsThumb,
-        insetIconURL: griffpatchPhysicsIcon,
+        iconURL: numberEncoding,
+        insetIconURL: turbowarpIcon,
         description: 'Turn words to numbers and back',
         customInsetColor: '#D9F0FF',
         featured: true
