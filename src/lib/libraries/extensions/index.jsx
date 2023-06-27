@@ -177,17 +177,6 @@ const menuItems = [
         featured: true
     },
 
-    {
-        name: 'GameJolt',
-        extensionId: 'https://extensions.turbowarp.org/gamejolt.js',
-        tags: ['turbowarp'],
-        extDeveloper: 'softed',
-        iconURL: gamejolt_img,
-        insetIconURL: turbowarpIcon,
-        description: 'Blocks that allow games to interact with the GameJolt API. Unofficial.',
-        customInsetColor: '#D9F0FF',
-        featured: true
-    },
     
     {
         name: '3D',
