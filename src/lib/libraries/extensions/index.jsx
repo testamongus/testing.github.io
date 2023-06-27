@@ -164,20 +164,7 @@ const menuItems = [
         customInsetColor: '#D9F0FF',
         featured: true
     },
-
-    {
-        name: 'TurboHook',
-        extensionId: 'https://extensions.turbowarp.org/CubesterYT/TurboHook.js',
-        tags: ['turbowarp'],
-        extDeveloper: 'CubesterYT',
-        iconURL: turboHook_img,
-        insetIconURL: turbowarpIcon,
-        description: 'Allows you to use webhooks.',
-        customInsetColor: '#D9F0FF',
-        featured: true
-    },
-
-    
+  
     {
         name: '3D',
         extensionId: 'jg3d',
