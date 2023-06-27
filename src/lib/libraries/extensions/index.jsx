@@ -56,6 +56,7 @@ import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
 import numberEncoding from './penguinmod/extensions/numericalencoding.png';
 import perlinNoise from './penguinmod/extensions/39f37f1b00fbf96926276701d8de4c89.png';
+import gamejolt_img from './penguinmod/extensions/gamejolt.svg';
 
 import customExtensionIcon from './custom/custom.svg';
 
@@ -118,6 +119,7 @@ import jgJavascriptExtensionIcon from './penguinmod/extensions/javascript.png';
 // category expansions
 import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators_expanded.png';
 import pmSensingExpansionExtensionIcon from './penguinmod/extensions/sensing_expanded.png';
+import turboHook_img from './penguinmod/extensions/TurboHook.svg';
 
 // jg: default icon if you are too lazy to make one and you want me to make one instead lololololololol
 // gsa: ololololololo
@@ -165,13 +167,25 @@ const menuItems = [
     },
 
     {
-        name: 'Perlin Noise',
-        extensionId: 'https://raw.githubusercontent.com/PenguinMod/PenguinMod-Vm/f407b7b6c78eacab674b000055070d1892756272/src/extensions/iyg_perlin_noise/index.js',
-        tags: ['penguinmod'],
-        extDeveloper: 'PenguinMod Team',
-        iconURL: perlinNoise,
-        insetIconURL: jg3dInsetExtensionIcon,
-        description: 'Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.',
+        name: 'TurboHook',
+        extensionId: 'https://extensions.turbowarp.org/CubesterYT/TurboHook.js',
+        tags: ['turbowarp'],
+        extDeveloper: 'CubesterYT',
+        iconURL: turboHook_img,
+        insetIconURL: turbowarpIcon,
+        description: 'Allows you to use webhooks.',
+        customInsetColor: '#D9F0FF',
+        featured: true
+    },
+
+    {
+        name: 'GameJolt',
+        extensionId: 'https://extensions.turbowarp.org/gamejolt.js',
+        tags: ['turbowarp'],
+        extDeveloper: 'softed',
+        iconURL: gamejolt_img,
+        insetIconURL: turbowarpIcon,
+        description: 'Blocks that allow games to interact with the GameJolt API. Unofficial.',
         customInsetColor: '#D9F0FF',
         featured: true
     },
