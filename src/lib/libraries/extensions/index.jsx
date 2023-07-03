@@ -155,7 +155,7 @@ const menuItems = [
 
     {
         name: 'Numerical Encoding',
-        extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
+        extensionId: './lib/libraries/extensions/numberEncode.js',
         tags: ['turbowarp'],
         extDeveloper: 'cs2627883',
         iconURL: griffpatchPhysicsThumb,
