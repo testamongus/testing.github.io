@@ -153,21 +153,9 @@ const menuItems = [
         featured: true
     },
 
-    {
-        name: 'Numerical Encoding',
-        extensionId: './lib/libraries/extensions/numberEncode.js',
-        tags: ['turbowarp'],
-        extDeveloper: 'cs2627883',
-        iconURL: griffpatchPhysicsThumb,
-        insetIconURL: griffpatchPhysicsIcon,
-        iconURL: numberEncoding,
-        insetIconURL: turbowarpIcon,
-        description: 'Turn words to numbers and back',
-        customInsetColor: '#D9F0FF',
-        featured: true
-    },
-  
-    {
+
+        
+      {
         name: '3D',
         extensionId: 'jg3d',
         iconURL: jg3dExtensionIcon,
