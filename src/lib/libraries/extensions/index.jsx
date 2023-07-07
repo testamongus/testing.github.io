@@ -1,6 +1,4 @@
 /* eslint-disable max-len */
-
-// https://raw.githubusercontent.com/PenguinMod/PenguinMod-Vm/f407b7b6c78eacab674b000055070d1892756272/src/extensions/iyg_perlin_noise/index.js //
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
