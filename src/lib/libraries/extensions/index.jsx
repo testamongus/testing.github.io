@@ -54,7 +54,6 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
-import gamejolt_img from './penguinmod/extensions/gamejolt.svg';
 
 import customExtensionIcon from './custom/custom.svg';
 
@@ -117,7 +116,6 @@ import jgJavascriptExtensionIcon from './penguinmod/extensions/javascript.png';
 // category expansions
 import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators_expanded.png';
 import pmSensingExpansionExtensionIcon from './penguinmod/extensions/sensing_expanded.png';
-import turboHook_img from './penguinmod/extensions/TurboHook.svg';
 
 // jg: default icon if you are too lazy to make one and you want me to make one instead lololololololol
 // gsa: ololololololo
