@@ -54,7 +54,6 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 import twIcon from './tw/tw.svg';
 import turbowarpIcon from './penguinmod/extensions/turbowarp_icon.svg';
-import numberEncoding from './penguinmod/extensions/numericalencoding.png';
 import gamejolt_img from './penguinmod/extensions/gamejolt.svg';
 
 import customExtensionIcon from './custom/custom.svg';
