@@ -279,6 +279,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Newgrounds API',
+        extensionId: 'https://extensions.turbowarp.org/obviousAlexC/newgroundsIO.js',
+        twDeveloper: 'ObviousAlexC',
+        iconURL: 'https://extensions.turbowarp.org/images/obviousAlexC/newgroundsIO.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Interact with the Newgrounds API to add acheivments and leaderboards into your game.',
+        featured: true
+    },
+    {
         name: 'Files',
         extensionId: 'twFiles',
         twDeveloper: 'GarboMuffin',
