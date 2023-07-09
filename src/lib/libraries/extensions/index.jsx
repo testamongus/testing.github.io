@@ -320,7 +320,7 @@ const menuItems = [
         description: 'Blocks for handling JSON objects and Arrays.',
         featured: true
     },
-    {
+   /* {
         name: 'Physics',
         extensionId: 'https://extensions.turbowarp.org/box2d.js',
         tags: ['turbowarp'],
@@ -330,7 +330,7 @@ const menuItems = [
         description: 'Box2D Physics extension created by Griffpatch.',
         customInsetColor: '#D9F0FF',
         featured: true
-    },
+    }, */
     {
         name: 'Tweening',
         extensionId: 'jgTween',
