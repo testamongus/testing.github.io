@@ -322,7 +322,7 @@ const menuItems = [
     },
     {
         name: 'Physics',
-        extensionId: './extensions.turbowarp.org_box2d.js',
+        extensionId: 'https://extensions.turbowarp.org/box2d.js',
         tags: ['turbowarp'],
         extDeveloper: 'griffpatch',
         iconURL: griffpatchPhysicsThumb,
