@@ -77,7 +77,7 @@ import canvasExtensionIcon from './penguinmod/extensions/CanvasSmall.png';
 import griffpatchPhysicsThumb from './penguinmod/extensions/griffpatch_physics.png';
 import griffpatchPhysicsIcon from './penguinmod/extensions/griffpatch_physicsIcon.svg';
 
-import gp from './penguinmod/extensions/gamepad.svg';
+import gp from 'https://extensions.turbowarp.org/images/gamepad.svg';
 import clippingblending from './penguinmod/extensions/clippingblending.svg';
 
 import pointerlockThumb from './penguinmod/extensions/pointerlock.svg';
@@ -532,7 +532,7 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'GamePad',
+        name: 'Gamepad',
         extensionId: 'Gamepad',
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
