@@ -77,7 +77,7 @@ import canvasExtensionIcon from './penguinmod/extensions/CanvasSmall.png';
 import griffpatchPhysicsThumb from './penguinmod/extensions/griffpatch_physics.png';
 import griffpatchPhysicsIcon from './penguinmod/extensions/griffpatch_physicsIcon.svg';
 
-import gp from 'https://extensions.turbowarp.org/images/gamepad.svg';
+import gp from './penguinmod/extensions/gamepad.svg';
 import clippingblending from './penguinmod/extensions/clippingblending.svg';
 
 import pointerlockThumb from './penguinmod/extensions/pointerlock.svg';
@@ -537,7 +537,7 @@ const menuItems = [
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
         twDeveloper: 'GarboMuffin',
-        iconURL: gp,
+        iconURL: 'https://extensions.turbowarp.org/images/gamepad.svg',
         description: (
             <FormattedMessage
                 defaultMessage="Directly access gamepads instead of just mapping buttons to keys."
