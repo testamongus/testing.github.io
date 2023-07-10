@@ -279,6 +279,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Streamilator',
+        extensionId: 'https://streamilator.github.io/Streamilator/extension.js',
+        twDeveloper: 'ObviousAlexC',
+        iconURL: defaultExtensionIcon,
+        insetIconURL: turbowarpIcon,
+        tags: ['penguinmod'],
+        description: 'A better way to handle audio from urls.',
+        featured: true
+    },
+    {
         name: 'Newgrounds API',
         extensionId: 'https://extensions.turbowarp.org/obviousAlexC/newgroundsIO.js',
         twDeveloper: 'ObviousAlexC',
