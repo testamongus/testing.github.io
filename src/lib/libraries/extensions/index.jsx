@@ -9,6 +9,7 @@ import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
 import videoSensingIconURL from './videoSensing/video-sensing.png';
+import streamin from './Capture.PNG';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 
 import text2speechIconURL from './text2speech/text2speech.png';
@@ -281,10 +282,10 @@ const menuItems = [
     {
         name: 'Streamilator',
         extensionId: 'https://streamilator.github.io/Streamilator/extension.js',
-        twDeveloper: 'ObviousAlexC',
-        iconURL: defaultExtensionIcon,
+        twDeveloper: 'mdwalters',
+        iconURL: streamin,
         insetIconURL: turbowarpIcon,
-        tags: ['penguinmod'],
+        tags: ['turbowarp'],
         description: 'A better way to handle audio from urls.',
         featured: true
     },
