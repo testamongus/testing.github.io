@@ -289,6 +289,26 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Numerical Encoding',
+        extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
+        twDeveloper: 'cs2627883',
+        iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Encode strings as numbers for cloud variables',
+        featured: true
+    },
+    {
+        name: 'Zip',
+        extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
+        twDeveloper: 'CST1229',
+        iconURL: 'https://extensions.turbowarp.org/images/CST1229/zip.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Create and edit .zip format files, including .sb3 files.',
+        featured: true
+    },
+    {
         name: 'Newgrounds API',
         extensionId: 'https://extensions.turbowarp.org/obviousAlexC/newgroundsIO.js',
         twDeveloper: 'ObviousAlexC',
