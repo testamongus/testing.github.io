@@ -299,6 +299,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: '0tils',
+        extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
+        twDeveloper: '0znzw',
+        iconURL: 'https://survexe1pc.github.io/unsafe-extensions/images/0znzw/0tils.png',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Placeholder',
+        featured: true
+    },
+    {
         name: 'Zip',
         extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
         twDeveloper: 'CST1229',
