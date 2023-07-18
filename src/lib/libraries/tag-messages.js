@@ -143,7 +143,7 @@ export default defineMessages({
     },
     penguinmod: {
         defaultMessage: 'PenguinMod/Snail IDE',
-        description: 'Tag for filtering a library by PenguinMod',
+        description: 'Tag for filtering a library by PenguinMod/Snail IDE',
         id: 'gui.libraryTags.penguinmod'
     },
     scratch: {
@@ -165,5 +165,10 @@ export default defineMessages({
         defaultMessage: 'Category Expansions',
         description: 'Tag for filtering a library by categoryexpansion',
         id: 'gui.libraryTags.categoryexpansion'
+    },
+    categoryhardware: {
+        defaultMessage: 'Hardware',
+        description: 'Tag for filtering a library by categoryhardware',
+        id: 'gui.libraryTags.hardware'
     },
 });

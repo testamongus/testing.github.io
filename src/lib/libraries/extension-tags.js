@@ -5,4 +5,5 @@ export default [
     { tag: 'scratch', intlLabel: messages.scratch },
     { tag: 'categoryexpansion', intlLabel: messages.categoryexpansion },
     { tag: 'programminglanguage', intlLabel: messages.programminglanguage },
+    { tag: 'hardware', intlLabel: messages.hardware },
 ];

@@ -268,7 +268,7 @@ const menuItems = [
         iconURL: makeymakeyIconURL,
         insetIconURL: makeymakeyInsetIconURL,
         customInsetColor: '#E64D00',
-        tags: ['scratch'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Make anything into a key."
@@ -696,7 +696,7 @@ const menuItems = [
         collaborator: 'LEGO',
         iconURL: ev3IconURL,
         insetIconURL: ev3InsetIconURL,
-        tags: ['scratch'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Build interactive robots and more."
