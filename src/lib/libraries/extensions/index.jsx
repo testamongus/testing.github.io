@@ -329,6 +329,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Itch.io',
+        extensionId: 'https://extensions.turbowarp.org/itchio.js',
+        twDeveloper: 'softed',
+        iconURL: 'https://extensions.turbowarp.org/images/itchio.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Blocks that interact with the itch.io website. Unofficial.',
+        featured: true
+    },
+    {
         name: 'Files',
         extensionId: 'twFiles',
         twDeveloper: 'GarboMuffin',
