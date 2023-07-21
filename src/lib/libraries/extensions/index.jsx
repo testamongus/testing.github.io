@@ -320,6 +320,16 @@ const menuItems = [
     },
     {
         name: 'Newgrounds API',
+        extensionId: 'https://khanning.github.io/scratch-arduino-extension/arduino_extension.js',
+        twDeveloper: 'khanning',
+        iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
+        insetIconURL: turbowarpIcon,
+        tags: ['hardware'],
+        description: 'Scratch X - Experiment',
+        featured: true
+    },
+    {
+        name: 'Newgrounds API',
         extensionId: 'https://extensions.turbowarp.org/obviousAlexC/newgroundsIO.js',
         twDeveloper: 'ObviousAlexC',
         iconURL: 'https://extensions.turbowarp.org/images/obviousAlexC/newgroundsIO.svg',
@@ -328,16 +338,7 @@ const menuItems = [
         description: 'Interact with the Newgrounds API to add acheivments and leaderboards into your game.',
         featured: true
     },
-    {
-        name: 'Itch.io',
-        extensionId: 'https://extensions.turbowarp.org/itchio.js',
-        twDeveloper: 'softed',
-        iconURL: 'https://extensions.turbowarp.org/images/itchio.svg',
-        insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
-        description: 'Blocks that interact with the itch.io website. Unofficial.',
-        featured: true
-    },
+
     {
         name: 'Files',
         extensionId: 'twFiles',
