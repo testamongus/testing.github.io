@@ -323,18 +323,8 @@ const menuItems = [
         extensionId: 'https://khanning.github.io/scratch-arduino-extension/arduino_extension.js',
         twDeveloper: 'khanning',
         iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
-        insetIconURL: turbowarpIcon,
+        insetIconURL: 'https://play-lh.googleusercontent.com/AmzHCh6UEelYfh9AfWXh1WIOC0Z_Z69N9bTvEi-hbRhDe7XL04xuuQfvQXCKLHSHcgVk',
         tags: ['hardware'],
-        description: 'Scratch X - Experiment',
-        featured: true
-    },
-    {
-        name: 'Spotify',
-        extensionId: 'https://nmsderp.github.io/spotify-i-think.js',
-        twDeveloper: 'Spotify',
-        iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
-        insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
         description: 'Scratch X - Experiment',
         featured: true
     },
