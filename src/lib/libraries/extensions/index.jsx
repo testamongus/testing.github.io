@@ -319,7 +319,7 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Newgrounds API',
+        name: 'Adruino',
         extensionId: 'https://khanning.github.io/scratch-arduino-extension/arduino_extension.js',
         twDeveloper: 'khanning',
         iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
