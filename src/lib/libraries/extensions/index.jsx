@@ -329,6 +329,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Spotify',
+        extensionId: 'https://nmsderp.github.io/spotify-i-think.js',
+        twDeveloper: 'Spotify',
+        iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Scratch X - Experiment',
+        featured: true
+    },
+    {
         name: 'Newgrounds API',
         extensionId: 'https://extensions.turbowarp.org/obviousAlexC/newgroundsIO.js',
         twDeveloper: 'ObviousAlexC',
