@@ -658,7 +658,7 @@ const menuItems = [
     },
     {
         name: 'VR',
-        extensionId: 'jg_vr',
+        extensionId: 'jg_3dVr',
         iconURL: 'https://as2.ftcdn.net/v2/jpg/02/41/98/45/1000_F_241984528_p68u5TVuoXRNfjIUfUIzGNrT0MmokJ5Q.jpg',
         tags: ['penguinmod'],
         description: "Unfishined penguinmod extension, would not use in projects. (Yes that is a stock photo)",
