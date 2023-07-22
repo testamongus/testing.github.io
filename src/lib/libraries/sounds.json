@@ -3245,6 +3245,19 @@
         "rate": 44100
     },
     {
+        "name": "Laugh4",
+        "tags": [
+            "human",
+            "voice",
+            "penguinmod"
+        ],
+        "assetId": "835657aa43e84caf2c9dff79ff49c32d",
+        "dataFormat": "",
+        "md5ext": "835657aa43e84caf2c9dff79ff49c32d.wav",
+        "sampleCount": 128260,
+        "rate": 44100
+    },
+    {
         "name": "Lo Geh Tabla",
         "tags": [
             "drums",
