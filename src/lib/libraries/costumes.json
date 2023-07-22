@@ -10682,7 +10682,18 @@
         "rotationCenterX": 240,
         "rotationCenterY": 180
     },
-    
+    {
+        "name": "Snail",
+        "tags": [
+            "animals"
+        ],
+        "assetId": "db6466dad187b1ee755cfa21cb87ce4b",
+        "bitmapResolution": 1,
+        "dataFormat": "svg",
+        "md5ext": "db6466dad187b1ee755cfa21cb87ce4b.svg",
+        "rotationCenterX": 37.387305,
+        "rotationCenterY": 32.46749548000042
+    },
     {
         "name": "Unicorn Running-e",
         "tags": [

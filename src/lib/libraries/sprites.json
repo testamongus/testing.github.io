@@ -3241,6 +3241,27 @@
         "blocks": {}
     },
     {
+        "name": "Snail",
+        "tags": [
+            "animals"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "db6466dad187b1ee755cfa21cb87ce4b",
+                "name": "Snail",
+                "bitmapResolution": 1,
+                "md5ext": "db6466dad187b1ee755cfa21cb87ce4b.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 37.387305,
+                "rotationCenterY": 32.46749548000042
+            }
+        ],
+        "sounds": [],
+        "blocks": {}
+    },
+    {
         "name": "Dani",
         "tags": [
             "people"
