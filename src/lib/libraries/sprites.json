@@ -3220,6 +3220,27 @@
         "blocks": {}
     },
     {
+        "name": "What the heck is this",
+        "tags": [
+            "people"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "e2f5e1174e7d700ce4130f884c85d805",
+                "name": "What the heck is this",
+                "bitmapResolution": 1,
+                "md5ext": "e2f5e1174e7d700ce4130f884c85d805.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 240,
+                "rotationCenterY": 180
+            }
+        ],
+        "sounds": [],
+        "blocks": {}
+    },
+    {
         "name": "Dani",
         "tags": [
             "people"
