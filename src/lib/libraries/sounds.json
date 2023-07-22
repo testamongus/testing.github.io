@@ -3258,6 +3258,17 @@
         "rate": 44100
     },
     {
+        "name": "Vine Boom",
+        "tags": [
+            "penguinmod"
+        ],
+        "assetId": "b6958568b828c34000abe6b2d84bb2ab",
+        "dataFormat": "",
+        "md5ext": "b6958568b828c34000abe6b2d84bb2ab.mp3",
+        "sampleCount": 128260,
+        "rate": 19200
+    },
+    {
         "name": "Lo Geh Tabla",
         "tags": [
             "drums",
