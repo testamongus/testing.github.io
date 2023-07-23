@@ -3258,6 +3258,19 @@
         "rate": 44100
     },
     {
+        "name": "pueb.mp3",
+        "tags": [
+            "human",
+            "voice",
+            "penguinmod"
+        ],
+        "assetId": "23e76415c974d913461feaec4dc63dda",
+        "dataFormat": "",
+        "md5ext": "23e76415c974d913461feaec4dc63dda.mp3",
+        "sampleCount": 128260,
+        "rate": 44100
+    },
+    {
         "name": "Vine Boom",
         "tags": [
             "penguinmod"
