@@ -665,23 +665,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: extensionsConfig?.adavision?.name || "Ada Vision",
-        tags: ['penguinmod'],
-        extensionId: 'adavision',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/e0dbaa558a96f981dd0a34c25b4b4b84.png',
-        insetIconURL: turbowarpIcon,
-        description: (
-            <FormattedMessage
-                defaultMessage="Use TeachableMachine models to detect things in images."
-                description="Description for the 'Ada Vision' extension"
-                id="gui.extension.adavision.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: true
-    },
-
-    {
         name: 'JavaScript',
         extensionId: 'jgJavascript',
         iconURL: jgJavascriptExtensionIcon,
