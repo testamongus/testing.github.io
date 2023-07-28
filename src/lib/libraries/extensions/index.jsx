@@ -161,6 +161,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Perlin Noise',
+        extensionId: 'iygPerlin',
+        iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
+        tags: ['penguinmod'],
+        description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
+        featured: true
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Pen"
