@@ -161,6 +161,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'AdaBrowser',
+        extensionId: 'adabrowser',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/40998229311219c2117265d5e4bd9745.png',
+        tags: ['penguinmod'],
+        customInsetColor: '#B200FF',
+        insetIconURL: turbowarpIcon,
+        description: 'Interact with the web browser, orginally in Adacraft.',
+        featured: true
+    },
+    {
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
         iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
