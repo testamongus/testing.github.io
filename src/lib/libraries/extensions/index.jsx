@@ -317,6 +317,26 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Dot Prop',
+        extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
+        twDeveloper: 'idk lol',
+        iconURL: defaultExtensionIcon,
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Legacy Extension from version 1.0',
+        featured: true
+    },
+    {
+        name: 'Classic Cloud Multiplayer',
+        extensionId: 'https://emmettdewet14.github.io/Cloud.js',
+        twDeveloper: 'emmettdewet14',
+        iconURL: defaultExtensionIcon,
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Legacy Extension from version 1.0',
+        featured: true
+    },
+    {
         name: '0tils',
         extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
         twDeveloper: '0znzw',
