@@ -659,7 +659,7 @@ const menuItems = [
     {
         name: '3D VR',
         extensionId: 'jg3dVr',
-        iconURL: jgScratchAuthExtensionIcon,
+        iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsXcntVmSk264zyLaS3GdbOBQPhk3JjE5Vg&usqp=CAU',
         tags: ['penguinmod'],
         description: "Unfinished PenguinMod Extension.",
         featured: true
