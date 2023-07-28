@@ -665,6 +665,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Ada Vision',
+        extensionId: 'adavision',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/e0dbaa558a96f981dd0a34c25b4b4b84.png',
+        tags: ['penguinmod'],
+        description: "Orignally from Adacraft, now avilable in Snail IDE",
+        featured: true
+    },
+    {
         name: 'JavaScript',
         extensionId: 'jgJavascript',
         iconURL: jgJavascriptExtensionIcon,
