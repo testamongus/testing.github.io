@@ -172,8 +172,8 @@ export default defineMessages({
         id: 'gui.libraryTags.hardware'
     },
     custom: {
-        defaultMessage: 'Custom',
-        description: 'Tag for filtering a library by custom. Usually this is a custom button, not an actual tag',
-        id: 'gui.libraryTags.custom'
+        defaultMessage: 'Other Mods',
+        description: 'Extensions from other mods (not counting turbowarp)',
+        id: 'gui.libraryTags.other_mods'
     },
 });

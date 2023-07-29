@@ -164,7 +164,7 @@ const menuItems = [
         name: 'AdaBrowser',
         extensionId: 'adabrowser',
         iconURL: 'https://www.adacraft.org/studio/static/assets/40998229311219c2117265d5e4bd9745.png',
-        tags: ['penguinmod'],
+        tags: ['other_mods'],
         customInsetColor: '#B200FF',
         insetIconURL: turbowarpIcon,
         description: 'Interact with the web browser, orginally in Adacraft.',
@@ -692,6 +692,14 @@ const menuItems = [
         iconURL: jgScratchAuthExtensionIcon,
         tags: ['penguinmod'],
         description: "Get a user's scratch name to prove they are a real scratch user.",
+        featured: true
+    },
+    {
+        name: 'micro:bit',
+        extensionId: 'vittamicrobit',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
+        tags: ['other_mods', 'hardware'],
+        description: "Blocks to interact with BBC micro:bit through a USB cable connection.",
         featured: true
     },
     {
