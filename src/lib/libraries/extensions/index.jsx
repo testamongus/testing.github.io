@@ -703,6 +703,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Adacraft Runtime',
+        extensionId: 'adaruntime',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/53d3dbd30eb60a7860a3ffdb4753a43f.png',
+        tags: ['other_mods'],
+        description: "Special blocks that interact with the vm.",
+        featured: true
+    },
+    {
         name: '3D VR',
         extensionId: 'jg3dVr',
         iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsXcntVmSk264zyLaS3GdbOBQPhk3JjE5Vg&usqp=CAU',
