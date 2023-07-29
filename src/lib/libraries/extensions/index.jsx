@@ -695,7 +695,7 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'micro:bit',
+        name: 'micro:bit (Adacraft)',
         extensionId: 'vittamicrobit',
         iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
         tags: ['other_mods','hardware'],
