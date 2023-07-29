@@ -171,7 +171,7 @@ export default defineMessages({
         description: 'Tag for filtering a library by categoryhardware',
         id: 'gui.libraryTags.hardware'
     },
-    custom: {
+    other_mods: {
         defaultMessage: 'Other Mods',
         description: 'Extensions from other mods (not counting turbowarp)',
         id: 'gui.libraryTags.other_mods'
