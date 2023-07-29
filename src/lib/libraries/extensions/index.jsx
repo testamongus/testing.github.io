@@ -589,6 +589,16 @@ const menuItems = [
         twDeveloper: 'LilyMakesThings'
     },
     {
+        name: 'Snail Extras',
+        extensionId: 'https://snail-ide.github.io/snail_extras.js', // update reference once file names are updated
+        tags: ['penguinmod'],
+        iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RWnel-yFH8B7obNf21l-F1DpJ7eCVd2oq2SeHm89Xw&s',
+        insetIconURL: turbowarpIcon,
+        description: 'Snail IDE Extras',
+        featured: true,
+        twDeveloper: 'Mr_rudy'
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="HTML Canvas"
