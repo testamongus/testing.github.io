@@ -16,13 +16,28 @@ class SnailExtras {
             }
           },
           {
-            opcode: 'grab',
+            opcode: 'waitDivide',
+            text: 'wait [TIME] seconds divided by [FUNNY]',
+            blockType: Scratch.BlockType.COMMAND,
+            arguments: {
+              TIME: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 10
+              },
+              FUNNY: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 2
+              }
+            }
+          },
+          {
+            opcode: 'fetch',
             text: 'grab [URL]',
             blockType: Scratch.BlockType.REPORTER,
             arguments: {
               URL: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue: 'http://example.org/'
+                defaultValue: 'https://extensions.turbowarp.org/hello.txt'
               }
             }
           }
@@ -38,6 +53,14 @@ class SnailExtras {
         }, timeInMilliseconds);
       });
     }
+    waitDivide (args) {
+        return new Promise((resolve, reject) => {
+          const timeInMilliseconds = args.TIME * 1000 / args.FUNNY;
+          setTimeout(() => {
+            resolve();
+          }, timeInMilliseconds);
+        });
+      }
   
     fetch (args) {
       return fetch(args.URL)
@@ -49,5 +72,6 @@ class SnailExtras {
           return 'Uh oh! Something went wrong.';
         });
     }
+    
   }
   Scratch.extensions.register(new SnailExtras());
