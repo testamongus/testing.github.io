@@ -589,6 +589,16 @@ const menuItems = [
         twDeveloper: 'LilyMakesThings'
     },
     {
+        name: 'Longman Dictionary',
+        extensionId: 'https://extensions.turbowarp.org/veggiecan/LongmanDictionary.js', // update reference once file names are updated
+        tags: ['turbowarp'],
+        iconURL: 'https://extensions.turbowarp.org/images/veggiecan/LongmanDictionary.png',
+        insetIconURL: turbowarpIcon,
+        description: 'Get the definitions of words from the Longman Dictionary',
+        featured: true,
+        twDeveloper: 'veggiecan0419'
+    },
+    {
         name: 'Beepbox',
         extensionId: 'https://extensions.turbowarp.org/Lily/McUtils.js', // update reference once file names are updated
         tags: ['turbowarp'],
