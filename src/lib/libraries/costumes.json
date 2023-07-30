@@ -10695,6 +10695,15 @@
         "rotationCenterY": 32.46749548000042
     },
     {
+        "assetId": "74043a21ba48559c2673248acbbd84c1",
+        "name": "Snail 2",
+        "bitmapResolution": 1,
+        "md5ext": "74043a21ba48559c2673248acbbd84c1.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 97.10489266879569,
+        "rotationCenterY": 54.5393334434151
+    },
+    {
         "name": "Unicorn Running-e",
         "tags": [
             "fantasy",
