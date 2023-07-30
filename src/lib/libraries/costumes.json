@@ -10695,8 +10695,11 @@
         "rotationCenterY": 32.46749548000042
     },
     {
-        "assetId": "74043a21ba48559c2673248acbbd84c1",
         "name": "Snail 2",
+        "tags": [
+            "animals"
+        ],
+        "assetId": "74043a21ba48559c2673248acbbd84c1",
         "bitmapResolution": 1,
         "md5ext": "74043a21ba48559c2673248acbbd84c1.svg",
         "dataFormat": "svg",
