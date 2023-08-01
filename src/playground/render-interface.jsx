@@ -177,7 +177,7 @@ const Footer = () => (
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/Snail-IDE/snail-ide.github.io/">
+                    <a href="https://github.com/Snail-IDE/">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"
