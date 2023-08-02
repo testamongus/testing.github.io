@@ -929,6 +929,39 @@
                 "rotationCenterY": 102
             }
         ],
+        
+        "sounds": [
+            {
+                "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+                "name": "pop",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 1032,
+                "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
+        "name": "Purple Square Guy Fighting",
+        "tags": [
+            "people"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "ee0d4d7bdf782d5a156c30bcf7e746ec",
+                "name": "By carters3421",
+                "bitmapResolution": 1,
+                "md5ext": "ee0d4d7bdf782d5a156c30bcf7e746ec.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 46,
+                "rotationCenterY": 80
+            }
+        ],
+        
         "sounds": [
             {
                 "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
