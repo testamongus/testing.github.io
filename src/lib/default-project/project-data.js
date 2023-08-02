@@ -3,7 +3,7 @@ import sharedMessages from '../shared-messages';
 
 let messages = defineMessages({
     variable: {
-        defaultMessage: 'my variable',
+        defaultMessage: '🐌',
         description: 'Name for the default variable',
         id: 'gui.defaultProject.variable'
     }
