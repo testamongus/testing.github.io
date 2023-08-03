@@ -3258,6 +3258,18 @@
         "rate": 44100
     },
     {
+        "name": "Adventure",
+        "tags": [
+            "penguinmod",
+            "themes"
+        ],
+        "assetId": "c4ef1d99d24712cbd452c788f61adc0f",
+        "dataFormat": "",
+        "md5ext": "c4ef1d99d24712cbd452c788f61adc0f.mp3",
+        "sampleCount": 128260,
+        "rate": 44100
+    },
+    {
         "name": "pueb.mp3",
         "tags": [
             "human",
