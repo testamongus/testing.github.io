@@ -2795,58 +2795,6 @@
         "rate": 44100
     },
     {
-        "name": "Gunshot 1",
-        "tags": [
-            "effects",
-            "guns",
-            "penguinmod"
-        ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
-        "rate": 44100,
-        "fromPenguinModLibrary": true,
-        "libraryFilePage": "sounds/gunshot1.mp3"
-    },
-    {
-        "name": "Gunshot 2",
-        "tags": [
-            "effects",
-            "guns",
-            "penguinmod"
-        ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
-        "rate": 44100,
-        "fromPenguinModLibrary": true,
-        "libraryFilePage": "sounds/gunshot2.mp3"
-    },
-    {
-        "name": "Gunshot 3",
-        "tags": [
-            "effects",
-            "guns",
-            "penguinmod"
-        ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
-        "rate": 44100,
-        "fromPenguinModLibrary": true,
-        "libraryFilePage": "sounds/gunshot3.mp3"
-    },
-    {
-        "name": "Gunshot 4",
-        "tags": [
-            "effects",
-            "guns",
-            "penguinmod"
-        ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
-        "rate": 44100,
-        "fromPenguinModLibrary": true,
-        "libraryFilePage": "sounds/gunshot4.mp3"
-    },
-    {
         "name": "Hand Clap",
         "tags": [
             "human",
@@ -3569,19 +3517,6 @@
         "md5ext": "a822b56063729f4f42f9a62e6010768b.wav",
         "sampleCount": 94489,
         "rate": 22050
-    },
-    {
-        "name": "Nailgun",
-        "tags": [
-            "effects",
-            "guns",
-            "penguinmod"
-        ],
-        "dataFormat": "mpeg",
-        "md5ext": "sound.mp3",
-        "rate": 44100,
-        "fromPenguinModLibrary": true,
-        "libraryFilePage": "sounds/nailgun.mp3"
     },
     {
         "name": "Ocean Wave",
