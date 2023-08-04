@@ -590,7 +590,7 @@ const menuItems = [
     },
     {
         name: 'Beepbox',
-        extensionId: 'https://extensions.turbowarp.org/Lily/McUtils.js', // update reference once file names are updated
+        extensionId: 'beepboxsynth', // update reference once file names are updated
         tags: ['turbowarp'],
         iconURL: 'https://jasonglenevans.github.io/GvbvdxxMod2/static/assets/d0a53858e0c079c8b99e85a652b4d1d9.png',
         insetIconURL: 'https://jasonglenevans.github.io/GvbvdxxMod2/static/assets/ba43bca2715721d8cb5ddbdb38267da0.png',
