@@ -319,7 +319,7 @@ const menuItems = [
     {
         name: 'Dot Prop',
         extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
-        twDeveloper: 'idk lol',
+        twDeveloper: 'Richienbs',
         iconURL: defaultExtensionIcon,
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
@@ -712,6 +712,16 @@ const menuItems = [
         iconURL: jgScratchAuthExtensionIcon,
         tags: ['penguinmod'],
         description: "Get a user's scratch name to prove they are a real scratch user.",
+        featured: true
+    },
+    {
+        name: 'PoseNet2Scratch',
+        extensionId: 'posenet2scratch',
+        iconURL: 'https://stretch3.github.io/static/assets/ac835879063d69ed48f21b8fa132a014.png',
+        tags: ['penguinmod','turbowarp'],
+        description: "PoseNet2Scratch blocks.",
+        internetConnectionRequired: true,
+        collaborator: 'champierre',
         featured: true
     },
     {
