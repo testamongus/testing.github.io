@@ -377,7 +377,6 @@ const menuItems = [
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
         featured: true,
-        disabled: true
     },
     {
         name: 'Zip',
