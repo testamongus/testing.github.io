@@ -265,7 +265,7 @@ const menuItems = [
         ),
         extensionId: 'speech2text',
         collaborator: 'Scratch',
-        iconURL: text2speechIconURL,
+        iconURL: 'https://powerbox1000.github.io/dev-blocks/static/assets/0294d390ec3c5a58f3701b3098646770.png',
         tags: ['scratch'],
         description: (
             <FormattedMessage
