@@ -356,16 +356,6 @@ const menuItems = [
         description: 'Create and edit .zip format files, including .sb3 files.',
         featured: true
     },
-    {
-        name: 'Adruino',
-        extensionId: 'https://khanning.github.io/scratch-arduino-extension/arduino_extension.js',
-        twDeveloper: 'khanning',
-        iconURL: 'https://web.archive.org/web/20220326094337im_/https://scratchx.org/images/extensions/arduino_small.png',
-        insetIconURL: 'https://play-lh.googleusercontent.com/AmzHCh6UEelYfh9AfWXh1WIOC0Z_Z69N9bTvEi-hbRhDe7XL04xuuQfvQXCKLHSHcgVk',
-        tags: ['hardware'],
-        description: 'Scratch X - Experiment',
-        featured: true
-    },
 
     {
         name: 'Files',
@@ -711,6 +701,17 @@ const menuItems = [
         extensionId: 'jgScratchAuthenticate',
         iconURL: jgScratchAuthExtensionIcon,
         tags: ['penguinmod'],
+        description: "Get a user's scratch name to prove they are a real scratch user.",
+        featured: true
+    },
+    {
+        name: 'Adruino v2',
+        extensionId: 'vittaarduino',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/f505cf3f6fe2f81662840a05426958fa.png',
+        bluetoothRequired: true,
+        collaborator: 'Vittascience',
+        internetConnectionRequired: true,
+        tags: ['penguinmod','other_mods'],
         description: "Get a user's scratch name to prove they are a real scratch user.",
         featured: true
     },
