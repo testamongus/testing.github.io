@@ -369,6 +369,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Cats',
+        extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
+        twDeveloper: ' G1nX',
+        iconURL: 'https://penguinmod-extensions-gallery.vercel.app/images/Gen1x/placeholder-cats.png',
+        tags: ['penguinmod'],
+        description: 'cat cool 😎',
+        featured: true,
+        disabled: true
+    },
+    {
         name: 'Zip',
         extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
         twDeveloper: 'CST1229',
