@@ -258,6 +258,28 @@ const menuItems = [
     {
         name: (
             <FormattedMessage
+                defaultMessage="Speech to Text"
+                description="Name for the Speech to Text extension"
+                id="gui.extension.speech2text.name"
+            />
+        ),
+        extensionId: 'speech2text',
+        collaborator: 'Scratch',
+        iconURL: text2speechIconURL,
+        tags: ['scratch'],
+        description: (
+            <FormattedMessage
+                defaultMessage="Talk to your projects."
+                description="Description for the Speech to Text extension"
+                id="gui.extension.speech2text.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: true
+    },
+    {
+        name: (
+            <FormattedMessage
                 defaultMessage="Translate"
                 description="Name for the Translate extension"
                 id="gui.extension.translate.name"
