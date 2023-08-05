@@ -715,16 +715,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'PoseNet2Scratch',
-        extensionId: 'posenet2scratch',
-        iconURL: 'https://stretch3.github.io/static/assets/ac835879063d69ed48f21b8fa132a014.png',
-        tags: ['penguinmod','turbowarp'],
-        description: "PoseNet2Scratch blocks.",
-        internetConnectionRequired: true,
-        collaborator: 'champierre',
-        featured: true
-    },
-    {
         name: 'micro:bit (Adacraft)',
         extensionId: 'vittamicrobit',
         iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
