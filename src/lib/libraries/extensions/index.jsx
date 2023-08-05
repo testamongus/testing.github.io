@@ -371,8 +371,8 @@ const menuItems = [
     },
     {
         name: 'Cats',
-        extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
-        twDeveloper: ' G1nX',
+        extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
+        collaborator: ' G1nX',
         iconURL: catsIconURL,
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
