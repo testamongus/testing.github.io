@@ -34,6 +34,7 @@ import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
 import ev3ConnectionSmallIconURL from './ev3/ev3-small.svg';
 
 import wedo2IconURL from './wedo2/wedo.png'; // TODO: Rename file names to match variable/prop names?
+import catsIconURL from './cats/download.png';
 import wedo2InsetIconURL from './wedo2/wedo-small.svg';
 import wedo2ConnectionIconURL from './wedo2/wedo-illustration.svg';
 import wedo2ConnectionSmallIconURL from './wedo2/wedo-small.svg';
@@ -372,9 +373,9 @@ const menuItems = [
         name: 'Cats',
         extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
         twDeveloper: ' G1nX',
-        iconURL: 'https://penguinmod-extensions-gallery.vercel.app/images/Gen1x/placeholder-cats.png',
+        iconURL: catsIconURL,
         tags: ['penguinmod'],
-        description: 'cat cool 😎',
+        description: 'Blocks to give you cat facts. 😻',
         featured: true,
         disabled: true
     },
