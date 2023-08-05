@@ -864,7 +864,7 @@ const menuItems = [
         collaborator: 'LEGO',
         iconURL: boostIconURL,
         insetIconURL: boostInsetIconURL,
-        tags: ['scratch'],
+        tags: ['scratch','hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Bring robotic creations to life."
@@ -906,7 +906,7 @@ const menuItems = [
         ),
         featured: true,
         disabled: false,
-        tags: ['scratch'],
+        tags: ['scratch','hardware'],
         bluetoothRequired: true,
         internetConnectionRequired: true,
         launchPeripheralConnectionFlow: true,
@@ -931,7 +931,7 @@ const menuItems = [
         iconURL: gdxforIconURL,
         insetIconURL: gdxforInsetIconURL,
         customInsetColor: '#4C97FF',
-        tags: ['scratch'],
+        tags: ['scratch','hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Sense push, pull, motion, and spin."
