@@ -25,7 +25,7 @@
 .header {
     width: 100%;
     height: 3.125em;
-    background-color: hsla(194, 100%, 50%, 1);
+    background-color: rgb(86, 5, 161);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,13 +51,13 @@
 }
 
 .promptButton:focus {
-    outline-color: hsla(194, 100%, 50%, 0.35);
+    outline-color: hsla(271, 88%, 16%, 0.35);
     outline-width: 4px;
     outline-style: solid;
 }
 
 .accept {
-    background-color: hsla(194, 100%, 50%, 1);
+    background-color: rgb(123, 8, 255);
     color: white;
 }
 
@@ -71,7 +71,7 @@
 
 .filePicker {
     border: 0;
-    background-color: hsla(194, 100%, 50%, 1);
+    background-color: hsla(270, 93%, 11%, 0.808);
     border-radius: 4px;
     font-weight: 600;
     color: white;
