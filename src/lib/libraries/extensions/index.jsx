@@ -379,6 +379,22 @@ const menuItems = [
         featured: true,
     },
     {
+        name: 'TypeScratch',
+        extensionId: 'typescratch',
+        collaborator: 'jwklong',
+        iconURL: typescratchThumb,
+        insetIconURL: typescratchIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="Brings all the sweet dynamic type support from TypeScript to your project!"
+                description="Description for the 'TypeScratch' extension"
+                id="gui.extension.typescratch.description"
+            />
+        ),
+        featured: true,
+        disabled: true
+    },
+    {
         name: 'Zip',
         extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
         twDeveloper: 'CST1229',
