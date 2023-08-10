@@ -761,6 +761,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'TypeScratch',
+        extensionId: 'typescratch',
+        iconURL: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+        tags: ['penguinmod, programminglanguage'],
+        description: "Similar to the JavaScript extension but for TypeScript",
+        featured: true
+    },
+    {
         name: 'JavaScript',
         extensionId: 'jgJavascript',
         iconURL: jgJavascriptExtensionIcon,
