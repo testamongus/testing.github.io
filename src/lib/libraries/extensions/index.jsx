@@ -737,17 +737,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Adruino v2',
-        extensionId: 'vittaarduino',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/f505cf3f6fe2f81662840a05426958fa.png',
-        bluetoothRequired: true,
-        collaborator: 'Vittascience',
-        internetConnectionRequired: true,
-        tags: ['penguinmod','other_mods'],
-        description: "Get a user's scratch name to prove they are a real scratch user.",
-        featured: true
-    },
-    {
         name: 'micro:bit (Adacraft)',
         extensionId: 'vittamicrobit',
         iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
