@@ -379,6 +379,15 @@ const menuItems = [
         featured: true,
     },
     {
+        name: 'Wacky Joke Blocks',
+        extensionId: 'https://snail-ide.github.io/joke.js',
+        collaborator: 'Mr_rudy/nmsderp',
+        iconURL: 'https://c8.alamy.com/comp/RB1P6W/young-handsome-business-man-laughing-of-you-pointing-to-the-camera-with-finger-hand-over-chest-shame-expression-RB1P6W.jpg',
+        tags: ['penguinmod'],
+        description: 'why did i make this',
+        featured: true,
+    },
+    {
         name: 'Zip',
         extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
         twDeveloper: 'CST1229',
