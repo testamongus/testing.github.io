@@ -770,6 +770,25 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Hacked Block Collection',
+        extensionId: 'https://extensions.turbowarp.org/Lily/HackedBlocks.js',
+        iconURL: 'https://extensions.turbowarp.org/images/unknown.svg',
+        twDeveloper: 'LilyMakesThings',
+        description: 'Various modified vanilla blocks.',
+        featured: true
+
+    },
+    // https://extensions.turbowarp.org/shreder95ua/resolution.js
+    {
+        name: 'Screen Resolution',
+        extensionId: 'https://extensions.turbowarp.org/shreder95ua/resolution.js',
+        iconURL: 'https://extensions.turbowarp.org/images/shreder95ua/resolution.svg',
+        twDeveloper: 'shreder95ua',
+        description: 'Get the resolution of the primary screen.',
+        featured: true
+
+    },
+    {
         name: 'TypeScratch',
         extensionId: 'typescratch',
         iconURL: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
