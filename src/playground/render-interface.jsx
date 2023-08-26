@@ -147,21 +147,21 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'TurboWarp Desktop'}
                     </a>
-                    <a href="https://docs.turbowarp.org/embedding">
+                    <a href="https://snail-ide.github.io/docs/embedding">
                         <FormattedMessage
                             defaultMessage="Embedding"
                             description="Link in footer to embedding documentation for embedding link"
                             id="tw.footer.embed"
                         />
                     </a>
-                    <a href="https://docs.turbowarp.org/url-parameters">
+                    <a href="https://snail-ide.github.io/docs/url-parameters">
                         <FormattedMessage
                             defaultMessage="URL Parameters"
                             description="Link in footer to URL parameters documentation"
                             id="tw.footer.parameters"
                         />
                     </a>
-                    <a href="https://docs.turbowarp.org/">
+                    <a href="https://snail-ide.github.io/docs/">
                         <FormattedMessage
                             defaultMessage="Documentation"
                             description="Link in footer to additional documentation"
@@ -191,10 +191,17 @@ const Footer = () => (
                             id="tw.privacy"
                         />
                     </a>
+                    <a href="https://snail-ide.github.io/examples/">
+                        <FormattedMessage
+                            defaultMessage="Example Projects"
+                            description="Link to example projects"
+                            id="tw.examples"
+                        />
+                    </a>
                     <a href="https://scratch.mit.edu/studios/33532977/">
                         <FormattedMessage
                             defaultMessage="Scratch Studio"
-                            description="Link to privacy policy"
+                            description="Link to scratch studio"
                             id="tw.snail-studio"
                         />
                     </a>
