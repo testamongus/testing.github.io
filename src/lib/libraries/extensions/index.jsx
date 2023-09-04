@@ -755,6 +755,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Video',
+        extensionId: 'https://extensions.turbowarp.org/Lily/Video.js',
+        iconURL: 'https://extensions.turbowarp.org/images/Lily/Video.svg',
+        insetIconURL: turbowarpIcon,
+        twDeveloper: 'LillyMakesThings',
+        tags: ['turbowarp'],
+        description: "Play videos from URLs.",
+        featured: true
+    },
+    {
         name: 'micro:bit (Adacraft)',
         extensionId: 'vittamicrobit',
         iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
@@ -835,7 +845,7 @@ const menuItems = [
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="Community submited/beta extensions.."
+                defaultMessage="Community submited/beta extensions."
                 description="Description of snail ide custom/beta extensions in extension library"
                 id="sn.extensionGallery.description"
             />
