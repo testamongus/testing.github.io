@@ -184,8 +184,9 @@ const menuItems = [
         name: 'Blockly2Math',
         extensionId: 'blockly2math',
         iconURL: blocklyIconURL,
+        collaborator: 'Google',
         tags: ['penguinmod'],
-        description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
+        description: "Blockly math blocks.",
         featured: true
     },
     {
@@ -852,15 +853,6 @@ const menuItems = [
         ),
         tags: ['penguinmod'],
         featured: true
-    },
-    {
-        name: 'Hacked Block Collection',
-        extensionId: 'https://extensions.turbowarp.org/Lily/HackedBlocks.js',
-        iconURL: 'https://extensions.turbowarp.org/images/unknown.svg',
-        twDeveloper: 'LilyMakesThings',
-        description: 'Various modified vanilla blocks.',
-        featured: true
-
     },
     // https://extensions.turbowarp.org/shreder95ua/resolution.js
     {
