@@ -9,6 +9,7 @@ import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
 
 import videoSensingIconURL from './videoSensing/video-sensing.png';
+import blocklyIconURL from './blockly/blockly.png';
 import videoSensingInsetIconURL from './videoSensing/video-sensing-small.svg';
 
 import text2speechIconURL from './text2speech/text2speech.png';
@@ -175,6 +176,14 @@ const menuItems = [
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
         iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
+        tags: ['penguinmod'],
+        description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
+        featured: true
+    },
+    {
+        name: 'Blockly2Math',
+        extensionId: 'blockly2math',
+        iconURL: blocklyIconURL,
         tags: ['penguinmod'],
         description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
         featured: true
@@ -767,6 +776,71 @@ const menuItems = [
         iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsXcntVmSk264zyLaS3GdbOBQPhk3JjE5Vg&usqp=CAU',
         tags: ['penguinmod'],
         description: "Unfinished PenguinMod Extension.",
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="PenguinMod Extra Extensions"
+                description="Name of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.name"
+            />
+        ),
+        href: 'https://extensions.penguinmod.site/',
+        extensionId: 'special_penguinmodExtensionLibrary',
+        iconURL: 'https://studio.penguinmod.site/static/assets/7a4510ab192e5a0bd0b1186db1396bce.svg',
+        description: (
+            <FormattedMessage
+                defaultMessage="See some user-submitted extensions. Opens in a new tab."
+                description="Description of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.description"
+            />
+        ),
+        tags: ['penguinmod'],
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="TurboWarp Extension Gallery"
+                description="Name of extensions.turbowarp.org in extension library"
+                id="tw.extensionGallery.name"
+            />
+        ),
+        href: 'https://extensions.turbowarp.org/',
+        extensionId: 'special_turbowarpExtensionLibrary',
+        iconURL: 'https://studio.penguinmod.site/static/assets/fa121178a0dc748c56257f39987f0540.svg',
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
+                description="Description of extensions.turbowarp.org in extension library"
+                id="tw.extensionGallery.description"
+            />
+        ),
+        tags: ['penguinmod'],
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Snail IDE Extension Gallery"
+                description="Name of extensions.turbowarp.org in extension library"
+                id="sn.extensionGallery.name"
+            />
+        ),
+        href: 'https://snail-ide.github.io/community-extensions/',
+        extensionId: 'special_snailExtensionLibrary',
+        iconURL: 'https://u.cubeupload.com/Mr_rudy/7e3download.png',
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="Community submited/beta extensions.."
+                description="Description of snail ide custom/beta extensions in extension library"
+                id="sn.extensionGallery.description"
+            />
+        ),
+        tags: ['penguinmod'],
         featured: true
     },
     {
