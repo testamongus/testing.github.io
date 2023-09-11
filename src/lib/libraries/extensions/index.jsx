@@ -832,28 +832,6 @@ const menuItems = [
         tags: ['penguinmod'],
         featured: true
     },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Snail IDE Extension Gallery"
-                description="Name of extensions.turbowarp.org in extension library"
-                id="sn.extensionGallery.name"
-            />
-        ),
-        href: 'https://snail-ide.github.io/community-extensions/',
-        extensionId: 'special_snailExtensionLibrary',
-        iconURL: 'https://u.cubeupload.com/Mr_rudy/7e3download.png',
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="Community submited/beta extensions."
-                description="Description of snail ide custom/beta extensions in extension library"
-                id="sn.extensionGallery.description"
-            />
-        ),
-        tags: ['penguinmod'],
-        featured: true
-    },
     // https://extensions.turbowarp.org/shreder95ua/resolution.js
     {
         name: 'Screen Resolution',

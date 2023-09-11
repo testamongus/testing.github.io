@@ -205,13 +205,6 @@ const Footer = () => (
                             id="tw.snail-studio"
                         />
                     </a>
-                    <a href="https://snail-ide.github.io/community-extensions/">
-                        <FormattedMessage
-                            defaultMessage="Community/Beta Extensions"
-                            description="Link to privacy policy"
-                            id="tw.community-extensions"
-                        />
-                    </a>
                 </div>
             </div>
         </div>
