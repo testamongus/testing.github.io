@@ -205,6 +205,13 @@ const Footer = () => (
                             id="tw.snail-studio"
                         />
                     </a>
+                    <a href="https://snail-ide-beta.mobirisesite.com/">
+                        <FormattedMessage
+                            defaultMessage="Homepage Beta"
+                            description="Link to homepage beta"
+                            id="tw.beta"
+                        />
+                    </a>
                 </div>
             </div>
         </div>
