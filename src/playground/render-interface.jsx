@@ -137,6 +137,13 @@ const Footer = () => (
                             id="tw.footer.donate"
                         />
                     </a>
+                    <a href="https://penguinmod.site/donate">
+                        <FormattedMessage
+                            defaultMessage="Donate to PenguinMod Developer"
+                            description="Donation link in footer"
+                            id="tw.footer.penguinmod-donate"
+                        />
+                    </a>
                 </div>
                 <div className={styles.footerSection}>
                     <a href="https://studio.penguinmod.site/PenguinMod-Packager">
