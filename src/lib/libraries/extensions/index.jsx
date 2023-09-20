@@ -870,12 +870,11 @@ const menuItems = [
     },
     {
         name: 'GD API',
-        extensionId: 'GDapiSP',
+        extensionId: 'https://snail-ide.github.io/examples/gd/gd.js',
         iconURL: gdApiICON,
         tags: ['penguinmod'],
         collaborator: 'SharkPool-SP',
         description: 'Access the GD api.',
-        disabled: true,
         featured: true
     },
     {
