@@ -3,6 +3,7 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import gdApiICON from './gdapi/Capture.png';
 import musicInsetIconURL from './music/music-small.svg';
 
 import penIconURL from './pen/pen.png';
@@ -856,6 +857,25 @@ const menuItems = [
         iconURL: jgJavascriptExtensionIcon,
         tags: ['penguinmod', 'programminglanguage'],
         description: 'Run your own custom code written in JavaScript!',
+        featured: true
+    },
+    {
+        name: 'Better Input',
+        extensionId: 'https://extensions.penguinmod.site/extensions/SharkPool/BetterInput.js',
+        iconURL: 'https://extensions.penguinmod.site/images/SharkPool/BetterInput.svg',
+        tags: ['penguinmod'],
+        collaborator: 'SharkPool-SP',
+        description: 'Expansion to the Ask and Wait blocks.',
+        featured: true
+    },
+    {
+        name: 'GD API',
+        extensionId: 'GDapiSP',
+        iconURL: gdApiICON,
+        tags: ['penguinmod'],
+        collaborator: 'SharkPool-SP',
+        description: 'Access the GD api.',
+        disabled: true,
         featured: true
     },
     {
