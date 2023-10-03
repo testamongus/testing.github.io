@@ -50,6 +50,13 @@ const manifest = {
       "id": "twKeys",
       "type": "boolean",
       "default": false
+    },
+    {
+      "dynamic": true,
+      "name": "🐌",
+      "id": "snailKey",
+      "type": "boolean",
+      "default": false
     }
   ],
   "userscripts": [

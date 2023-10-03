@@ -74,6 +74,13 @@ export default async function ({ addon, msg }) {
           ]
         );
       }
+      if (addon.settings.get("snailKey")) {
+        keys.push(
+          ...[
+            ["🐌", "snail"],
+          ]
+        );
+      }
     }
     return keys;
   }
