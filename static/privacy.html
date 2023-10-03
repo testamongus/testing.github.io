@@ -45,6 +45,50 @@
             <p>In rare circumstances, connections that are appear to be spam may have their IP logged for up to 24 hours. This happens very infrequently and only in cases of extreme abuse.</p>
             <p>Built-in PenguinMod and Custom extensions that require Wi-Fi or use Wi-Fi to get online data (Website Requests, Extended Audio, CloudLink, HTML iframes, Storage, etc.) may connect to any user-specified API, which will grant the owner of the website being connected to: Your full IP address (and possibly location), the ability to show or display anything (if the extension is showing the info returned to the user), and any other things public APIs can do.</p>
             <p>This document does not apply to third-parties, including other users or bots connected to cloud variables, links to external websites, custom extensions, or some advanced URL parameters.</p>
+            <h2>Other services</h2>
+            <p>When using cloud variables, the project ID and your username may be logged for up to 14 days.</p>
+            <p>Your randomly generated or chosen username is stored in your browser's local storage. To mitigate the potential to track users with this feature, all randomly generated usernames are anonymized before the server receives them. However, usernames explicitly set by a user may be logged to help prevent abuse.</p>
+            <p>Built-in Scratch extensions that require Wi-Fi (such as Translate, Text to Speech, LEGO, micro:bit, etc.) may connect to the Scratch API to implement these features. <a href="https://scratch.mit.edu/privacy_policy/">Refer to the Scratch privacy policy for more information</a>. The Translate extension may instead make requests to a TurboWarp API, which may then forward your request to the Scratch API and log the message being translated and the result for caching and performance.</p>
+            <p>In rare circumstances, connections that are appear to be spam may have their IP logged for up to 24 hours. This happens very infrequently and only in cases of extreme abuse.</p>
+            <p>
+                Built-in PenguinMod and Custom extensions that require Wi-Fi or use Wi-Fi to get online data (HTTP, Website Requests, Extended Audio, CloudLink, HTML iframes, Storage, etc.) may connect to any user-specified API, which will grant the owner of the website being connected to:<br>
+                    - your full IP address (and possibly general location using your IP address)<br>
+                    - the ability to show or display anything (if the extension is showing the info returned to the user)<br>
+                    - any other things public APIs can do or access<br>
+            </p>
+            <p>This document does not apply to third-parties, including other users or bots connected to cloud variables, links to external websites, custom extensions, or some advanced URL parameters.</p>
+
+            <h2>Editor extensions</h2>
+            <h4>Core - HTML iframes (referred to as "iframes" here)</h4>
+            <p>
+                "iframes" may connect to user-specified websites. These websites may be allowed to access: <br>
+                    - your IP address<br>
+                    - your general location (using your IP address)<br>
+                    - any web API<br>
+                The websites specified may also display any content, however Snail IDE will attempt to automatically scan the website
+                for any potential viruses or vulnerabilities. Major adult websites are also blocked, and most others are blocked aswell.
+                <br>
+                Snail IDE does not allow projects uploaded to only display content from other websites.
+                Uploaded projects must contain content of their own, and certain websites may cause the uploaded project to be deleted or rejected.
+            </p>
+            <h4>Core - Scratch Authentication (referred to as "Scratch Auth Extension" here)</h4>
+            <p>
+                The "Scratch Auth Extension" will connect to <a href="https://auth.itinerary.eu.org/">Scratch Auth</a> for Log-In. Scratch Auth can access: <br>
+                    - your IP address<br>
+                    - your general location (using your IP address)<br>
+                    - your public <a href="https://scratch.mit.edu/">Scratch</a> Account information<br>
+                The "Scratch Auth Extension" also allows your public Scratch account information to be accessible to the PenguinMod project,
+                however other tools, extensions or APIs are required to get information past your Scratch username.
+            </p>
+            <h4>User-submitted (G1nX) - Better Storage</h4>
+            <p>
+                Better Storage will connect to <a href="https://auth.itinerary.eu.org/">Scratch Auth</a> for Log-In. Scratch Auth can access: <br>
+                    - your IP address<br>
+                    - your general location (using your IP address)<br>
+                    - your public <a href="https://scratch.mit.edu/">Scratch</a> Account information<br>
+                Better Storage can also access any info that Scratch Auth can.
+            </p>
+
 
             <h2>Contact</h2>
 
