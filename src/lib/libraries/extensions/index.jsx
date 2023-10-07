@@ -508,6 +508,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Better Storage',
+        extensionId: 'https://extensions.penguinmod.site/images/Gen1x/betterstorage.png',
+        iconURL: 'https://extensions.penguinmod.site/images/Gen1x/betterstorage.png',
+        tags: ['penguinmod'],
+        description: 'Like PenguinMods Storage Extension, but with a couple more features, and faster servers.',
+        collaborator: 'G1nX',
+        featured: true
+    },
+    {
         name: 'Storage',
         extensionId: 'jgStorage',
         iconURL: jgStorageExtensionIcon,
