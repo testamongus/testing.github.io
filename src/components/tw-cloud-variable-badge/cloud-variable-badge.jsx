@@ -18,14 +18,6 @@ const hosts = [
             name: '9gr',
             href: 'https://scratch.mit.edu/users/9gr/'
         }
-    },
-    {
-        name: 'Repl',
-        cloudHost: 'wss://cloud-server.snail-ide-repl.repl.co/',
-        provider: {
-            name: 'Mr_rudy',
-            href: 'https://scratch.mit.edu/users/Mr_rudy/'
-        }
     }
 ];
 

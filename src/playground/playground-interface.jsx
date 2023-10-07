@@ -28,7 +28,6 @@ import TWProjectMetaFetcherHOC from '../lib/tw-project-meta-fetcher-hoc.jsx';
 import TWStateManagerHOC from '../lib/tw-state-manager-hoc.jsx';
 import TWThemeHOC from '../lib/tw-theme-hoc.jsx';
 import TWPackagerIntegrationHOC from '../lib/tw-packager-integration-hoc.jsx';
-import TWRestorePointHOC from '../lib/tw-restore-point-hoc.jsx';
 import SettingsStore from '../addons/settings-store-singleton';
 import '../lib/tw-fix-history-api';
 import GUI from './render-gui.jsx';
@@ -72,9 +71,9 @@ class Interface extends React.Component {
     }
     handleUpdateProjectTitle(title, isDefault) {
         if (isDefault || !title) {
-            document.title = `Snail IDE - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
+            document.title = `PenguinMod - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
         } else {
-            document.title = `${title} - Snail IDE`;
+            document.title = `${title} - PenguinMod`;
         }
     }
     render() {
@@ -165,7 +164,6 @@ const WrappedInterface = compose(
     TWProjectMetaFetcherHOC,
     TWStateManagerHOC,
     TWThemeHOC,
-    TWRestorePointHOC,
     TWPackagerIntegrationHOC
 )(ConnectedInterface);
 

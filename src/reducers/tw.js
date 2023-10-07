@@ -9,11 +9,14 @@ const SET_WINDOW_FULLSCREEN = 'tw/SET_WINDOW_FULLSCREEN';
 const SET_DIMENSIONS = 'tw/SET_DIMENSIONS';
 const SET_AUTHOR = 'tw/SET_AUTHOR';
 const SET_DESCRIPTION = 'tw/SET_DESCRIPTION';
+const SET_EXTRA_PROJECT_INFO = 'tw/SET_EXTRA_PROJECT_INFO';
+const SET_REMIXED_PROJECT_INFO = 'tw/SET_REMIXED_PROJECT_INFO';
 const ADD_COMPILE_ERROR = 'tw/ADD_COMPILE_ERROR';
 const CLEAR_COMPILE_ERRORS = 'tw/CLEAR_COMPILE_ERRORS';
 const SET_FILE_HANDLE = 'tw/SET_FILE_HANDLE';
 const SET_USERNAME_INVALID = 'tw/SET_USERNAME_INVALID';
 const SET_HAS_CLOUD_VARIABLES = 'tw/SET_HAS_CLOUD_VARIABLES';
+const SET_CLOUD_HOST = 'tw/SET_CLOUD_HOST';
 
 export const initialState = {
     framerate: 30,
@@ -40,10 +43,23 @@ export const initialState = {
         instructions: '',
         credits: ''
     },
+    extraProjectInfo: {
+        accepted: true,
+        isRemix: false,
+        remixId: 0,
+        tooLarge: false,
+        author: ''
+    },
+    remixedProjectInfo: {
+        loaded: false,
+        name: '',
+        author: ''
+    },
     compileErrors: [],
     fileHandle: null,
     usernameInvalid: false,
-    hasCloudVariables: false
+    hasCloudVariables: false,
+    cloudHost: ''
 };
 
 const reducer = function (state, action) {
@@ -93,6 +109,14 @@ const reducer = function (state, action) {
         return Object.assign({}, state, {
             description: action.description
         });
+    case SET_EXTRA_PROJECT_INFO:
+        return Object.assign({}, state, {
+            extraProjectInfo: action.extraProjectInfo
+        });
+    case SET_REMIXED_PROJECT_INFO:
+        return Object.assign({}, state, {
+            remixedProjectInfo: action.remixedProjectInfo
+        });
     case ADD_COMPILE_ERROR:
         return Object.assign({}, state, {
             compileErrors: [
@@ -115,6 +139,10 @@ const reducer = function (state, action) {
     case SET_HAS_CLOUD_VARIABLES:
         return Object.assign({}, state, {
             hasCloudVariables: action.hasCloudVariables
+        });
+    case SET_CLOUD_HOST:
+        return Object.assign({}, state, {
+            cloudHost: action.cloudHost
         });
     default:
         return state;
@@ -198,6 +226,20 @@ const setDescription = function (description) {
     };
 };
 
+const setExtraProjectInfo = function (extraProjectInfo) {
+    return {
+        type: SET_EXTRA_PROJECT_INFO,
+        extraProjectInfo: extraProjectInfo
+    };
+};
+
+const setRemixedProjectInfo = function (remixedProjectInfo) {
+    return {
+        type: SET_REMIXED_PROJECT_INFO,
+        remixedProjectInfo: remixedProjectInfo
+    };
+};
+
 const addCompileError = function (error) {
     return {
         type: ADD_COMPILE_ERROR,
@@ -232,6 +274,13 @@ const setHasCloudVariables = function (hasCloudVariables) {
     };
 };
 
+const setCloudHost = function (cloudHost) {
+    return {
+        type: SET_CLOUD_HOST,
+        cloudHost
+    };
+};
+
 export {
     reducer as default,
     initialState as twInitialState,
@@ -246,9 +295,12 @@ export {
     setDimensions,
     setAuthor,
     setDescription,
+    setExtraProjectInfo,
+    setRemixedProjectInfo,
     addCompileError,
     clearCompileErrors,
     setFileHandle,
     setUsernameInvalid,
-    setHasCloudVariables
+    setHasCloudVariables,
+    setCloudHost
 };

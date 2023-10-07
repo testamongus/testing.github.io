@@ -699,10 +699,9 @@ const menuItems = [
     },
     {
         name: 'Camera Controls',
-        extensionId: 'DTcameracontrols',
-        iconURL: 'https://extensions.turbowarp.org/images/DT/cameracontrols.svg',
-        tags: ['turbowarp'],
-        insetIconURL: turbowarpIcon,
+        extensionId: 'pmCamera',
+        iconURL: 'https://studio.penguinmod.site/static/assets/6b8350e1c4fcb14dddb1c4bac60690fc.png',
+        tags: ['penguinmod'],
         description: (
             <FormattedMessage
                 defaultMessage="Move the visible part of the stage."
@@ -711,7 +710,6 @@ const menuItems = [
             />
         ),
         featured: true,
-        twDeveloper: 'DT-is-not-available'
     },
     {
         name: 'Clipping and Blending',
