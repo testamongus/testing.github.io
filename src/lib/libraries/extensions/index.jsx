@@ -164,6 +164,42 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Monitors Plus',
+        extensionId: 'https://snail-ide.github.io/Monitors-Plus.js',
+        iconURL: defaultExtensionIcon,
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: 'W.I.P Description',
+        featured: true
+    },
+    {
+        name: 'Lazy Collisions',
+        extensionId: 'https://snail-ide.github.io/Lazy-Collisions.js',
+        iconURL: defaultExtensionIcon,
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: 'W.I.P Description',
+        featured: true
+    },
+    {
+        name: 'Newgrounds Audio',
+        extensionId: 'https://snail-ide.github.io/Newgrounds-Audio.js',
+        iconURL: defaultExtensionIcon,
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: 'W.I.P Description',
+        featured: true
+    },
+    {
+        name: 'Tile Grids',
+        extensionId: 'https://snail-ide.github.io/Tile-Grids.js',
+        iconURL: defaultExtensionIcon,
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: 'W.I.P Description',
+        featured: true
+    },
+    {
         name: 'AdaBrowser',
         extensionId: 'adabrowser',
         iconURL: 'https://www.adacraft.org/studio/static/assets/40998229311219c2117265d5e4bd9745.png',
