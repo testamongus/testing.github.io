@@ -139,7 +139,7 @@ ShareButton.defaultProps = {
         const projectName = _projectName.join(" - ");
 
         const url = location.origin;
-        window.open(`https://penguinmod.site/upload?name=${encodeURIComponent(projectName)}&external=${url}`, "_blank");
+        window.open("https://snail-ide.github.io/sorry.html/");
         return;
     }
 };
