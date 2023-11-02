@@ -387,6 +387,24 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Camera Sensing Plus',
+        extensionId: 'https://snail-ide.github.io/sensing.js',
+        twDeveloper: 'SharkPool',
+        iconURL: 'https://viewscreen.githubusercontent.com/view/svg?browser=chrome&bypass_fastly=true&color_mode=dark&commit=ba342a9d0fb3f3ee92bad604f3dd985888be1ae1&device=unknown_device&docs_host=https%3A%2F%2Fdocs.github.com&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f536861726b506f6f6c2d53502f536861726b506f6f6c732d457874656e73696f6e732f626133343261396430666233663365653932626164363034663364643938353838386265316165312f657874656e73696f6e2d7468756d62732f43616d6572612d53656e73696e672d506c75732e737667&logged_in=true&nwo=SharkPool-SP%2FSharkPools-Extensions&path=extension-thumbs%2FCamera-Sensing-Plus.svg&platform=linux&repository_id=668067482&repository_type=Repository&version=116#1060ffb0-fda8-4ee7-aa38-c842750410b4',
+        tags: ['turbowarp'],
+        description: 'Improved camera sensing',
+        featured: true
+    },
+    {
+        name: 'ChatGPT',
+        extensionId: 'https://anonymous-cat1.github.io/WorkingTurboGPT/extension.js',
+        twDeveloper: 'Anonymous-cat1',
+        iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
+        tags: ['turbowarp'],
+        description: 'Use ChatGPT in your projects',
+        featured: true
+    },
+    {
         name: 'Dot Prop',
         extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
         twDeveloper: 'Richienbs',
