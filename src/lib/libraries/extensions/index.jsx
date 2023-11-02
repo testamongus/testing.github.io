@@ -282,13 +282,13 @@ const menuItems = [
     {
         name: (
             <FormattedMessage
-                defaultMessage="Text to Speech"
+                defaultMessage="Text to Speech 2.0"
                 description="Name for the Text to Speech extension"
-                id="gui.extension.text2speech.name"
+                id="gui.extension.text2speech2.name"
             />
         ),
-        extensionId: 'text2speech',
-        collaborator: 'Amazon Web Services',
+        extensionId: 'https://snail-ide.github.io/tts.js',
+        collaborator: 'SharkPool',
         iconURL: text2speechIconURL,
         insetIconURL: text2speechInsetIconURL,
         customInsetColor: '#9966FF',
@@ -297,7 +297,7 @@ const menuItems = [
             <FormattedMessage
                 defaultMessage="Make your projects talk."
                 description="Description for the Text to speech extension"
-                id="gui.extension.text2speech.description"
+                id="gui.extension.text2speech2.description"
             />
         ),
         featured: true,
@@ -1203,6 +1203,30 @@ if (IsLocal || IsLiveTests) {
             tags: ['penguinmod'],
             description: 'dr bob eae',
             featured: true
+        },
+        {
+            name: (
+                <FormattedMessage
+                    defaultMessage="Text to Speech"
+                    description="Name for the Text to Speech extension"
+                    id="gui.extension.text2speech.name"
+                />
+            ),
+            extensionId: 'text2speech',
+            collaborator: 'Amazon Web Services',
+            iconURL: text2speechIconURL,
+            insetIconURL: text2speechInsetIconURL,
+            customInsetColor: '#9966FF',
+            tags: ['scratch'],
+            description: (
+                <FormattedMessage
+                    defaultMessage="Make your projects talk."
+                    description="Description for the Text to speech extension"
+                    id="gui.extension.text2speech.description"
+                />
+            ),
+            featured: true,
+            internetConnectionRequired: true
         },
         {
             name: 'Inline Blocks',
