@@ -403,7 +403,7 @@ const SoundEditor = props => (
         {props.size >= SOUND_BYTE_LIMIT && (
             <div className={classNames(styles.alert, styles.tooLarge)}>
                 <FormattedMessage
-                    defaultMessage="This sound may be too large to upload to Scratch."
+                    defaultMessage="This sound may be too large to upload to Scratch. But can be uploaded to Snail Share. (Snail Share is not finished yet)"
                     description="Message that appears when a sound exceeds the Scratch sound size limit."
                     id="tw.tooLarge"
                 />
