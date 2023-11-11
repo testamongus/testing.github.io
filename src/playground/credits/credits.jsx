@@ -54,7 +54,7 @@ const Credits = () => (
     <main className={styles.main}>
         <header className={styles.headerContainer}>
             <h1 className={styles.headerText}>
-                PenguinMod Credits
+                Snail IDE Credits
             </h1>
         </header>
         <section>
@@ -94,8 +94,7 @@ const Credits = () => (
             </a>
             <h2>Domain Provider</h2>
             <p>
-                <a href="https://penguinmod.site">penguinmod.site</a> (and any subdomains) are currently provided by NotHouse.
-                Currently no link to any known profile of theirs is publicly known.
+                <a href="https://snail-ide.js.org">snail-ide.js.org</a> is provided by <a href="https://js.org">js.org</a>
             </p>
             <h2>Sound Effects</h2>
             <p>
@@ -106,7 +105,7 @@ const Credits = () => (
             </p>
         </section>
         <section>
-            <h1>PenguinMod & TurboWarp</h1>
+            <h1>PenguinMod, TurboWarp and Snail IDE</h1>
         </section>
         <section>
             <h2>Extensions</h2>
