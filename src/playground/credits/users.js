@@ -136,6 +136,7 @@ const extensionDevelopers = [
     'GarboMuffin',
     'griffpatch',
     'DT-is-not-available',
+    'SharkPool-SP',
     'Vadik1',
     'MikeDev',
     'LilyMakesThings'
