@@ -293,5 +293,4 @@ We provide [Scratch](https://scratch.mit.edu) free of charge, and want to keep i
 
 -->
 
-custom domains are pain
-we do a little trolling
+yeeeeouch
