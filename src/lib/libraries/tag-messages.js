@@ -171,4 +171,9 @@ export default defineMessages({
         description: 'Extensions from other mods (not counting turbowarp)',
         id: 'gui.libraryTags.other_mods'
     },
+    categorybuilders: {
+        defaultMessage: 'Extension Builders',
+        description: 'Tag for filtering a library by categorybuilders',
+        id: 'gui.libraryTags.extenionbuilders'
+    }
 });

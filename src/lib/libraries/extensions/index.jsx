@@ -218,6 +218,25 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Perlin Noise',
+        extensionId: 'iygPerlin',
+        iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
+        tags: ['penguinmod'],
+        description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
+        featured: true
+    },
+    {
+        name: 'TurboBuilder',
+        href: 'https://turbobuilder-steel.vercel.app',
+        extensionId: 'special_turboBuilder',
+        iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+        description: 'Create your own amazing extensions using a scratch-based UI!',
+        collaborator: 'Started by JeremyGamer13, continued by jwklong',
+        tags: ['builders'],
+        featured: true,
+        disabled: true
+    },
+    {
         name: 'Blockly2Math',
         extensionId: 'blockly2math',
         iconURL: blocklyIconURL,
