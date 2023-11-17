@@ -221,7 +221,7 @@ const menuItems = [
         {
         name: 'Save Data',
         extensionId: 'https://snail-ide.js.org/save.js',
-        collaborator: 'Mr_rudy'
+        collaborator: 'Mr_rudy',
         iconURL: snailSaveIcon,
         tags: ['penguinmod'],
         description: "Extremely easy way to save data.",
