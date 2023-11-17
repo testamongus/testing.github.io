@@ -139,7 +139,7 @@ ShareButton.defaultProps = {
         const projectName = _projectName.join(" - ");
 
         const url = location.origin;
-        window.open("https://snail-ide.github.io/sorry.html/");
+        window.open("https://snail-ide.github.io/sorry.html");
         return;
     }
 };
