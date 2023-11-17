@@ -154,21 +154,21 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'TurboWarp Desktop'}
                     </a>
-                    <a href="https://snail-ide.github.io/docs/embedding">
+                    <a href="https://snail-ide.js.org/docs/embedding">
                         <FormattedMessage
                             defaultMessage="Embedding"
                             description="Link in footer to embedding documentation for embedding link"
                             id="tw.footer.embed"
                         />
                     </a>
-                    <a href="https://snail-ide.github.io/docs/url-parameters">
+                    <a href="https://snail-ide.js.org/docs/url-parameters">
                         <FormattedMessage
                             defaultMessage="URL Parameters"
                             description="Link in footer to URL parameters documentation"
                             id="tw.footer.parameters"
                         />
                     </a>
-                    <a href="https://snail-ide.github.io/docs/">
+                    <a href="https://snail-ide.js.org/docs/">
                         <FormattedMessage
                             defaultMessage="Documentation"
                             description="Link in footer to additional documentation"
@@ -198,7 +198,7 @@ const Footer = () => (
                             id="tw.privacy"
                         />
                     </a>
-                    <a href="https://snail-ide.github.io/examples/">
+                    <a href="https://snail-ide.js.org/examples/">
                         <FormattedMessage
                             defaultMessage="Example Projects"
                             description="Link to example projects"

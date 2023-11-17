@@ -3,6 +3,7 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import snailSaveIcon from './snailsavedata/cool.svg';
 import gdApiICON from './gdapi/Capture.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -165,7 +166,7 @@ const menuItems = [
     },
     {
         name: 'Monitors Plus',
-        extensionId: 'https://snail-ide.github.io/Monitors-Plus.js',
+        extensionId: 'https://snail-ide.js.org/Monitors-Plus.js',
         iconURL: defaultExtensionIcon,
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
@@ -174,7 +175,7 @@ const menuItems = [
     },
     {
         name: 'Lazy Collisions',
-        extensionId: 'https://snail-ide.github.io/Lazy-Collisions.js',
+        extensionId: 'https://snail-ide.js.org/Lazy-Collisions.js',
         iconURL: defaultExtensionIcon,
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
@@ -183,7 +184,7 @@ const menuItems = [
     },
     {
         name: 'Newgrounds Audio',
-        extensionId: 'https://snail-ide.github.io/Newgrounds-Audio.js',
+        extensionId: 'https://snail-ide.js.org/Newgrounds-Audio.js',
         iconURL: defaultExtensionIcon,
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
@@ -192,7 +193,7 @@ const menuItems = [
     },
     {
         name: 'Tile Grids',
-        extensionId: 'https://snail-ide.github.io/Tile-Grids.js',
+        extensionId: 'https://snail-ide.js.org/Tile-Grids.js',
         iconURL: defaultExtensionIcon,
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
@@ -217,12 +218,13 @@ const menuItems = [
         description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
         featured: true
     },
-    {
-        name: 'Perlin Noise',
-        extensionId: 'iygPerlin',
-        iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
+        {
+        name: 'Save Data',
+        extensionId: 'https://snail-ide.js.org/save.js',
+        collaborator: 'Mr_rudy'
+        iconURL: snailSaveIcon,
         tags: ['penguinmod'],
-        description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
+        description: "Extremely easy way to save data.",
         featured: true
     },
     {
@@ -306,7 +308,7 @@ const menuItems = [
                 id="gui.extension.text2speech2.name"
             />
         ),
-        extensionId: 'https://snail-ide.github.io/tts.js',
+        extensionId: 'https://snail-ide.js.org/tts.js',
         collaborator: 'SharkPool',
         iconURL: text2speechIconURL,
         insetIconURL: text2speechInsetIconURL,
@@ -407,7 +409,7 @@ const menuItems = [
     },
     {
         name: 'Camera Sensing Plus',
-        extensionId: 'https://snail-ide.github.io/sensing.js',
+        extensionId: 'https://snail-ide.js.org/sensing.js',
         twDeveloper: 'SharkPool',
         iconURL: 'https://viewscreen.githubusercontent.com/view/svg?browser=chrome&bypass_fastly=true&color_mode=dark&commit=ba342a9d0fb3f3ee92bad604f3dd985888be1ae1&device=unknown_device&docs_host=https%3A%2F%2Fdocs.github.com&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f536861726b506f6f6c2d53502f536861726b506f6f6c732d457874656e73696f6e732f626133343261396430666233663365653932626164363034663364643938353838386265316165312f657874656e73696f6e2d7468756d62732f43616d6572612d53656e73696e672d506c75732e737667&logged_in=true&nwo=SharkPool-SP%2FSharkPools-Extensions&path=extension-thumbs%2FCamera-Sensing-Plus.svg&platform=linux&repository_id=668067482&repository_type=Repository&version=116#1060ffb0-fda8-4ee7-aa38-c842750410b4',
         tags: ['turbowarp'],
@@ -464,7 +466,7 @@ const menuItems = [
     },
     {
         name: 'Wacky Joke Blocks',
-        extensionId: 'https://snail-ide.github.io/joke.js',
+        extensionId: 'https://snail-ide.js.org/joke.js',
         collaborator: 'Mr_rudy/nmsderp',
         iconURL: 'https://c8.alamy.com/comp/RB1P6W/young-handsome-business-man-laughing-of-you-pointing-to-the-camera-with-finger-hand-over-chest-shame-expression-RB1P6W.jpg',
         tags: ['penguinmod'],
@@ -724,7 +726,7 @@ const menuItems = [
     },
     {
         name: 'Snail Extras',
-        extensionId: 'https://snail-ide.github.io/snail_extras.js', // update reference once file names are updated
+        extensionId: 'https://snail-ide.js.org/snail_extras.js', // update reference once file names are updated
         tags: ['penguinmod'],
         iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RWnel-yFH8B7obNf21l-F1DpJ7eCVd2oq2SeHm89Xw&s',
         insetIconURL: turbowarpIcon,
@@ -950,7 +952,7 @@ const menuItems = [
     },
     {
         name: 'GD API',
-        extensionId: 'https://snail-ide.github.io/examples/gd/gd.js',
+        extensionId: 'https://snail-ide.js.org/examples/gd/gd.js',
         iconURL: gdApiICON,
         tags: ['penguinmod'],
         collaborator: 'SharkPool-SP',
