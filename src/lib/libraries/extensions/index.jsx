@@ -235,8 +235,7 @@ const menuItems = [
         description: 'Create your own amazing extensions using a scratch-based UI!',
         collaborator: 'Started by JeremyGamer13, continued by jwklong',
         tags: ['builders'],
-        featured: true,
-        disabled: true
+        featured: true
     },
     {
         name: 'Blockly2Math',

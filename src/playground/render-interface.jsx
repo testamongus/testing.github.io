@@ -205,6 +205,13 @@ const Footer = () => (
                             id="tw.examples"
                         />
                     </a>
+                    <a href="https://snail-ide.js.org/editor.html?livetests">
+                        <FormattedMessage
+                            defaultMessage="Live Tests"
+                            description="Opens the livetests page"
+                            id="tw.livetests"
+                        />
+                    </a>
                     <a href="https://scratch.mit.edu/studios/33532977/">
                         <FormattedMessage
                             defaultMessage="Scratch Studio"
