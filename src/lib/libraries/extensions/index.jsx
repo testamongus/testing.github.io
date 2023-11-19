@@ -646,15 +646,6 @@ const menuItems = [
         internetConnectionRequired: true
     },
     {
-        name: 'Open Street Map',
-        extensionId: 'nmsderpMap',
-        iconURL: mapIconURL,
-        tags: ['penguinmod'],
-        description: 'Use maps in your project. W.I.P Extension.',
-        featured: true,
-        internetConnectionRequired: true
-    },
-    {
         name: 'Color Utility Blocks',
         extensionId: 'colors',
         iconURL: gsaColorUtilExtensionIcon,
@@ -1283,7 +1274,16 @@ if (IsLocal || IsLiveTests) {
             tags: ['penguinmod'],
             description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
             featured: true
-        }
+        },
+        {
+        name: 'Open Street Map',
+        extensionId: 'nmsderpMap',
+        iconURL: mapIconURL,
+        tags: ['penguinmod'],
+        description: 'Use maps in your project. W.I.P Extension.',
+        featured: true,
+        internetConnectionRequired: true
+    },
     ];
     extras.forEach(ext => {
         menuItems.push(ext);
