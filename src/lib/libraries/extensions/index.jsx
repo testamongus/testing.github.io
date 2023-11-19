@@ -3,6 +3,7 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import mapIconURL from './maps/openstreetmap.jpg';
 import snailSaveIcon from './snailsavedata/cool.svg';
 import gdApiICON from './gdapi/Capture.png';
 import musicInsetIconURL from './music/music-small.svg';
@@ -641,6 +642,15 @@ const menuItems = [
         iconURL: jgIframeExtensionIcon,
         tags: ['penguinmod'],
         description: 'Blocks to place and move around frames that contain HTML content or websites.',
+        featured: true,
+        internetConnectionRequired: true
+    },
+    {
+        name: 'Open Street Map',
+        extensionId: 'nmsderpMap',
+        iconURL: mapIconURL,
+        tags: ['penguinmod'],
+        description: 'Use maps in your project. W.I.P Extension.',
         featured: true,
         internetConnectionRequired: true
     },
