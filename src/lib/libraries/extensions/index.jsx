@@ -1277,7 +1277,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
         name: 'Open Street Map',
-        extensionId: 'nmsderpMap',
+        extensionId: 'adacraftleaflet',
         iconURL: mapIconURL,
         tags: ['penguinmod'],
         description: 'Use maps in your project. W.I.P Extension.',
