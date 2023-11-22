@@ -1,6 +1,7 @@
 /*
    This extension was made with TurboBuilder!
    https://turbobuilder-steel.vercel.app/
+   edited by thepython555 for safety
 */
 (function(Scratch) {
     const variables = {};
@@ -151,7 +152,7 @@
         }
     });
     Extension.prototype[`see`] = (args, util) => {
-        return localStorage.getItem(args["seeid"])
+        return localStorage.getItem("SNAIL-IDE-SAVE-EXT-" + args["seeid"])
     };
 
     blocks.push({
@@ -170,7 +171,7 @@
         }
     });
     Extension.prototype[`colorsave`] = (args, util) => {
-        localStorage.setItem(args["colorid"], args["color"])
+        localStorage.setItem("SNAIL-IDE-SAVE-EXT-" + args["colorid"], args["color"])
     };
 
     blocks.push({
@@ -189,7 +190,7 @@
         }
     });
     Extension.prototype[`savedata`] = (args, util) => {
-        localStorage.setItem(args["id"], args["data"])
+        localStorage.setItem("SNAIL-IDE-SAVE-EXT-" + args["id"], args["data"])
     };
 
     '#b48abc';
