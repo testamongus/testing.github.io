@@ -9,7 +9,7 @@ import styles from './share-button.css';
 function authenticate() {
     return new Promise((resolve, reject) => {
         const login = window.open(
-            `https://auth.itinerary.eu.org/auth/?redirect=${btoa(window.location.origin)}&name=PenguinMod`,
+            `https://auth.itinerary.eu.org/auth/?redirect=${btoa(window.location.origin)}&name=Snail-IDE`,
             "Scratch Authentication",
             `scrollbars=yes,resizable=yes,status=no,location=yes,toolbar=no,menubar=no,width=768,height=512,left=200,top=200`
         );
@@ -139,7 +139,7 @@ ShareButton.defaultProps = {
         const projectName = _projectName.join(" - ");
 
         const url = location.origin;
-        window.open("https://snail-ide.github.io/sorry.html");
+        window.open("https://snail-ide.vercel.app/upload?name=Project&external=https://snail-ide.js.org");
         return;
     }
 };
