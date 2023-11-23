@@ -3,6 +3,8 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import extCreateIcon from './ext-create/logo.png';
+import extCreateInset from './ext-create/inset.png';
 import mapIconURL from './maps/openstreetmap.jpg';
 import snailSaveIcon from './snailsavedata/cool.svg';
 import gdApiICON from './gdapi/Capture.png';
@@ -239,6 +241,17 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'CreateExt',
+        href: 'https://ext-create.vercel.app/',
+        extensionId: 'special_ExtCreate',
+        iconURL: extCreateIcon,
+        insetIconURL: extCreateInset,
+        description: 'Snail IDE version of TurboBuilder',
+        collaborator: 'Started by JeremyGamer13, continued by jwklong, modified by nmsderp',
+        tags: ['builders'],
+        featured: true
+    },
+    {
         name: 'Blockly2Math',
         extensionId: 'blockly2math',
         iconURL: blocklyIconURL,
@@ -395,6 +408,16 @@ const menuItems = [
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         description: 'A better way to handle audio from urls.',
+        featured: true
+    },
+    {
+        name: 'Search Params',
+        extensionId: 'https://extensions.turbowarp.org/ZXMushroom63/searchApi.js',
+        twDeveloper: 'ZXMushroom63',
+        iconURL: 'https://extensions.turbowarp.org/images/ZXMushroom63/searchApi.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Interact with URL search parameters: the part of the URL after a question mark.',
         featured: true
     },
     {
