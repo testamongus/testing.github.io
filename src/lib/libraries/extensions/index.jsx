@@ -3,8 +3,8 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
-import extCreateIcon from './ext-create/logo.png';
-import extCreateInset from './ext-create/inset.png';
+import extCreateIcon from './ext-create/logo.svg';
+import extCreateInset from './ext-create/inset.svg';
 import mapIconURL from './maps/openstreetmap.jpg';
 import snailSaveIcon from './snailsavedata/cool.svg';
 import gdApiICON from './gdapi/Capture.png';
