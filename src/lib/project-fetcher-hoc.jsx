@@ -42,7 +42,7 @@ const fetchProjectToken = projectId => {
     if (hashParams.has('token')) {
         return Promise.resolve(hashParams.get('token'));
     }
-    return fetch(`https://projects.penguinmod.site/api/projects/getPublished?id=${projectId}`)
+    return fetch(`https://backend.nmsderp.repl.co/api/projects/getPublished?id=${projectId}`)
         .then(r => {
             if (!r.ok) return null;
             return r.json();
@@ -136,7 +136,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                     storage.setProjectToken(projectId);
                     assetPromise = storage.load(storage.AssetType.Project, projectId, storage.DataFormat.JSON);
                 } else {
-                    projectUrl = `https://projects.penguinmod.site/api/projects/getPublished?type=file&id=${projectId}`
+                    projectUrl = `https://backend.nmsderp.repl.co/api/projects/getPublished?type=file&id=${projectId}`
                     assetPromise = progressMonitor.fetchWithProgress(projectUrl)
                         .then(r => {
                             this.props.vm.runtime.renderer.setPrivateSkinAccess(false);
@@ -176,7 +176,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                             if (!res.ok) {
                                 // Treat failure to load as an error
                                 // Throw to be caught by catch later on
-                                throw new Error('Could not find project; ' + err);
+                                throw new Error('Could not find project; ' + projectUrl);
                             }
                             res.arrayBuffer().then(data => {
                                 this.props.onFetchedProjectData(data, loadingState);
