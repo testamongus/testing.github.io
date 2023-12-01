@@ -431,6 +431,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Augmented Reality',
+        extensionId: 'https://extensions.turbowarp.org/ar.js',
+        twDeveloper: 'Vadik1',
+        iconURL: 'https://extensions.turbowarp.org/images/ar.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Shows image from camera and performs motion tracking, allowing 3D projects to correctly overlay virtual objects on real world.',
+        featured: true
+    },
+    {
         name: 'Camera Sensing Plus',
         extensionId: 'https://snail-ide.js.org/sensing.js',
         twDeveloper: 'SharkPool',
