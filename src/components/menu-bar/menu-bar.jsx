@@ -879,24 +879,6 @@ class MenuBar extends React.Component {
                         </a>
                     </div>
                 </div>
-                <div className={styles.menuBarItem}>
-                        <a
-                            className={styles.feedbackLink}
-                            href="https://snail-ide.js.org/editor.html?livetests"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            {/* todo: icon */}
-                            <Button className={styles.feedbackButton}>
-                                <FormattedMessage
-                                    defaultMessage="Live Tests"
-                                    description="Button to live tests"
-                                    id="tw.livetestsButton"
-                                />
-                            </Button>
-                        </a>
-                    </div>
-                </div>
 
                 <div className={styles.accountInfoGroup}>
                     <div className={styles.menuBarItem}>
