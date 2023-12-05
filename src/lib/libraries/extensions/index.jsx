@@ -1301,6 +1301,14 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'Christmas',
+            extensionId: 'jgChristmas',
+            iconURL: defaultExtensionIcon,
+            tags: ['penguinmod'],
+            description: 'all i want for christmas is yououuouououo',
+            featured: true
+        },
+        {
             name: 'Inline Blocks',
             extensionId: 'pmInlineBlocks',
             iconURL: pmInlineBlocksExtensionIcon,
