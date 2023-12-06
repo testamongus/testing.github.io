@@ -314,28 +314,13 @@ const menuItems = [
         featured: true
     },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="Text to Speech 2.0"
-                description="Name for the Text to Speech extension"
-                id="gui.extension.text2speech2.name"
-            />
-        ),
+        name: 'Text to Speech 2.0',
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Text-to-Speech.js',
-        collaborator: 'SharkPool',
-        iconURL: text2speechIconURL,
-        insetIconURL: text2speechInsetIconURL,
-        customInsetColor: '#9966FF',
-        tags: ['scratch'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Make your projects talk with the TikTok API."
-                description="Description for the Text to speech extension"
-                id="gui.extension.text2speech2.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: true
+        twDeveloper: 'SharkPool',
+        iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Text-to-Speech.svg',
+        tags: ['turbowarp'],
+        description: 'Make your projects talk with the TikTok API.',
+        featured: true
     },
     {
             name: (
