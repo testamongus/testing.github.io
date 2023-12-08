@@ -3,6 +3,7 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import pythonIcon from './python/py.svg';
 import extCreateIcon from './ext-create/logo.svg';
 import extCreateInset from './ext-create/inset.svg';
 import mapIconURL from './maps/openstreetmap.jpg';
@@ -1208,6 +1209,14 @@ if (IsLocal || IsLiveTests) {
             iconURL: defaultExtensionIcon,
             tags: ['penguinmod'],
             description: 'Basic blocks for files. This has been replaced by the TurboWarp files extension.',
+            featured: true
+        },
+        {
+            name: 'Python',
+            extensionId: 'pythonExtension',
+            iconURL: pythonIcon,
+            tags: ['programminglanguage'],
+            description: 'Execute python commands on our server and have them used in your projects.',
             featured: true
         },
         {
