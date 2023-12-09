@@ -311,6 +311,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Objects',
+        extensionId: 'https://extensions.penguinmod.com/extensions/skyhigh173/object.js',
+        iconURL: 'https://extensions.penguinmod.com/images/skyhigh173/object.svg',
+        tags: ['penguinmod'],
+        collaborator: 'skyhigh173',
+        description: 'Handle large JSON files at an extreme speed',
+        featured: true
+    }
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Video Sensing"
