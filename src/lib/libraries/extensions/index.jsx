@@ -188,8 +188,8 @@ const menuItems = [
     },
     {
         name: 'Screensharing',
-        extensionId: 'https://thepython555.github.io/screen-sharing.js',
-        iconURL: 'https://thepython555.github.io/Screensharing.png', // please forgive me the text is slightly offcenter
+        extensionId: 'https://snail-ide.js.org/screen-sharing.js',
+        iconURL: 'https://snail-ide.js.org/Screensharing.png', // please forgive me the text is slightly offcenter
         collaborator: 'pooiod7',
         tags: ['penguinmod'],
         description: 'Share your screen and get the current frame as a image.',
