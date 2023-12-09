@@ -318,7 +318,7 @@ const menuItems = [
         collaborator: 'skyhigh173',
         description: 'Handle large JSON files at an extreme speed',
         featured: true
-    }
+    },
     {
         name: (
             <FormattedMessage
