@@ -132,6 +132,13 @@ const Footer = () => (
                     </a>
                     <a href="https://github.com/sponsors/GarboMuffin">
                         <FormattedMessage
+                            defaultMessage="Send us Repl.it Cycles"
+                            description="Donation link in footer"
+                            id="tw.footer.donate"
+                        />
+                    </a>
+                    <a href="https://github.com/sponsors/GarboMuffin">
+                        <FormattedMessage
                             defaultMessage="Donate to TurboWarp Developer"
                             description="Donation link in footer"
                             id="tw.footer.donate"
