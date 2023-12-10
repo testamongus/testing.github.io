@@ -235,7 +235,11 @@ const Footer = () => (
 class Interface extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            showDonationPopup: false,
+        };
         this.handleUpdateProjectTitle = this.handleUpdateProjectTitle.bind(this);
+        this.toggleDonationPopup = this.toggleDonationPopup.bind(this);
     }
     componentDidUpdate(prevProps) {
         if (prevProps.isLoading && !this.props.isLoading) {
@@ -284,6 +288,14 @@ class Interface extends React.Component {
                         />
                     </div>
                 ) : null}
+                {/* Donation Popup */}
+                {this.state.showDonationPopup && (
+                    <div className={styles.donationPopup}>
+                        {/* Add your donation message and a button to close the popup */}
+                        <p>Snail IDE is a free service that anybody can use to learn to code, we host our servers on replit and we will eventually need cycles to continue allowing more projects to be uploaded. So please check out https://replit.com/@nmsderp/backend?v=1 to tip cycles.</p>
+                        <button onClick={this.toggleDonationPopup}>Close</button>
+                    </div>
+                )}
                 <div
                     className={styles.center}
                     style={isPlayerOnly ? ({
