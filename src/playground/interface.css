@@ -177,3 +177,33 @@ a {
 [theme="dark"] .remixProject:hover {
     background-color: rgba(0, 0, 0, 5%);
 }
+/* Donation Popup Styles */
+.donationPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+}
+
+.donationPopup p {
+    margin-bottom: 10px;
+}
+
+.donationPopup button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.donationPopup button:hover {
+    background-color: #45a049;
+}
