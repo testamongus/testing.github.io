@@ -319,6 +319,15 @@ const menuItems = [
         description: 'Handle large JSON files at an extreme speed',
         featured: true
     },
+       {
+        name: 'Money Utilities',
+        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Money-Utilities.js',
+        iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Money-Utilities.svg',
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: "Convert Currencies and get Currency Information.",
+        featured: true
+    },
     {
         name: (
             <FormattedMessage
