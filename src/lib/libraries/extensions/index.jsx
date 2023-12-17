@@ -250,6 +250,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Grayscale',
+        extensionId: 'https://penguin-mod-extensions-gallery.vercel.app/extensions/Mr_rudy/grayscale.js',
+        collaborator: 'Mr_rudy',
+        iconURL: 'https://penguin-mod-extensions-gallery.vercel.app/images/Mr_rudy/grayscale.svg',
+        tags: ['penguinmod'],
+        description: "Toggle a dramatic grayscale effect on your project. ",
+        featured: true
+    },
+    {
         name: 'TurboBuilder',
         href: 'https://turbobuilder-steel.vercel.app',
         extensionId: 'special_turboBuilder',
