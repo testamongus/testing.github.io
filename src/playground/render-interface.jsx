@@ -205,6 +205,13 @@ const Footer = () => (
                             id="tw.examples"
                         />
                     </a>
+                    <a href="`https://snail-ide.vercel.app/report?type=project&id=${projectId}`">
+                        <FormattedMessage
+                            defaultMessage="Report this Projoct"
+                            description="Report the Project"
+                            id="tw.examples"
+                        />
+                    </a>
                     <a href="https://snail-ide.js.org/editor.html?livetests">
                         <FormattedMessage
                             defaultMessage="Live Tests"
