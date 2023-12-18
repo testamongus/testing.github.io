@@ -21,10 +21,7 @@ class UsernameModal extends React.Component {
         bindAll(this, [
             'handleFramerateChange',
             'handleCustomizeFramerate',
-            /*
-            add back: nohqpen
             'handleHighQualityPenChange',
-            */
             'handleInterpolationChange',
             'handleInfiniteClonesChange',
             'handleRemoveFencingChange',
@@ -32,6 +29,7 @@ class UsernameModal extends React.Component {
             'handleWarpTimerChange',
             'handleStageWidthChange',
             'handleStageHeightChange',
+            'handleStagePresetUsed',
             'handleDisableCompilerChange',
             'handleStoreProjectOptions'
         ]);
@@ -39,20 +37,18 @@ class UsernameModal extends React.Component {
     handleFramerateChange (e) {
         this.props.vm.setFramerate(e.target.checked ? 60 : 30);
     }
-    handleCustomizeFramerate () {
+    async handleCustomizeFramerate () {
+        // prompt() returns Promise in desktop app
         // eslint-disable-next-line no-alert
-        const newFramerate = prompt(this.props.intl.formatMessage(messages.newFramerate), this.props.framerate);
+        const newFramerate = await prompt(this.props.intl.formatMessage(messages.newFramerate), this.props.framerate);
         const parsed = parseFloat(newFramerate);
         if (isFinite(parsed)) {
             this.props.vm.setFramerate(parsed);
         }
     }
-    /*
-    add back: nohqpen
     handleHighQualityPenChange (e) {
         this.props.vm.renderer.setUseHighQualityRender(e.target.checked);
     }
-    */
     handleInterpolationChange (e) {
         this.props.vm.setInterpolation(e.target.checked);
     }
@@ -87,6 +83,13 @@ class UsernameModal extends React.Component {
     handleStageHeightChange (value) {
         this.props.vm.setStageSize(this.props.customStageSize.width, value);
     }
+    handleStagePresetUsed (widescreen) {
+        if (widescreen) {
+            this.props.vm.setStageSize(640, 360);
+            return;
+        }
+        this.props.vm.setStageSize(480, 360);
+    }
     handleStoreProjectOptions () {
         this.props.vm.storeProjectOptions();
     }
@@ -111,6 +114,7 @@ class UsernameModal extends React.Component {
                 onWarpTimerChange={this.handleWarpTimerChange}
                 onStageWidthChange={this.handleStageWidthChange}
                 onStageHeightChange={this.handleStageHeightChange}
+                onStagePresetUsed={this.handleStagePresetUsed}
                 onDisableCompilerChange={this.handleDisableCompilerChange}
                 stageWidth={this.props.customStageSize.width}
                 stageHeight={this.props.customStageSize.height}
