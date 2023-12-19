@@ -332,7 +332,7 @@ const CustomStageSize = ({
                     <button
                         className={styles.customStageSizeButton}
                         data-selected={stageWidth === 360 && stageHeight === 480}
-                        data-widescreen={true}
+                        data-mobile={true}
                         onClick={() => onStagePresetUsed(true)}
                     >
                         Mobile Game
