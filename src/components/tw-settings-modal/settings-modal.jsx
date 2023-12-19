@@ -329,6 +329,14 @@ const CustomStageSize = ({
                     >
                         16:9
                     </button>
+                    <button
+                        className={styles.customStageSizeButton}
+                        data-selected={stageWidth === 360 && stageHeight === 480}
+                        data-widescreen={true}
+                        onClick={() => onStagePresetUsed(true)}
+                    >
+                        Mobile Game
+                    </button>
                 </div>
                 <div className={styles.customStageSizeContainer}>
                     <FormattedMessage
@@ -407,7 +415,7 @@ const StoreProjectOptions = ({ onStoreProjectOptions }) => (
             <p>
                 <FormattedMessage
                     // eslint-disable-next-line max-len
-                    defaultMessage="Stores the selected settings in the project so they will be automatically applied when PenguinMod loads this project. Warp timer will not be saved."
+                    defaultMessage="Stores the selected settings in the project so they will be automatically applied when Snail IDE loads this project. Warp timer will not be saved."
                     description="Help text for the store settings in project button"
                     id="tw.settingsModal.storeProjectOptionsHelp"
                 />
