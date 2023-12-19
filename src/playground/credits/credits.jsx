@@ -84,7 +84,7 @@ const Credits = () => (
         </section>
         <section>
             <h2>GitHub Pages</h2>
-            <p>We currently use <a href="https://pages.github.com/">GitHub Pages</a> to host PenguinMod.</p>
+            <p>We currently use <a href="https://pages.github.com/">GitHub Pages</a> to host Snail IDE.</p>
             <a href="https://pages.github.com/">
                 <img
                     src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png"
@@ -98,8 +98,8 @@ const Credits = () => (
             </p>
             <h2>Sound Effects</h2>
             <p>
-                PenguinMod has added some more sounds to the Sound Library.
-                All PenguinMod sounds are
+                Snail IDE has added some more sounds to the Sound Library.
+                All Snail IDE sounds are
                 from <a href="https://freesound.org/">https://freesound.org/</a> and <a href="https://archive.org/">https://archive.org/</a> under
                 the Public Domain license.
             </p>
@@ -126,7 +126,7 @@ const Credits = () => (
             <h2>Addons</h2>
             <p>
                 Addons are mostly taken from <a href="https://scratchaddons.com/">Scratch Addons</a>,
-                but we hope to have some PenguinMod addons in the future.
+                but we hope to have some Snail IDE addons in the future.
                 Here are the developers that made the current addons available.
             </p>
             <UserList users={UserData.addonDevelopers} />
@@ -183,8 +183,8 @@ const Credits = () => (
                 far more than we could hope to list here.
             </p>
             <p>
-                Unfortunately due to PenguinMod's small size, we have decided to mainly focus on English.
-                You can still use PenguinMod with the other languages, but they will not be updated at this time.
+                Unfortunately due to Snail IDE's small size, we have decided to mainly focus on English.
+                You can still use Snail IDE with the other languages, but they will not be updated at this time.
             </p>
         </section>
         <section>
