@@ -369,6 +369,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Asset Manager',
+        extensionId: 'https://extensions.turbowarp.org/Lily/Assets.js',
+        twDeveloper: 'LillyMakesThings',
+        iconURL: 'https://extensions.turbowarp.org/images/Lily/Assets.svg',
+        tags: ['turbowarp'],
+        description: 'Add, remove, and get data from various types of assets.',
+        featured: true
+    },
+    {
             name: (
                 <FormattedMessage
                     defaultMessage="Text to Speech (Scratch)"
