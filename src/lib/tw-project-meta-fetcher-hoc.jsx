@@ -6,8 +6,8 @@ import log from './log';
 import { setProjectTitle } from '../reducers/project-title';
 import { setAuthor, setDescription, setExtraProjectInfo, setRemixedProjectInfo } from '../reducers/tw';
 
-const API_URL = 'https://backend.nmsderp.repl.co/api/projects/getPublished?id=$id';
-const API_REMIX_URL = 'https://backend.nmsderp.repl.co/api/pmWrapper/remixes?id=$id';
+const API_URL = 'https://snailshare-backend.glitch.me/api/projects/getPublished?id=$id';
+const API_REMIX_URL = 'https://snailshare-backend.glitch.me/api/pmWrapper/remixes?id=$id';
 
 function APIProjectToReadableProject(apiProject) {
     return {
