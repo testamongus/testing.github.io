@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import log from './log';
 import {getIsShowingProject} from '../reducers/project-state';
 
-const PACKAGER_URL = 'https://studio.penguinmod.site/PenguinMod-Packager';
-const PACKAGER_ORIGIN = "https://studio.penguinmod.site";
+const PACKAGER_URL = 'https://snail-ide.js.org/Snail-IDE-Packager';
+const PACKAGER_ORIGIN = "https://snail-ide.js.org";
 
 const readBlobAsArrayBuffer = blob => new Promise((resolve, reject) => {
     const fr = new FileReader();
