@@ -544,12 +544,32 @@ const menuItems = [
     },
     {
         name: '0tils',
-        extensionId: 'https://survexe1pc.github.io/unsafe-extensions/0znzw/0tils.js',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/0tils.js',
         twDeveloper: '0znzw',
-        iconURL: 'https://survexe1pc.github.io/unsafe-extensions/images/0znzw/0tils.png',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/0znzw/0tils.png',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
-        description: 'Placeholder',
+        description: 'Utilites by 0znzw',
+        featured: true
+    },
+    {
+        name: 'Sprite Sheets',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/SpriteSheets.js',
+        twDeveloper: 'Ashime',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/unknown.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Handle sprite sheets!',
+        featured: true
+    },
+    {
+        name: 'Right Click Menu',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/RightClickMenu.js',
+        twDeveloper: 'Ashime',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/0znzw/RightClickMenu.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Disable and enable the right click menu.',
         featured: true
     },
     {
