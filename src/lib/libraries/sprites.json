@@ -3304,6 +3304,27 @@
         "blocks": {}
     },
     {
+        "name": "Code4Ever",
+        "tags": [
+            "animals"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "d6fca8032161abb18de704bc12b69d60",
+                "name": "Code4Ever",
+                "bitmapResolution": 1,
+                "md5ext": "d6fca8032161abb18de704bc12b69d60.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 62.895774094344375,
+                "rotationCenterY": 25.95373585639973
+            }
+        ],
+        "sounds": [],
+        "blocks": {}
+    },
+    {
         "name": "Dani",
         "tags": [
             "people"
