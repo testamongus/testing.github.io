@@ -16,6 +16,7 @@ const BitsAndBytes = require('./freecam-v2.ttf');
 const Arcade = require('./PressStart2P.ttf');
 const Archivo = require('./Archivo-Regular.ttf');
 const ArchivoBlack = require('./Archivo-Black.ttf');
+const Handjet = require('./Archivo-Black.ttf');
 
 const log = require('../log').default;
 
@@ -33,7 +34,8 @@ const fontSource = {
     'Playful': Playful,
     'Arcade': Arcade,
     'Archivo': Archivo,
-    'Archivo Black': ArchivoBlack
+    'Archivo Black': ArchivoBlack,
+    'Handjet': Handjet
 };
 
 const fontData = {};

@@ -219,10 +219,10 @@ const Footer = () => (
                             id="tw.snail-studio"
                         />
                     </a>
-                    <a href="https://snail-ide-beta.mobirisesite.com/">
+                    <a href="https://snail-ide.vercel.app">
                         <FormattedMessage
-                            defaultMessage="Homepage Beta"
-                            description="Link to homepage beta"
+                            defaultMessage="Homepage"
+                            description="Link to homepage"
                             id="tw.beta"
                         />
                     </a>
