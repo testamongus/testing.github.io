@@ -1422,13 +1422,8 @@ const lists = function () {
 };
 const effectsCategory = function () {
     return `
+    
     <category name="Effects" id="effectsCategory" colour="#1e246e" secondaryColour="#1e246e">
-    <block type="looks_setTintColor">
-            <value name="color">
-                <shadow type="colour_picker"></shadow>
-            </value>
-        </block>
-        <block type="looks_tintColor"/>
         <block type="looks_changeeffectby">
             <value name="CHANGE">
                 <shadow type="math_number">
@@ -1436,6 +1431,9 @@ const effectsCategory = function () {
                 </shadow>
             </value>
         </block>
+        <block type="looks_show"/>
+            <block type="looks_hide"/>
+            <block type="looks_getSpriteVisible"/>
         <block type="looks_seteffectto">
             <value name="VALUE">
                 <shadow type="math_number">
