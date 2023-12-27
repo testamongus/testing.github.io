@@ -1420,6 +1420,35 @@ const lists = function () {
     </category>
     `;
 };
+const effectsCategory = function () {
+    return `
+    <category name="Effects" id="effectsCategory" colour="#1e246e" secondaryColour="#1e246e">
+    <block type="looks_setTintColor">
+            <value name="color">
+                <shadow type="colour_picker"></shadow>
+            </value>
+        </block>
+        <block type="looks_tintColor"/>
+        <block type="looks_changeeffectby">
+            <value name="CHANGE">
+                <shadow type="math_number">
+                    <field name="NUM">25</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="looks_seteffectto">
+            <value name="VALUE">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="looks_cleargraphiceffects"/>
+        <block type="looks_getEffectValue"/>
+        ${categorySeparator}
+    </category>
+    `;
+};
 const myBlocks = function () {
     return `
     <category
@@ -1506,6 +1535,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
     const operatorsXML = moveCategory('operators') || operators(isInitialSetup, isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isInitialSetup, isStage, targetId);
     const listsXML = moveCategory('lists') || lists(isInitialSetup, isStage, targetId);
+    const effectsXML = moveCategory('effects') || effectsCategory(isInitialSetup, isStage, targetId);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isInitialSetup, isStage, targetId);
     const liveTestsXML = moveCategory('liveTests') || liveTests(isLiveTest);
 
@@ -1520,6 +1550,7 @@ const makeToolboxXML = function (isInitialSetup, isStage = true, targetId, categ
         operatorsXML, gap,
         variablesXML, gap,
         listsXML, gap,
+        effectsXML, gap,
         myBlocksXML, gap,
         isLiveTest ? [liveTestsXML, gap] : ''
     ];
