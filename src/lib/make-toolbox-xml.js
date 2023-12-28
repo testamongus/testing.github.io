@@ -607,6 +607,7 @@ const events = function (isInitialSetup, isStage) {
         <block type="event_whenstopclicked"/>
         <block type="event_always"></block>
         <block type="event_whentouchingobject"></block>
+        <block type="event_touchingobjectmenu"></block>
         <block type="event_whenanything">
             <value name="ANYTHING"></value>
         </block>
@@ -636,6 +637,7 @@ const events = function (isInitialSetup, isStage) {
                 <shadow type="event_broadcast_menu"></shadow>
             </value>
         </block>
+        <block type="event_broadcast_menu"></block>
         <block type="event_broadcastandwait">
             <value name="BROADCAST_INPUT">
               <shadow type="event_broadcast_menu"></shadow>
