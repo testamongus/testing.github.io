@@ -606,6 +606,7 @@ const events = function (isInitialSetup, isStage) {
         <block type="event_whenflagclicked"/>
         <block type="event_whenstopclicked"/>
         <block type="event_always"></block>
+        <block type="event_whentouchingobject"></block>
         <block type="event_whenanything">
             <value name="ANYTHING"></value>
         </block>
@@ -907,6 +908,7 @@ const sensing = function (isInitialSetup, isStage) {
         <block type="sensing_mouseclicked"/>
         <block type="sensing_mousex"/>
         <block type="sensing_mousey"/>
+        <block type="sensing_loud"/>
         ${blockSeparator}
         <block type="sensing_setclipboard">
             <value name="ITEM">
