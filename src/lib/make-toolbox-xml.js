@@ -384,11 +384,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </value>
             </block>
             ${blockSeparator}
-            <block type="looks_setTintColor">
-                <value name="color">
-                    <shadow type="colour_picker"></shadow>
-                </value>
-            </block>
             <block type="looks_changesizeby">
                 <value name="CHANGE">
                     <shadow type="math_number">
@@ -396,7 +391,6 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                     </shadow>
                 </value>
             </block>
-            <block type="looks_tintColor"/>
             <block type="looks_setsizeto">
                 <value name="SIZE">
                     <shadow type="math_number">
@@ -1455,12 +1449,6 @@ const effectsCategory = function () {
         </block>
         <block type="looks_cleargraphiceffects"/>
         <block type="looks_getEffectValue"/>
-        <block type="looks_setTintColor">
-                <value name="color">
-                    <shadow type="colour_picker"></shadow>
-                </value>
-            </block>
-            <block type="looks_tintColor"/>
         ${categorySeparator}
     </category>
     `;
