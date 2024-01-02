@@ -214,6 +214,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'SnailShare API',
+        extensionId: 'https://snail-ide.js.org/api.js',
+        iconURL: 'https://snail-ide.js.org/snailideapiext.png',
+        collaborator: 'BA4X',
+        tags: ['penguinmod'],
+        description: 'Fetch details of projects and users from Snailshare.',
+        featured: true
+    },
+    {
         name: 'Tile Grids',
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Tile-Grids.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Tile-Grids.svg',
