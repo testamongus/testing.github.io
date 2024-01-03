@@ -232,6 +232,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Site Runtime',
+        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/webextension.js',
+        tags: ['other_mods'],
+        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/site-runtime.png',
+        description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
+        featured: true,
+        collaborator: 'MrIncredibleMaker',
+        internetConnectionRequired: true,
+    },
+    {
         name: 'AdaBrowser',
         extensionId: 'adabrowser',
         iconURL: 'https://www.adacraft.org/studio/static/assets/40998229311219c2117265d5e4bd9745.png',
