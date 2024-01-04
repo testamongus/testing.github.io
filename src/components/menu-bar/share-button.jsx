@@ -1,147 +1,198 @@
 import classNames from 'classnames';
-import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
+import bindAll from 'lodash.bindall';
 import Button from '../button/button.jsx';
 
+import loadingIcon from './share-loading.svg';
 import styles from './share-button.css';
 
-function authenticate() {
-    return new Promise((resolve, reject) => {
-        const login = window.open(
-            `https://auth.itinerary.eu.org/auth/?redirect=${btoa(window.location.origin)}&name=Snail-IDE`,
-            "Scratch Authentication",
-            `scrollbars=yes,resizable=yes,status=no,location=yes,toolbar=no,menubar=no,width=768,height=512,left=200,top=200`
-        );
-        if (!login) {
-            reject("PopupBlocked");
-        }
-        let cantAccessAnymore = false;
-        let finished = false;
-        let interval = null;
-        interval = setInterval(() => {
-            if (login?.closed && (!finished)) {
-                clearInterval(interval);
-                try {
-                    login.close();
-                } catch {
-                    // what a shame we couldnt close the window that doesnt exist anymore
-                }
-                reject("PopupClosed");
-            }
-            try {
-                const query = login.location.search;
-                if (!cantAccessAnymore) return;
-                const parameters = new URLSearchParams(query);
-                const privateCode = parameters.get("privateCode");
-                finished = true;
-                clearInterval(interval);
-                setTimeout(() => {
-                    login.close();
-                }, 1000);
-                resolve(privateCode);
-            } catch {
-                // due to strange chrome bug, window still has the previous url on it so we need to wait until we switch to the auth site
-                cantAccessAnymore = true;
-                // now we cant access the location yet since the user hasnt left the authentication site
-            }
-        }, 10);
-    })
-}
+const getProjectThumbnail = () => new Promise(resolve => {
+    window.vm.renderer.requestSnapshot(uri => {
+        resolve(uri);
+    });
+});
+const getProjectUri = () => new Promise(resolve => {
+    window.vm.saveProjectSb3().then(blob => new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = element => {
+            resolve(element.target.result);
+        };
+        reader.readAsDataURL(blob);
+    }))
+        .then(resolve);
+});
 
-const ShareButton = ({
-    className,
-    isShared,
-    onClick
-}) => (
-    <Button
-        className={classNames(
-            className,
-            styles.shareButton,
-            { [styles.shareButtonIsShared]: isShared }
-        )}
-        onClick={onClick}
-    >
-        <FormattedMessage
-            defaultMessage="Upload"
-            description="Label for project share button"
-            id="gui.menuBar.pmshare"
-        />
-    </Button>
-);
+const isUploadAvailable = async () => {
+    let res = null;
+    try {
+        res = await fetch('https://snailshare-backend.glitch.me/api');
+    } catch {
+        // failed to fetch entirely
+        return false;
+    }
+    return res.ok;
+};
+
+class ShareButton extends React.Component {
+    constructor(props) {
+        super(props);
+        bindAll(this, [
+            'handleMessageEvent',
+            'wrapperEventHandler',
+            'onUploadProject'
+        ]);
+        this.state = {
+            loading: false,
+            imageUri: ''
+        };
+    }
+    componentDidMount() {
+        window.addEventListener('message', this.wrapperEventHandler);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('message', this.wrapperEventHandler);
+    }
+
+    wrapperEventHandler(e) {
+        this.handleMessageEvent(e);
+    }
+    async handleMessageEvent(e) {
+        if (!e.origin.startsWith(`https://snail-ide.vercel.app`)) {
+            return;
+        }
+
+        if (!e.data.p4) {
+            return;
+        }
+
+        const packagerData = e.data.p4;
+        if (packagerData.type !== 'validate') {
+            return;
+        }
+
+        const imageUri = this.state.imageUri;
+        e.source.postMessage({
+            p4: {
+                type: 'image',
+                uri: imageUri
+            }
+        }, e.origin);
+        const projectUri = await getProjectUri();
+        e.source.postMessage({
+            p4: {
+                type: 'project',
+                uri: projectUri
+            }
+        }, e.origin);
+
+        e.source.postMessage({
+            p4: {
+                type: 'finished'
+            }
+        }, e.origin);
+    }
+    async onUploadProject() {
+        if (this.state.loading) return;
+        if (!window.vm) return;
+        if (!window.vm.runtime) return;
+        if (!window.vm.renderer) return;
+
+        // get the project thumbnail
+        await new Promise((resolve) => {
+            getProjectThumbnail().then(dataUrl => {
+                this.setState({
+                    imageUri: dataUrl
+                });
+                resolve();
+            });
+            window.vm.renderer.draw(); // force the callback to run
+            setTimeout(() => {
+                window.vm.renderer.draw(); // force the callback to run
+            }, 50);
+            setTimeout(() => {
+                window.vm.renderer.draw(); // force the callback to run
+            }, 100);
+        });
+
+        this.setState({
+            loading: true
+        });
+        isUploadAvailable().then(available => {
+            this.setState({
+                loading: false
+            });
+            if (!available) {
+                // error?
+                console.warn('Project Server did not respond. Uploading is not available.');
+                alert('Uploading is currently unavailable. Please wait for the server to be restored.');
+                return;
+            }
+
+            let remixPiece = '';
+            if (location.hash.includes('#')) {
+                const id = location.hash.replace('#', '');
+                remixPiece = `&remix=${id}`;
+            }
+
+            const url = location.origin;
+            window.open(`https://snail-ide.vercel.app/upload?name=${this.props.projectTitle}${remixPiece}&external=${url}`, '_blank');
+        });
+    }
+    render() {
+        return (
+            <Button
+                className={classNames(
+                    this.props.className,
+                    styles.shareButton,
+                    { [styles.shareButtonIsShared]: this.props.isShared },
+                    { [styles.disabled]: this.state.loading },
+                )}
+                onClick={this.onUploadProject}
+            >
+                <div className={classNames(styles.shareContent)}>
+                    {window.location.hash.includes('#') ?
+                        <FormattedMessage
+                            defaultMessage="Remix"
+                            description="Menu bar item for remixing"
+                            id="gui.menuBar.remix"
+                        /> :
+                        <FormattedMessage
+                            defaultMessage="Upload"
+                            description="Label for project share button"
+                            id="gui.menuBar.pmshare"
+                        />}
+                    {this.state.loading ? (
+                        <img
+                            className={classNames(styles.icon)}
+                            draggable={false}
+                            src={loadingIcon}
+                            height={20}
+                            width={20}
+                        />
+                    ) : null}
+                </div>
+            </Button>
+        );
+    }
+}
 
 ShareButton.propTypes = {
     className: PropTypes.string,
     isShared: PropTypes.bool,
-    onClick: PropTypes.func
+    projectTitle: PropTypes.string
 };
 
-const getProjectThumbnail = () => {
-    return new Promise((resolve, reject) => {
-        window.vm.renderer.requestSnapshot(uri => {
-            resolve(uri);
-        })
-    })
-}
-const getProjectUri = () => {
-    return new Promise((resolve, reject) => {
-        window.vm.saveProjectSb3().then(blob => {
-            return new Promise(resolve => {
-                const reader = new FileReader();
-                reader.onload = element => {
-                    resolve(element.target.result);
-                }
-                reader.readAsDataURL(blob);
-            })
-        }).then(resolve);
-    })
-}
+const mapStateToProps = state => ({
+    projectTitle: state.scratchGui.projectTitle
+});
 
-window.addEventListener("message", async (e) => {
-    if (!e.origin.startsWith(`https://penguinmod.site`)) {
-        return;
-    }
+// eslint-disable-next-line no-unused-vars
+const mapDispatchToProps = dispatch => ({});
 
-    if (!e.data.p4) {
-        return
-    }
-
-    const packagerData = e.data.p4;
-    if (packagerData.type !== 'validate') {
-        return;
-    }
-
-    const imageUri = await getProjectThumbnail();
-    e.source.postMessage({
-        p4: {
-            type: 'image',
-            uri: imageUri
-        }
-    }, e.origin);
-    const projectUri = await getProjectUri();
-    e.source.postMessage({
-        p4: {
-            type: 'project',
-            uri: projectUri
-        }
-    }, e.origin);
-    e.source.postMessage({
-        p4: {
-            type: 'finished'
-        }
-    }, e.origin);
-})
-
-ShareButton.defaultProps = {
-    onClick: () => {
-        let _projectName = document.title.split(" - ");
-        _projectName.pop();
-        const projectName = _projectName.join(" - ");
-
-        const url = location.origin;
-        window.open("https://snail-ide.vercel.app/upload?name=Project&external=https://snail-ide.js.org");
-        return;
-    }
-};
-
-export default ShareButton;
+export default injectIntl(connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ShareButton));
