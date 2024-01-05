@@ -244,15 +244,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Leaflet',
-        extensionId: 'posenet2scratch',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/cc4d68fe9d6a77c7f35f9d5461b60967.png',
-        internetConnectionRequired: true,
-        tags: ['other_mods'],
-        description: 'Blocks to display maps with Leaflet',
-        featured: true
-    },
-    {
         name: 'Tile Grids',
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Tile-Grids.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Tile-Grids.svg',
