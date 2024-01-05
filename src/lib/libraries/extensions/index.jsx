@@ -228,7 +228,7 @@ const menuItems = [
         iconURL: 'https://www.adacraft.org/studio/static/assets/cc4d68fe9d6a77c7f35f9d5461b60967.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
-        tags: ['penguinmod'],
+        tags: ['other_mods'],
         description: 'Detect human poses quickly and accurately with a normal WebCam without using a special device',
         featured: true
     },
