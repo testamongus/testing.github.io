@@ -233,6 +233,26 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'ImageClassifer2Scratch',
+        extensionId: 'ic2scratch',
+        iconURL: 'https://raw.githubusercontent.com/champierre/ic2scratch/master/scratch-gui/src/lib/libraries/extensions/ic2scratch/ic2scratch.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/ic2scratch/master/scratch-gui/src/lib/libraries/extensions/ic2scratch/ic2scratch-small.png',
+        collaborator: 'champierre',
+        internetConnectionRequired: true,
+        tags: ['other_mods'],
+        description: 'Image Classification Blocks.',
+        featured: true
+    },
+    {
+        name: 'Leaflet',
+        extensionId: 'posenet2scratch',
+        iconURL: 'https://www.adacraft.org/studio/static/assets/cc4d68fe9d6a77c7f35f9d5461b60967.png',
+        internetConnectionRequired: true,
+        tags: ['other_mods'],
+        description: 'Blocks to display maps with Leaflet',
+        featured: true
+    },
+    {
         name: 'Tile Grids',
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Tile-Grids.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Tile-Grids.svg',
