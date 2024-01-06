@@ -256,7 +256,6 @@ const menuItems = [
         name: 'Key Simulator',
         extensionId: 'https://snail-ide.js.org/keysim.js',
         iconURL: defaultExtensionIcon,
-        insetIconURL, turbowarpIcon,
         collaborator: 'CubesterYT',
         tags: ['turbowarp'],
         description: 'Simulate pressing a key on the keyboard.',
