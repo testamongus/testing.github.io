@@ -151,7 +151,7 @@ const CustomExtensionModal = props => (
                                 // eslint-disable-next-line max-len
                                 defaultMessage="Unsandboxed extensions can corrupt your project, delete your settings, phish for passwords, and other bad things. The {APP_NAME} developers are not responsible for any resulting issues."
                                 description="Warning that appears when disabling extension security sandbox"
-                                id="tw.customExtensionModal.unsandboxedWarning2"
+                                id="pm.customExtensionModal.unsandboxedWarning2"
                                 values={{
                                     APP_NAME
                                 }}
@@ -160,25 +160,35 @@ const CustomExtensionModal = props => (
                     )}
                 </React.Fragment>
             ) : (
-                props.unsandboxed ? (
-                    <p className={styles.trustedExtension}>
-                        <FormattedMessage
-                            // eslint-disable-next-line max-len
-                            defaultMessage="This extension will be loaded without the sandbox because it is from a trusted source."
-                            description="Message that appears in custom extension prompt"
-                            id="tw.customExtensionModal.trusted"
-                        />
-                    </p>
-                ) : (
+                <React.Fragment>
+                    {props.unsandboxed ? (
+                        <p className={styles.trustedExtension}>
+                            <FormattedMessage
+                                // eslint-disable-next-line max-len
+                                defaultMessage="This extension will be loaded without the sandbox because it is from a trusted source."
+                                description="Message that appears in custom extension prompt"
+                                id="tw.customExtensionModal.trusted"
+                            />
+                        </p>
+                    ) : (
+                        <p>
+                            <FormattedMessage
+                                // eslint-disable-next-line max-len
+                                defaultMessage="Extensions from untrusted URLs will always be loaded with the sandbox for security."
+                                description="Message that appears in custom extension prompt"
+                                id="tw.customExtensionModal.untrusted"
+                            />
+                        </p>
+                    )}
                     <p>
                         <FormattedMessage
                             // eslint-disable-next-line max-len
-                            defaultMessage="Extensions from untrusted URLs will always be loaded with the sandbox for security."
+                            defaultMessage="Your browser may not allow PenguinMod to access certain sites. If this is causing issues for you, try loading from a file or text instead."
                             description="Message that appears in custom extension prompt"
-                            id="tw.customExtensionModal.untrusted"
+                            id="tw.customExtensionModal.corsProblem"
                         />
                     </p>
-                )
+                </React.Fragment>
             )}
 
             <div className={styles.buttonRow}>
