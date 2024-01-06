@@ -253,6 +253,16 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Key Simulator',
+        extensionId: 'https://snail-ide.js.org/keysim.js',
+        iconURL: defaultExtensionIcon,
+        insetIconURL, turbowarpIcon,
+        collaborator: 'CubesterYT',
+        tags: ['turbowarp'],
+        description: 'Simulate pressing a key on the keyboard.',
+        featured: true
+    },
+    {
         name: 'Site Runtime',
         extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/webextension.js',
         tags: ['other_mods'],
