@@ -9491,6 +9491,38 @@
         "blocks": {}
     },
     {
+        "name": "Snail Pony (by julianlukasiak)",
+        "tags": [
+            "animals",
+            "fantasy"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "57f7de04af07045440d809a056cd7684",
+                "name": "snail pony",
+                "bitmapResolution": 1,
+                "md5ext": "57f7de04af07045440d809a056cd7684.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 74,
+                "rotationCenterY": 78
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "45ffcf97ee2edca0199ff5aa71a5b72e",
+                "name": "horse",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 57856,
+                "md5ext": "45ffcf97ee2edca0199ff5aa71a5b72e.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
         "name": "Noor",
         "tags": [
             "people",
