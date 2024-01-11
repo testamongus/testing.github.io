@@ -136,7 +136,7 @@ const HighQualityPen = props => (
         help={
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance. Set to be on default in Snail IDE.</FormattedMessage>"
+                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance. Set to be on default in Snail IDE."
                 description="High quality pen setting help"
                 id="tw.settingsModal.highQualityPenHelp"
             />
