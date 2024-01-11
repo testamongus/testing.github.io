@@ -29,7 +29,7 @@ export const initialState = {
         warpTimer: false
     },
     runtimeOptions: {
-        maxClones: 300,
+        maxClones: 650,
         miscLimits: true,
         fencing: true
     },
