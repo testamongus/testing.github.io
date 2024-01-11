@@ -136,7 +136,7 @@ const HighQualityPen = props => (
         help={
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance."
+                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance. Set to be on default in Snail IDE.</FormattedMessage>"
                 description="High quality pen setting help"
                 id="tw.settingsModal.highQualityPenHelp"
             />
@@ -221,7 +221,7 @@ const InfiniteClones = props => (
         }
         help={
             <FormattedMessage
-                defaultMessage="Uncaps the clone limit of 650."
+                defaultMessage="Uncaps the clone limit of 300."
                 description="Infinite Clones setting help"
                 id="tw.settingsModal.infiniteClonesHelp"
             />
