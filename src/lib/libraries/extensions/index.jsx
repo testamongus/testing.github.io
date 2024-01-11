@@ -1418,6 +1418,14 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: '3-Axis Accelerometer',
+            extensionId: 'threeAxisAccelerometer',
+            iconURL: 'https://ide.tinkergen.com/static/assets/68e0777fce47a010d082beb3c6214161.png',
+            tags: ['other_mods'],
+            description: 'Visualize a 3-Axis Accelerometer with a simple block.',
+            featured: true
+        },
+        {
             name: 'Christmas',
             extensionId: 'jgChristmas',
             iconURL: defaultExtensionIcon,
