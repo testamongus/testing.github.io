@@ -23,13 +23,13 @@ export const initialState = {
     interpolation: false,
     cloud: true,
     username: '',
-    highQualityPen: false,
+    highQualityPen: true,
     compilerOptions: {
         enabled: true,
         warpTimer: false
     },
     runtimeOptions: {
-        maxClones: 650,
+        maxClones: 300,
         miscLimits: true,
         fencing: true
     },
