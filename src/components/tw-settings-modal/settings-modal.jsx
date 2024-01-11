@@ -221,7 +221,7 @@ const InfiniteClones = props => (
         }
         help={
             <FormattedMessage
-                defaultMessage="Disables Scratch's 300 clone limit."
+                defaultMessage="Uncaps the clone limit of 650."
                 description="Infinite Clones setting help"
                 id="tw.settingsModal.infiniteClonesHelp"
             />
