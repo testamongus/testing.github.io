@@ -1,7 +1,8 @@
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {injectIntl} from 'react-intl';
+import localforage from 'localforage';
+import {injectIntl, intlShape, defineMessages} from 'react-intl';
 
 import LibraryItemComponent from '../components/library-item/library-item.jsx';
 
@@ -11,12 +12,15 @@ class LibraryItem extends React.PureComponent {
         bindAll(this, [
             'handleBlur',
             'handleClick',
+            'handleFavoriteClick',
             'handleFocus',
             'handleKeyPress',
             'handleMouseEnter',
             'handleMouseLeave',
             'handlePlay',
             'handleStop',
+            'processFavoriteClick',
+            'handleDeleteClick',
             'rotateIcon',
             'startRotatingIcons',
             'stopRotatingIcons'
@@ -33,6 +37,18 @@ class LibraryItem extends React.PureComponent {
         this.handleMouseLeave(id);
     }
     handleClick (e) {
+        if (e.target.dataset && e.target.dataset.clearclick === 'true') {
+            return;
+        }
+        if (e.target.parentElement.dataset && e.target.parentElement.dataset.clearclick === 'true') {
+            return;
+        }
+        
+        if (e.target.closest('a')) {
+            // Allow clicking on links inside the item
+            return;
+        }
+
         if (!this.props.disabled) {
             if (this.props.href) {
                 window.open(this.props.href);
@@ -41,6 +57,29 @@ class LibraryItem extends React.PureComponent {
             }
         }
         e.preventDefault();
+    }
+    handleFavoriteClick (...args) {
+        this.processFavoriteClick(...args);
+    }
+    async handleDeleteClick () {
+        const id = this.props._id;
+        const db = "pm:favorited_extensions";
+        let favorites = [];
+        const _saved = await localforage.getItem(db);
+        if (_saved) {
+            favorites = _saved;
+        }
+
+        // remove from favorites
+        favorites = favorites.filter(item => {
+            // console.log(item._id, id);
+            return item._id !== id;
+        });
+
+        await localforage.setItem(db, favorites);
+
+        // update on library.jsx
+        this.props.onFavoriteUpdated();
     }
     handleFocus (id) {
         if (!this.props.showPlayButton) {
@@ -82,6 +121,31 @@ class LibraryItem extends React.PureComponent {
     handleStop () {
         this.props.onMouseLeave(this.props.id);
     }
+
+    async processFavoriteClick (alreadyFavorite) {
+        const id = "pm:favorited_extensions";
+        let favorites = [];
+        const _saved = await localforage.getItem(id);
+        if (_saved) {
+            favorites = _saved;
+        }
+
+        if (!alreadyFavorite) {
+            // add to favorites
+            favorites.push(this.props.extensionId);
+        } else {
+            // remove from favorites
+            favorites = favorites.filter(item => {
+                return item !== this.props.extensionId;
+            });
+        }
+
+        await localforage.setItem(id, favorites);
+
+        // update on library.jsx
+        this.props.onFavoriteUpdated();
+    }
+
     startRotatingIcons () {
         this.rotateIcon();
         this.intervalId = setInterval(this.rotateIcon, 300);
@@ -114,6 +178,7 @@ class LibraryItem extends React.PureComponent {
             this.props.iconRawURL;
         return (
             <LibraryItemComponent
+                intl={this.props.intl}
                 bluetoothRequired={this.props.bluetoothRequired}
                 collaborator={this.props.collaborator}
                 twDeveloper={this.props.twDeveloper}
@@ -128,6 +193,7 @@ class LibraryItem extends React.PureComponent {
                 iconURL={iconURL}
                 icons={this.props.icons}
                 id={this.props.id}
+                _id={this.props._id}
                 incompatibleWithScratch={this.props.incompatibleWithScratch}
                 insetIconURL={this.props.insetIconURL}
                 customInsetColor={this.props.customInsetColor}
@@ -135,6 +201,15 @@ class LibraryItem extends React.PureComponent {
                 isPlaying={this.props.isPlaying}
                 name={this.props.name}
                 showPlayButton={this.props.showPlayButton}
+
+                favoritable={this.props.favoritable}
+                favorited={this.props.favorited}
+                deletable={this.props.deletable}
+                custom={this.props.custom}
+                _unsandboxed={this.props._unsandboxed}
+                onFavoriteClick={this.handleFavoriteClick}
+                onDeleteClick={this.handleDeleteClick}
+
                 onBlur={this.handleBlur}
                 onClick={this.handleClick}
                 onFocus={this.handleFocus}
@@ -149,6 +224,7 @@ class LibraryItem extends React.PureComponent {
 }
 
 LibraryItem.propTypes = {
+    intl: intlShape,
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
     twDeveloper: PropTypes.string,
@@ -161,9 +237,9 @@ LibraryItem.propTypes = {
     ]),
     disabled: PropTypes.bool,
     extensionId: PropTypes.string,
+    href: PropTypes.string,
     featured: PropTypes.bool,
     hidden: PropTypes.bool,
-    href: PropTypes.string,
     iconMd5: PropTypes.string,
     iconRawURL: PropTypes.string,
     icons: PropTypes.arrayOf(
@@ -184,7 +260,14 @@ LibraryItem.propTypes = {
     onMouseEnter: PropTypes.func.isRequired,
     onMouseLeave: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired,
-    showPlayButton: PropTypes.bool
+    showPlayButton: PropTypes.bool,
+    favoritable: PropTypes.bool,
+    favorited: PropTypes.bool,
+    deletable: PropTypes.bool,
+    custom: PropTypes.bool,
+    _unsandboxed: PropTypes.bool,
+    onFavoriteUpdated: PropTypes.func,
+    _id: PropTypes.string,
 };
 
 export default injectIntl(LibraryItem);
