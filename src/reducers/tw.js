@@ -9,8 +9,6 @@ const SET_WINDOW_FULLSCREEN = 'tw/SET_WINDOW_FULLSCREEN';
 const SET_DIMENSIONS = 'tw/SET_DIMENSIONS';
 const SET_AUTHOR = 'tw/SET_AUTHOR';
 const SET_DESCRIPTION = 'tw/SET_DESCRIPTION';
-const SET_EXTRA_PROJECT_INFO = 'tw/SET_EXTRA_PROJECT_INFO';
-const SET_REMIXED_PROJECT_INFO = 'tw/SET_REMIXED_PROJECT_INFO';
 const ADD_COMPILE_ERROR = 'tw/ADD_COMPILE_ERROR';
 const CLEAR_COMPILE_ERRORS = 'tw/CLEAR_COMPILE_ERRORS';
 const SET_FILE_HANDLE = 'tw/SET_FILE_HANDLE';
@@ -23,7 +21,7 @@ export const initialState = {
     interpolation: false,
     cloud: true,
     username: '',
-    highQualityPen: true,
+    highQualityPen: false,
     compilerOptions: {
         enabled: true,
         warpTimer: false
@@ -42,18 +40,6 @@ export const initialState = {
     description: {
         instructions: '',
         credits: ''
-    },
-    extraProjectInfo: {
-        accepted: true,
-        isRemix: false,
-        remixId: 0,
-        tooLarge: false,
-        author: ''
-    },
-    remixedProjectInfo: {
-        loaded: false,
-        name: '',
-        author: ''
     },
     compileErrors: [],
     fileHandle: null,
@@ -108,14 +94,6 @@ const reducer = function (state, action) {
     case SET_DESCRIPTION:
         return Object.assign({}, state, {
             description: action.description
-        });
-    case SET_EXTRA_PROJECT_INFO:
-        return Object.assign({}, state, {
-            extraProjectInfo: action.extraProjectInfo
-        });
-    case SET_REMIXED_PROJECT_INFO:
-        return Object.assign({}, state, {
-            remixedProjectInfo: action.remixedProjectInfo
         });
     case ADD_COMPILE_ERROR:
         return Object.assign({}, state, {
@@ -226,20 +204,6 @@ const setDescription = function (description) {
     };
 };
 
-const setExtraProjectInfo = function (extraProjectInfo) {
-    return {
-        type: SET_EXTRA_PROJECT_INFO,
-        extraProjectInfo: extraProjectInfo
-    };
-};
-
-const setRemixedProjectInfo = function (remixedProjectInfo) {
-    return {
-        type: SET_REMIXED_PROJECT_INFO,
-        remixedProjectInfo: remixedProjectInfo
-    };
-};
-
 const addCompileError = function (error) {
     return {
         type: ADD_COMPILE_ERROR,
@@ -295,8 +259,6 @@ export {
     setDimensions,
     setAuthor,
     setDescription,
-    setExtraProjectInfo,
-    setRemixedProjectInfo,
     addCompileError,
     clearCompileErrors,
     setFileHandle,
