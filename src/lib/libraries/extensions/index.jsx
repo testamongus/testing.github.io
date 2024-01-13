@@ -226,6 +226,7 @@ const menuItems = [
         name: 'Posenet2Scratch',
         extensionId: 'posenet2scratch',
         iconURL: 'https://www.adacraft.org/studio/static/assets/cc4d68fe9d6a77c7f35f9d5461b60967.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/posenet2scratch/master/scratch-gui/src/lib/libraries/extensions/posenet2scratch/posenet2scratch-small.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
         tags: ['other_mods'],
@@ -236,10 +237,22 @@ const menuItems = [
         name: 'Facemesh2scratch',
         extensionId: 'facemesh2scratch',
         iconURL: 'https://raw.githubusercontent.com/champierre/facemesh2scratch/master/scratch-gui/src/lib/libraries/extensions/facemesh2scratch/facemesh2scratch.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/facemesh2scratch/master/scratch-gui/src/lib/libraries/extensions/facemesh2scratch/facemesh2scratch-small.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
         tags: ['other_mods'],
         description: 'Use facetracking in your projects!',
+        featured: true
+    },
+    {
+        name: 'Handpose2scratch',
+        extensionId: 'handpose2scratch',
+        iconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch-small.png',
+        collaborator: 'champierre',
+        internetConnectionRequired: true,
+        tags: ['other_mods'],
+        description: 'Use handtracking in your projects!',
         featured: true
     },
     {
