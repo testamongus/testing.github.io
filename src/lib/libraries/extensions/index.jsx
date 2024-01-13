@@ -1027,13 +1027,32 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'micro:bit (Adacraft)',
+        name: (
+            <FormattedMessage
+                defaultMessage="micro:bit with USB"
+                description="Name for the 'Vitta micro:bit' extension"
+                id="gui.extension.vittamicrobit.name"
+            />
+        ),
+        tags: ['hardware'],
         extensionId: 'vittamicrobit',
+        collaborator: 'Vittascience',
         iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
-        tags: ['other_mods','hardware'],
-        description: "Blocks to interact with BBC micro:bit through a USB cable connection.",
-        featured: true
+        insetIconURL: 'https://www.adacraft.org/studio/static/assets/42f568ea43bc3ccb3de1c575cfc04484.svg',
+        description: (
+            <FormattedMessage
+                defaultMessage="Blocks to interact with micro:bit through a USB cable connection"
+                description="Description for the 'Vitta micro:bit' extension"
+                id="gui.extension.vittamicrobit.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        usbConnectionRequired: true,
+        launchSerialConnectionFlow: true,
+        useAutoscan: false,
     },
+
     {
         name: 'Adacraft Runtime',
         extensionId: 'adaruntime',
