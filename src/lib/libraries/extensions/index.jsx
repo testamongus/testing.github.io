@@ -245,17 +245,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Handpose2scratch',
-        extensionId: 'handpose2scratch',
-        iconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch.png',
-        insetIconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch-small.png',
-        collaborator: 'champierre',
-        internetConnectionRequired: true,
-        tags: ['other_mods'],
-        description: 'Use handtracking in your projects!',
-        featured: true
-    },
-    {
         name: 'ImageClassifer2Scratch',
         extensionId: 'ic2scratch',
         iconURL: 'https://raw.githubusercontent.com/champierre/ic2scratch/master/scratch-gui/src/lib/libraries/extensions/ic2scratch/ic2scratch.png',
@@ -1462,6 +1451,17 @@ if (IsLocal || IsLiveTests) {
             iconURL: pmInlineBlocksExtensionIcon,
             tags: ['penguinmod'],
             description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
+            featured: true
+        },
+        {
+            name: 'Handpose2scratch',
+            extensionId: 'handpose2scratch',
+            iconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch.png',
+            insetIconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch-small.png',
+            collaborator: 'champierre',
+            internetConnectionRequired: true,
+            tags: ['other_mods'],
+            description: 'Use handtracking in your projects!',
             featured: true
         },
         {
