@@ -230,7 +230,7 @@ const menuItems = [
         insetIconURL: 'https://raw.githubusercontent.com/champierre/posenet2scratch/master/scratch-gui/src/lib/libraries/extensions/posenet2scratch/posenet2scratch-small.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
-        tags: ['other_mods'],
+        tags: ['other_mods', 'ai'],
         description: 'Detect human poses quickly and accurately with a normal WebCam without using a special device',
         featured: true
     },
@@ -241,7 +241,7 @@ const menuItems = [
         insetIconURL: 'https://raw.githubusercontent.com/champierre/facemesh2scratch/master/scratch-gui/src/lib/libraries/extensions/facemesh2scratch/facemesh2scratch-small.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
-        tags: ['other_mods'],
+        tags: ['other_mods', 'ai'],
         description: 'Use facetracking in your projects!',
         featured: true
     },
@@ -252,7 +252,7 @@ const menuItems = [
         insetIconURL: 'https://raw.githubusercontent.com/champierre/ic2scratch/master/scratch-gui/src/lib/libraries/extensions/ic2scratch/ic2scratch-small.png',
         collaborator: 'champierre',
         internetConnectionRequired: true,
-        tags: ['other_mods'],
+        tags: ['other_mods', 'ai'],
         description: 'Image Classification Blocks.',
         featured: true
     },
@@ -425,7 +425,7 @@ const menuItems = [
         name: 'Cloud Storage',
         extensionId: 'https://snail-ide.js.org/cloudstorage.js',
         collaborator: 'pooiod7',
-        iconURL: cloudstorageIconURL,
+        iconURL: cloudstorageIconURL, // this needs to be redone soon
         tags: ['penguinmod'],
         description: 'Store data in a database, similar to Storage and Better Storage, but powered by a Snap! extension.',
         featured: true
@@ -589,7 +589,7 @@ const menuItems = [
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
         iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
-        tags: ['turbowarp'],
+        tags: ['turbowarp', 'ai'],
         description: 'Use ChatGPT in your projects',
         featured: true
     },
