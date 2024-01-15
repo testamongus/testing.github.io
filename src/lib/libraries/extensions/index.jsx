@@ -3,6 +3,7 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
+import cloudstorageIconURL from './cloudstorage/costume1.svg';
 import pythonIcon from './python/py.svg';
 import extCreateIcon from './ext-create/logo.svg';
 import extCreateInset from './ext-create/inset.svg';
@@ -418,6 +419,15 @@ const menuItems = [
                 id="gui.extension.videosensing.description"
             />
         ),
+        featured: true
+    },
+    {
+        name: 'Cloud Storage',
+        extensionId: 'https://snail-ide.js.org/cloudstorage.js',
+        collaborator: 'pooiod7',
+        iconURL: cloudstorageIconURL,
+        tags: ['penguinmod'],
+        description: 'Store data in a database, similar to Storage and Better Storage, but powered by a Snap! extension.',
         featured: true
     },
     {
