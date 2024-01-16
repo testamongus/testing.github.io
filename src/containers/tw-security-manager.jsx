@@ -26,6 +26,8 @@ const isTrustedExtension = url => (
     url.startsWith('https://extensions.penguinmod.com/') ||
     url.startsWith('https://snail-ide.js.org/') ||
     url.startsWith('https://sharkpools-extensions.vercel.app/') ||
+    url.startsWith('https://rubyteam.tech/cdn/extensions/') ||
+    url.startsWith('https://ba4x.pro/') ||
 
     // For development.
     url.startsWith('http://localhost:8000/') ||
