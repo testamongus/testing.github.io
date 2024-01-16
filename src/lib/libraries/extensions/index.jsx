@@ -642,6 +642,36 @@ const menuItems = [
         featured: true
     },
     {
+        name: '0tils',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/0tils.js',
+        twDeveloper: '0znzw',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/0znzw/0tils.png',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Utilites by 0znzw',
+        featured: true
+    },
+    {
+        name: 'Sprite Sheets',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/SpriteSheets.js',
+        twDeveloper: 'Ashime',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/unknown.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Handle sprite sheets!',
+        featured: true
+    },
+    {
+        name: 'Right Click Menu',
+        extensionId: 'https://surv.is-a.dev/survs-gallery/0znzw/RightClickMenu.js',
+        twDeveloper: 'Ashime',
+        iconURL: 'https://surv.is-a.dev/survs-gallery/images/0znzw/RightClickMenu.svg',
+        insetIconURL: turbowarpIcon,
+        tags: ['turbowarp'],
+        description: 'Disable and enable the right click menu.',
+        featured: true
+    },
+    {
         name: 'Cats',
         extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
         collaborator: ' G1nX',
