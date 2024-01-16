@@ -613,6 +613,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Analytics',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/analytics.js',
+        collaborator: 'Ruby Dev Team',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/analytics.webp',
+        tags: ['turbowarp', 'penguinmod'],
+        description: 'Measure how many people are using your projects using the Ruby API.',
+        featured: true
+    },
+    {
         name: 'Dot Prop',
         extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
         twDeveloper: 'Richienbs',

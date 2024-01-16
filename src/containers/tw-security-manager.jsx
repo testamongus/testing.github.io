@@ -28,6 +28,7 @@ const isTrustedExtension = url => (
     url.startsWith('https://sharkpools-extensions.vercel.app/') ||
     url.startsWith('https://rubyteam.tech/cdn/extensions/') ||
     url.startsWith('https://ba4x.pro/') ||
+    url.startsWith('https://adacraft.notion.site/') ||
 
     // For development.
     url.startsWith('http://localhost:8000/') ||
