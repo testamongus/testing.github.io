@@ -25,10 +25,13 @@ const isTrustedExtension = url => (
     url.startsWith('https://extensions.turbowarp.org/') ||
     url.startsWith('https://extensions.penguinmod.com/') ||
     url.startsWith('https://snail-ide.js.org/') ||
+    url.startsWith('https://snail-ide.vercel.app/') ||
     url.startsWith('https://sharkpools-extensions.vercel.app/') ||
     url.startsWith('https://rubyteam.tech/cdn/extensions/') ||
     url.startsWith('https://ba4x.pro/') ||
     url.startsWith('https://adacraft.notion.site/') ||
+    url.startsWith('https://adacraft.org/') ||
+    url.startsWith('https://raw.githubusercontent.com/khanning/scratch-extensions/master/') ||
 
     // For development.
     url.startsWith('http://localhost:8000/') ||
