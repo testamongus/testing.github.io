@@ -331,13 +331,23 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'CreateExt',
+        name: 'ExtCreate',
         href: 'https://ext-create.vercel.app/',
         extensionId: 'special_ExtCreate',
         iconURL: extCreateIcon,
         insetIconURL: extCreateInset,
         description: 'Snail IDE version of TurboBuilder',
         collaborator: 'Started by JeremyGamer13, continued by jwklong, modified by nmsderp',
+        tags: ['builders'],
+        featured: true
+    },
+    {
+        name: 'PenguinBuilder',
+        href: 'https://u.cubeupload.com/Mr_rudy/costume1.png',
+        extensionId: 'special_PenguinBuilder',
+        iconURL: extCreateIcon,
+        description: 'Create your own extensions using Blockly.',
+        collaborator: 'chickencuber',
         tags: ['builders'],
         featured: true
     },
@@ -588,7 +598,7 @@ const menuItems = [
         name: 'ChatGPT',
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
-        iconURL: 'https://camo.githubusercontent.com/c317b9c3d7681a40fb286d644fa3fdb0b2dbc4434840b004e86b77d62b331bbe/68747470733a2f2f616e6f6e796d6f75732d636174312e6769746875622e696f2f576f726b696e67547572626f4750542f696d672f7468756d622e737667',
+        iconURL: 'https://snail-ide.js.org/SnailGPT/img/thumb.svg',
         tags: ['turbowarp', 'ai'],
         description: 'Use ChatGPT in your projects',
         featured: true
