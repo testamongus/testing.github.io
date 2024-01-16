@@ -343,9 +343,9 @@ const menuItems = [
     },
     {
         name: 'PenguinBuilder',
-        href: 'https://u.cubeupload.com/Mr_rudy/costume1.png',
+        href: 'https://chickencuber.github.io/PenguinBuilder/editor/',
         extensionId: 'special_PenguinBuilder',
-        iconURL: extCreateIcon,
+        iconURL: 'https://u.cubeupload.com/Mr_rudy/costume1.png',
         description: 'Create your own extensions using Blockly.',
         collaborator: 'chickencuber',
         tags: ['builders'],
