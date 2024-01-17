@@ -911,7 +911,7 @@ class MenuBar extends React.Component {
                         >
                             <Button className={styles.feedbackButton}>
                                 <FormattedMessage
-                                    defaultMessage="Open AI [BETA]"
+                                    defaultMessage="SnailAI [EARLY ALPHA]"
                                     description="Button to go back to open the AI"
                                     id="pm.aibutton"
                                 />
