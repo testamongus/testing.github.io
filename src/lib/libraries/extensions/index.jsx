@@ -595,12 +595,12 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'ChatGPT',
+        name: 'PenguinGPT',
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
-        iconURL: 'https://snail-ide.js.org/SnailGPT/img/thumb.svg',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
-        description: 'Use ChatGPT in your projects',
+        description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
         featured: true
     },
     {
@@ -644,10 +644,19 @@ const menuItems = [
     {
         name: 'Cats',
         extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
-        collaborator: ' G1nX',
+        collaborator: 'Gen1X',
         iconURL: catsIconURL,
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
+        featured: true,
+    },
+    {
+        name: 'PenguinPedia',
+        extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
+        collaborator: 'Gen1X',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
+        tags: ['penguinmod'],
+        description: 'Get a lot of data from Wikipedia, like definitions and images!',
         featured: true,
     },
     {
