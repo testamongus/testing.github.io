@@ -77,6 +77,11 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 import errorIcon from './tw-error.svg';
 import themeIcon from './tw-moon.svg';
+// cool icons ye
+import addonsIcon from './addons.svg';
+import settingsIcon from './settings.svg';
+import editIcon from './edit.svg';
+import fileIcon from './file.svg';
 
 import scratchLogo from './scratch-logo.svg';
 
@@ -549,6 +554,12 @@ class MenuBar extends React.Component {
                                 })}
                                 onMouseUp={this.props.onClickFile}
                             >
+                                        <img
+                                            src={fileIcon}
+                                            draggable={false}
+                                            width={20}
+                                            height={20}
+                                        />
                                 <FormattedMessage
                                     defaultMessage="File"
                                     description="Text for file dropdown menu"
@@ -689,6 +700,12 @@ class MenuBar extends React.Component {
                             onMouseUp={this.props.onClickEdit}
                         >
                             <div className={classNames(styles.editMenu)}>
+                                        <img
+                                            src={editIcon}
+                                            draggable={false}
+                                            width={20}
+                                            height={20}
+                                        />
                                 <FormattedMessage
                                     defaultMessage="Edit"
                                     description="Text for edit dropdown menu"
@@ -786,6 +803,12 @@ class MenuBar extends React.Component {
                                 </MenuSection>
                                 <MenuSection>
                                     <MenuItem onClick={this.props.onClickSettings}>
+                                        <img
+                                            src={settingsIcon}
+                                            draggable={false}
+                                            width={20}
+                                            height={20}
+                                        />
                                         <FormattedMessage
                                             defaultMessage="Gameplay Settings"
                                             description="Menu bar item for gameplay settings"
@@ -801,6 +824,12 @@ class MenuBar extends React.Component {
                                 onMouseUp={this.props.onClickAddonSettings}
                             >
                                 <div>
+                                    <img
+                                        src={addonsIcon}
+                                        draggable={false}
+                                        width={20}
+                                        height={20}
+                                    />
                                     <FormattedMessage
                                         // Note: this string is used by scratch-vm for the addons blocks category
                                         defaultMessage="Addons"
