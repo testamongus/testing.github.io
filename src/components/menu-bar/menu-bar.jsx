@@ -546,6 +546,7 @@ class MenuBar extends React.Component {
                                     </MenuSection>
                                 </MenuBarMenu>
                             </div>
+                            <Divider className={classNames(styles.divider)} />
                         </div>}
                         {(this.props.canManageFiles) && (
                             <div
