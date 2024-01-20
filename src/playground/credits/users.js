@@ -136,11 +136,12 @@ const logoArtists = Promise.all([
 
 const extensionDevelopers = [
     'GarboMuffin',
+    'Ruby-Devs',
     'griffpatch',
     'DT-is-not-available',
     'SharkPool-SP',
     'Vadik1',
-    'MikeDev',
+    'MikeDev101',
     'LilyMakesThings'
 ].map(fromHardcodedGithub);
 
