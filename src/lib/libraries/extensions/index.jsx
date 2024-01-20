@@ -643,7 +643,7 @@ const menuItems = [
     },
     {
         name: 'Cats',
-        extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
+        extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/CATS.js',
         collaborator: 'Gen1X',
         iconURL: catsIconURL,
         tags: ['penguinmod'],
@@ -652,7 +652,7 @@ const menuItems = [
     },
     {
         name: 'PenguinPedia',
-        extensionId: 'https://penguinmod-extensions-gallery.vercel.app/extensions/Gen1x/CATS.js',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/penguinpedia.js',
         collaborator: 'Gen1X',
         iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
         tags: ['penguinmod'],
