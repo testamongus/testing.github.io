@@ -598,16 +598,16 @@ const menuItems = [
         name: 'PenguinGPT',
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
+        iconURL: 'https://ruby-devs.github.io/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
         description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
         featured: true
     },
     {
         name: 'Gemini',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
+        extensionId: 'https://ruby-devs.github.io/cdn/extensions/geminiai.js',
         collaborator: 'Ruby Dev Team',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
+        iconURL: 'https://ruby-devs.github.io/cdn/thumbnails/turbogemini.webp',
         tags: ['turbowarp', 'ai'],
         description: 'Use Google Gemini in your projects',
         featured: true
