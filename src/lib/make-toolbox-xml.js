@@ -428,8 +428,14 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </shadow>
             </value>
         </block>
+        <block type="looks_setTintColor">
+            <value name="color">
+                <shadow type="colour_picker"></shadow>
+            </value>
+        </block>
         <block type="looks_cleargraphiceffects"/>
         <block type="looks_getEffectValue"/>
+        <block type="looks_tintColor"/>
         ${blockSeparator}
         ${isStage ? '' : `
             <block type="looks_show"/>
@@ -1486,6 +1492,12 @@ const liveTests = function () {
                 </shadow>
             </value>
         </block>
+        <block type="looks_setTintColor">
+            <value name="color">
+                <shadow type="colour_picker"></shadow>
+            </value>
+        </block>
+        <block type="looks_tintColor"/>
     </category>
     `;
 };
