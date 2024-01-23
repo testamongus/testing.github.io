@@ -490,9 +490,9 @@ const menuItems = [
                 id="gui.extension.speech2text.name"
             />
         ),
-        extensionId: 'https://raw.githubusercontent.com/khanning/scratch-extensions/master/speech_to_text_extension.js',
-        collaborator: 'Google',
-        iconURL: 'https://powerbox1000.github.io/dev-blocks/static/assets/0294d390ec3c5a58f3701b3098646770.png',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/speechtotext.js',
+        collaborator: 'Ruby Dev Team',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/speechtotext.png',
         tags: ['scratch'],
         description: (
             <FormattedMessage
@@ -598,16 +598,16 @@ const menuItems = [
         name: 'PenguinGPT',
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
-        iconURL: 'https://ruby-devs.github.io/cdn/thumbnails/penguingpt.png',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
         description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
         featured: true
     },
     {
         name: 'Gemini',
-        extensionId: 'https://ruby-devs.github.io/cdn/extensions/geminiai.js',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
         collaborator: 'Ruby Dev Team',
-        iconURL: 'https://ruby-devs.github.io/cdn/thumbnails/turbogemini.webp',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
         tags: ['turbowarp', 'ai'],
         description: 'Use Google Gemini in your projects',
         featured: true
@@ -888,6 +888,15 @@ const menuItems = [
             />
         ),
         featured: true
+    },
+    {
+        name: '1MB Shortener',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/1mb.js', // update reference once file names are updated
+        tags: ['turbowarp'],
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/1mb.svg',
+        description: 'Using 1mb Api you can now share links without it being long!',
+        featured: true,
+        collaborator: 'Ruby Dev Team'
     },
     {
         name: 'McUtils',
