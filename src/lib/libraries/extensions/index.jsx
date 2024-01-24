@@ -332,7 +332,7 @@ const menuItems = [
     },
     {
         name: 'ExtCreate',
-        href: 'https://ext-create.vercel.app/',
+        href: 'https://ext-create.snail-ide.com/',
         extensionId: 'special_ExtCreate',
         iconURL: extCreateIcon,
         insetIconURL: extCreateInset,
