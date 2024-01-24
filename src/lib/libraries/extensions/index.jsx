@@ -1507,7 +1507,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Christmas',
-            extensionId: 'utilCool',
+            extensionId: 'jgChristmas',
             iconURL: defaultExtensionIcon,
             tags: ['penguinmod'],
             description: 'all i want for christmas is yououuouououo',
@@ -1515,7 +1515,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Cool Utils',
-            extensionId: 'utilsCool',
+            extensionId: 'utilCool',
             iconURL: defaultExtensionIcon,
             tags: ['penguinmod'],
             description: 'just a test',
