@@ -1514,14 +1514,6 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
-            name: 'Cool Utils',
-            extensionId: 'utilCool',
-            iconURL: defaultExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'just a test',
-            featured: true
-        },
-        {
             name: 'Inline Blocks',
             extensionId: 'pmInlineBlocks',
             iconURL: pmInlineBlocksExtensionIcon,
