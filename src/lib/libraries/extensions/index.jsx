@@ -1138,6 +1138,29 @@ const menuItems = [
         tags: ['penguinmod'],
         featured: true
     },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Ruby Extension Gallery"
+                description="Name of https://rubyteam.tech/gallery in extension library"
+                id="ruby.extensionGallery.name"
+            />
+        ),
+        href: 'https://rubyteam.tech/gallery',
+        extensionId: 'special_rubyGallery',
+        insetIconURL: 'https://rubyteam.tech/logo.svg',
+        iconURL: 'https://u.cubeupload.com/Mr_rudy/ruby.png',
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="We list many Ruby extensions here for convenience, but you can find even more on https://rubyteam.tech/gallery"
+                description="Description of extensions.turbowarp.org in extension library"
+                id="ruby.extensionGallery.description"
+            />
+        ),
+        tags: ['penguinmod'],
+        featured: true
+    },
     // https://extensions.turbowarp.org/shreder95ua/resolution.js
     {
         name: 'Screen Resolution',
