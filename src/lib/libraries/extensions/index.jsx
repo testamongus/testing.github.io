@@ -1507,10 +1507,18 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Christmas',
-            extensionId: 'jgChristmas',
+            extensionId: 'utilCool',
             iconURL: defaultExtensionIcon,
             tags: ['penguinmod'],
             description: 'all i want for christmas is yououuouououo',
+            featured: true
+        },
+        {
+            name: 'Cool Utils',
+            extensionId: 'utilsCool',
+            iconURL: defaultExtensionIcon,
+            tags: ['penguinmod'],
+            description: 'just a test',
             featured: true
         },
         {
