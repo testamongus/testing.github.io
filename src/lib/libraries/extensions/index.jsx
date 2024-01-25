@@ -490,9 +490,10 @@ const menuItems = [
                 id="gui.extension.speech2text.name"
             />
         ),
-        extensionId: 'https://rubyteam.tech/cdn/extensions/speechtotext.js',
-        collaborator: 'Ruby Dev Team',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/speechtotext.png',
+        extensionId: 'https://sayamindu.github.io/scratch-extensions/speech_to_text_extension.js',
+        collaborator: 'sayamindu',
+        iconURL: 'https://dinosaurmod.github.io/static/assets/0294d390ec3c5a58f3701b3098646770.png',
+        insetIconURL: 'https://dinosaurmod.github.io/static/assets/eb4eeab5e4befb734d8d5b06cd78813f.svg',
         tags: ['scratch'],
         description: (
             <FormattedMessage
