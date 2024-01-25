@@ -890,7 +890,7 @@ class MenuBar extends React.Component {
                     <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
-                            href="https://snail-ide.vercel.app"
+                            href="https://snail-ide.com"
                             rel="noopener noreferrer"
                             target="_blank"
                         >
