@@ -89,7 +89,7 @@ const Credits = () => (
             <p><i>This list's order is also randomized on each refresh.</i></p>
         </section>
         <section>
-            <h2>GitHub Pages</h2>
+            <h2>Vercel</h2>
             <p>We currently use <a href="https://pages.github.com/">Vercel</a> to host Snail IDE.</p>
             <a href="https://vercel.com/">
                 <img
