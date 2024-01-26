@@ -295,6 +295,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Random Utils',
+        extensionId: 'https://editor.snail-ide.com/random_utils.js',
+        iconURL: 'https://editor.snail-ide.com/random.png',
+        tags: ['penguinmod'],
+        description: "Random utilites that you may or may not use.",
+        featured: true
+    },
+    {
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
         iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
