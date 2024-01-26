@@ -82,7 +82,7 @@ const Credits = () => (
             <UserList users={UserData.snDev} />
             <p><i>The list order is randomized on each refresh.</i></p>
             <p>
-                ♥ Without PenguinMod, Snail IDE would never exists here the PenguinMod Dev Team is listed ♥
+                ♥ Without PenguinMod, Snail IDE would never exist, here the PenguinMod Dev Team is listed ♥
                 A list is below, but you can also check <a href="https://github.com/orgs/penguinmod/people">their GitHub</a> incase this one is out of date. But not all devs are listed there.
             </p>
             <UserList users={UserData.pmDevelopers} />
