@@ -90,7 +90,7 @@ const Credits = () => (
         </section>
         <section>
             <h2>Vercel</h2>
-            <p>We currently use <a href="https://pages.github.com/">Vercel</a> to host Snail IDE.</p>
+            <p>We currently use <a href="https://vercel.com/">Vercel</a> to host Snail IDE.</p>
             <a href="https://vercel.com/">
                 <img
                     src="https://raw.githubusercontent.com/github/explore/3c66f1237835e0b877190fbea528d0ebece7bccf/topics/vercel/vercel.png"
