@@ -79,27 +79,33 @@ const Credits = () => (
                 Snail IDE is made by a small bunch of developers.
                 A list is below, but you can also check <a href="https://github.com/orgs/Snail-IDE/people">our GitHub</a> incase this one is out of date.
             </p>
-            <UserList users={UserData.pmDevelopers} />
+            <UserList users={UserData.snDev} />
             <p><i>The list order is randomized on each refresh.</i></p>
+            <p>
+                ♥ Without PenguinMod, Snail IDE would never exists here the PenguinMod Dev Team is listed ♥
+                A list is below, but you can also check <a href="https://github.com/orgs/penguinmod/people">their GitHub</a> incase this one is out of date. But not all devs are listed there.
+            </p>
+            <UserList users={UserData.pmDevelopers} />
+            <p><i>This list's order is also randomized on each refresh.</i></p>
         </section>
         <section>
             <h2>GitHub Pages</h2>
-            <p>We currently use <a href="https://pages.github.com/">GitHub Pages</a> to host Snail IDE.</p>
-            <a href="https://pages.github.com/">
+            <p>We currently use <a href="https://pages.github.com/">Vercel</a> to host Snail IDE.</p>
+            <a href="https://vercel.com/">
                 <img
-                    src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/collections/github-pages-examples/github-pages-examples.png"
+                    src="https://raw.githubusercontent.com/github/explore/3c66f1237835e0b877190fbea528d0ebece7bccf/topics/vercel/vercel.png"
                     width="160"
                     height="160"
                 />
             </a>
             <h2>Domain Provider</h2>
             <p>
-                <a href="https://snail-ide.js.org">snail-ide.js.org</a> is provided by <a href="https://js.org">js.org</a>
+                <a href="https://snail-ide.com">snail-ide.com</a> is provided by <a href="https://scratch.mit.edu/users/BA4X/">BA4X/thepython555/Dumo178</a>
             </p>
             <h2>Sound Effects</h2>
             <p>
                 Snail IDE has added some more sounds to the Sound Library.
-                All Snail IDE sounds are
+                Most Snail IDE sounds are
                 from <a href="https://freesound.org/">https://freesound.org/</a> and <a href="https://archive.org/">https://archive.org/</a> under
                 the Public Domain license.
             </p>
@@ -120,7 +126,16 @@ const Credits = () => (
                 Check them out below:
             </p>
             <UserList users={UserData.extensionDevelopers} />
-            <p><i>The list order is randomized on each refresh.</i></p>
+            <p>
+                We also have added extension created by the Ruby Dev Team since they are really cool and useful!
+                Check out the full list of Ruby extensions <a href="https://rubyteam.tech/gallery">here</a>,
+                but we still need to credit these people!
+                Check them out below:
+            </p>
+            <UserList users={UserData.rubyDev} />
+            <p>
+                Both of those credits are not listed in specific order. They are randomized on refresh.
+            </p>
         </section>
         <section>
             <h2>Addons</h2>

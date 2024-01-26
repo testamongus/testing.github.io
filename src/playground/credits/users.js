@@ -115,20 +115,32 @@ const addonDevelopers = [
 ].map(fromHardcoded);
 
 const pmDevelopers = [
-    'asmarly',
-    'CST1229',
+    'enderhacker',
     'FreshPenguin112',
     'Ianyourgod',
-    'jdev082',
+    'JoshAtticus',
     'JeremyGamer13',
     'jwklong',
-    'MaterArc',
+    'tnix100',
     'RedMan13',
-    'showierdata9978',
+    'showierdata9978'
+].map(fromHardcodedGithub);
+
+const snDev = [
+    'thepython555',
     'nmsderp',
     'cesderp14',
-    'thepython555'
 ].map(fromHardcodedGithub);
+
+const rubyDev = [
+    "Gen1x-ALT",
+    "cicerorph",
+    "DodecaTheDev",
+    "ddededodediamante",
+    "CharcoalAfterlife",
+    "JoshAtticus",
+    "adevguylol"
+].map(fromHardcodedGithub)
 
 const logoArtists = Promise.all([
     '593554048188416001'
@@ -148,6 +160,8 @@ const extensionDevelopers = [
 export default {
     addonDevelopers: shuffle(addonDevelopers),
     pmDevelopers: shuffle(pmDevelopers),
+    snDev: shuffle(snDev),
+    rubyDev: shuffle(rubyDev),
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers)
 };
