@@ -255,6 +255,20 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'scratch2maqueen',
+        extensionId: 'scratch2maqueen', // update reference once file names are updated
+        tags: ['other_mods'],
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: true,
+        iconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
+        description: 'Control DFRobot Maqueen.',
+        featured: true,
+        collaborator: 'Vernier',
+    },
+    {
         name: 'ImageClassifer2Scratch',
         extensionId: 'ic2scratch',
         iconURL: 'https://raw.githubusercontent.com/champierre/ic2scratch/master/scratch-gui/src/lib/libraries/extensions/ic2scratch/ic2scratch.png',
@@ -1495,20 +1509,6 @@ if (IsLocal || IsLiveTests) {
             tags: ['penguinmod'],
             description: 'dr bob eae',
             featured: true
-        },
-        {
-            name: 'scratch2maqueen',
-            extensionId: 'scratch2maqueen', // update reference once file names are updated
-            tags: ['penguinmod'],
-            bluetoothRequired: true,
-            internetConnectionRequired: true,
-            launchPeripheralConnectionFlow: true,
-            useAutoScan: true,
-            iconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
-            insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
-            description: 'Control DFRobot Maqueen.',
-            featured: true,
-            collaborator: 'Vernier',
         },
         {
             name: 'Snail Extras',
