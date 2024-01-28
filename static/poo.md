@@ -24,3 +24,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 8 (nmsderp) 1/27/24 8:42 PM:
 - :trollface:, btw there is a vm logger now
+
+- EDIT 9 (nmsderp) 1/27/14 8:49 PM:
+- More vm logger stuff
