@@ -1497,6 +1497,20 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'scratch2maqueen',
+            extensionId: 'scratch2maqueen', // update reference once file names are updated
+            tags: ['penguinmod'],
+            bluetoothRequired: true,
+            internetConnectionRequired: true,
+            launchPeripheralConnectionFlow: true,
+            useAutoScan: true,
+            iconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
+            insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2maqueen/master/scratch-gui/src/lib/libraries/extensions/scratch2maqueen/scratch2maqueen-small.png',
+            description: 'Control DFRobot Maqueen.',
+            featured: true,
+            collaborator: 'Vernier',
+        },
+        {
             name: 'Snail Extras',
             extensionId: 'https://snail-ide.js.org/snail_extras.js', // update reference once file names are updated
             tags: ['penguinmod'],
