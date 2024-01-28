@@ -21,3 +21,6 @@ im thinking about making a page to read this entire file cuz why not
   
 - EDIT 7 (nmsderp) 1/27/24 8:36 PM:
 - animate extension from pm :0
+
+- EDIT 8 (nmsderp) 1/27/24 8:42 PM:
+- :trollface:, btw there is a vm logger now
