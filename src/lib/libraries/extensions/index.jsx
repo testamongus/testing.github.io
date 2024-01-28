@@ -224,6 +224,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Pang API',
+        extensionId: 'https://extensions.penguinmod.com/extensions/SammerLOL/pangapi.js',
+        iconURL: 'https://extensions.penguinmod.com/images/SammerLOL/pangapi.png',
+        collaborator: 'oc9x97',
+        tags: ['penguinmod'],
+        description: 'Fetch details of projects and users from PenguinMod.',
+        featured: true
+    },
+    {
         name: 'Posenet2Scratch',
         extensionId: 'posenet2scratch',
         iconURL: 'https://www.adacraft.org/studio/static/assets/cc4d68fe9d6a77c7f35f9d5461b60967.png',
@@ -669,15 +678,6 @@ const menuItems = [
         featured: true,
     },
     {
-        name: 'Wacky Joke Blocks',
-        extensionId: 'https://snail-ide.js.org/joke.js',
-        collaborator: 'Mr_rudy/nmsderp',
-        iconURL: 'https://c8.alamy.com/comp/RB1P6W/young-handsome-business-man-laughing-of-you-pointing-to-the-camera-with-finger-hand-over-chest-shame-expression-RB1P6W.jpg',
-        tags: ['penguinmod'],
-        description: 'why did i make this',
-        featured: true,
-    },
-    {
         name: 'Zip',
         extensionId: 'https://extensions.turbowarp.org/CST1229/zip.js',
         twDeveloper: 'CST1229',
@@ -936,16 +936,6 @@ const menuItems = [
         description: 'Make some moosic',
         featured: true,
         twDeveloper: 'jasonglenevans'
-    },
-    {
-        name: 'Snail Extras',
-        extensionId: 'https://snail-ide.js.org/snail_extras.js', // update reference once file names are updated
-        tags: ['penguinmod'],
-        iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RWnel-yFH8B7obNf21l-F1DpJ7eCVd2oq2SeHm89Xw&s',
-        insetIconURL: turbowarpIcon,
-        description: 'Snail IDE Extras',
-        featured: true,
-        twDeveloper: 'Mr_rudy'
     },
     {
         name: (
@@ -1392,6 +1382,7 @@ const menuItems = [
         helpLink: 'https://scratch.mit.edu/vernier'
     },
     {
+        // not really an extension, but it's easiest to present it as one
         name: (
             <FormattedMessage
                 defaultMessage="Custom Extension"
@@ -1403,12 +1394,11 @@ const menuItems = [
         iconURL: customExtensionIcon,
         description: (
             <FormattedMessage
-                defaultMessage="Load custom extensions from URLs, files, or JavaScript source code."
+                defaultMessage="Load custom extensions from URLs."
                 description="Description of library item to load a custom extension from a custom source"
                 id="tw.customExtension.description"
             />
         ),
-        tags: ['tw'],
         featured: true
     }
 ];
@@ -1507,6 +1497,16 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
+            name: 'Snail Extras',
+            extensionId: 'https://snail-ide.js.org/snail_extras.js', // update reference once file names are updated
+            tags: ['penguinmod'],
+            iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RWnel-yFH8B7obNf21l-F1DpJ7eCVd2oq2SeHm89Xw&s',
+            insetIconURL: turbowarpIcon,
+            description: 'THIS EXTENSION IS NOW CLASSIFIED AS LEGACY AND WILL NOT BE UPDATED',
+            featured: true,
+            twDeveloper: 'Mr_rudy'
+        },
+        {
             name: '3-Axis Accelerometer',
             extensionId: 'threeAxisAccelerometer',
             iconURL: 'https://ide.tinkergen.com/static/assets/68e0777fce47a010d082beb3c6214161.png',
@@ -1529,6 +1529,15 @@ if (IsLocal || IsLiveTests) {
             tags: ['penguinmod'],
             description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
             featured: true
+        },
+        {
+            name: 'Wacky Joke Blocks',
+            extensionId: 'https://snail-ide.js.org/joke.js',
+            collaborator: 'Mr_rudy/nmsderp',
+            iconURL: 'https://c8.alamy.com/comp/RB1P6W/young-handsome-business-man-laughing-of-you-pointing-to-the-camera-with-finger-hand-over-chest-shame-expression-RB1P6W.jpg',
+            tags: ['penguinmod'],
+            description: 'THIS EXTENSION IS NOW CLASSIFIED AS LEGACY AND WILL NOT BE UPDATED',
+            featured: true,
         },
         {
             name: 'Handpose2scratch',
