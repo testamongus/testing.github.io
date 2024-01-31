@@ -2,6 +2,7 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
+import NoahgptThumb from './noahgpt/costume1.svg'
 import musicIconURL from './music/music.png';
 import cloudstorageIconURL from './cloudstorage/costume1.svg';
 import pythonIcon from './python/py.svg';
@@ -633,6 +634,15 @@ const menuItems = [
         iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
         description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
+        featured: true
+    },
+    {
+        name: 'noahgpt',
+        extensionId: 'https://snail-ide.js.org/static/noahgpt.js',
+        twDeveloper: 'meysam',
+        iconURL: 'https://snail-ide.js.org/noahgpt/costume1.svg',
+        tags: ['ai'],
+        description: 'use a alternative chatgpt in your projects (powered by character ai)',
         featured: true
     },
     {
