@@ -75,7 +75,7 @@ class ISSLocationExtension {
             return coordinate === 'latitude' ? data.latitude : data.longitude;
         } catch (error) {
             console.error('Error fetching ISS location:', error);
-            return 'Failed to fetch ISS location 😭';
+            return 'Failed to fetch ISS location 😭 (The Server is Most Likely Getting Too Many Requests)';
         }
     }
 
