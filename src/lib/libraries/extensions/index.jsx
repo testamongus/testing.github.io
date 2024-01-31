@@ -637,15 +637,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'noahgpt',
-        extensionId: 'https://snail-ide.js.org/noahgpt.js',
-        collaborator: 'meysam',
-        iconURL: NoahgptThumb,
-        tags: ['ai'],
-        description: 'use a alternative chatgpt in your projects (powered by character ai)',
-        featured: true
-    },
-    {
         name: 'Gemini',
         extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
         collaborator: 'Ruby Dev Team',
