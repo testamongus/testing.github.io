@@ -43,7 +43,7 @@ const CloudVariableBadge = props => {
     
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="{APP_NAME}'s cloud variables are not connected to Scratch's. Anyone can {changeTheirUsername} to anything, so beware of impersonation. We now use Infinity Server created by thepython555, which unlocks a lot of Turbowarp's cloud limiations. Go to the GitHub repo to learn more."
+                defaultMessage="{APP_NAME}'s cloud variables are not connected to Scratch's. Anyone can {changeTheirUsername} to anything, so beware of impersonation. We now use Infinity Server created by thepython555, which unlocks a lot of TurboWarp's cloud limiations. Go to the GitHub repo to learn more."
                 // eslint-disable-next-line max-len
                 description="Cloud variable information shown under projects with cloud variables. {changeTheirUsername} will be replaced with a link with text 'change their username' (translated)"
                 id="tw.usesCloudVariables2"
