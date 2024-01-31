@@ -1219,6 +1219,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'ISS',
+        extensionId: 'https://snail-ide.js.org/iss.js',
+        iconURL: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/artist_s_impression_of_the_completed_international_space_station/9874982-3-eng-GB/Artist_s_impression_of_the_completed_International_Space_Station_pillars.jpg',
+        tags: ['penguinmod'],
+        description: 'Get the latitude and longitude of the International Space Station',
+        featured: true
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="TurboWarp Blocks"
