@@ -2,7 +2,7 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
-import NoahgptThumb from './noahgpt/costume1.svg'
+import NoahgptThumb from './noahgpt/costume1.svg';
 import musicIconURL from './music/music.png';
 import cloudstorageIconURL from './cloudstorage/costume1.svg';
 import pythonIcon from './python/py.svg';
@@ -638,9 +638,9 @@ const menuItems = [
     },
     {
         name: 'noahgpt',
-        extensionId: 'https://snail-ide.js.org/static/noahgpt.js',
-        twDeveloper: 'meysam',
-        iconURL: 'https://snail-ide.js.org/noahgpt/costume1.svg',
+        extensionId: 'https://snail-ide.js.org/noahgpt.js',
+        collaborator: 'meysam',
+        iconURL: NoahgptThumb,
         tags: ['ai'],
         description: 'use a alternative chatgpt in your projects (powered by character ai)',
         featured: true
