@@ -168,6 +168,7 @@ const menuItems = [
         customInsetColor: '#B200FF',
         insetIconURL: jg3dInsetExtensionIcon,
         description: 'Use the magic of 3D to spice up your project.',
+        collaborator: 'PenguinMod',
         featured: true
     },
     {
