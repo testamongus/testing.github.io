@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-// import localforage from 'localforage';
 import { defineMessages, injectIntl, intlShape } from 'react-intl';
 
 import LibraryItem from '../../containers/library-item.jsx';
@@ -42,15 +41,6 @@ const arrayIncludesItemsFrom = (array, from) => {
     return value;
 };
 
-async function saveFavorites(favorites) {
-    localStorage.setItem("pm:favorited_extensions", JSON.stringify(favorites));
-}
-
-async function loadFavorites() {
-    const favorites = localStorage.getItem("pm:favorited_extensions");
-    return favorites ? JSON.parse(favorites) : [];
-}
-
 class LibraryComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -65,9 +55,7 @@ class LibraryComponent extends React.Component {
             'handleTagClick',
             'setFilteredDataRef',
             'loadLibraryData',
-            'loadLibraryFavorites',
             'waitForLoading',
-            'handleFavoritesUpdate',
             'createFilteredData',
             'getFilteredData'
         ]);
@@ -75,7 +63,6 @@ class LibraryComponent extends React.Component {
             playingItem: null,
             filterQuery: '',
             selectedTags: [],
-            favorites: [],
             collapsed: false,
             loaded: false,
             data: props.data
@@ -98,16 +85,6 @@ class LibraryComponent extends React.Component {
                     resolve({ key: "data", value: data });
                 });
             }
-        });
-    }
-    async loadLibraryFavorites() {
-        const favorites = await loadFavorites();
-        return { key: "favorites", value: favorites };
-    }
-    async handleFavoritesUpdate() {
-        const favorites = await loadFavorites();
-        this.setState({
-            favorites
         });
     }
 
@@ -135,12 +112,8 @@ class LibraryComponent extends React.Component {
                 });
             }
         }
-        if (this.props.setStopHandler) this.props.setStopHandler(this.handlePlayingEnd);
         if (!this.usesSpecialLoading.includes(this.props.actor)) return;
         const spinnerProcesses = [this.loadLibraryData];
-        if (this.props.actor === "ExtensionLibrary") {
-            spinnerProcesses.push(this.loadLibraryFavorites);
-        }
         this.waitForLoading(spinnerProcesses).then((packet) => {
             const data = { loaded: true, ...packet };
             this.setState(data);
@@ -157,10 +130,6 @@ class LibraryComponent extends React.Component {
             this.setState({
                 data: this.props.data
             });
-        }
-
-        if (prevState.favorites !== this.state.favorites) {
-            await saveFavorites(this.state.favorites);
         }
     }
 
@@ -261,14 +230,7 @@ class LibraryComponent extends React.Component {
             return filtered;
         }
 
-        const final = [].concat(
-            this.state.favorites
-                .filter(item => (typeof item !== "string"))
-                .map(item => ({ ...item, custom: true }))
-                .reverse(),
-            filtered.filter(item => (this.state.favorites.includes(item.extensionId))),
-            filtered.filter(item => (!this.state.favorites.includes(item.extensionId)))
-        ).map(item => ({ ...item, custom: typeof item.custom === "boolean" ? item.custom : false }));
+        const final = filtered.map(item => ({ ...item, custom: false }));
 
         return final;
     }
@@ -438,13 +400,6 @@ class LibraryComponent extends React.Component {
                                 onMouseEnter={this.handleMouseEnter}
                                 onMouseLeave={this.handleMouseLeave}
                                 onSelect={this.handleSelect}
-
-                                favoritable={this.props.actor === "ExtensionLibrary" && dataItem.extensionId}
-                                favorited={this.state.favorites.includes(dataItem.extensionId)}
-                                deletable={dataItem.deletable}
-                                custom={dataItem.custom}
-                                onFavoriteUpdated={() => this.handleFavoritesUpdate()}
-                                _unsandboxed={dataItem._unsandboxed}
                             />
                         )) : (
                             <div className={styles.spinnerWrapper}>
@@ -479,7 +434,6 @@ LibraryComponent.propTypes = {
     onItemMouseLeave: PropTypes.func,
     onItemSelected: PropTypes.func,
     onRequestClose: PropTypes.func,
-    setStopHandler: PropTypes.func,
     showPlayButton: PropTypes.bool,
     tags: PropTypes.arrayOf(PropTypes.shape(TagButton.propTypes)),
     title: PropTypes.string.isRequired
