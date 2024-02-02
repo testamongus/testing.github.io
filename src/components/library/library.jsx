@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-import localforage from 'localforage';
-import {defineMessages, injectIntl, intlShape} from 'react-intl';
+// import localforage from 'localforage';
+import { defineMessages, injectIntl, intlShape } from 'react-intl';
 
 import LibraryItem from '../../containers/library-item.jsx';
 import Modal from '../../containers/modal.jsx';
@@ -12,7 +12,6 @@ import Filter from '../filter/filter.jsx';
 import TagButton from '../../containers/tag-button.jsx';
 import TagCheckbox from '../../containers/tag-checkbox.jsx';
 import Spinner from '../spinner/spinner.jsx';
-import Separator from '../tw-extension-separator/separator.jsx';
 
 import styles from './library.css';
 
@@ -31,27 +30,29 @@ const messages = defineMessages({
 
 const PM_LIBRARY_API = "https://snail-ide-object-libraries.vercel.app/";
 
-const ALL_TAG = {tag: 'all', intlLabel: messages.allTag};
+const ALL_TAG = { tag: 'all', intlLabel: messages.allTag };
 const tagListPrefix = [];
 
-/**
- * Returns true if the array includes items from the other array.
- * @param {Array} array The array to check
- * @param {Array} from The array with the items that need to be included
- * @returns {boolean}
- */
 const arrayIncludesItemsFrom = (array, from) => {
     if (!Array.isArray(array)) array = [];
     if (!Array.isArray(from)) from = [];
     const value = from.every((value) => {
         return array.indexOf(value) >= 0;
     });
-    // console.log(array, from, value);
     return value;
 };
 
+async function saveFavorites(favorites) {
+    localStorage.setItem("pm:favorited_extensions", JSON.stringify(favorites));
+}
+
+async function loadFavorites() {
+    const favorites = localStorage.getItem("pm:favorited_extensions");
+    return favorites ? JSON.parse(favorites) : [];
+}
+
 class LibraryComponent extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         bindAll(this, [
             'handleClose',
@@ -80,23 +81,18 @@ class LibraryComponent extends React.Component {
             data: props.data
         };
 
-        // used for actor libraries
-        // they have special things like favorited items
-        // the way they load though breaks stuff
         this.usesSpecialLoading = [
             "ExtensionLibrary"
         ];
     }
 
-    loadLibraryData () {
+    loadLibraryData() {
         return new Promise((resolve) => {
             if (this.state.data.then) {
-                // If data is a promise, wait for the promise to resolve
                 this.state.data.then(data => {
                     resolve({ key: "data", value: data });
                 });
             } else {
-                // Allow the spinner to display before loading the content
                 setTimeout(() => {
                     const data = this.state.data;
                     resolve({ key: "data", value: data });
@@ -104,22 +100,20 @@ class LibraryComponent extends React.Component {
             }
         });
     }
-    async loadLibraryFavorites () {
-        const favorites = await localforage.getItem("pm:favorited_extensions");
-        return { key: "favorites", value: favorites ? favorites : [] };
+    async loadLibraryFavorites() {
+        const favorites = await loadFavorites();
+        return { key: "favorites", value: favorites };
     }
-    async handleFavoritesUpdate () {
-        const favorites = await localforage.getItem("pm:favorited_extensions");
+    async handleFavoritesUpdate() {
+        const favorites = await loadFavorites();
         this.setState({
             favorites
         });
     }
 
-    async waitForLoading (processes) {
-        // we store values in here
+    async waitForLoading(processes) {
         const packet = {};
         for (const process of processes) {
-            // result = { key: "data", value: ... }
             const result = await process();
             packet[result.key] = result.value;
         }
@@ -128,9 +122,7 @@ class LibraryComponent extends React.Component {
 
     componentDidMount() {
         if (!this.usesSpecialLoading.includes(this.props.actor)) {
-            // regular loading
             if (this.state.data.then) {
-                // If data is a promise, wait for the promise to resolve
                 this.state.data.then(data => {
                     this.setState({
                         loaded: true,
@@ -138,7 +130,6 @@ class LibraryComponent extends React.Component {
                     });
                 });
             } else {
-                // Allow the spinner to display before loading the content
                 setTimeout(() => {
                     this.setState({ loaded: true });
                 });
@@ -146,48 +137,41 @@ class LibraryComponent extends React.Component {
         }
         if (this.props.setStopHandler) this.props.setStopHandler(this.handlePlayingEnd);
         if (!this.usesSpecialLoading.includes(this.props.actor)) return;
-        // special loading
         const spinnerProcesses = [this.loadLibraryData];
-        // pm: actors can load extra stuff
-        // pm: if we are acting as the extension library, load favorited extensions
         if (this.props.actor === "ExtensionLibrary") {
             spinnerProcesses.push(this.loadLibraryFavorites);
         }
-        // wait for spinner stuff
         this.waitForLoading(spinnerProcesses).then((packet) => {
             const data = { loaded: true, ...packet };
             this.setState(data);
         });
     }
-    // uncomment this if favorites start exploding the website lol!
-    // componentWillUnmount () {
-    //     // pm: clear favorites from.... memory idk
-    //     this.setState({
-    //         favorites: []
-    //     });
-    // }
-    componentDidUpdate (prevProps, prevState) {
+
+    async componentDidUpdate(prevProps, prevState) {
         if (prevState.filterQuery !== this.state.filterQuery ||
             prevState.selectedTags.length !== this.state.selectedTags.length) {
             this.scrollToTop();
         }
 
         if (prevProps.data !== this.props.data) {
-            // eslint-disable-next-line react/no-did-update-set-state
             this.setState({
                 data: this.props.data
             });
         }
+
+        if (prevState.favorites !== this.state.favorites) {
+            await saveFavorites(this.state.favorites);
+        }
     }
-    handleSelect (id) {
+
+    handleSelect(id) {
         this.handleClose();
         this.props.onItemSelected(this.getFilteredData()[id]);
     }
-    handleClose () {
+    handleClose() {
         this.props.onRequestClose();
     }
-    handleTagClick (tag, enabled) {
-        // console.log(tag, enabled);
+    handleTagClick(tag, enabled) {
         if (this.state.playingItem === null) {
             this.setState({
                 filterQuery: '',
@@ -208,8 +192,7 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handleMouseEnter (id) {
-        // don't restart if mouse over already playing item
+    handleMouseEnter(id) {
         if (this.props.onItemMouseEnter && this.state.playingItem !== id) {
             this.props.onItemMouseEnter(this.getFilteredData()[id]);
             this.setState({
@@ -217,7 +200,7 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handleMouseLeave (id) {
+    handleMouseLeave(id) {
         if (this.props.onItemMouseLeave) {
             this.props.onItemMouseLeave(this.getFilteredData()[id]);
             this.setState({
@@ -225,14 +208,14 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handlePlayingEnd () {
+    handlePlayingEnd() {
         if (this.state.playingItem !== null) {
             this.setState({
                 playingItem: null
             });
         }
     }
-    handleFilterChange (event) {
+    handleFilterChange(event) {
         if (this.state.playingItem === null) {
             this.setState({
                 filterQuery: event.target.value,
@@ -247,23 +230,21 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handleFilterClear () {
-        this.setState({filterQuery: ''});
+    handleFilterClear() {
+        this.setState({ filterQuery: '' });
     }
-    createFilteredData () {
+    createFilteredData() {
         if (this.state.selectedTags.length <= 0) {
             if (!this.state.filterQuery) return this.state.data;
             return this.state.data.filter(dataItem => (
                 (dataItem.tags || [])
-                    // Second argument to map sets `this`
                     .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase)
                     .concat(dataItem.name ?
                         (typeof dataItem.name === 'string' ?
-                        // Use the name if it is a string, else use formatMessage to get the translated name
                             dataItem.name : this.props.intl.formatMessage(dataItem.name.props)
                         ).toLowerCase() :
                         null)
-                    .join('\n') // unlikely to partially match newlines
+                    .join('\n')
                     .indexOf(this.state.filterQuery.toLowerCase()) !== -1
             ));
         }
@@ -271,9 +252,9 @@ class LibraryComponent extends React.Component {
             dataItem.tags &&
             dataItem.tags
                 .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase),
-        this.state.selectedTags)));
+            this.state.selectedTags)));
     }
-    getFilteredData () {
+    getFilteredData() {
         const filtered = this.createFilteredData();
 
         if (this.props.actor !== "ExtensionLibrary") {
@@ -288,16 +269,16 @@ class LibraryComponent extends React.Component {
             filtered.filter(item => (this.state.favorites.includes(item.extensionId))),
             filtered.filter(item => (!this.state.favorites.includes(item.extensionId)))
         ).map(item => ({ ...item, custom: typeof item.custom === "boolean" ? item.custom : false }));
-        
+
         return final;
     }
-    scrollToTop () {
+    scrollToTop() {
         this.filteredDataRef.scrollTop = 0;
     }
-    setFilteredDataRef (ref) {
+    setFilteredDataRef(ref) {
         this.filteredDataRef = ref;
     }
-    render () {
+    render() {
         return (
             <Modal
                 fullScreen
@@ -305,9 +286,6 @@ class LibraryComponent extends React.Component {
                 id={this.props.id}
                 onRequestClose={this.handleClose}
             >
-                {/*
-                    todo: translation support?
-                */}
                 {this.props.header ? (
                     <h1
                         style={{ marginLeft: "6px" }}
@@ -333,29 +311,25 @@ class LibraryComponent extends React.Component {
                         </p>
                     </h1>
                 ) : null}
-                {/* filter bar & stuff */}
                 <div className={classNames(styles.libraryContentWrapper)}>
                     <div
                         className={classNames(styles.libraryFilterBar)}
                         style={this.state.collapsed ? { display: "none" } : null}
                     >
-                        {/*
-                            todo: translation?
-                        */}
                         <h3 className={classNames(styles.whiteTextInDarkMode)}>Filters</h3>
                         {this.props.filterable && (
                             <div>
-                                    <Filter
-                                        className={classNames(
-                                            styles.filterBarItem,
-                                            styles.filter
-                                        )}
-                                        filterQuery={this.state.filterQuery}
-                                        inputClassName={styles.filterInput}
-                                        placeholderText={this.props.intl.formatMessage(messages.filterPlaceholder)}
-                                        onChange={this.handleFilterChange}
-                                        onClear={this.handleFilterClear}
-                                    />
+                                <Filter
+                                    className={classNames(
+                                        styles.filterBarItem,
+                                        styles.filter
+                                    )}
+                                    filterQuery={this.state.filterQuery}
+                                    inputClassName={styles.filterInput}
+                                    placeholderText={this.props.intl.formatMessage(messages.filterPlaceholder)}
+                                    onChange={this.handleFilterChange}
+                                    onClear={this.handleFilterClear}
+                                />
                                 <Divider className={classNames(styles.filterBarItem, styles.divider)} />
                             </div>
                         )}
@@ -489,10 +463,7 @@ class LibraryComponent extends React.Component {
 
 LibraryComponent.propTypes = {
     data: PropTypes.oneOfType([PropTypes.arrayOf(
-        /* eslint-disable react/no-unused-prop-types, lines-around-comment */
-        // An item in the library
         PropTypes.shape({
-            // @todo remove md5/rawURL prop from library, refactor to use storage
             md5: PropTypes.string,
             name: PropTypes.oneOfType([
                 PropTypes.string,
@@ -500,7 +471,6 @@ LibraryComponent.propTypes = {
             ]),
             rawURL: PropTypes.string
         })
-        /* eslint-enable react/no-unused-prop-types, lines-around-comment */
     ), PropTypes.instanceOf(Promise)]),
     filterable: PropTypes.bool,
     id: PropTypes.string.isRequired,
