@@ -77,6 +77,7 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 import errorIcon from './tw-error.svg';
 import themeIcon from './tw-moon.svg';
+import homeS from './navicon.png';
 // cool icons ye
 import addonsIcon from './addons.svg';
 import settingsIcon from './settings.svg';
@@ -456,6 +457,19 @@ class MenuBar extends React.Component {
                                 />
                             </div>
                         ) : null}
+                        {this.props.onHomeClick && (
+                            <div
+                                className={classNames(styles.menuBarItem, styles.hoverable)}
+                                onClick={() => { window.location.href = "https://snail-ide.com"; }}
+                            >
+                                <img
+                                    src={homeS}
+                                    width="24"
+                                    height="24"
+                                    draggable={false}
+                                />
+                            </div>
+                        )}
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
@@ -489,6 +503,10 @@ class MenuBar extends React.Component {
                                 />
                             </div>
                         )}
+
+                        
+
+
                         {/* tw: display compile errors */}
                         {this.props.compileErrors.length > 0 && <div>
                             <div
@@ -967,6 +985,7 @@ MenuBar.propTypes = {
     onClickAccount: PropTypes.func,
     onClickAddonSettings: PropTypes.func,
     onClickTheme: PropTypes.func,
+    onHomeClick: PropTypes.func,
     onClickPackager: PropTypes.func,
     onClickRestorePoints: PropTypes.func,
     onClickEdit: PropTypes.func,
