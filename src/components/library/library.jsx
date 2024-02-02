@@ -2,14 +2,13 @@ import classNames from 'classnames';
 import bindAll from 'lodash.bindall';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { defineMessages, injectIntl, intlShape } from 'react-intl';
+import {defineMessages, injectIntl, intlShape} from 'react-intl';
 
 import LibraryItem from '../../containers/library-item.jsx';
 import Modal from '../../containers/modal.jsx';
 import Divider from '../divider/divider.jsx';
 import Filter from '../filter/filter.jsx';
 import TagButton from '../../containers/tag-button.jsx';
-import TagCheckbox from '../../containers/tag-checkbox.jsx';
 import Spinner from '../spinner/spinner.jsx';
 
 import styles from './library.css';
@@ -27,22 +26,11 @@ const messages = defineMessages({
     }
 });
 
-const PM_LIBRARY_API = "https://snail-ide-object-libraries.vercel.app/";
-
-const ALL_TAG = { tag: 'all', intlLabel: messages.allTag };
-const tagListPrefix = [];
-
-const arrayIncludesItemsFrom = (array, from) => {
-    if (!Array.isArray(array)) array = [];
-    if (!Array.isArray(from)) from = [];
-    const value = from.every((value) => {
-        return array.indexOf(value) >= 0;
-    });
-    return value;
-};
+const ALL_TAG = {tag: 'all', intlLabel: messages.allTag};
+const tagListPrefix = [ALL_TAG];
 
 class LibraryComponent extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         bindAll(this, [
             'handleClose',
@@ -53,115 +41,69 @@ class LibraryComponent extends React.Component {
             'handlePlayingEnd',
             'handleSelect',
             'handleTagClick',
-            'setFilteredDataRef',
-            'loadLibraryData',
-            'waitForLoading',
-            'createFilteredData',
-            'getFilteredData'
+            'setFilteredDataRef'
         ]);
         this.state = {
             playingItem: null,
             filterQuery: '',
-            selectedTags: [],
-            collapsed: false,
+            selectedTag: ALL_TAG.tag,
             loaded: false,
             data: props.data
         };
-
-        this.usesSpecialLoading = [
-            "ExtensionLibrary"
-        ];
     }
-
-    loadLibraryData() {
-        return new Promise((resolve) => {
-            if (this.state.data.then) {
-                this.state.data.then(data => {
-                    resolve({ key: "data", value: data });
+    componentDidMount () {
+        if (this.state.data.then) {
+            // If data is a promise, wait for the promise to resolve
+            this.state.data.then(data => {
+                this.setState({
+                    loaded: true,
+                    data
                 });
-            } else {
-                setTimeout(() => {
-                    const data = this.state.data;
-                    resolve({ key: "data", value: data });
-                });
-            }
-        });
-    }
-
-    async waitForLoading(processes) {
-        const packet = {};
-        for (const process of processes) {
-            const result = await process();
-            packet[result.key] = result.value;
+            });
+        } else {
+            // Allow the spinner to display before loading the content
+            setTimeout(() => {
+                this.setState({loaded: true});
+            });
         }
-        return packet;
+        if (this.props.setStopHandler) this.props.setStopHandler(this.handlePlayingEnd);
     }
-
-    componentDidMount() {
-        if (!this.usesSpecialLoading.includes(this.props.actor)) {
-            if (this.state.data.then) {
-                this.state.data.then(data => {
-                    this.setState({
-                        loaded: true,
-                        data
-                    });
-                });
-            } else {
-                setTimeout(() => {
-                    this.setState({ loaded: true });
-                });
-            }
-        }
-        if (!this.usesSpecialLoading.includes(this.props.actor)) return;
-        const spinnerProcesses = [this.loadLibraryData];
-        this.waitForLoading(spinnerProcesses).then((packet) => {
-            const data = { loaded: true, ...packet };
-            this.setState(data);
-        });
-    }
-
-    async componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate (prevProps, prevState) {
         if (prevState.filterQuery !== this.state.filterQuery ||
-            prevState.selectedTags.length !== this.state.selectedTags.length) {
+            prevState.selectedTag !== this.state.selectedTag) {
             this.scrollToTop();
         }
-
         if (prevProps.data !== this.props.data) {
+            // eslint-disable-next-line react/no-did-update-set-state
             this.setState({
                 data: this.props.data
             });
         }
     }
-
-    handleSelect(id) {
+    handleSelect (id) {
         this.handleClose();
         this.props.onItemSelected(this.getFilteredData()[id]);
     }
-    handleClose() {
+    handleClose () {
         this.props.onRequestClose();
     }
-    handleTagClick(tag, enabled) {
+    handleTagClick (tag) {
         if (this.state.playingItem === null) {
             this.setState({
                 filterQuery: '',
-                selectedTags: this.state.selectedTags.concat([tag.toLowerCase()])
+                selectedTag: tag.toLowerCase()
             });
         } else {
             this.props.onItemMouseLeave(this.getFilteredData()[[this.state.playingItem]]);
             this.setState({
                 filterQuery: '',
                 playingItem: null,
-                selectedTags: this.state.selectedTags.concat([tag.toLowerCase()])
-            });
-        }
-        if (!enabled) {
-            const tags = this.state.selectedTags.filter(t => (t !== tag));
-            this.setState({
-                selectedTags: tags
+                selectedTag: tag.toLowerCase()
             });
         }
     }
-    handleMouseEnter(id) {
+    handleMouseEnter (id) {
+        // don't restart if mouse over already playing item
         if (this.props.onItemMouseEnter && this.state.playingItem !== id) {
             this.props.onItemMouseEnter(this.getFilteredData()[id]);
             this.setState({
@@ -169,7 +111,7 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handleMouseLeave(id) {
+    handleMouseLeave (id) {
         if (this.props.onItemMouseLeave) {
             this.props.onItemMouseLeave(this.getFilteredData()[id]);
             this.setState({
@@ -177,70 +119,62 @@ class LibraryComponent extends React.Component {
             });
         }
     }
-    handlePlayingEnd() {
+    handlePlayingEnd () {
         if (this.state.playingItem !== null) {
             this.setState({
                 playingItem: null
             });
         }
     }
-    handleFilterChange(event) {
+    handleFilterChange (event) {
         if (this.state.playingItem === null) {
             this.setState({
                 filterQuery: event.target.value,
-                selectedTags: []
+                selectedTag: ALL_TAG.tag
             });
         } else {
             this.props.onItemMouseLeave(this.getFilteredData()[[this.state.playingItem]]);
             this.setState({
                 filterQuery: event.target.value,
                 playingItem: null,
-                selectedTags: []
+                selectedTag: ALL_TAG.tag
             });
         }
     }
-    handleFilterClear() {
-        this.setState({ filterQuery: '' });
+    handleFilterClear () {
+        this.setState({filterQuery: ''});
     }
-    createFilteredData() {
-        if (this.state.selectedTags.length <= 0) {
+    getFilteredData () {
+        if (this.state.selectedTag === 'all') {
             if (!this.state.filterQuery) return this.state.data;
             return this.state.data.filter(dataItem => (
                 (dataItem.tags || [])
+                    // Second argument to map sets `this`
                     .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase)
                     .concat(dataItem.name ?
                         (typeof dataItem.name === 'string' ?
+                        // Use the name if it is a string, else use formatMessage to get the translated name
                             dataItem.name : this.props.intl.formatMessage(dataItem.name.props)
                         ).toLowerCase() :
                         null)
-                    .join('\n')
+                    .join('\n') // unlikely to partially match newlines
                     .indexOf(this.state.filterQuery.toLowerCase()) !== -1
             ));
         }
-        return this.state.data.filter(dataItem => (arrayIncludesItemsFrom(
+        return this.state.data.filter(dataItem => (
             dataItem.tags &&
             dataItem.tags
-                .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase),
-            this.state.selectedTags)));
+                .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase)
+                .indexOf(this.state.selectedTag) !== -1
+        ));
     }
-    getFilteredData() {
-        const filtered = this.createFilteredData();
-
-        if (this.props.actor !== "ExtensionLibrary") {
-            return filtered;
-        }
-
-        const final = filtered.map(item => ({ ...item, custom: false }));
-
-        return final;
-    }
-    scrollToTop() {
+    scrollToTop () {
         this.filteredDataRef.scrollTop = 0;
     }
-    setFilteredDataRef(ref) {
+    setFilteredDataRef (ref) {
         this.filteredDataRef = ref;
     }
-    render() {
+    render () {
         return (
             <Modal
                 fullScreen
@@ -248,168 +182,87 @@ class LibraryComponent extends React.Component {
                 id={this.props.id}
                 onRequestClose={this.handleClose}
             >
-                {this.props.header ? (
-                    <h1
-                        style={{ marginLeft: "6px" }}
-                        className={classNames(
-                            styles.libraryHeader,
-                            styles.whiteTextInDarkMode
-                        )}
-                    >
-                        <button
-                            style={this.state.collapsed ? { transform: "scaleX(0.65)" } : null}
-                            className={classNames(styles.libraryFilterCollapse)}
-                            onClick={() => {
-                                this.setState({
-                                    collapsed: !this.state.collapsed
-                                });
-                            }}
-                        />
-                        {this.props.header}
-                        <p
-                            className={classNames(styles.libraryItemCount)}
-                        >
-                            {this.state.data.length}
-                        </p>
-                    </h1>
-                ) : null}
-                <div className={classNames(styles.libraryContentWrapper)}>
-                    <div
-                        className={classNames(styles.libraryFilterBar)}
-                        style={this.state.collapsed ? { display: "none" } : null}
-                    >
-                        <h3 className={classNames(styles.whiteTextInDarkMode)}>Filters</h3>
+                {(this.props.filterable || this.props.tags) && (
+                    <div className={styles.filterBar}>
                         {this.props.filterable && (
-                            <div>
-                                <Filter
-                                    className={classNames(
-                                        styles.filterBarItem,
-                                        styles.filter
-                                    )}
-                                    filterQuery={this.state.filterQuery}
-                                    inputClassName={styles.filterInput}
-                                    placeholderText={this.props.intl.formatMessage(messages.filterPlaceholder)}
-                                    onChange={this.handleFilterChange}
-                                    onClear={this.handleFilterClear}
-                                />
-                                <Divider className={classNames(styles.filterBarItem, styles.divider)} />
-                            </div>
+                            <Filter
+                                className={classNames(
+                                    styles.filterBarItem,
+                                    styles.filter
+                                )}
+                                filterQuery={this.state.filterQuery}
+                                inputClassName={styles.filterInput}
+                                placeholderText={this.props.intl.formatMessage(messages.filterPlaceholder)}
+                                onChange={this.handleFilterChange}
+                                onClear={this.handleFilterClear}
+                            />
+                        )}
+                        {this.props.filterable && this.props.tags && (
+                            <Divider className={classNames(styles.filterBarItem, styles.divider)} />
                         )}
                         {this.props.tags &&
-                            <div>
-                                {tagListPrefix.concat(this.props.tags).map((tagProps, id) => {
-                                    let onclick = this.handleTagClick;
-                                    if (tagProps.type === 'divider') {
-                                        return (<Divider className={classNames(styles.filterBarItem, styles.divider)} />);
-                                    }
-                                    if (tagProps.type === 'title') {
-                                        return (<h3 className={classNames(styles.whiteTextInDarkMode)}>{tagProps.intlLabel}</h3>);
-                                    }
-                                    if (tagProps.type === 'subtitle') {
-                                        return (<h5 className={classNames(styles.whiteTextInDarkMode)}>{tagProps.intlLabel}</h5>);
-                                    }
-                                    if (tagProps.type === 'custom') {
-                                        onclick = () => {
-                                            const api = {};
-                                            api.useTag = this.handleTagClick;
-                                            api.close = this.handleClose;
-                                            api.select = (id) => {
-                                                const items = this.state.data;
-                                                for (const item of items) {
-                                                    if (item.extensionId === id) {
-                                                        this.handleClose();
-                                                        this.props.onItemSelected(item);
-                                                        return;
-                                                    };
-                                                }
-                                            };
-                                            tagProps.func(api);
-                                        };
-                                        return (
-                                            <TagButton
-                                                active={false}
-                                                className={classNames(
-                                                    styles.filterBarItem,
-                                                    styles.tagButton,
-                                                    tagProps.className
-                                                )}
-                                                key={`tag-button-${id}`}
-                                                onClick={onclick}
-                                                {...tagProps}
-                                            />
-                                        );
-                                    }
-                                    return (
-                                        <div className={classNames(styles.tagCheckboxWrapper)}>
-                                            <div style={{ width: "90%" }}>
-                                                <TagCheckbox
-                                                    active={false}
-                                                    key={`tag-button-${id}`}
-                                                    onClick={onclick}
-                                                    {...tagProps}
-                                                />
-                                            </div>
-                                            <div style={{ width: "7.5%", marginRight: "2.5%", textAlign: "right" }}>
-                                                {this.state.loaded &&
-                                                    (
-                                                        this.state.data.filter(dataItem => (arrayIncludesItemsFrom(
-                                                            dataItem.tags &&
-                                                            dataItem.tags
-                                                                .map(String.prototype.toLowerCase.call, String.prototype.toLowerCase),
-                                                            [tagProps.tag]))).length
-                                                    )
-                                                }
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                            <div className={styles.tagWrapper}>
+                                {tagListPrefix.concat(this.props.tags).map((tagProps, id) => (
+                                    <TagButton
+                                        active={this.state.selectedTag === tagProps.tag.toLowerCase()}
+                                        className={classNames(
+                                            styles.filterBarItem,
+                                            styles.tagButton,
+                                            tagProps.className
+                                        )}
+                                        key={`tag-button-${id}`}
+                                        onClick={this.handleTagClick}
+                                        {...tagProps}
+                                    />
+                                ))}
                             </div>
                         }
                     </div>
-                    <div
-                        className={classNames(styles.libraryScrollGrid)}
-                        ref={this.setFilteredDataRef}
-                    >
-                        {this.state.loaded ? this.getFilteredData().map((dataItem, index) => (
-                            <LibraryItem
-                                bluetoothRequired={dataItem.bluetoothRequired}
-                                collaborator={dataItem.collaborator}
-                                extDeveloper={dataItem.extDeveloper}
-                                credits={dataItem.credits}
-                                twDeveloper={dataItem.twDeveloper}
-                                eventSubmittor={dataItem.eventSubmittor}
-                                customInsetColor={dataItem.customInsetColor}
-                                description={dataItem.description}
-                                disabled={dataItem.disabled}
-                                extensionId={dataItem.extensionId}
-                                featured={dataItem.featured}
-                                hidden={dataItem.hidden}
-                                href={dataItem.href}
-                                iconMd5={dataItem.costumes ? dataItem.costumes[0].md5ext : dataItem.md5ext}
-                                iconRawURL={this.props.actor === "CostumeLibrary" ? `${PM_LIBRARY_API}files/${dataItem.libraryFilePage}` : dataItem.rawURL}
-                                icons={dataItem.costumes}
-                                id={index}
-                                _id={dataItem._id}
-                                incompatibleWithScratch={dataItem.incompatibleWithScratch}
-                                insetIconURL={dataItem.insetIconURL}
-                                internetConnectionRequired={dataItem.internetConnectionRequired}
-                                isPlaying={this.state.playingItem === index}
-                                key={typeof dataItem.name === 'string' ? dataItem.name : dataItem.rawURL}
-                                name={dataItem.name}
-                                showPlayButton={this.props.showPlayButton}
-                                onMouseEnter={this.handleMouseEnter}
-                                onMouseLeave={this.handleMouseLeave}
-                                onSelect={this.handleSelect}
+                )}
+                <div
+                    className={classNames(styles.libraryScrollGrid, {
+                        [styles.withFilterBar]: this.props.filterable || this.props.tags
+                    })}
+                    ref={this.setFilteredDataRef}
+                >
+                    {this.state.loaded ? this.getFilteredData().map((dataItem, index) => (
+                        <LibraryItem
+                            bluetoothRequired={dataItem.bluetoothRequired}
+                            collaborator={dataItem.collaborator}
+                            extDeveloper={dataItem.extDeveloper}
+                            credits={dataItem.credits}
+                            twDeveloper={dataItem.twDeveloper}
+                            eventSubmittor={dataItem.eventSubmittor}
+                            customInsetColor={dataItem.customInsetColor}
+                            description={dataItem.description}
+                            disabled={dataItem.disabled}
+                            extensionId={dataItem.extensionId}
+                            featured={dataItem.featured}
+                            hidden={dataItem.hidden}
+                            href={dataItem.href}
+                            iconMd5={dataItem.costumes ? dataItem.costumes[0].md5ext : dataItem.md5ext}
+                            iconRawURL={dataItem.rawURL}
+                            icons={dataItem.costumes}
+                            id={index}
+                            incompatibleWithScratch={dataItem.incompatibleWithScratch}
+                            insetIconURL={dataItem.insetIconURL}
+                            internetConnectionRequired={dataItem.internetConnectionRequired}
+                            isPlaying={this.state.playingItem === index}
+                            key={typeof dataItem.name === 'string' ? dataItem.name : dataItem.rawURL}
+                            name={dataItem.name}
+                            showPlayButton={this.props.showPlayButton}
+                            onMouseEnter={this.handleMouseEnter}
+                            onMouseLeave={this.handleMouseLeave}
+                            onSelect={this.handleSelect}
+                        />
+                    )) : (
+                        <div className={styles.spinnerWrapper}>
+                            <Spinner
+                                large
+                                level="primary"
                             />
-                        )) : (
-                            <div className={styles.spinnerWrapper}>
-                                <Spinner
-                                    large
-                                    level="primary"
-                                />
-                            </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </div>
             </Modal>
         );
@@ -418,7 +271,10 @@ class LibraryComponent extends React.Component {
 
 LibraryComponent.propTypes = {
     data: PropTypes.oneOfType([PropTypes.arrayOf(
+        /* eslint-disable react/no-unused-prop-types, lines-around-comment */
+        // An item in the library
         PropTypes.shape({
+            // @todo remove md5/rawURL prop from library, refactor to use storage
             md5: PropTypes.string,
             name: PropTypes.oneOfType([
                 PropTypes.string,
@@ -426,6 +282,7 @@ LibraryComponent.propTypes = {
             ]),
             rawURL: PropTypes.string
         })
+        /* eslint-enable react/no-unused-prop-types, lines-around-comment */
     ), PropTypes.instanceOf(Promise)]),
     filterable: PropTypes.bool,
     id: PropTypes.string.isRequired,
@@ -434,6 +291,7 @@ LibraryComponent.propTypes = {
     onItemMouseLeave: PropTypes.func,
     onItemSelected: PropTypes.func,
     onRequestClose: PropTypes.func,
+    setStopHandler: PropTypes.func,
     showPlayButton: PropTypes.bool,
     tags: PropTypes.arrayOf(PropTypes.shape(TagButton.propTypes)),
     title: PropTypes.string.isRequired
