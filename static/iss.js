@@ -1,12 +1,16 @@
 // made by nmsderp
-// inspired by some scratchx extension
-
+// iss cool 😎
 class ISSLocationExtension {
     getInfo() {
         return {
             id: 'ISSLocation',
             name: 'ISS Location',
             blocks: [
+                {
+                    opcode: 'silly-billy-label',
+                    blockType: Scratch.BlockType.LABEL,
+                    text: 'Works Well With Ruby Maps',
+                  },
                 {
                     opcode: 'getISSCoordinate',
                     blockType: Scratch.BlockType.REPORTER,
@@ -46,18 +50,22 @@ class ISSLocationExtension {
                         },
                     },
                 },
+                {
+                    opcode: 'getISSVelocity',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'get velocity of ISS',
+                },
             ],
             menus: {
                 LATORLONGMENU: {
                     acceptReporters: false,
                     items: ['latitude', 'longitude'],
                 },
-                // time for geography lessons with nolan!
                 LOCATIONMENU: {
                     acceptReporters: false,
                     items: [
-                        'New York', 'Cincinati', 'Detroit', 'London', 'Paris', 'Tokyo', 'Sydney', // those are cities
-                        'United States', 'United Kingdom', 'France', 'Japan', 'Australia' // those are countries
+                        'New York', 'Cincinnati', 'Detroit', 'London', 'Paris', 'Tokyo', 'Sydney', // Cities
+                        'United States', 'United Kingdom', 'France', 'Japan', 'Australia' // Countries
                     ],
                 },
             },
@@ -78,7 +86,6 @@ class ISSLocationExtension {
             return 'Failed to fetch ISS location 😭 (The Server is Most Likely Getting Too Many Requests)';
         }
     }
-
     whenISSPassesOverLocation(args, util) {
         const location = args.LOCATION.toLowerCase();
         setInterval(async () => {
@@ -96,11 +103,10 @@ class ISSLocationExtension {
             } catch (error) {
                 console.error('Error fetching ISS location:', error);
             }
-        }, 60000); // when 1 minute :0
+        }, 60000); // when every minute :0
     }
 
     isISSOverLocation(ISSLocation, location) {
-        // implement stuff to check if ISS is passing over given location, it is silly 
         return ISSLocation.latitude.toFixed(2) === location || ISSLocation.longitude.toFixed(2) === location;
     }
 
@@ -117,6 +123,20 @@ class ISSLocationExtension {
         } catch (error) {
             console.error('Error fetching ISS location:', error);
             return 'Failed to fetch ISS location 😭';
+        }
+    }
+
+    async getISSVelocity() {
+        try {
+            const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544');
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ISS data: ${response.statusText}`);
+            }
+            const data = await response.json();
+            return data.velocity.toFixed(2); // return velocity rounded to 2 decimal places, cuz cool 
+        } catch (error) {
+            console.error('Error fetching ISS data:', error);
+            return 'Failed to fetch ISS velocity 😭';
         }
     }
 }
