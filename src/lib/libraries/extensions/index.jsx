@@ -1081,7 +1081,7 @@ const menuItems = [
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="We list many Ruby extensions here for convenience, but you can find even more on https://rubyteam.tech/gallery"
+                defaultMessage="All Ruby Extensions were removed from this list, to get the extensions please go to the gallery. (@yumbee told us)"
                 description="Description of extensions.turbowarp.org in extension library"
                 id="ruby.extensionGallery.description"
             />
