@@ -302,6 +302,9 @@ class Interface extends React.Component {
                     />
                     {isHomepage ? (
                         <React.Fragment>
+                            <div className={styles.remixWarningBox}>
+                                    <p>If you would like your extension removed/added to Snail IDE, please contact us in some way.</p>
+                            </div>
                             {/* project not approved message */}
                             {(window.LastFetchedProject) != null && (window.LastFetchedProject.accepted == false) ? (
                                 <div className={styles.remixWarningBox}>
