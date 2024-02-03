@@ -447,29 +447,19 @@ class MenuBar extends React.Component {
                         {this.props.onClickLogo ? (
                             <div className={classNames(styles.menuBarItem)}>
                                 <img
-                                    alt="Scratch"
+                                    alt="Snail IDE"
                                     className={classNames(styles.scratchLogo, {
                                         [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                     })}
                                     draggable={false}
-                                    src={this.props.logo}
-                                    onClick={this.props.onClickLogo}
+                                    src={homeS}
+                                    onClick={() => { 
+                                        window.open('https://snail-ide.com', '_blank'); 
+                                        this.props.onClickLogo();
+                                    }}
                                 />
                             </div>
                         ) : null}
-                        {this.props.onHomeClick && (
-                            <div
-                                className={classNames(styles.menuBarItem, styles.hoverable)}
-                                onClick={() => { window.location.href = "https://snail-ide.com"; }}
-                            >
-                                <img
-                                    src={homeS}
-                                    width="24"
-                                    height="24"
-                                    draggable={false}
-                                />
-                            </div>
-                        )}
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
