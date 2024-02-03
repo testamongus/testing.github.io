@@ -10,7 +10,6 @@ import classNames from 'classnames';
 import bluetoothIconURL from './bluetooth.svg';
 import internetConnectionIconURL from './internet-connection.svg';
 
-/* eslint-disable react/prefer-stateless-function */
 class LibraryItemComponent extends React.PureComponent {
     render() {
         return this.props.featured ? (
@@ -74,6 +73,14 @@ class LibraryItemComponent extends React.PureComponent {
                     <span className={styles.libraryItemName}>{this.props.name}</span>
                     <br />
                     <span className={styles.featuredDescription}>{this.props.description}</span>
+                    {this.props.docsURI && (
+                        <span>
+                            <br />
+                            <a href={this.props.docsURI} target="_blank" rel="noopener noreferrer">
+                                Click Here For Docs
+                            </a>
+                        </span>
+                    )}
                 </div>
                 {
                     this.props.bluetoothRequired ||
@@ -193,7 +200,6 @@ class LibraryItemComponent extends React.PureComponent {
                 onMouseEnter={this.props.showPlayButton ? null : this.props.onMouseEnter}
                 onMouseLeave={this.props.showPlayButton ? null : this.props.onMouseLeave}
             >
-                {/* Layers of wrapping is to prevent layout thrashing on animation */}
                 <Box className={styles.libraryItemImageContainerWrapper}>
                     <Box
                         className={styles.libraryItemImageContainer}
@@ -208,6 +214,14 @@ class LibraryItemComponent extends React.PureComponent {
                     </Box>
                 </Box>
                 <span className={styles.libraryItemName}>{this.props.name}</span>
+                {this.props.docsURI && (
+                    <span>
+                        <br />
+                        <a href={this.props.docsURI} target="_blank" rel="noopener noreferrer">
+                            Click Here For Docs
+                        </a>
+                    </span>
+                )}
                 {this.props.showPlayButton ? (
                     <PlayButton
                         isPlaying={this.props.isPlaying}
@@ -219,8 +233,6 @@ class LibraryItemComponent extends React.PureComponent {
         );
     }
 }
-/* eslint-enable react/prefer-stateless-function */
-
 
 LibraryItemComponent.propTypes = {
     bluetoothRequired: PropTypes.bool,
@@ -255,6 +267,7 @@ LibraryItemComponent.propTypes = {
     onMouseLeave: PropTypes.func.isRequired,
     onPlay: PropTypes.func.isRequired,
     onStop: PropTypes.func.isRequired,
+    docsURI: PropTypes.string,
     showPlayButton: PropTypes.bool
 };
 

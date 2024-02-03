@@ -632,6 +632,7 @@ const menuItems = [
         name: 'PenguinGPT',
         extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
         twDeveloper: 'Anonymous-cat1',
+        docsURI: 'https://docs.snail-ide.com/extensions/chatgpt',
         iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
         description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
@@ -814,6 +815,7 @@ const menuItems = [
     {
         name: 'Storage',
         extensionId: 'jgStorage',
+        docsURI: 'https://docs.snail-ide.com/extensions/storage',
         iconURL: jgStorageExtensionIcon,
         tags: ['penguinmod'],
         description: 'Store data after PenguinMod has already been closed out. Basic Server Storage is also included.',
