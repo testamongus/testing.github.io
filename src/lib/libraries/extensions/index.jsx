@@ -651,7 +651,7 @@ const menuItems = [
     {
         name: 'Cats',
         extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/CATS.js',
-        collaborator: 'Gen1X',
+        ruby: 'Gen1X',
         iconURL: catsIconURL,
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
