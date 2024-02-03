@@ -173,7 +173,7 @@ const menuItems = [
     },
     {
         name: 'Monitors Plus',
-        extensionId: 'https://snail-ide.js.org/Monitors-Plus.js',
+        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Monitors-Plus.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Monitors-Plus.svg',
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
