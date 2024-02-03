@@ -1072,7 +1072,7 @@ const menuItems = [
         extensionId: 'https://ruby-devs.vercel.app/cdn/extensions/rubymaps.js',
         ruby: 'G1nX',
         iconURL: 'https://ruby-devs.vercel.app/cdn/thumbnails/rubymaps.svg',
-        tags: ['turbowarp', 'ai'],
+        tags: ['turbowarp','penguinmod'],
         description: 'An extension that lets you integrate the power of maps into your projects!',
         featured: true
     },
