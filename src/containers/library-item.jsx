@@ -181,6 +181,7 @@ class LibraryItem extends React.PureComponent {
                 intl={this.props.intl}
                 bluetoothRequired={this.props.bluetoothRequired}
                 collaborator={this.props.collaborator}
+                ruby={this.props.ruby}
                 twDeveloper={this.props.twDeveloper}
                 credits={this.props.credits}
                 extDeveloper={this.props.extDeveloper}
@@ -227,6 +228,7 @@ LibraryItem.propTypes = {
     intl: intlShape,
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
+    ruby: PropTypes.string,
     twDeveloper: PropTypes.string,
     extDeveloper: PropTypes.string,
     credits: PropTypes.string,

@@ -1059,6 +1059,60 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'PenguinGPT',
+        extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
+        ruby: 'cicerorph & Anonymous-cat1',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
+        tags: ['turbowarp', 'ai'],
+        description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
+        featured: true
+    },
+    {
+        name: 'Ruby Maps',
+        extensionId: 'https://ruby-devs.vercel.app/cdn/extensions/rubymaps.js',
+        ruby: 'G1nX',
+        iconURL: 'https://ruby-devs.vercel.app/cdn/thumbnails/rubymaps.svg',
+        tags: ['turbowarp', 'ai'],
+        description: 'An extension that lets you integrate the power of maps into your projects!',
+        featured: true
+    },
+    {
+        name: 'Gemini',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
+        ruby: 'cicerorph',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
+        tags: ['turbowarp', 'ai'],
+        description: 'Use Google Gemini in your projects',
+        featured: true
+    },
+    {
+        name: 'Analytics',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/analytics.js',
+        ruby: 'cicerorph',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/analytics.webp',
+        tags: ['turbowarp', 'penguinmod'],
+        description: 'Measure how many people are using your projects using the Ruby API.',
+        featured: true
+    },
+    {
+        name: 'PenguinPedia',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/penguinpedia.js',
+        ruby: 'Gen1X',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
+        tags: ['penguinmod'],
+        description: 'Get a lot of data from Wikipedia, like definitions and images!',
+        featured: true,
+    },
+    {
+        name: '1MB Shortener',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/1mb.js', // update reference once file names are updated
+        tags: ['turbowarp'],
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/1mb.svg',
+        description: 'Using 1mb Api you can now share links without it being long!',
+        featured: true,
+        ruby: 'cicerorph'
+    },
+    {
         name: '3D VR',
         extensionId: 'jg3dVr',
         iconURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsXcntVmSk264zyLaS3GdbOBQPhk3JjE5Vg&usqp=CAU',
@@ -1081,7 +1135,7 @@ const menuItems = [
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="All Ruby Extensions were removed from this list, to get the extensions please go to the gallery. (@yumbee told us)"
+                defaultMessage="View Other Useful Ruby Team Extensions!"
                 description="Description of extensions.turbowarp.org in extension library"
                 id="ruby.extensionGallery.description"
             />

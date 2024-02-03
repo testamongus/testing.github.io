@@ -87,6 +87,7 @@ class LibraryItemComponent extends React.PureComponent {
                     this.props.bluetoothRequired ||
                         this.props.internetConnectionRequired ||
                         this.props.collaborator ||
+                        this.props.ruby ||
                         this.props.extDeveloper ||
                         this.props.twDeveloper ||
                         this.props.eventSubmittor ||
@@ -130,6 +131,22 @@ class LibraryItemComponent extends React.PureComponent {
                                                 className={styles.featuredExtensionMetadataDetail}
                                             >
                                                 {this.props.collaborator}
+                                            </div>
+                                        </div>
+                                    ) : null}
+                                    {this.props.ruby ? (
+                                        <div>
+                                            <div>
+                                                <FormattedMessage
+                                                    defaultMessage="Created By Ruby Dev:"
+                                                    description="Label for ruby extensions"
+                                                    id="gui.extensionLibrary.ruby"
+                                                />
+                                            </div>
+                                            <div
+                                                className={styles.featuredExtensionMetadataDetail}
+                                            >
+                                                {this.props.ruby}
                                             </div>
                                         </div>
                                     ) : null}
@@ -238,6 +255,7 @@ class LibraryItemComponent extends React.PureComponent {
 LibraryItemComponent.propTypes = {
     bluetoothRequired: PropTypes.bool,
     collaborator: PropTypes.string,
+    ruby: PropTypes.string,
     credits: PropTypes.string,
     twDeveloper: PropTypes.string,
     extDeveloper: PropTypes.string,
