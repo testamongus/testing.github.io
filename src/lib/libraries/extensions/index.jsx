@@ -629,34 +629,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'PenguinGPT',
-        extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
-        twDeveloper: 'Anonymous-cat1',
-        docsURI: 'https://docs.snail-ide.com/extensions/chatgpt',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
-        tags: ['turbowarp', 'ai'],
-        description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
-        featured: true
-    },
-    {
-        name: 'Gemini',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
-        collaborator: 'Ruby Dev Team',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
-        tags: ['turbowarp', 'ai'],
-        description: 'Use Google Gemini in your projects',
-        featured: true
-    },
-    {
-        name: 'Analytics',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/analytics.js',
-        collaborator: 'Ruby Dev Team',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/analytics.webp',
-        tags: ['turbowarp', 'penguinmod'],
-        description: 'Measure how many people are using your projects using the Ruby API.',
-        featured: true
-    },
-    {
         name: 'Dot Prop',
         extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
         twDeveloper: 'Richienbs',
@@ -683,15 +655,6 @@ const menuItems = [
         iconURL: catsIconURL,
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
-        featured: true,
-    },
-    {
-        name: 'PenguinPedia',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/penguinpedia.js',
-        collaborator: 'Gen1X',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
-        tags: ['penguinmod'],
-        description: 'Get a lot of data from Wikipedia, like definitions and images!',
         featured: true,
     },
     {
@@ -915,15 +878,6 @@ const menuItems = [
             />
         ),
         featured: true
-    },
-    {
-        name: '1MB Shortener',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/1mb.js', // update reference once file names are updated
-        tags: ['turbowarp'],
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/1mb.svg',
-        description: 'Using 1mb Api you can now share links without it being long!',
-        featured: true,
-        collaborator: 'Ruby Dev Team'
     },
     {
         name: 'McUtils',
@@ -1150,29 +1104,6 @@ const menuItems = [
                 defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
                 description="Description of extensions.turbowarp.org in extension library"
                 id="tw.extensionGallery.description"
-            />
-        ),
-        tags: ['penguinmod'],
-        featured: true
-    },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Ruby Extension Gallery"
-                description="Name of https://rubyteam.tech/gallery in extension library"
-                id="ruby.extensionGallery.name"
-            />
-        ),
-        href: 'https://rubyteam.tech/gallery',
-        extensionId: 'special_rubyGallery',
-        insetIconURL: 'https://rubyteam.tech/logo.svg',
-        iconURL: 'https://u.cubeupload.com/Mr_rudy/ruby.png',
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="We list many Ruby extensions here for convenience, but you can find even more on https://rubyteam.tech/gallery"
-                description="Description of extensions.turbowarp.org in extension library"
-                id="ruby.extensionGallery.description"
             />
         ),
         tags: ['penguinmod'],
