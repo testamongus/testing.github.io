@@ -138,7 +138,7 @@ class LibraryItemComponent extends React.PureComponent {
                                         <div>
                                             <div>
                                                 <FormattedMessage
-                                                    defaultMessage="Created By Ruby Dev:"
+                                                    defaultMessage="Created By Ruby Dev(s)"
                                                     description="Label for ruby extensions"
                                                     id="gui.extensionLibrary.ruby"
                                                 />
