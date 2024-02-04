@@ -154,7 +154,8 @@ const extensionDevelopers = [
     'SharkPool-SP',
     'Vadik1',
     'MikeDev101',
-    'LilyMakesThings'
+    'LilyMakesThings',
+    'CharcoalAfterlife'
 ].map(fromHardcodedGithub);
 
 export default {
