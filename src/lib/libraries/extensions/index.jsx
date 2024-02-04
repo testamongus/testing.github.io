@@ -329,15 +329,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Ruby Maps',
-        extensionId: 'https://ruby-devs.vercel.app/cdn/extensions/rubymaps.js',
-        collaborator: 'G1nX',
-        iconURL: 'https://ruby-devs.vercel.app/cdn/thumbnails/rubymaps.svg',
-        tags: ['turbowarp','penguinmod'],
-        description: 'An extension that lets you integrate the power of maps into your projects!',
-        featured: true
-    },
-    {
         name: 'Gemini',
         extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
         collaborator: 'cicerorph',
