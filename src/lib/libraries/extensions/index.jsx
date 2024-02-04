@@ -328,6 +328,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Rounding+',
+        extensionId: 'https://snail-ide.js.org/rounding.js',
+        iconURL: 'https://uploads.scratch.mit.edu/get_image/project/957486168_144x108.png',
+        tags: ['penguinmod'],
+        description: "Expansion of the rounding block.",
+        collaborator: 'CharcoalAfterlife',
+        featured: true
+    },
+    {
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
         iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
