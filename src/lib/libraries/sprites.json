@@ -9523,6 +9523,38 @@
         "blocks": {}
     },
     {
+        "name": "poo snail",
+        "tags": [
+            "animals",
+            "fantasy"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "47d1bffb6b163c822f07a8de3b997808",
+                "name": "please help",
+                "bitmapResolution": 1,
+                "md5ext": "47d1bffb6b163c822f07a8de3b997808.png",
+                "dataFormat": "png",
+                "rotationCenterX": 74,
+                "rotationCenterY": 78
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "844d13e3e3d7729c240870cc7312a9f4",
+                "name": "horse",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 57856,
+                "md5ext": "844d13e3e3d7729c240870cc7312a9f4.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
         "name": "Noor",
         "tags": [
             "people",
