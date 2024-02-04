@@ -320,6 +320,60 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'PenguinGPT',
+        extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
+        collaborator: 'cicerorph & Anonymous-cat1',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
+        tags: ['turbowarp', 'ai'],
+        description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
+        featured: true
+    },
+    {
+        name: 'Ruby Maps',
+        extensionId: 'https://ruby-devs.vercel.app/cdn/extensions/rubymaps.js',
+        collaborator: 'G1nX',
+        iconURL: 'https://ruby-devs.vercel.app/cdn/thumbnails/rubymaps.svg',
+        tags: ['turbowarp','penguinmod'],
+        description: 'An extension that lets you integrate the power of maps into your projects!',
+        featured: true
+    },
+    {
+        name: 'Gemini',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
+        collaborator: 'cicerorph',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
+        tags: ['turbowarp', 'ai'],
+        description: 'Use Google Gemini in your projects',
+        featured: true
+    },
+    {
+        name: 'Analytics',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/analytics.js',
+        collaborator: 'cicerorph',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/analytics.webp',
+        tags: ['turbowarp', 'penguinmod'],
+        description: 'Measure how many people are using your projects using the Ruby API.',
+        featured: true
+    },
+    {
+        name: 'PenguinPedia',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/penguinpedia.js',
+        collaborator: 'Gen1X',
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
+        tags: ['penguinmod'],
+        description: 'Get a lot of data from Wikipedia, like definitions and images!',
+        featured: true,
+    },
+    {
+        name: '1MB Shortener',
+        extensionId: 'https://rubyteam.tech/cdn/extensions/1mb.js', // update reference once file names are updated
+        tags: ['turbowarp'],
+        iconURL: 'https://rubyteam.tech/cdn/thumbnails/1mb.svg',
+        description: 'Using 1mb Api you can now share links without it being long!',
+        featured: true,
+        collaborator: 'cicerorph'
+    },
+    {
         name: 'Random Utils',
         extensionId: 'https://editor.snail-ide.com/random_utils.js',
         iconURL: 'https://editor.snail-ide.com/random.png',
@@ -660,7 +714,7 @@ const menuItems = [
     {
         name: 'Cats',
         extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/CATS.js',
-        ruby: 'Gen1X',
+        collaborator: 'Gen1X',
         iconURL: catsIconURL,
         tags: ['penguinmod'],
         description: 'Blocks to give you cat facts. 😻',
@@ -1122,6 +1176,30 @@ const menuItems = [
                 defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
                 description="Description of extensions.turbowarp.org in extension library"
                 id="tw.extensionGallery.description"
+            />
+        ),
+        tags: ['penguinmod'],
+        featured: true
+    },
+
+     {
+        name: (
+            <FormattedMessage
+                defaultMessage="Ruby Extension Gallery"
+                description="Name of https://rubyteam.tech/gallery in extension library"
+                id="ruby.extensionGallery.name"
+            />
+        ),
+        href: 'https://rubyteam.tech/gallery',
+        extensionId: 'special_rubyGallery',
+        insetIconURL: 'https://rubyteam.tech/logo.svg',
+        iconURL: 'https://u.cubeupload.com/Mr_rudy/ruby.png',
+        description: (
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="View Other Useful Ruby Team Extensions!"
+                description="Description of extensions.turbowarp.org in extension library"
+                id="ruby.extensionGallery.description"
             />
         ),
         tags: ['penguinmod'],
