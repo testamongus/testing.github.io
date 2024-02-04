@@ -331,7 +331,7 @@ const menuItems = [
         name: 'Rounding+',
         extensionId: 'https://snail-ide.js.org/rounding.js',
         iconURL: 'https://uploads.scratch.mit.edu/get_image/project/957486168_144x108.png',
-        tags: ['penguinmod'],
+        tags: ['penguinmod', 'categoryexpansion'],
         description: "Expansion of the rounding block.",
         collaborator: 'CharcoalAfterlife',
         featured: true
