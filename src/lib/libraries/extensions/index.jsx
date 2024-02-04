@@ -1014,6 +1014,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Discord Auth',
+        extensionId: 'https://snail-ide.js.org/discord.js',
+        iconURL: 'https://snail-ide.js.org/discord-png.png',
+        tags: ['penguinmod'],
+        description: "Get data from a Discord user!",
+        featured: true
+    },
+    {
         name: 'Video',
         extensionId: 'https://extensions.turbowarp.org/Lily/Video.js',
         iconURL: 'https://extensions.turbowarp.org/images/Lily/Video.svg',
