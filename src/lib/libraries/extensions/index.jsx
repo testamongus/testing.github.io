@@ -953,6 +953,16 @@ const menuItems = [
         twDeveloper: 'LilyMakesThings'
     },
     {
+        name: 'Skins',
+        extensionId: 'https://extensions.turbowarp.org/Lily/Skins.js', // update reference once file names are updated
+        tags: ['turbowarp'],
+        iconURL: 'https://extensions.turbowarp.org/images/Lily/Skins.svg',
+        insetIconURL: turbowarpIcon,
+        description: 'Have your sprites render as other images or costumes',
+        featured: true,
+        twDeveloper: 'LilyMakesThings'
+    },
+    {
         name: 'Longman Dictionary',
         extensionId: 'https://extensions.turbowarp.org/veggiecan/LongmanDictionary.js', // update reference once file names are updated
         tags: ['turbowarp'],
