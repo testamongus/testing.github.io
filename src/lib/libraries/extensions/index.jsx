@@ -386,7 +386,7 @@ const menuItems = [
     {
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
-        iconURL: 'https://studio.penguinmod.site/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
+        iconURL: 'https://studio.penguinmod.com/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
         tags: ['penguinmod'],
         description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
         featured: true
@@ -824,8 +824,8 @@ const menuItems = [
     },
     {
         name: 'Better Storage',
-        extensionId: 'https://extensions.penguinmod.site/extensions/Gen1x/better_storage.js',
-        iconURL: 'https://extensions.penguinmod.site/images/Gen1x/betterstorage.png',
+        extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/better_storage.js',
+        iconURL: 'https://extensions.penguinmod.com/images/Gen1x/betterstorage.png',
         tags: ['penguinmod'],
         description: 'Like PenguinMods Storage Extension, but with a couple more features, and faster servers.',
         collaborator: 'G1nX',
@@ -1016,7 +1016,7 @@ const menuItems = [
     {
         name: 'Camera Controls',
         extensionId: 'pmCamera',
-        iconURL: 'https://studio.penguinmod.site/static/assets/6b8350e1c4fcb14dddb1c4bac60690fc.png',
+        iconURL: 'https://studio.penguinmod.com/static/assets/6b8350e1c4fcb14dddb1c4bac60690fc.png',
         tags: ['penguinmod'],
         description: (
             <FormattedMessage
@@ -1150,9 +1150,9 @@ const menuItems = [
                 id="pm.extraLibraryExtensions.name"
             />
         ),
-        href: 'https://extensions.penguinmod.site/',
+        href: 'https://extensions.penguinmod.com/',
         extensionId: 'special_penguinmodExtensionLibrary',
-        iconURL: 'https://studio.penguinmod.site/static/assets/7a4510ab192e5a0bd0b1186db1396bce.svg',
+        iconURL: 'https://studio.penguinmod.com/static/assets/7a4510ab192e5a0bd0b1186db1396bce.svg',
         description: (
             <FormattedMessage
                 defaultMessage="See some user-submitted extensions. Opens in a new tab."
@@ -1173,7 +1173,7 @@ const menuItems = [
         ),
         href: 'https://extensions.turbowarp.org/',
         extensionId: 'special_turbowarpExtensionLibrary',
-        iconURL: 'https://studio.penguinmod.site/static/assets/fa121178a0dc748c56257f39987f0540.svg',
+        iconURL: 'https://studio.penguinmod.com/static/assets/fa121178a0dc748c56257f39987f0540.svg',
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
@@ -1238,8 +1238,8 @@ const menuItems = [
     },
     {
         name: 'Better Input',
-        extensionId: 'https://extensions.penguinmod.site/extensions/SharkPool/BetterInput.js',
-        iconURL: 'https://extensions.penguinmod.site/images/SharkPool/BetterInput.svg',
+        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/BetterInput.js',
+        iconURL: 'https://extensions.penguinmod.com/images/SharkPool/BetterInput.svg',
         tags: ['penguinmod'],
         collaborator: 'SharkPool-SP',
         description: 'Expansion to the Ask and Wait blocks.',
