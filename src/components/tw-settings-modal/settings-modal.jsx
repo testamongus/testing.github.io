@@ -1,4 +1,4 @@
-import { defineMessages, FormattedMessage, intlShape, injectIntl } from 'react-intl';
+import {defineMessages, FormattedMessage, intlShape, injectIntl} from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
@@ -17,9 +17,9 @@ const BufferedInput = BufferedInputHOC(Input);
 
 const messages = defineMessages({
     title: {
-        defaultMessage: 'Settings',
+        defaultMessage: 'Advanced Settings',
         description: 'Title of settings modal',
-        id: 'pm.settingsModal.title'
+        id: 'tw.settingsModal.title'
     },
     help: {
         defaultMessage: 'Click for help',
@@ -41,7 +41,7 @@ const LearnMore = props => (
 );
 
 class UnwrappedSetting extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         bindAll(this, [
             'handleClickHelp'
@@ -50,7 +50,7 @@ class UnwrappedSetting extends React.Component {
             helpVisible: false
         };
     }
-    componentDidUpdate(prevProps) {
+    componentDidUpdate (prevProps) {
         if (this.props.active && !prevProps.active) {
             // eslint-disable-next-line react/no-did-update-set-state
             this.setState({
@@ -58,21 +58,19 @@ class UnwrappedSetting extends React.Component {
             });
         }
     }
-    handleClickHelp() {
+    handleClickHelp () {
         this.setState(prevState => ({
             helpVisible: !prevState.helpVisible
         }));
     }
-    render() {
+    render () {
         return (
             <div
                 className={classNames(styles.setting, {
                     [styles.active]: this.props.active
                 })}
             >
-                <div className={classNames(styles.label, {
-                    [styles.labelUnsetHeight]: this.props.unsetHeight === true
-                })}>
+                <div className={styles.label}>
                     {this.props.primary}
                     <button
                         className={styles.helpIcon}
@@ -101,7 +99,7 @@ UnwrappedSetting.propTypes = {
 };
 const Setting = injectIntl(UnwrappedSetting);
 
-const BooleanSetting = ({ value, onChange, label, ...props }) => (
+const BooleanSetting = ({value, onChange, label, ...props}) => (
     <Setting
         {...props}
         active={value}
@@ -136,7 +134,7 @@ const HighQualityPen = props => (
         help={
             <FormattedMessage
                 // eslint-disable-next-line max-len
-                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance. Set to be on default in Snail IDE."
+                defaultMessage="Allows pen projects to render at higher resolutions and disables some coordinate rounding in the editor. Not all projects benefit from this setting and it may impact performance."
                 description="High quality pen setting help"
                 id="tw.settingsModal.highQualityPenHelp"
             />
@@ -221,7 +219,7 @@ const InfiniteClones = props => (
         }
         help={
             <FormattedMessage
-                defaultMessage="Uncaps the clone limit of 300."
+                defaultMessage="Disables Scratch's 300 clone limit."
                 description="Infinite Clones setting help"
                 id="tw.settingsModal.infiniteClonesHelp"
             />
@@ -295,75 +293,63 @@ const WarpTimer = props => (
     />
 );
 
+const DisableCompiler = props => (
+    <BooleanSetting
+        {...props}
+        label={
+            <FormattedMessage
+                defaultMessage="Disable Compiler"
+                description="Disable Compiler setting"
+                id="tw.settingsModal.disableCompiler"
+            />
+        }
+        help={
+            <FormattedMessage
+                // eslint-disable-next-line max-len
+                defaultMessage="Disables the TurboWarp compiler. You may want to enable this while editing projects so that scripts update immediately. Otherwise, you should never enable this."
+                description="Disable Compiler help"
+                id="tw.settingsModal.disableCompilerHelp"
+            />
+        }
+        slug="disable-compiler"
+    />
+);
+
 const CustomStageSize = ({
     customStageSizeEnabled,
     stageWidth,
     onStageWidthChange,
     stageHeight,
-    onStageHeightChange,
-    onStagePresetUsed
+    onStageHeightChange
 }) => (
     <Setting
         active={customStageSizeEnabled}
-        unsetHeight={true}
         primary={(
             <div className={classNames(styles.label, styles.customStageSize)}>
                 <FormattedMessage
-                    defaultMessage="Stage Size:"
-                    description="Stage Size option"
-                    id="pm.settingsModal.stageSize"
+                    defaultMessage="Custom Stage Size:"
+                    description="Custom Stage Size option"
+                    id="tw.settingsModal.customStageSize"
                 />
-                <div>
-                    <button
-                        className={styles.customStageSizeButton}
-                        data-selected={stageWidth === 480 && stageHeight === 360}
-                        onClick={() => onStagePresetUsed(false)}
-                    >
-                        4:3
-                    </button>
-                    <button
-                        className={styles.customStageSizeButton}
-                        data-selected={stageWidth === 640 && stageHeight === 360}
-                        data-widescreen={true}
-                        onClick={() => onStagePresetUsed(true)}
-                    >
-                        16:9
-                    </button>
-                    <button
-                        className={styles.customStageSizeButton}
-                        data-selected={stageWidth === 360 && stageHeight === 480}
-                        data-mobile={true}
-                        onClick={() => onStagePresetUsed(true)}
-                    >
-                        Mobile Game
-                    </button>
-                </div>
-                <div className={styles.customStageSizeContainer}>
-                    <FormattedMessage
-                        defaultMessage="Custom Stage Size:"
-                        description="Custom Stage Size option"
-                        id="tw.settingsModal.customStageSize"
-                    />
-                    <BufferedInput
-                        value={stageWidth}
-                        onSubmit={onStageWidthChange}
-                        className={styles.customStageSizeInput}
-                        type="number"
-                        min="0"
-                        max="1024"
-                        step="1"
-                    />
-                    <span>{'×'}</span>
-                    <BufferedInput
-                        value={stageHeight}
-                        onSubmit={onStageHeightChange}
-                        className={styles.customStageSizeInput}
-                        type="number"
-                        min="0"
-                        max="1024"
-                        step="1"
-                    />
-                </div>
+                <BufferedInput
+                    value={stageWidth}
+                    onSubmit={onStageWidthChange}
+                    className={styles.customStageSizeInput}
+                    type="number"
+                    min="0"
+                    max="1024"
+                    step="1"
+                />
+                <span>{'×'}</span>
+                <BufferedInput
+                    value={stageHeight}
+                    onSubmit={onStageHeightChange}
+                    className={styles.customStageSizeInput}
+                    type="number"
+                    min="0"
+                    max="1024"
+                    step="1"
+                />
             </div>
         )}
         secondary={
@@ -395,11 +381,10 @@ CustomStageSize.propTypes = {
     stageWidth: PropTypes.number,
     onStageWidthChange: PropTypes.func,
     stageHeight: PropTypes.number,
-    onStageHeightChange: PropTypes.func,
-    onStagePresetUsed: PropTypes.func
+    onStageHeightChange: PropTypes.func
 };
 
-const StoreProjectOptions = ({ onStoreProjectOptions }) => (
+const StoreProjectOptions = ({onStoreProjectOptions}) => (
     <div className={styles.setting}>
         <div>
             <button
@@ -415,7 +400,7 @@ const StoreProjectOptions = ({ onStoreProjectOptions }) => (
             <p>
                 <FormattedMessage
                     // eslint-disable-next-line max-len
-                    defaultMessage="Stores the selected settings in the project so they will be automatically applied when Snail IDE loads this project. Warp timer will not be saved."
+                    defaultMessage="Stores the selected settings in the project so they will be automatically applied when TurboWarp loads this project. Warp timer and disable compiler will not be saved."
                     description="Help text for the store settings in project button"
                     id="tw.settingsModal.storeProjectOptionsHelp"
                 />
@@ -440,21 +425,16 @@ Header.propTypes = {
 const SettingsModalComponent = props => (
     <Modal
         className={styles.modalContent}
-        onRequestClose={(...args) => {
-            if (!props.isEmbedded) {
-                props.onStoreProjectOptions();
-            }
-            props.onClose(...args)
-        }}
+        onRequestClose={props.onClose}
         contentLabel={props.intl.formatMessage(messages.title)}
         id="settingsModal"
     >
         <Box className={styles.body}>
             <Header>
                 <FormattedMessage
-                    defaultMessage="Gameplay"
+                    defaultMessage="Featured"
                     description="Settings modal section"
-                    id="pm.settingsModal.gameplay"
+                    id="tw.settingsModal.featured"
                 />
             </Header>
             <CustomFPS
@@ -495,9 +475,9 @@ const SettingsModalComponent = props => (
             />
             <Header>
                 <FormattedMessage
-                    defaultMessage="Screen Resolution"
+                    defaultMessage="Danger Zone"
                     description="Settings modal section"
-                    id="pm.settingsModal.screenResolution"
+                    id="tw.settingsModal.dangerZone"
                 />
             </Header>
             {!props.isEmbedded && (
@@ -505,11 +485,15 @@ const SettingsModalComponent = props => (
                     {...props}
                 />
             )}
-            {/* {!props.isEmbedded && (
+            <DisableCompiler
+                value={props.disableCompiler}
+                onChange={props.onDisableCompilerChange}
+            />
+            {!props.isEmbedded && (
                 <StoreProjectOptions
                     {...props}
                 />
-            )} */}
+            )}
         </Box>
     </Modal>
 );
