@@ -851,6 +851,17 @@ const menuItems = [
         internetConnectionRequired: true
     },
     {
+        name: 'CloudLink Ω',
+        extensionId: 'https://raw.githubusercontent.com/MikeDev101/cloudlink-omega/main/client/cloudlinkomega_turbowarp.js',
+        tags: ['penguinmod', 'turbowarp'],
+        iconURL: 'https://snail-ide.js.org/omgea.png',
+        description: 'Use the power P2P to create better and faster cloud based projects.',
+        featured: true,
+        disabled: true,
+        extDeveloper: 'MikeDev',
+        internetConnectionRequired: false
+    },
+    {
         name: 'CloudLink',
         extensionId: 'https://extensions.penguinmod.com/extensions/MikeDev101/cloudlink.js',
         tags: ['penguinmod', 'turbowarp'],
