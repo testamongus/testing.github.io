@@ -855,7 +855,7 @@ const menuItems = [
         extensionId: 'https://raw.githubusercontent.com/MikeDev101/cloudlink-omega/main/client/cloudlinkomega_turbowarp.js',
         tags: ['penguinmod', 'turbowarp'],
         iconURL: 'https://snail-ide.js.org/omega.png',
-        description: 'Use the power P2P to create better and faster cloud based projects.',
+        description: 'Use the power P2P to create better and faster cloud based projects. You can even easily add voice chat.',
         featured: true,
         disabled: true,
         extDeveloper: 'MikeDev',
