@@ -854,7 +854,7 @@ const menuItems = [
         name: 'CloudLink Ω',
         extensionId: 'https://raw.githubusercontent.com/MikeDev101/cloudlink-omega/main/client/cloudlinkomega_turbowarp.js',
         tags: ['penguinmod', 'turbowarp'],
-        iconURL: 'https://snail-ide.js.org/omgea.png',
+        iconURL: 'https://snail-ide.js.org/omega.png',
         description: 'Use the power P2P to create better and faster cloud based projects.',
         featured: true,
         disabled: true,
