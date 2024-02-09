@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import VM from 'scratch-vm';
 import {defineMessages, injectIntl, intlShape} from 'react-intl';
-import log from '../lib/log';
 
 import extensionLibraryContent from '../lib/libraries/extensions/index.jsx';
-import extensionTags from '../lib/libraries/tw-extension-tags';
+import extensionTags from '../lib/libraries/extension-tags';
 
 import LibraryComponent from '../components/library/library.jsx';
 import extensionIcon from '../components/action-menu/icon--sprite.svg';
@@ -16,6 +15,11 @@ const messages = defineMessages({
         defaultMessage: 'Choose an Extension',
         description: 'Heading for the extension library',
         id: 'gui.extensionLibrary.chooseAnExtension'
+    },
+    extensionUrl: {
+        defaultMessage: 'Enter the URL of the extension',
+        description: 'Prompt for unoffical extension url',
+        id: 'gui.extensionLibrary.extensionUrl'
     },
     incompatible: {
         // eslint-disable-next-line max-len
@@ -42,30 +46,38 @@ class ExtensionLibrary extends React.PureComponent {
         ]);
     }
     handleItemSelect (item) {
-        const extensionId = item.extensionId;
-        const isCustomURL = !item.disabled && !extensionId;
-        if (isCustomURL) {
-            this.props.onOpenCustomExtensionModal();
-            return;
-        }
-
         // eslint-disable-next-line no-alert
         if (item.incompatibleWithScratch && !confirm(this.props.intl.formatMessage(messages.incompatible))) {
             return;
         }
-
-        const url = item.extensionURL ? item.extensionURL : extensionId;
-        if (!item.disabled) {
-            if (this.props.vm.extensionManager.isExtensionLoaded(extensionId)) {
-                this.props.onCategorySelected(extensionId);
+        const id = item.extensionId;
+        let url = item.extensionURL ? item.extensionURL : id;
+        const isCustomURL = !item.disabled && !id;
+        if (isCustomURL) {
+            // eslint-disable-next-line no-alert
+            url = prompt(this.props.intl.formatMessage(messages.extensionUrl));
+        }
+        if (url && !item.disabled) {
+            if (this.props.vm.extensionManager.isExtensionLoaded(url)) {
+                this.props.onCategorySelected(id);
             } else {
                 const parsedURL = isCustomURL ? parseExtensionURL(url) : url;
                 this.props.vm.extensionManager.loadExtensionURL(parsedURL)
                     .then(() => {
-                        this.props.onCategorySelected(extensionId);
+                        this.props.onCategorySelected(id);
+                        if (isCustomURL) {
+                            let newUrl = location.pathname;
+                            if (location.search) {
+                                newUrl += location.search;
+                                newUrl += '&';
+                            } else {
+                                newUrl += '?';
+                            }
+                            newUrl += `extension=${encodeURIComponent(url)}`;
+                            history.replaceState('', '', newUrl);
+                        }
                     })
                     .catch(err => {
-                        log.error(err);
                         // eslint-disable-next-line no-alert
                         alert(err);
                     });
@@ -75,14 +87,15 @@ class ExtensionLibrary extends React.PureComponent {
     render () {
         const extensionLibraryThumbnailData = extensionLibraryContent.map(extension => ({
             rawURL: extension.iconURL || extensionIcon,
+            disabled: extension.disabled && !this.props.liveTest,
             ...extension
         }));
         return (
             <LibraryComponent
                 data={extensionLibraryThumbnailData}
-                filterable={false}
-                id="extensionLibrary"
+                filterable={true}
                 tags={extensionTags}
+                id="extensionLibrary"
                 title={this.props.intl.formatMessage(messages.extensionTitle)}
                 visible={this.props.visible}
                 onItemSelected={this.handleItemSelect}
@@ -95,7 +108,6 @@ class ExtensionLibrary extends React.PureComponent {
 ExtensionLibrary.propTypes = {
     intl: intlShape.isRequired,
     onCategorySelected: PropTypes.func,
-    onOpenCustomExtensionModal: PropTypes.func,
     onRequestClose: PropTypes.func,
     visible: PropTypes.bool,
     vm: PropTypes.instanceOf(VM).isRequired // eslint-disable-line react/no-unused-prop-types
