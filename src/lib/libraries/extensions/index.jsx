@@ -209,11 +209,21 @@ const menuItems = [
     },
     {
         name: 'Newgrounds Audio',
-        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Newgrounds-Audio.js',
+        extensionId: 'https://snail-ide.js.org/Prompts.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Newgrounds-Audio.svg',
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
         description: 'Fetch Audio and Audio Information from Newgrounds. Works best with Tune Shark',
+        featured: true
+    },
+    
+    {
+        name: 'Prompts',
+        extensionId: 'https://snail-ide.js.org/Prompts.js',
+        iconURL: 'https://snail-ide.js.org/Prompts.png',
+        collaborator: 'LoganCreatez',
+        tags: ['penguinmod'],
+        description: 'Good prompts for penguingpt ',
         featured: true
     },
     {
