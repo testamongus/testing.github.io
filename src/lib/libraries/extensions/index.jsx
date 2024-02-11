@@ -413,11 +413,21 @@ const menuItems = [
     },
     {
         name: 'Grayscale',
-        extensionId: 'https://penguin-mod-extensions-gallery.vercel.app/extensions/Mr_rudy/grayscale.js',
+        extensionId: 'https://snail-ide.js.org/grayscale.js',
         collaborator: 'Mr_rudy',
-        iconURL: 'https://penguin-mod-extensions-gallery.vercel.app/images/Mr_rudy/grayscale.svg',
+        iconURL: 'https://snail-ide.js.org/grayscale.svg',
         tags: ['penguinmod'],
         description: "Toggle a dramatic grayscale effect on your project. ",
+        featured: true
+    },
+    {
+        name: 'Roku',
+        extensionId: 'roku',
+        internetConnectionRequired: true,
+        collaborator: 'gvbvdxx',
+        iconURL: roku,
+        tags: ['other_mods'],
+        description: 'Interact with your Roku tv via the GM2Helper software!',
         featured: true
     },
     {
@@ -1524,16 +1534,6 @@ if (IsLocal || IsLiveTests) {
             iconURL: jgPermissionExtensionIcon,
             tags: ['penguinmod'],
             description: 'Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that PenguinMod requires you have to do certain tasks.',
-            featured: true
-        },
-        {
-            name: 'Roku',
-            extensionId: 'roku',
-            internetConnectionRequired: true,
-            collaborator: 'gvbvdxx',
-            iconURL: roku,
-            tags: ['other_mods'],
-            description: 'Interact with your Roku tv via the GM2Helper software!',
             featured: true
         },
         {
