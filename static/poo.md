@@ -45,3 +45,6 @@ im thinking about making a page to read this entire file cuz why not
   
 - EDIT 15 (nmsderp) 2/10/24 9:39 PM
 - :trollface::trollface:
+
+- EDIT 16 (nmsderp) 2/11/24 4:49 PM
+- super bowl is today :O
