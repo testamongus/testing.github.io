@@ -209,7 +209,7 @@ const menuItems = [
     },
     {
         name: 'Newgrounds Audio',
-        extensionId: 'https://snail-ide.js.org/Prompts.js',
+        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Newgrounds-Audio.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Newgrounds-Audio.svg',
         collaborator: 'SharkPool',
         tags: ['penguinmod'],
