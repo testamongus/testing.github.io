@@ -4,6 +4,7 @@ import {FormattedMessage} from 'react-intl';
 
 import NoahgptThumb from './noahgpt/costume1.svg';
 import musicIconURL from './music/music.png';
+import roku from './roku/roku.png';
 import cloudstorageIconURL from './cloudstorage/costume1.svg';
 import pythonIcon from './python/py.svg';
 import extCreateIcon from './ext-create/logo.svg';
@@ -1523,6 +1524,16 @@ if (IsLocal || IsLiveTests) {
             iconURL: jgPermissionExtensionIcon,
             tags: ['penguinmod'],
             description: 'Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that PenguinMod requires you have to do certain tasks.',
+            featured: true
+        },
+        {
+            name: 'Roku',
+            extensionId: 'roku',
+            internetConnectionRequired: true,
+            collaborator: 'gvbvdxx',
+            iconURL: roku,
+            tags: ['other_mods'],
+            description: 'Interact with your Roku tv via the GM2Helper software!',
             featured: true
         },
         {
