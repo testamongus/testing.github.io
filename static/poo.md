@@ -48,3 +48,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 16 (nmsderp) 2/11/24 4:49 PM
 - super bowl is today :O
+
+- EDIT 17 (nmsderp) 2/11/24 4:53 PM
+- goobert
