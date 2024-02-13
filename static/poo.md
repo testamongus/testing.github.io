@@ -51,3 +51,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 17 (nmsderp) 2/11/24 4:53 PM
 - goobert
+
+- EDIT 18 (nmsderp) 2/12/24 8:01 PM
+- sigma
