@@ -54,3 +54,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 18 (nmsderp) 2/12/24 8:01 PM
 - sigma
+
+- EDIT 19 (nmsderp) 2/13/24 6:57 PM
+- new font
