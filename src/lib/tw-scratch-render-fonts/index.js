@@ -6,7 +6,8 @@ const Handwriting = require('./handlee-regular.ttf');
 const Marker = require('./Knewave.ttf');
 const Curly = require('./Griffy-Regular.ttf');
 const Pixel = require('./Grand9K-Pixel.ttf');
-const Scratch = require('./Scratch.ttf');
+// Xtraflexidisc is saved as Scratch for backwards-compat, this needs visual renaming
+const Scratch = require('./Xtraflexidisc.otf');
 
 /* PenguinMod Fonts */
 const Technological = require('./MonospaceBold.ttf');
@@ -16,7 +17,7 @@ const BitsAndBytes = require('./freecam-v2.ttf');
 const Arcade = require('./PressStart2P.ttf');
 const Archivo = require('./Archivo-Regular.ttf');
 const ArchivoBlack = require('./Archivo-Black.ttf');
-const Handjet = require('./Archivo-Black.ttf');
+const Handjet = require('./Handjet.ttf');
 
 const log = require('../log').default;
 
@@ -27,6 +28,7 @@ const fontSource = {
     'Marker': Marker,
     'Curly': Curly,
     'Pixel': Pixel,
+    // Xtraflexidisc is saved as Scratch for backwards-compat, this needs visual renaming
     'Scratch': Scratch,
     'Technological': Technological,
     'Bubbly': Bubbly,
