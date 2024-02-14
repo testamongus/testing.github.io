@@ -38,7 +38,8 @@ const fontSource = {
     'Archivo': Archivo,
     'Archivo Black': ArchivoBlack,
     'Handjet': Handjet,
-    'Luckiest Guy': Lucky
+    // TODO: Fix and readd this font
+    // 'Luckiest Guy': Lucky
 };
 
 const fontData = {};
