@@ -57,3 +57,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 19 (nmsderp) 2/13/24 6:57 PM
 - new font
+
+- EDIT 20 (nmsderp) 2/13/24 7:36 PM
+- lucky died
