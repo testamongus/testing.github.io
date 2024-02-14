@@ -55,7 +55,7 @@ if (locale !== 'en') {
     }
 }
 
-document.title = `${settingsTranslations.title} - PenguinMod`;
+document.title = `${settingsTranslations.title} - Snail IDE`;
 
 const theme = getInitialDarkMode() ? 'dark' : 'light';
 document.body.setAttribute('theme', theme);
@@ -1053,7 +1053,7 @@ class AddonSettingsComponent extends React.Component {
                             />
                         </div>
                         <a
-                            href="https://discord.gg/NZ9MBMYTZh"
+                            href="https://scratch.mit.edu/users/Mr_rudy"
                             target="_blank"
                             rel="noreferrer"
                             className={styles.feedbackButtonOuter}
@@ -1062,6 +1062,9 @@ class AddonSettingsComponent extends React.Component {
                                 {settingsTranslations.addonFeedback}
                             </span>
                         </a>
+                        <div className={styles.importWarn}>
+                                    <p>Please do not import settings from other mods, it may break.</p>
+                            </div>
                     </div>
                     {this.state.dirty && (
                         <Dirty
