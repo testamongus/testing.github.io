@@ -37,7 +37,8 @@ const fontSource = {
     'Arcade': Arcade,
     'Archivo': Archivo,
     'Archivo Black': ArchivoBlack,
-    'Handjet': Handjet
+    'Handjet': Handjet,
+    'Luckiest Guy': Lucky
 };
 
 const fontData = {};
