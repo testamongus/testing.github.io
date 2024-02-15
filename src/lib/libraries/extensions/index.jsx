@@ -223,7 +223,7 @@ const menuItems = [
         extensionId: 'https://snail-ide.js.org/Prompts.js',
         iconURL: 'https://snail-ide.js.org/Prompts.png',
         collaborator: 'LoganCreatez',
-        tags: ['penguinmod'],
+        tags: ['penguinmod','ai'],
         description: 'Good prompts for penguingpt ',
         featured: true
     },
