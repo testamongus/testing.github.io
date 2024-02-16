@@ -61,7 +61,7 @@
       async usergrab(args) {
         try {
           const response = await Scratch.fetch(
-            "https://snailidebackend.replit.app/api/users/getFollowerCount?username=" + encodeURIComponent(args.WHO)
+            "https://projects.snail-ide.com/api/users/getFollowerCount?username=" + encodeURIComponent(args.WHO)
           );
           return response.text(); //pretty straightforward isnt it
         } catch (error) {
@@ -71,7 +71,7 @@
       async idtoname(args) {
         try {
           const response = await Scratch.fetch(
-            "https://snailidebackend.replit.app/api/pmWrapper/getProject?id=" + args.WHO
+            "https://projects.snail-ide.com/api/pmWrapper/getProject?id=" + args.WHO
           );
           const jsonData = await response.json();
           return jsonData.name;
@@ -82,7 +82,7 @@
       async idtoowner(args) {
         try {
           const response = await Scratch.fetch(
-            "https://snailidebackend.replit.app/api/pmWrapper/getProject?id=" + args.WHO
+            "https://projects.snail-ide.com/api/pmWrapper/getProject?id=" + args.WHO
           );
           const jsonData = await response.json();
           return jsonData.author.username;

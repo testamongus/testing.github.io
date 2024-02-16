@@ -28,7 +28,7 @@ const getProjectUri = () => new Promise(resolve => {
 const isUploadAvailable = async () => {
     let res = null;
     try {
-        res = await fetch('https://snailidebackend.replit.app/api');
+        res = await fetch('https://projects.snail-ide.com/api');
     } catch {
         // failed to fetch entirely
         return false;

@@ -300,15 +300,15 @@ StudioView.prototype.onselect = function (id, el) { };
 StudioView.prototype.onpageload = function () { };
 StudioView.prototype.onend = function () { };
 
-StudioView.STUDIO_API = 'https://snailidebackend.replit.app/api';
+StudioView.STUDIO_API = 'https://projects.snail-ide.com/api';
 
 // The URL to download thumbnails from.
 // $id is replaced with the project's ID.
-StudioView.THUMBNAIL_SRC = 'https://snailidebackend.replit.app/api/pmWrapper/iconUrl?id=$id';
+StudioView.THUMBNAIL_SRC = 'https://projects.snail-ide.com/api/pmWrapper/iconUrl?id=$id';
 
 // The URL for project pages.
 // $id is replaced with the project ID.
-StudioView.PROJECT_PAGE = 'https://snail-ide.js.org/#$id';
+StudioView.PROJECT_PAGE = 'https://editor.snail-ide.com/#$id';
 
 // The amount of "placeholders" to insert before the next page loads.
 StudioView.PLACEHOLDER_COUNT = 9;
