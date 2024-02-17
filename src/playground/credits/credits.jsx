@@ -208,14 +208,13 @@ const Credits = () => (
             <p>
                 We added some songs from IncompeteTech to Snail IDE, we have to have proper credit though!
             </p>
-            <p>
-                Unfortunately due to Snail IDE's small size, we have decided to mainly focus on English.
-                You can still use Snail IDE with the other languages, but they will not be updated at this time.
-            </p>
             <p>"Scheming Weasel (slower version)" Kevin MacLeod (incompetech.com)
                     Licensed under Creative Commons: By Attribution 4.0 License
                     http://creativecommons.org/licenses/by/4.0/
             </p>
+            <p>"Monkeys Spinning Monkeys" Kevin MacLeod (incompetech.com)
+                    Licensed under Creative Commons: By Attribution 4.0 License
+                    http://creativecommons.org/licenses/by/4.0/</p>
         </section>
         <section>
             <p>
