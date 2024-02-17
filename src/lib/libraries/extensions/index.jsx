@@ -5,7 +5,7 @@ import {FormattedMessage} from 'react-intl';
 import NoahgptThumb from './noahgpt/costume1.svg';
 import musicIconURL from './music/music.png';
 import roku from './roku/roku.png';
-import roku from './share/share.svg';
+import share from './share/share.svg';
 import cloudstorageIconURL from './cloudstorage/costume1.svg';
 import pythonIcon from './python/py.svg';
 import extCreateIcon from './ext-create/logo.svg';
