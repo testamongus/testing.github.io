@@ -430,16 +430,16 @@ const menuItems = [
         description: 'Interact with your Roku tv via the GM2Helper software!',
         featured: true
     },
-    {
-        name: 'NES Emulator',
-        extensionId: 'nesemulator',
-        internetConnectionRequired: true,
-        collaborator: 'gvbvdxx',
-        iconURL: 'https://gvbvdxx.github.io/GvbvdxxMod2/static/assets/5cce782349e882908aaf73c3adda0c5a.svg',
-        tags: ['other_mods'],
-        description: 'Run NES games and play them, right in Snail IDE',
-        featured: true
-    },
+   // {
+    //    name: 'NES Emulator',
+   //     extensionId: 'nesemulator',
+   //     internetConnectionRequired: true,
+   //     collaborator: 'gvbvdxx',
+   //     iconURL: 'https://gvbvdxx.github.io/GvbvdxxMod2/static/assets/5cce782349e882908aaf73c3adda0c5a.svg',
+   //     tags: ['other_mods'],
+   //     description: 'Run NES games and play them, right in Snail IDE',
+    //    featured: true
+   // },
     {
         name: 'TurboBuilder',
         href: 'https://turbobuilder-steel.vercel.app',
