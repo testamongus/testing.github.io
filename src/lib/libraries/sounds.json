@@ -568,6 +568,18 @@
         "rate": 22050
     },
     {
+        "name": "Sneaky Snitch",
+        "tags": [
+            "loops",
+            "music"
+        ],
+        "assetId": "fdaf076d61cf2f9c1deb51eaef464d49",
+        "dataFormat": "adpcm",
+        "md5ext": "fdaf076d61cf2f9c1deb51eaef464d49.mp3",
+        "sampleCount": 137161,
+        "rate": 22050
+    },
+    {
         "name": "Bowling Strike",
         "tags": [
             "sports",
