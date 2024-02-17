@@ -544,6 +544,18 @@
         "rate": 22050
     },
     {
+        "name": "Scheming Weasel",
+        "tags": [
+            "loops",
+            "music"
+        ],
+        "assetId": "eb5190075ae6b2bbeb908ca0432b7b97",
+        "dataFormat": "adpcm",
+        "md5ext": "eb5190075ae6b2bbeb908ca0432b7b97.mp3",
+        "sampleCount": 137161,
+        "rate": 22050
+    },
+    {
         "name": "Bowling Strike",
         "tags": [
             "sports",

@@ -108,7 +108,7 @@ const Credits = () => (
                 Snail IDE has added some more sounds to the Sound Library.
                 Most Snail IDE sounds are
                 from <a href="https://freesound.org/">https://freesound.org/</a> and <a href="https://archive.org/">https://archive.org/</a> under
-                the Public Domain license.
+                the Public Domain license. But we have also added some songs created by <a href="https://incompetech.com/">Kevin Macleod.</a>
             </p>
         </section>
         <section>
@@ -201,6 +201,20 @@ const Credits = () => (
             <p>
                 Unfortunately due to Snail IDE's small size, we have decided to mainly focus on English.
                 You can still use Snail IDE with the other languages, but they will not be updated at this time.
+            </p>
+        </section>
+        <section>
+            <h2>IncompeteTech</h2>
+            <p>
+                We added some songs from IncompeteTech to Snail IDE, we have to have proper credit though!
+            </p>
+            <p>
+                Unfortunately due to Snail IDE's small size, we have decided to mainly focus on English.
+                You can still use Snail IDE with the other languages, but they will not be updated at this time.
+            </p>
+            <p>"Scheming Weasel (slower version)" Kevin MacLeod (incompetech.com)
+                    Licensed under Creative Commons: By Attribution 4.0 License
+                    http://creativecommons.org/licenses/by/4.0/
             </p>
         </section>
         <section>
