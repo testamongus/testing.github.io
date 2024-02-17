@@ -225,7 +225,7 @@ const menuItems = [
         iconURL: 'https://snail-ide.js.org/Prompts.png',
         collaborator: 'LoganCreatez',
         tags: ['penguinmod','ai'],
-        description: 'Good prompts for penguingpt ',
+        description: 'Good prompts for PenguinGPT ',
         featured: true
     },
     {
@@ -334,7 +334,7 @@ const menuItems = [
     },
     {
         name: 'PenguinGPT',
-        extensionId: 'https://snail-ide.js.org/SnailGPT/extension.js',
+        extensionId: 'https://snail-ide.js.org/gpt.js',
         collaborator: 'cicerorph & Anonymous-cat1',
         iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
