@@ -218,6 +218,15 @@ const menuItems = [
         description: 'Fetch Audio and Audio Information from Newgrounds. Works best with Tune Shark',
         featured: true
     },
+    {
+        name: 'Scratch Utitlites',
+        extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Scratch-Utilities.js',
+        iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Scratch-Utilities.svg',
+        collaborator: 'SharkPool',
+        tags: ['penguinmod'],
+        description: 'Do many things via the Scratch API; you can even fetch cloud data from projects!',
+        featured: true
+    },
     
     {
         name: 'Prompts',
@@ -225,7 +234,7 @@ const menuItems = [
         iconURL: 'https://snail-ide.js.org/Prompts.png',
         collaborator: 'LoganCreatez',
         tags: ['penguinmod','ai'],
-        description: 'Good prompts for PenguinGPT ',
+        description: 'Good prompts for PenguinGPT',
         featured: true
     },
     {
