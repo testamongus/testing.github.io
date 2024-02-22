@@ -381,7 +381,7 @@ class Interface extends React.Component {
                                     />
                                 </p>
                             </div>
-                            {projectId !== '0' (
+                            {projectId && projectId !== '0' && (
                                 <div>
                                     <div className={styles.centerSector}>
                                         <a
