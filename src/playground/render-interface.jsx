@@ -408,7 +408,7 @@ class Interface extends React.Component {
                                                     if (projectDetails && projectDetails.author) {
                                                         const username = projectDetails.author.username;
                                                         const profileUrl = `https://www.snail-ide.com/profile?user=${username}`;
-                                                        window.open(profileUrl, '_blank');
+                                                        window.open(profileUrl);
                                                     } else {
                                                         console.error("Author details not available.");
                                                         // Optionally, you can handle this case by setting a default author name or showing a message to the user
