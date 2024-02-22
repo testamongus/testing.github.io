@@ -381,6 +381,31 @@ class Interface extends React.Component {
                                     />
                                 </p>
                             </div>
+                            {extraProjectInfo.author && (
+                                <VoteFrame
+                                    id={projectId}
+                                    darkmode={this.props.isDark}
+                                />
+                            )}
+                            {projectId !== '0' && extraProjectInfo.author && (
+                                <div>
+                                    {`${isUpdated ? 'Updated' : 'Uploaded'} ${projectReleaseMonth} ${projectReleaseDay} ${projectReleaseYear} at ${projectReleaseHour}:${projectReleaseMinute < 10 ? '0' : ''}${projectReleaseMinute} ${projectReleaseHalf}`}
+                                    <div className={styles.centerSector}>
+                                        <a
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            href={`https://snail-ide.com/report?type=project&id=${projectId}`}
+                                            className={styles.reportLink}
+                                        >
+                                            <img
+                                                src="https://studio.penguinmod.com/report_flag.png"
+                                                alt="!"
+                                            />
+                                            {'Report'}
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
                             <div className={styles.section}>
                                 <FeaturedProjects />
                             </div>

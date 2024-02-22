@@ -147,6 +147,15 @@ a {
     text-decoration: none;
 }
 
+.report-link,
+.report-link > img {
+    height: 16px;
+    margin-right: 4px;
+}
+.report-link {
+    color: red !important;
+}
+
 .remixList {
     overflow-x: auto;
     display: flex;
