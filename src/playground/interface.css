@@ -156,6 +156,11 @@ a {
     color: red !important;
 }
 
+.profilelink,
+.profilelink {
+    color: rgb(14, 141, 20) !important;
+}
+
 .remixList {
     overflow-x: auto;
     display: flex;

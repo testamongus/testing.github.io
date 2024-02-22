@@ -219,7 +219,7 @@ const Footer = () => (
                             id="tw.snail-studio"
                         />
                     </a>
-                    <a href="https://snail-ide.vercel.app">
+                    <a href="https://snail-ide.com">
                         <FormattedMessage
                             defaultMessage="Homepage"
                             description="Link to homepage"
@@ -321,8 +321,8 @@ class Interface extends React.Component {
                             {(window.LastFetchedProject) != null && (window.LastFetchedProject.remix != null) ? (
                                 <div className={styles.unsharedUpdate}>
                                     <div style={{ display: "flex", flexDirection: "row" }}>
-                                        <a style={{ height: "32px" }} target="_blank" href={"https://snail-ide.vercel.app/profile?user=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}><img style={{ marginRight: "4px", borderRadius: "4px" }} width="32" height="32" title={projectDetailCache[String(window.LastFetchedProject.remix)]?.owner} alt={projectDetailCache[String(window.LastFetchedProject.remix)]?.owner} src={"https://snailshare.xyz/api/pmWrapper/scratchUserImage?username=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}></img></a>
-                                        <p>Thanks to <b><a target="_blank" href={"https://snail-ide.vercel.app/profile?user=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}>{projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}</a></b> for the original project <b><a href={window.location.origin + "/#" + projectDetailCache[String(window.LastFetchedProject.remix)]?.id}>{projectDetailCache[String(window.LastFetchedProject.remix)]?.name}</a></b>.</p>
+                                        <a style={{ height: "32px" }} target="_blank" href={"https://snail-ide.com/profile?user=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}><img style={{ marginRight: "4px", borderRadius: "4px" }} width="32" height="32" title={projectDetailCache[String(window.LastFetchedProject.remix)]?.owner} alt={projectDetailCache[String(window.LastFetchedProject.remix)]?.owner} src={"https://snailshare.xyz/api/pmWrapper/scratchUserImage?username=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}></img></a>
+                                        <p>Thanks to <b><a target="_blank" href={"https://snail-ide.com/profile?user=" + projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}>{projectDetailCache[String(window.LastFetchedProject.remix)]?.owner}</a></b> for the original project <b><a href={window.location.origin + "/#" + projectDetailCache[String(window.LastFetchedProject.remix)]?.id}>{projectDetailCache[String(window.LastFetchedProject.remix)]?.name}</a></b>.</p>
                                     </div>
                                     <div style={{ display: 'none' }}>{getProjectDetailsById(window.LastFetchedProject.remix).yesIDefinetlyKnowHowToUseReactProperlyShutUp}</div>
                                 </div>
@@ -369,7 +369,7 @@ class Interface extends React.Component {
                                 </div>
                             ) : null}
                             {((window.LastFetchedProject) != null) ? (
-                                <a target="_blank" href={"https://snail-ide.vercel.app/profile?user=" + window.LastFetchedProject.owner}>View other projects by {window.LastFetchedProject.owner}</a>
+                                <a target="_blank" href={"https://snail-ide.com/profile?user=" + window.LastFetchedProject.owner}>View other projects by {window.LastFetchedProject.owner}</a>
                             ) : null}
                             <div className={styles.section}>
                                 <p>
@@ -382,27 +382,49 @@ class Interface extends React.Component {
                                 </p>
                             </div>
                             {projectId && projectId !== '0' && (
-                                <div>
-                                    <div className={styles.centerSector}>
-                                        <a
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            href={`https://snail-ide.com/report?type=project&id=${projectId}`}
-                                            className={styles.reportLink}
-                                        >
-                                            <img
-                                                src="https://studio.penguinmod.com/report_flag.png"
-                                                alt="!"
-                                            />
-                                            {'Report'}
-                                        </a>
+                                    <div>
+                                        <div className={styles.centerSector}>
+                                            <a
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                href={`https://snail-ide.com/report?type=project&id=${projectId}`}
+                                                className={styles.reportLink}
+                                            >
+                                                <img
+                                                    src="https://studio.penguinmod.com/report_flag.png"
+                                                    alt="!"
+                                                />
+                                                {'Report'}
+                                            </a>
+                                        </div>
+                                        <div className={styles.centerSector}>
+                                            <a
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                href="#"
+                                                className={styles.profilelink}
+                                                onClick={() => {
+                                                    const projectDetails = getProjectDetailsById(window.LastFetchedProject.remix);
+                                                    if (projectDetails && projectDetails.author) {
+                                                        const username = projectDetails.author.username;
+                                                        const profileUrl = `https://www.snail-ide.com/profile?user=${username}`;
+                                                        window.open(profileUrl, '_blank');
+                                                    } else {
+                                                        console.error("Author details not available.");
+                                                        // Optionally, you can handle this case by setting a default author name or showing a message to the user
+                                                    }
+                                                }}
+                                            >
+                                                {'View Profile'}
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
+                                )}
+
                             <div className={styles.section}>
                                 <FeaturedProjects />
                             </div>
-                            <a target="_blank" href="https://snail-ide.vercel.app/search?q=all:projects">View projects in new tab</a>
+                            <a target="_blank" href="https://snail-ide.com/search?q=all:projects">View projects in new tab</a>
                         </React.Fragment>
                     ) : null}
                 </div>
