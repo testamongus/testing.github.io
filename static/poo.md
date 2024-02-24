@@ -63,3 +63,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 21 (nmsderp) 2/23/24 8:39 PM
 - 21
+
+- EDIT 22 (nmsderp) 2/23/24 10:39 PM
+- egg
