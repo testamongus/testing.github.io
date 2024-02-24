@@ -893,17 +893,27 @@ const menuItems = [
     },
     {
         name: 'CloudLink Ω',
-        extensionId: 'https://raw.githubusercontent.com/MikeDev101/cloudlink-omega/main/client/cloudlinkomega_turbowarp.js',
+        extensionId: 'https://raw.githubusercontent.com/cloudlink-omega/extension/main/clomega_turbowarp.js',
         tags: ['penguinmod', 'turbowarp'],
-        iconURL: 'https://snail-ide.js.org/omega.png',
-        description: 'Use the power of P2P to create better and faster cloud based projects. You can even easily add voice chat.',
+        iconURL: 'https://private-user-images.githubusercontent.com/12957745/306790791-ae16bce0-d300-485a-bfb0-1fbb5331e7a5.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3MzY4NjYsIm5iZiI6MTcwODczNjU2NiwicGF0aCI6Ii8xMjk1Nzc0NS8zMDY3OTA3OTEtYWUxNmJjZTAtZDMwMC00ODVhLWJmYjAtMWZiYjUzMzFlN2E1LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDAxMDI0NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTcyMTdhYmRhMzUyNjIxZWQ1M2Y4YjIwYjFmNmQ1MWVhZGQ3YjliYzFlNmY4OTcyYjNiNzE4OTg2YmYyMmNkNzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kBpTCI2zHyIuRVp2CpzP4YD-rYXUBtc22OnO93cHDic',
+        description: 'Register and login to accounts via Cloud Link 5 (WIP Extension!!!)',
         featured: true,
-        disabled: true,
         extDeveloper: 'MikeDev',
         internetConnectionRequired: false
     },
     {
-        name: 'CloudLink',
+        name: 'CloudLink 5',
+        extensionId: 'https://raw.githubusercontent.com/cloudlink-omega/cl5/main/cl5_turbowarp.js',
+        tags: ['penguinmod', 'turbowarp'],
+        insetIconURL: cloudlinkIcon,
+        iconURL: 'https://private-user-images.githubusercontent.com/12957745/306790529-50b012dc-eaa9-41c2-9584-817346406a6a.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3MzY4MzMsIm5iZiI6MTcwODczNjUzMywicGF0aCI6Ii8xMjk1Nzc0NS8zMDY3OTA1MjktNTBiMDEyZGMtZWFhOS00MWMyLTk1ODQtODE3MzQ2NDA2YTZhLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDAxMDIxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4N2QyOGJiODA3MWRlYWQyMWRlMTI3OTM0ZWIyYTg4NjE3OTUzY2IxNzhhNTJkYjE5ZTAwMDE0MGIzNDkzZjQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bNgS2gFNtGoz8TAS3P0TDrWkitod4s3Klv5zpbMri_M',
+        description: 'A powerful websocket extension for Scratch with account systems, and much more to offer. (WIP Extension!!!)',
+        featured: true,
+        extDeveloper: 'MikeDev',
+        internetConnectionRequired: false
+    },
+    {
+        name: 'CloudLink 4',
         extensionId: 'https://extensions.penguinmod.com/extensions/MikeDev101/cloudlink.js',
         tags: ['penguinmod', 'turbowarp'],
         insetIconURL: cloudlinkIcon,
