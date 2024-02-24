@@ -60,3 +60,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 20 (nmsderp) 2/13/24 7:36 PM
 - lucky died
+
+- EDIT 21 (nmsderp) 2/23/24 8:39 PM
+- 21
