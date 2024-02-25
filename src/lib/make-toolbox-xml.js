@@ -980,6 +980,7 @@ const sensing = function (isInitialSetup, isStage) {
             </value>
         </block>
         <block type="sensing_username"/>
+        <block type="sensing_unix"/>
         ${categorySeparator}
     </category>
     `;
