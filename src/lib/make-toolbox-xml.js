@@ -276,6 +276,13 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </shadow>
             </value>
         </block>
+        <block type="looks_tutorialmod_alert">
+            <value name="MESSAGE">
+                <shadow type="text">
+                    <field name="TEXT">${hello}</field>
+                </shadow>
+            </value>
+        </block>
         <block type="looks_thinkforsecs">
             <value name="MESSAGE">
                 <shadow type="text">
