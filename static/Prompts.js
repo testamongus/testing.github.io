@@ -1,6 +1,7 @@
 /*
-   This extension was made with TurboBuilder!
+   This extension was made with TurboBuilder! 
    https://turbobuilder-steel.vercel.app/
+   PS: nmsderp is currently losing his sanity setting up scratch-blocks
 */
 (async function(Scratch) {
     const variables = {};
