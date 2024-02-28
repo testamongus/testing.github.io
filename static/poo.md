@@ -72,3 +72,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 24 (dumo) 2/28/24 3:49 PM
 - hopefuly i fixed the error thingy for unix time stamp bloc but les see
+
+- EDIT 25 (dumo) 2/28/24 3:53 PM
+- nevermind
