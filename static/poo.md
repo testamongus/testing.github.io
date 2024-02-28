@@ -69,3 +69,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 23 (nmsderp) 2/25/24 8:10 PM
 - unix icon
+
+- EDIT 24 (dumo) 2/28/24 3:49 PM
+- hopefuly i fixed the error thingy for unix time stamp bloc but les see
