@@ -669,6 +669,18 @@
         "rate": 44100
     },
     {
+        "name": "Bass Tune",
+        "tags": [
+            "music",
+            "instruments"
+        ],
+        "assetId": "04d87df2255b9eb9650f41bab4e07255",
+        "dataFormat": "",
+        "md5ext": "04d87df2255b9eb9650f41bab4e07255.wav",
+        "sampleCount": 88200,
+        "rate": 44100
+    },
+    {
         "name": "C Elec Piano",
         "tags": [
             "music",
