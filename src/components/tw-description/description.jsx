@@ -14,25 +14,19 @@ const decorate = text => {
     // Replace emoji patterns with <img> tags
     text = text.replace(emojiRegex, (match, emojiName) => (
         <img
+            key={match} // Ensure each emoji has a unique key, I hope this fixes it
             src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiName}.png`}
             alt={match}
-            className={styles.emoji} // You may need to define a CSS class for styling
+            className={styles.emoji}
         />
     ));
 
-    // https://github.com/LLK/scratch-www/blob/25232a06bcceeaddec8fcb24fb63a44d870cf1cf/src/lib/decorate-text.jsx
-    
-    const isPmLink = /https:\/(\/\w+\.|\/)penguinmod\.(site\/.*|site)/sg;
-    const escaped = escape(text);
-    const htmlText = mdParser(escaped, {
-        linksInNewTab: link => isPmLink.test(link)
-    });
-    // not disabling this just incase, but this is intentional
-    const html = (<div dangerouslySetInnerHTML={{__html: htmlText}} />);
+    // Define a regular expression to match penguinmod.com links
+    const isPmLink = /https:\/(\/\w+\.|\/)penguinmod\.(com\/.*|com)/sg;
 
-    // Make links clickable
+    // Make links clickable, including penguinmod.com links
     const linkRegex = /(https?:\/\/[\w\d_\-.]{1,256}(?:\/(?:\S*[\w:/#[\]@$&'()*+=])?)?(?![^?!,:;\w\s]\S))/g;
-    text = reactStringReplace(html, linkRegex, (match, i) => (
+    text = reactStringReplace(text, linkRegex, (match, i) => (
         <a
             href={match}
             rel="noreferrer"
@@ -58,6 +52,7 @@ const decorate = text => {
 
     return text;
 };
+
 
 const Description = ({
     instructions,
