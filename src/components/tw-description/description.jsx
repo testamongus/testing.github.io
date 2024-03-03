@@ -21,7 +21,7 @@ const decorate = text => {
         />`
     ));
 
-    // Define a regular expression to match penguinmod.site links
+    // Define a regular expression to match penguinmod.com links
     const isPmLink = /https:\/(\/\w+\.|\/)penguinmod\.(com\/.*|com)/sg;
 
     // Escape the text to prevent XSS attacks
@@ -43,6 +43,7 @@ const decorate = text => {
 
 
 
+
 const Description = ({
     instructions,
     credits
@@ -57,7 +58,7 @@ const Description = ({
                         id="tw.home.instructions"
                     />
                 </h2>
-                <div dangerouslySetInnerHTML={{ __html: decorate(instructions) }} />
+                <div dangerouslySetInnerHTML={decorate(instructions).__html} />
             </div>
         ) : null}
         {instructions && credits ? (
@@ -72,7 +73,7 @@ const Description = ({
                         id="tw.home.credit"
                     />
                 </h2>
-                <div dangerouslySetInnerHTML={{ __html: decorate(credits) }} />
+                <div dangerouslySetInnerHTML={decorate(credits).__html} />
             </div>
         )}
     </div>
