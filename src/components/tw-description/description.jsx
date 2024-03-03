@@ -19,7 +19,7 @@ const decorate = text => {
 
     // Make links clickable
     const linkRegex = /(https?:\/\/[\w\d_\-.]{1,256}(?:\/(?:\S*[\w:/#[\]@$&'()*+=])?)?(?![^?!,:;\w\s]\S))/g;
-    text = reactStringReplace(html, linkRegex, (match, i) => (
+    let newText = reactStringReplace(html, linkRegex, (match, i) => (
         <a
             href={match}
             rel="noreferrer"
@@ -28,7 +28,7 @@ const decorate = text => {
     ));
 
     // Make hashtags clickable
-    text = reactStringReplace(text, /#([\w-]+)/g, (match, i) => (
+    newText = reactStringReplace(newText, /#([\w-]+)/g, (match, i) => (
         <a
             href={`https://snail-ide.js.org/#${match}`}
             key={match + i}
@@ -36,7 +36,7 @@ const decorate = text => {
     ));
 
     // Make @s clickable
-    text = reactStringReplace(text, /@([\w-]+)/g, (match, i) => (
+    newText = reactStringReplace(newText, /@([\w-]+)/g, (match, i) => (
         <a
             href={`https://scratch.mit.edu/users/${match}`}
             key={match + i}
@@ -44,11 +44,16 @@ const decorate = text => {
     ));
 
     // Replace text surrounded by colons with markdown image syntax
-    text = reactStringReplace(text, /:(.*?):/g, (match, i) => (
-        `![${match}](https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png "${match}")`
+    newText = reactStringReplace(newText, /:(.*?):/g, (match, i) => (
+        <img
+            src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png`}
+            alt={match}
+            title={match}
+            key={match + i}
+        />
     ));
 
-    return text;
+    return newText;
 };
 
 const Description = ({
