@@ -14,12 +14,11 @@ const decorate = text => {
 
     // Replace emoji patterns with emoji images
     text = text.replace(emojiRegex, (match, emojiName) => (
-        <img
-            key={match} // Ensure each emoji has a unique key
-            src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiName}.png`}
-            alt={match}
-            className={styles.emoji} // You may need to define a CSS class for styling
-        />
+        `<img
+            src="https://snail-ide-object-libraries.vercel.app/files/emojis/${emojiName}.png"
+            alt="${match}"
+            class="${styles.emoji}"
+        />`
     ));
 
     // Define a regular expression to match penguinmod.site links
@@ -35,16 +34,13 @@ const decorate = text => {
 
     // Make links clickable
     const linkRegex = /(https?:\/\/[\w\d_\-.]{1,256}(?:\/(?:\S*[\w:/#[\]@$&'()*+=])?)?(?![^?!,:;\w\s]\S))/g;
-    text = reactStringReplace(htmlText, linkRegex, (match, i) => (
-        <a
-            href={match}
-            rel="noreferrer"
-            key={match + i}
-        >{match}</a>
+    text = reactStringReplace(htmlText, linkRegex, match => (
+        `<a href="${match}" rel="noreferrer">${match}</a>`
     ));
 
     return <div dangerouslySetInnerHTML={{ __html: text }} />;
 };
+
 
 const Description = ({
     instructions,
