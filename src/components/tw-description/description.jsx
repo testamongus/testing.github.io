@@ -47,7 +47,7 @@ const decorate = text => {
 
     // Replace text surrounded by colons with markdown image syntax
     text = reactStringReplace(text, /:(.*?):/g, (match, i) => (
-        <img src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png`} alt={match} />
+        `![${match}](${`https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png`} "${match}")`
     ));
 
     return text;
