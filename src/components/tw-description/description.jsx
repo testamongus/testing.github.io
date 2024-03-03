@@ -43,7 +43,7 @@ const decorate = text => {
         >{match}</a>
     ));
 
-    return text;
+    return <div dangerouslySetInnerHTML={{ __html: text }} />;
 };
 
 const Description = ({
