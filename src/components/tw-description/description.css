@@ -16,6 +16,13 @@
     text-decoration: none;
 }
 
+.description img {
+    max-width: 24px;
+    max-height: 24px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
 [theme="dark"] .description {
     border-color: #203652;
     background-color: #16202c;
