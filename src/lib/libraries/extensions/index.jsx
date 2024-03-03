@@ -1334,7 +1334,7 @@ const menuItems = [
             />
         ),
         extensionId: 'tw',
-        twDeveloper: 'GarboMuffin',
+        twDeveloper: 'GarboMuffin and Mr_rudy/nmsderp',
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
         iconURL: twIcon,
