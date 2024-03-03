@@ -49,7 +49,7 @@ const decorate = text => {
             src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png`}
             alt={match}
             title={match}
-            key={match + i}
+            key={match + i} // Ensure each key is unique
         />
     ));
 
