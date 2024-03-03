@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-
 import styles from './description.css';
 import reactStringReplace from 'react-string-replace';
-
 import mdParser from 'md';
 import escape from 'scratch-vm/src/util/xml-escape';
 
@@ -22,7 +20,7 @@ const decorate = text => {
     ));
 
     // Define a regular expression to match penguinmod.com links
-    const isPmLink = /https:\/(\/\w+\.|\/)penguinmod\.(com\/.*|com)/sg;
+    const isPmLink = /https:\/\/penguinmod\.com\/\S*/g;
 
     // Escape the text to prevent XSS attacks
     const escaped = escape(text);
@@ -42,14 +40,12 @@ const decorate = text => {
 };
 
 
-
-
 const Description = ({
     instructions,
     credits
 }) => instructions !== 'unshared' && credits !== 'unshared' && (
     <div className={styles.description}>
-        {instructions ? (
+        {instructions && (
             <div>
                 <h2 className={styles.header}>
                     <FormattedMessage
@@ -58,12 +54,13 @@ const Description = ({
                         id="tw.home.instructions"
                     />
                 </h2>
-                <div dangerouslySetInnerHTML={decorate(instructions).__html} />
+                <div dangerouslySetInnerHTML={decorate(instructions)} />
+
             </div>
-        ) : null}
-        {instructions && credits ? (
+        )}
+        {instructions && credits && (
             <div className={styles.divider} />
-        ) : null}
+        )}
         {credits && (
             <div>
                 <h2 className={styles.header}>
@@ -73,12 +70,12 @@ const Description = ({
                         id="tw.home.credit"
                     />
                 </h2>
-                <div dangerouslySetInnerHTML={decorate(credits).__html} />
+                <div dangerouslySetInnerHTML={decorate(credits)} />
+
             </div>
         )}
     </div>
 );
-
 
 Description.propTypes = {
     instructions: PropTypes.string,
