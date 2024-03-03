@@ -23,7 +23,7 @@ const decorate = text => {
         <a
             href={match}
             rel="noreferrer"
-            key={match + i}
+            key={`link-${i}`} // Ensure each key is unique
         >{match}</a>
     ));
 
@@ -31,7 +31,7 @@ const decorate = text => {
     newText = reactStringReplace(newText, /#([\w-]+)/g, (match, i) => (
         <a
             href={`https://snail-ide.js.org/#${match}`}
-            key={match + i}
+            key={`hashtag-${i}`} // Ensure each key is unique
         >{`#${match}`}</a>
     ));
 
@@ -39,7 +39,7 @@ const decorate = text => {
     newText = reactStringReplace(newText, /@([\w-]+)/g, (match, i) => (
         <a
             href={`https://scratch.mit.edu/users/${match}`}
-            key={match + i}
+            key={`at-${i}`} // Ensure each key is unique
         >{`#${match}`}</a>
     ));
 
@@ -49,7 +49,7 @@ const decorate = text => {
             src={`https://snail-ide-object-libraries.vercel.app/files/emojis/${match}.png`}
             alt={match}
             title={match}
-            key={match + i} // Ensure each key is unique
+            key={`emoji-${i}`} // Ensure each key is unique
         />
     ));
 
