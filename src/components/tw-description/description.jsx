@@ -38,8 +38,9 @@ const decorate = text => {
         `<a href="${match}" rel="noreferrer">${match}</a>`
     ));
 
-    return <div dangerouslySetInnerHTML={{ __html: text }} />;
+    return { __html: text };
 };
+
 
 
 const Description = ({
@@ -56,7 +57,7 @@ const Description = ({
                         id="tw.home.instructions"
                     />
                 </h2>
-                {decorate(instructions)}
+                <div dangerouslySetInnerHTML={{ __html: decorate(instructions) }} />
             </div>
         ) : null}
         {instructions && credits ? (
@@ -71,11 +72,12 @@ const Description = ({
                         id="tw.home.credit"
                     />
                 </h2>
-                {decorate(credits)}
+                <div dangerouslySetInnerHTML={{ __html: decorate(credits) }} />
             </div>
         )}
     </div>
 );
+
 
 Description.propTypes = {
     instructions: PropTypes.string,
