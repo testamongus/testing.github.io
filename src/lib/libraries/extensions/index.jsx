@@ -589,6 +589,15 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Inline Blocks',
+        extensionId: 'pmInlineBlocks',
+        iconURL: pmInlineBlocksExtensionIcon,
+        collaborator: 'PenguinMod',
+        tags: ['penguinmod'],
+        description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
+        featured: true
+    },
+    {
             name: (
                 <FormattedMessage
                     defaultMessage="Text to Speech (Scratch)"
@@ -1649,14 +1658,6 @@ if (IsLocal || IsLiveTests) {
             iconURL: share,
             tags: ['penguinmod'],
             description: 'Share your projects with friends!',
-            featured: true
-        },
-        {
-            name: 'Inline Blocks',
-            extensionId: 'pmInlineBlocks',
-            iconURL: pmInlineBlocksExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'Create quick blocks for simple tasks. Insert them into any circle spot and have them return any value you want.',
             featured: true
         },
         {
