@@ -1338,7 +1338,7 @@ const menuItems = [
         tags: ['turbowarp'],
         insetIconURL: turbowarpIcon,
         iconURL: twIcon,
-        description: 'Weird new blocks.',
+        description: 'Special blocks from TurboWarp, even more added from Snail IDE.',
         featured: true
     },
     {
