@@ -37,6 +37,7 @@ import VoteFrame from './vote-frame.jsx';
 import MenuBar from '../components/menu-bar/menu-bar.jsx';
 import ProjectInput from '../components/tw-project-input/project-input.jsx';
 import FeaturedProjects from '../components/tw-featured-projects/featured-projects.jsx';
+import LikeButton from '../components/sn-likebtn/LikeButton.jsx';
 import Description from '../components/tw-description/description.jsx';
 import WebGlModal from '../containers/webgl-modal.jsx';
 import BrowserModal from '../components/browser-modal/browser-modal.jsx';
@@ -382,43 +383,46 @@ class Interface extends React.Component {
                                 </p>
                             </div>
                             {projectId && projectId !== '0' && (
-                                    <div>
-                                        <div className={styles.centerSector}>
-                                            <a
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                href={`https://snail-ide.com/report?type=project&id=${projectId}`}
-                                                className={styles.reportLink}
-                                            >
-                                                <img
-                                                    src="https://studio.penguinmod.com/report_flag.png"
-                                                    alt="!"
-                                                />
-                                                {'Report'}
-                                            </a>
-                                        </div>
-                                        <div className={styles.centerSector}>
-                                            <a
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                href="#"
-                                                className={styles.profilelink}
-                                                onClick={() => {
-                                                    const projectDetails = getProjectDetailsById(window.LastFetchedProject.remix);
-                                                    if (projectDetails && projectDetails.author) {
-                                                        const username = projectDetails.author.username;
-                                                        const profileUrl = `https://www.snail-ide.com/profile?user=${username}`;
-                                                        window.open(profileUrl);
-                                                    } else {
-                                                        console.error("Author details not available.");
-                                                        // Optionally, you can handle this case by setting a default author name or showing a message to the user
-                                                    }
-                                                }}
-                                            >
-                                                {'View Profile'}
-                                            </a>
-                                        </div>
+                                <div>
+                                    <div className={styles.centerSector}>
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href={`https://snail-ide.com/report?type=project&id=${projectId}`}
+                                        className={styles.reportLink}
+                                    >
+                                        <img
+                                        src="https://studio.penguinmod.com/report_flag.png"
+                                        alt="!"
+                                        />
+                                        {'Report'}
+                                    </a>
                                     </div>
+                                    <div className={styles.centerSector}>
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="#"
+                                        className={styles.profilelink}
+                                        onClick={() => {
+                                        const projectDetails = getProjectDetailsById(window.LastFetchedProject.remix);
+                                        if (projectDetails && projectDetails.author) {
+                                            const username = projectDetails.author.username;
+                                            const profileUrl = `https://www.snail-ide.com/profile?user=${username}`;
+                                            window.open(profileUrl);
+                                        } else {
+                                            console.error("Author details not available.");
+                                            // Optionally, you can handle this case by setting a default author name or showing a message to the user
+                                        }
+                                        }}
+                                    >
+                                        {'View Profile'}
+                                    </a>
+                                    </div>
+                                    <div className={styles.centerSector}>
+                                    <LikeButton />
+                                    </div>
+                                </div>
                                 )}
 
                             <div className={styles.section}>
