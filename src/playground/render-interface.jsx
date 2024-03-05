@@ -420,7 +420,6 @@ class Interface extends React.Component {
                                     </a>
                                     </div>
                                     <div className={styles.centerSector}>
-                                    <LikeButton />
                                     </div>
                                 </div>
                                 )}
