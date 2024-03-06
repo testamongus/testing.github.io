@@ -11,7 +11,7 @@ const user = {
         <img
           className="avatar"
           src={user.imageUrl}
-          alt={'Avatar of ' + user.name}
+          alt={'Profile of ' + user.name}
           style={{
             width: user.imageSize,
             height: user.imageSize
