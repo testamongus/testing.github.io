@@ -1670,6 +1670,15 @@ if (IsLocal || IsLiveTests) {
             featured: true,
         },
         {
+            name: 'Wacky Joke Blocks II',
+            extensionId: 'https://www.snail-ide.com/poopoo.js',
+            collaborator: 'Mr_rudy/nmsderp',
+            iconURL: defaultExtensionIcon,
+            tags: ['penguinmod'],
+            description: 'i was bored ok',
+            featured: true,
+        },
+        {
             name: 'Handpose2scratch',
             extensionId: 'handpose2scratch',
             iconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch.png',
