@@ -20,7 +20,7 @@ import DragConstants from '../lib/drag-constants';
 import defineDynamicBlock from '../lib/define-dynamic-block';
 import AddonHooks from '../addons/hooks';
 import LoadScratchBlocksHOC from '../lib/tw-load-scratch-blocks-hoc.jsx';
-import eurekaloader from './bp-eureka-loader.js';
+// import eurekaloader from './bp-eureka-loader.js';
 
 import {connect} from 'react-redux';
 import {updateToolbox} from '../reducers/toolbox';
@@ -168,7 +168,7 @@ class Blocks extends React.Component {
         for (const category of this.props.vm.runtime._blockInfo) {
             this.handleExtensionAdded(category);
         }
-        eurekaloader.load();
+       // eurekaloader.load();
     }
     shouldComponentUpdate (nextProps, nextState) {
         return (
