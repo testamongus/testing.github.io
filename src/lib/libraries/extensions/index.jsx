@@ -1,8 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 import NoahgptThumb from './noahgpt/costume1.svg';
+import typescriptIcon from './snail-ide/typescript.svg';
+import twGalleryIcon from './snail-ide/turbowarpgallery.svg';
+import pmGalleryIcon from './snail-ide/penguinmodgallery.svg';
+import rubyDevsGalleryIcon from './snail-ide/ruby.png';
 import musicIconURL from './music/music.png';
 import roku from './roku/roku.png';
 import share from './share/share.svg';
@@ -13,7 +17,10 @@ import extCreateInset from './ext-create/inset.svg';
 import mapIconURL from './maps/openstreetmap.jpg';
 import snailSaveIcon from './snailsavedata/cool.svg';
 import gdApiICON from './gdapi/Capture.png';
+import issIcon from './snail-ide/iss.jpg';
 import musicInsetIconURL from './music/music-small.svg';
+import clfiveIcon from './cloudlink/cl5.svg';
+import clomegaIcon from './cloudlink/clomega.svg';
 
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
@@ -161,8 +168,8 @@ const menuItems = [
     },
 
 
-        
-      {
+
+    {
         name: '3D',
         extensionId: 'jg3d',
         iconURL: jg3dExtensionIcon,
@@ -227,13 +234,13 @@ const menuItems = [
         description: 'Do many things via the Scratch API; you can even fetch cloud data from projects!',
         featured: true
     },
-    
+
     {
         name: 'Prompts',
         extensionId: 'https://snail-ide.js.org/Prompts.js',
         iconURL: 'https://snail-ide.js.org/Prompts.png',
         collaborator: 'LoganCreatez',
-        tags: ['penguinmod','ai'],
+        tags: ['penguinmod', 'ai'],
         description: 'Good prompts for PenguinGPT',
         featured: true
     },
@@ -412,7 +419,7 @@ const menuItems = [
         description: "Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things.",
         featured: true
     },
-        {
+    {
         name: 'Save Data',
         extensionId: 'https://snail-ide.js.org/save.js',
         collaborator: 'Mr_rudy',
@@ -440,16 +447,16 @@ const menuItems = [
         description: 'Interact with your Roku tv via the GM2Helper software!',
         featured: true
     },
-   // {
+    // {
     //    name: 'NES Emulator',
-   //     extensionId: 'nesemulator',
-   //     internetConnectionRequired: true,
-   //     collaborator: 'gvbvdxx',
-   //     iconURL: 'https://gvbvdxx.github.io/GvbvdxxMod2/static/assets/5cce782349e882908aaf73c3adda0c5a.svg',
-   //     tags: ['other_mods'],
-   //     description: 'Run NES games and play them, right in Snail IDE',
+    //     extensionId: 'nesemulator',
+    //     internetConnectionRequired: true,
+    //     collaborator: 'gvbvdxx',
+    //     iconURL: 'https://gvbvdxx.github.io/GvbvdxxMod2/static/assets/5cce782349e882908aaf73c3adda0c5a.svg',
+    //     tags: ['other_mods'],
+    //     description: 'Run NES games and play them, right in Snail IDE',
     //    featured: true
-   // },
+    // },
     {
         name: 'TurboBuilder',
         href: 'https://turbobuilder-steel.vercel.app',
@@ -530,7 +537,7 @@ const menuItems = [
         description: 'Handle large JSON files at an extreme speed',
         featured: true
     },
-       {
+    {
         name: 'Money Utilities',
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Money-Utilities.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Money-Utilities.svg',
@@ -598,29 +605,29 @@ const menuItems = [
         featured: true
     },
     {
-            name: (
-                <FormattedMessage
-                    defaultMessage="Text to Speech (Scratch)"
-                    description="Name for the Text to Speech extension"
-                    id="gui.extension.text2speech.name"
-                />
-            ),
-            extensionId: 'text2speech',
-            collaborator: 'Amazon Web Services',
-            iconURL: text2speechIconURL,
-            insetIconURL: text2speechInsetIconURL,
-            customInsetColor: '#9966FF',
-            tags: ['scratch'],
-            description: (
-                <FormattedMessage
-                    defaultMessage="Make your projects talk."
-                    description="Description for the Text to speech extension"
-                    id="gui.extension.text2speech.description"
-                />
-            ),
-            featured: true,
-            internetConnectionRequired: true
-        },
+        name: (
+            <FormattedMessage
+                defaultMessage="Text to Speech (Scratch)"
+                description="Name for the Text to Speech extension"
+                id="gui.extension.text2speech.name"
+            />
+        ),
+        extensionId: 'text2speech',
+        collaborator: 'Amazon Web Services',
+        iconURL: text2speechIconURL,
+        insetIconURL: text2speechInsetIconURL,
+        customInsetColor: '#9966FF',
+        tags: ['scratch'],
+        description: (
+            <FormattedMessage
+                defaultMessage="Make your projects talk."
+                description="Description for the Text to speech extension"
+                id="gui.extension.text2speech.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: true
+    },
     {
         name: (
             <FormattedMessage
@@ -732,26 +739,6 @@ const menuItems = [
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Camera-Sensing-Plus.svg',
         tags: ['turbowarp'],
         description: 'Improved camera sensing',
-        featured: true
-    },
-    {
-        name: 'Dot Prop',
-        extensionId: 'https://gistcdn.githack.com/Richienb/bd67c0d65a187eea28bd18d0e04c1052/raw/061ef801c8b474c75f830805b59947b81d8d4257/index.min.js',
-        twDeveloper: 'Richienbs',
-        iconURL: defaultExtensionIcon,
-        insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
-        description: 'Legacy Extension from version 1.0',
-        featured: true
-    },
-    {
-        name: 'Classic Cloud Multiplayer',
-        extensionId: 'https://emmettdewet14.github.io/Cloud.js',
-        twDeveloper: 'emmettdewet14',
-        iconURL: defaultExtensionIcon,
-        insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
-        description: 'Legacy Extension from version 1.0',
         featured: true
     },
     {
@@ -899,27 +886,6 @@ const menuItems = [
         description: 'Blocks to communicate with APIs and websites.',
         featured: true,
         internetConnectionRequired: true
-    },
-    {
-        name: 'CloudLink Ω',
-        extensionId: 'https://editor.snail-ide.com/clomega.js',
-        tags: ['penguinmod', 'turbowarp'],
-        iconURL: 'https://private-user-images.githubusercontent.com/12957745/306790791-ae16bce0-d300-485a-bfb0-1fbb5331e7a5.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3MzY4NjYsIm5iZiI6MTcwODczNjU2NiwicGF0aCI6Ii8xMjk1Nzc0NS8zMDY3OTA3OTEtYWUxNmJjZTAtZDMwMC00ODVhLWJmYjAtMWZiYjUzMzFlN2E1LnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDAxMDI0NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTcyMTdhYmRhMzUyNjIxZWQ1M2Y4YjIwYjFmNmQ1MWVhZGQ3YjliYzFlNmY4OTcyYjNiNzE4OTg2YmYyMmNkNzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kBpTCI2zHyIuRVp2CpzP4YD-rYXUBtc22OnO93cHDic',
-        description: 'Register and login to accounts via Cloud Link 5 (WIP Extension!!!)',
-        featured: true,
-        extDeveloper: 'MikeDev',
-        internetConnectionRequired: false
-    },
-    {
-        name: 'CloudLink 5',
-        extensionId: 'https://editor.snail-ide.com/cl5.js',
-        tags: ['penguinmod', 'turbowarp'],
-        insetIconURL: cloudlinkIcon,
-        iconURL: 'https://private-user-images.githubusercontent.com/12957745/306790529-50b012dc-eaa9-41c2-9584-817346406a6a.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDg3MzY4MzMsIm5iZiI6MTcwODczNjUzMywicGF0aCI6Ii8xMjk1Nzc0NS8zMDY3OTA1MjktNTBiMDEyZGMtZWFhOS00MWMyLTk1ODQtODE3MzQ2NDA2YTZhLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjI0VDAxMDIxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4N2QyOGJiODA3MWRlYWQyMWRlMTI3OTM0ZWIyYTg4NjE3OTUzY2IxNzhhNTJkYjE5ZTAwMDE0MGIzNDkzZjQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.bNgS2gFNtGoz8TAS3P0TDrWkitod4s3Klv5zpbMri_M',
-        description: 'A powerful websocket extension for Scratch with account systems, and much more to offer. (WIP Extension!!!)',
-        featured: true,
-        extDeveloper: 'MikeDev',
-        internetConnectionRequired: false
     },
     {
         name: 'CloudLink 4',
@@ -1244,7 +1210,7 @@ const menuItems = [
         ),
         href: 'https://extensions.turbowarp.org/',
         extensionId: 'special_turbowarpExtensionLibrary',
-        iconURL: 'https://studio.penguinmod.com/static/assets/fa121178a0dc748c56257f39987f0540.svg',
+        iconURL: twGalleryIcon,
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
@@ -1257,7 +1223,7 @@ const menuItems = [
         featured: true
     },
 
-     {
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Ruby Extension Gallery"
@@ -1268,7 +1234,7 @@ const menuItems = [
         href: 'https://rubyteam.tech/gallery',
         extensionId: 'special_rubyGallery',
         insetIconURL: 'https://rubyteam.tech/logo.svg',
-        iconURL: 'https://u.cubeupload.com/Mr_rudy/ruby.png',
+        iconURL: rubyDevsGalleryIcon,
         description: (
             <FormattedMessage
                 // eslint-disable-next-line max-len
@@ -1280,7 +1246,7 @@ const menuItems = [
         tags: ['penguinmod'],
         featured: true
     },
-    
+
     // https://extensions.turbowarp.org/shreder95ua/resolution.js
     {
         name: 'Screen Resolution',
@@ -1292,9 +1258,9 @@ const menuItems = [
 
     },
     {
-        name: 'TypeScratch',
+        name: 'TypeScript',
         extensionId: 'typescratch',
-        iconURL: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+        iconURL: typescriptIcon,
         tags: ['penguinmod', 'programminglanguage'],
         description: "Similar to the JavaScript extension but for TypeScript",
         featured: true
@@ -1328,8 +1294,8 @@ const menuItems = [
     {
         name: 'ISS',
         snailExt: true,
-        extensionId: 'https://snail-ide.js.org/iss.js',
-        iconURL: 'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/artist_s_impression_of_the_completed_international_space_station/9874982-3-eng-GB/Artist_s_impression_of_the_completed_International_Space_Station_pillars.jpg',
+        extensionId: '/iss.js',
+        iconURL: issIcon,
         tags: ['penguinmod'],
         description: 'Get the latitude and longitude of the International Space Station',
         featured: true
@@ -1419,7 +1385,7 @@ const menuItems = [
         collaborator: 'LEGO',
         iconURL: boostIconURL,
         insetIconURL: boostInsetIconURL,
-        tags: ['scratch','hardware'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Bring robotic creations to life."
@@ -1461,7 +1427,7 @@ const menuItems = [
         ),
         featured: true,
         disabled: false,
-        tags: ['scratch','hardware'],
+        tags: ['scratch', 'hardware'],
         bluetoothRequired: true,
         internetConnectionRequired: true,
         launchPeripheralConnectionFlow: true,
@@ -1486,7 +1452,7 @@ const menuItems = [
         iconURL: gdxforIconURL,
         insetIconURL: gdxforInsetIconURL,
         customInsetColor: '#4C97FF',
-        tags: ['scratch','hardware'],
+        tags: ['scratch', 'hardware'],
         description: (
             <FormattedMessage
                 defaultMessage="Sense push, pull, motion, and spin."
@@ -1536,6 +1502,27 @@ const menuItems = [
 if (IsLocal || IsLiveTests) {
     const extras = [
         {
+            name: 'CloudLink Ω',
+            extensionId: '/clomega.js',
+            tags: ['penguinmod', 'turbowarp'],
+            iconURL: clomegaIcon,
+            description: 'Register and login to accounts via Cloud Link 5 (WIP Extension!!!)',
+            featured: true,
+            extDeveloper: 'MikeDev',
+            internetConnectionRequired: false
+        },
+        {
+            name: 'CloudLink 5',
+            extensionId: '/cl5.js',
+            tags: ['penguinmod', 'turbowarp'],
+            insetIconURL: cloudlinkIcon,
+            iconURL: clfiveIcon,
+            description: 'A powerful websocket extension for Scratch with account systems, and much more to offer. (WIP Extension!!!)',
+            featured: true,
+            extDeveloper: 'MikeDev',
+            internetConnectionRequired: false
+        },
+        {
             name: 'Legacy Files',
             extensionId: 'jgFiles',
             iconURL: defaultExtensionIcon,
@@ -1557,22 +1544,6 @@ if (IsLocal || IsLiveTests) {
             iconURL: jgCloneManagerExtensionIcon,
             tags: ['penguinmod'],
             description: 'Mainly sharing data between clones and the main sprite, but also some other small features. This has been replaced by the TurboWarp Clones+ extension.',
-            featured: true
-        },
-        {
-            name: 'Unite',
-            extensionId: 'jwUnite',
-            iconURL: defaultExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'Legacy extension that was eventually merged into the default toolbox.',
-            featured: true
-        },
-        {
-            name: 'PenguinMod Permissions',
-            extensionId: 'JgPermissionBlocks',
-            iconURL: jgPermissionExtensionIcon,
-            tags: ['penguinmod'],
-            description: 'Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that PenguinMod requires you have to do certain tasks.',
             featured: true
         },
         {
@@ -1690,14 +1661,14 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
-        name: 'Open Street Map',
-        extensionId: 'adacraftleaflet',
-        iconURL: mapIconURL,
-        tags: ['penguinmod'],
-        description: 'Use maps in your project. W.I.P Extension.',
-        featured: true,
-        internetConnectionRequired: true
-    },
+            name: 'Open Street Map',
+            extensionId: 'adacraftleaflet',
+            iconURL: mapIconURL,
+            tags: ['penguinmod'],
+            description: 'Use maps in your project. W.I.P Extension.',
+            featured: true,
+            internetConnectionRequired: true
+        },
     ];
     extras.forEach(ext => {
         menuItems.push(ext);

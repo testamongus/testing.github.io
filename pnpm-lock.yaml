@@ -10,7 +10,7 @@ dependencies:
     version: 3.1000.20230326022803
   PenguinMod-MarkDown:
     specifier: github:PenguinMod/PenguinMod-MarkDown#master
-    version: git@github.com+PenguinMod/PenguinMod-MarkDown/ae5971c234a9d13a8886bb3edcec3df5ceffab34
+    version: github.com/PenguinMod/PenguinMod-MarkDown/ae5971c234a9d13a8886bb3edcec3df5ceffab34
   arraybuffer-loader:
     specifier: ^1.0.8
     version: 1.0.8
@@ -163,28 +163,28 @@ dependencies:
     version: 0.1.1
   scratch-audio:
     specifier: github:PenguinMod/PenguinMod-Audio#develop
-    version: git@github.com+PenguinMod/PenguinMod-Audio/0a3f4d98866e5d92fd459d94e5d5c8490de0e66f
+    version: github.com/PenguinMod/PenguinMod-Audio/0a3f4d98866e5d92fd459d94e5d5c8490de0e66f
   scratch-blocks:
     specifier: github:Snail-IDE/snail-blocks#develop-builds
-    version: git@github.com+Snail-IDE/snail-blocks/71363892a8e66981ceb63239243fa254e3002715
+    version: github.com/Snail-IDE/snail-blocks/71363892a8e66981ceb63239243fa254e3002715
   scratch-paint:
     specifier: github:Snail-IDE/Snail-IDE-Paint#develop
-    version: git@github.com+Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272(react-dom@16.14.0)(react-intl-redux@0.7.0)(react-intl@2.9.0)(react-popover@0.5.10)(react-redux@5.0.7)(react-responsive@4.1.0)(react-style-proptype@3.2.2)(react-tooltip@3.8.0)(react@16.14.0)(redux@3.7.2)(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+    version: github.com/Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272(react-dom@16.14.0)(react-intl-redux@0.7.0)(react-intl@2.9.0)(react-popover@0.5.10)(react-redux@5.0.7)(react-responsive@4.1.0)(react-style-proptype@3.2.2)(react-tooltip@3.8.0)(react@16.14.0)(redux@3.7.2)(scratch-render-fonts@1.0.0-prerelease.20210401210003)
   scratch-render:
     specifier: github:Snail-IDE/Snail-IDE-Render#develop
-    version: git@github.com+Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+    version: github.com/Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274(scratch-render-fonts@1.0.0-prerelease.20210401210003)
   scratch-render-fonts:
     specifier: 1.0.0-prerelease.20210401210003
     version: 1.0.0-prerelease.20210401210003
   scratch-storage:
     specifier: github:PenguinMod/PenguinMod-Storage#develop
-    version: git@github.com+PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84(webpack@4.46.0)
+    version: github.com/PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84(webpack@4.46.0)
   scratch-svg-renderer:
     specifier: github:TurboWarp/scratch-svg-renderer#develop
-    version: git@github.com+TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+    version: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
   scratch-vm:
     specifier: github:Snail-IDE/Snail-IDE-Vm#develop
-    version: git@github.com+Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
+    version: github.com/Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
   startaudiocontext:
     specifier: 1.2.1
     version: 1.2.1
@@ -196,7 +196,7 @@ dependencies:
     version: 0.7.0
   theia:
     specifier: github:FreshPenguin112/theia-pnpm#master
-    version: git@github.com+FreshPenguin112/theia-pnpm/13571e769ea006f4061f0eaf316cf3c7d214bad6
+    version: github.com/FreshPenguin112/theia-pnpm/13571e769ea006f4061f0eaf316cf3c7d214bad6
   to-style:
     specifier: 1.3.3
     version: 1.3.3
@@ -270,7 +270,7 @@ devDependencies:
     version: 3.2.3
   gh-pages-webpack-plugin:
     specifier: github:FreshPenguin112/gh-pages-webpack-plugin
-    version: git@github.com+FreshPenguin112/gh-pages-webpack-plugin/af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0
+    version: github.com/FreshPenguin112/gh-pages-webpack-plugin/af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0
   html-webpack-plugin:
     specifier: ^4.5.2
     version: 4.5.2(webpack@4.46.0)
@@ -3125,7 +3125,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001596
-      electron-to-chromium: 1.4.698
+      electron-to-chromium: 1.4.699
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -4632,8 +4632,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
-  /electron-to-chromium@1.4.698:
-    resolution: {integrity: sha512-f9iZD1t3CLy1AS6vzM5EKGa6p9pRcOeEFXRFbaG2Ta+Oe7MkfRQ3fsvPYidzHe1h4i0JvIvpcY55C+B6BZNGtQ==}
+  /electron-to-chromium@1.4.699:
+    resolution: {integrity: sha512-I7q3BbQi6e4tJJN5CRcyvxhK0iJb34TV8eJQcgh+fR2fQ8miMgZcEInckCo1U9exDHbfz7DLDnFn8oqH/VcRKw==}
 
   /elliptic@6.5.5:
     resolution: {integrity: sha512-7EjbcmUm17NQFu4Pmgmq2olYMj8nwMnpcddByChSUjArp8F5DQWcIcpriwO4ZToLNAJig0yiyjswfyGNje/ixw==}
@@ -12791,16 +12791,16 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  git@github.com+FreshPenguin112/gh-pages-webpack-plugin/af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0:
-    resolution: {commit: af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0, repo: git@github.com:FreshPenguin112/gh-pages-webpack-plugin.git, type: git}
+  github.com/FreshPenguin112/gh-pages-webpack-plugin/af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0:
+    resolution: {tarball: https://codeload.github.com/FreshPenguin112/gh-pages-webpack-plugin/tar.gz/af8291f79f5e90f62c4f312d1fc5e4a8a2aec5b0}
     name: gh-pages-webpack-plugin
     version: 1.0.2
     dependencies:
       gh-pages: 1.2.0
     dev: true
 
-  git@github.com+FreshPenguin112/theia-pnpm/13571e769ea006f4061f0eaf316cf3c7d214bad6:
-    resolution: {commit: 13571e769ea006f4061f0eaf316cf3c7d214bad6, repo: git@github.com:FreshPenguin112/theia-pnpm.git, type: git}
+  github.com/FreshPenguin112/theia-pnpm/13571e769ea006f4061f0eaf316cf3c7d214bad6:
+    resolution: {tarball: https://codeload.github.com/FreshPenguin112/theia-pnpm/tar.gz/13571e769ea006f4061f0eaf316cf3c7d214bad6}
     name: theia
     version: 2.1.2
     hasBin: true
@@ -12812,8 +12812,8 @@ packages:
       yargs: 3.32.0
     dev: false
 
-  git@github.com+PenguinMod/PenguinMod-Audio/0a3f4d98866e5d92fd459d94e5d5c8490de0e66f:
-    resolution: {commit: 0a3f4d98866e5d92fd459d94e5d5c8490de0e66f, repo: git@github.com:PenguinMod/PenguinMod-Audio.git, type: git}
+  github.com/PenguinMod/PenguinMod-Audio/0a3f4d98866e5d92fd459d94e5d5c8490de0e66f:
+    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Audio/tar.gz/0a3f4d98866e5d92fd459d94e5d5c8490de0e66f}
     name: scratch-audio
     version: 0.1.0
     dependencies:
@@ -12822,16 +12822,16 @@ packages:
       startaudiocontext: 1.2.1
     dev: false
 
-  git@github.com+PenguinMod/PenguinMod-MarkDown/ae5971c234a9d13a8886bb3edcec3df5ceffab34:
-    resolution: {commit: ae5971c234a9d13a8886bb3edcec3df5ceffab34, repo: git@github.com:PenguinMod/PenguinMod-MarkDown.git, type: git}
+  github.com/PenguinMod/PenguinMod-MarkDown/ae5971c234a9d13a8886bb3edcec3df5ceffab34:
+    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-MarkDown/tar.gz/ae5971c234a9d13a8886bb3edcec3df5ceffab34}
     name: md
     version: 0.6.0
     dependencies:
       slugo: 0.2.3
     dev: false
 
-  git@github.com+PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb:
-    resolution: {commit: c56c7aad93f71aa5d1a126bae1d5e663c161e8eb, repo: git@github.com:PenguinMod/PenguinMod-Parser.git, type: git}
+  github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb:
+    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Parser/tar.gz/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb}
     name: scratch-parser
     version: 0.0.0-development
     engines: {node: '>=8.0'}
@@ -12842,9 +12842,9 @@ packages:
       pify: 4.0.1
     dev: false
 
-  git@github.com+PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84(webpack@4.46.0):
-    resolution: {commit: 96f45f701dc11648bc88fcc5307193d591afea84, repo: git@github.com:PenguinMod/PenguinMod-Storage.git, type: git}
-    id: git@github.com+PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84
+  github.com/PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84(webpack@4.46.0):
+    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Storage/tar.gz/96f45f701dc11648bc88fcc5307193d591afea84}
+    id: github.com/PenguinMod/PenguinMod-Storage/96f45f701dc11648bc88fcc5307193d591afea84
     name: scratch-storage
     version: 0.0.0-development
     dependencies:
@@ -12858,9 +12858,9 @@ packages:
       - webpack
     dev: false
 
-  git@github.com+Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272(react-dom@16.14.0)(react-intl-redux@0.7.0)(react-intl@2.9.0)(react-popover@0.5.10)(react-redux@5.0.7)(react-responsive@4.1.0)(react-style-proptype@3.2.2)(react-tooltip@3.8.0)(react@16.14.0)(redux@3.7.2)(scratch-render-fonts@1.0.0-prerelease.20210401210003):
-    resolution: {commit: 599415de44e212ccb4753e22310c12a2cb104272, repo: git@github.com:Snail-IDE/Snail-IDE-Paint.git, type: git}
-    id: git@github.com+Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272
+  github.com/Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272(react-dom@16.14.0)(react-intl-redux@0.7.0)(react-intl@2.9.0)(react-popover@0.5.10)(react-redux@5.0.7)(react-responsive@4.1.0)(react-style-proptype@3.2.2)(react-tooltip@3.8.0)(react@16.14.0)(redux@3.7.2)(scratch-render-fonts@1.0.0-prerelease.20210401210003):
+    resolution: {tarball: https://codeload.github.com/Snail-IDE/Snail-IDE-Paint/tar.gz/599415de44e212ccb4753e22310c12a2cb104272}
+    id: github.com/Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272
     name: scratch-paint
     version: 0.2.0
     peerDependencies:
@@ -12897,9 +12897,9 @@ packages:
       scratch-render-fonts: 1.0.0-prerelease.20210401210003
     dev: false
 
-  git@github.com+Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274(scratch-render-fonts@1.0.0-prerelease.20210401210003):
-    resolution: {commit: b4ba43c750c74d78a1388df20ebfadee42a40274, repo: git@github.com:Snail-IDE/Snail-IDE-Render.git, type: git}
-    id: git@github.com+Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274
+  github.com/Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274(scratch-render-fonts@1.0.0-prerelease.20210401210003):
+    resolution: {tarball: https://codeload.github.com/Snail-IDE/Snail-IDE-Render/tar.gz/b4ba43c750c74d78a1388df20ebfadee42a40274}
+    id: github.com/Snail-IDE/Snail-IDE-Render/b4ba43c750c74d78a1388df20ebfadee42a40274
     name: scratch-render
     version: 0.1.0
     peerDependencies:
@@ -12916,9 +12916,9 @@ packages:
       twgl.js: 4.4.0
     dev: false
 
-  git@github.com+Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
-    resolution: {commit: dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3, repo: git@github.com:Snail-IDE/Snail-IDE-Vm.git, type: git}
-    id: git@github.com+Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3
+  github.com/Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
+    resolution: {tarball: https://codeload.github.com/Snail-IDE/Snail-IDE-Vm/tar.gz/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3}
+    id: github.com/Snail-IDE/Snail-IDE-Vm/dae0c01601aa117f5f2d886a3e1db6cc1f0de2b3
     name: scratch-vm
     version: 0.2.0
     peerDependencies:
@@ -12944,9 +12944,9 @@ packages:
       minilog: 3.1.0
       ml5: 0.12.2(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(encoding@0.1.13)(seedrandom@2.4.4)
       pathfinding: 0.4.18
-      scratch-parser: git@github.com+PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
+      scratch-parser: github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
       scratch-sb1-converter: 0.2.7
-      scratch-svg-renderer: git@github.com+TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+      scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
       scratch-translate-extension-languages: 0.0.20191118205314
       simplex-noise: 4.0.1
       sweetalert2: 11.10.6
@@ -12964,15 +12964,15 @@ packages:
       - webpack
     dev: false
 
-  git@github.com+Snail-IDE/snail-blocks/71363892a8e66981ceb63239243fa254e3002715:
-    resolution: {commit: 71363892a8e66981ceb63239243fa254e3002715, repo: git@github.com:Snail-IDE/snail-blocks.git, type: git}
+  github.com/Snail-IDE/snail-blocks/71363892a8e66981ceb63239243fa254e3002715:
+    resolution: {tarball: https://codeload.github.com/Snail-IDE/snail-blocks/tar.gz/71363892a8e66981ceb63239243fa254e3002715}
     name: scratch-blocks
     version: 0.1.0
     dev: false
 
-  git@github.com+TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003):
-    resolution: {commit: 179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82, repo: git@github.com:TurboWarp/scratch-svg-renderer.git, type: git}
-    id: git@github.com+TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82
+  github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003):
+    resolution: {tarball: https://codeload.github.com/TurboWarp/scratch-svg-renderer/tar.gz/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82}
+    id: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82
     name: '@turbowarp/scratch-svg-renderer'
     version: 1.0.0
     peerDependencies:
