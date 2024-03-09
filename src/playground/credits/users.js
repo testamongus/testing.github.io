@@ -131,6 +131,10 @@ const snDev = [
     'nmsderp',
     'cesderp14',
 ].map(fromHardcodedGithub);
+const snContribute = [
+    'someCatInTheWorld'
+
+].map(fromHardcodedGithub)
 
 const rubyDev = [
     "Gen1x-ALT",
@@ -164,5 +168,6 @@ export default {
     snDev: shuffle(snDev),
     rubyDev: shuffle(rubyDev),
     logoArtists: shuffle(logoArtists),
-    extensionDevelopers: shuffle(extensionDevelopers)
+    extensionDevelopers: shuffle(extensionDevelopers),
+    snContribute: shuffle(snContribute)
 };
