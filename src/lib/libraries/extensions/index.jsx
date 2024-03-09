@@ -1108,15 +1108,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Discord Auth',
-        extensionId: 'https://snail-ide.js.org/discord.js',
-        snailExt: true,
-        iconURL: 'https://snail-ide.js.org/discord-png.png',
-        tags: ['penguinmod'],
-        description: "Get data from a Discord user!",
-        featured: true
-    },
-    {
         name: 'Video',
         extensionId: 'https://extensions.turbowarp.org/Lily/Video.js',
         iconURL: 'https://extensions.turbowarp.org/images/Lily/Video.svg',
@@ -1660,6 +1651,16 @@ if (IsLocal || IsLiveTests) {
             featured: true,
             internetConnectionRequired: true
         },
+        
+    {
+        name: 'Discord Auth',
+        extensionId: 'https://snail-ide.js.org/discord.js',
+        snailExt: true,
+        iconURL: 'https://snail-ide.js.org/discord-png.png',
+        tags: ['penguinmod'],
+        description: "Get data from a Discord user!",
+        featured: true
+    },
     ];
     extras.forEach(ext => {
         menuItems.push(ext);
