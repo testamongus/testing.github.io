@@ -37,7 +37,7 @@ class DiscordAuth {
             let top = (screen.height - height) / 2;
             let left = (screen.width - width) / 2;
             const authWindow = window.open(
-                `https://opensnail.onrender.com/auth/discord`,
+                `https://opensnail.snail-ide.com/auth/discord`,
                 'Discord Auth',
                 `scrollbars=1,resizable=no,width=${width},height=${height},top=${top},left=${left}`
             );
@@ -47,7 +47,7 @@ class DiscordAuth {
                     clearInterval(intervalId);
                     try {
                         // Fetch user data from the server
-                        const response = await fetch('https://opensnail.onrender.com/api/userdata');
+                        const response = await fetch('https://opensnail.snail-ide.com/api/userdata');
                         if (!response.ok) {
                             throw new Error('Failed to fetch user data');
                         }
