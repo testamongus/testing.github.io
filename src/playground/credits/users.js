@@ -13,6 +13,11 @@ const fromHardcoded = ({userId, username, name}) => ({
     href: `https://scratch.mit.edu/users/${username}/`,
     text: name || username
 });
+const fromOther = ({userId, username, name}) => ({
+    image: `${userId}`,
+    href: `${username}`,
+    text: name || username
+});
 
 const fromHardcodedGithub = username => ({
     image: `https://github.com/${username}.png`,
@@ -132,9 +137,13 @@ const snDev = [
     'cesderp14',
 ].map(fromHardcodedGithub);
 const snContribute = [
-    'someCatInTheWorld'
+    {
+      image: "https://codeberg.org/avatars/7b7db239db951a3a298d6824a61972dfaede0d06871c43c77753aa993f435f31?size=512",
+      href: "https://codeberg.org/ACat",
+      text: "ACat"
+    }
 
-].map(fromHardcodedGithub)
+].map(fromOther)
 
 const rubyDev = [
     "Gen1x-ALT",
