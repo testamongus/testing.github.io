@@ -86,7 +86,7 @@ const Credits = () => (
             <p>
                 Snail IDE is made by a small bunch of developers, but people will sometimes contribute!
             </p>
-            <UserList users={UserData.snContribute} />
+            <UserList users={UserData.snContributeCodeBerg} />
             <p><i>The list order is randomized on each refresh.</i></p>
             <p>
                 ♥ Without PenguinMod, Snail IDE would never exist, here the PenguinMod Dev Team is listed ♥

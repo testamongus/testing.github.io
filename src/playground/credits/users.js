@@ -24,6 +24,11 @@ const fromHardcodedGithub = username => ({
     href: `https://github.com/${username}/`,
     text: username
 });
+const fromHardcodedCodeberg = username => ({
+    image: `https://codeberg.org/${username}.png`,
+    href: `https://codeberg.org/${username}/`,
+    text: username
+});
 
 const fromHardcodedDiscord = async userId => {
     const res = await fetch(`https://pmupdatereader.jeremygamer13.repl.co/user/${userId}`);
@@ -136,14 +141,10 @@ const snDev = [
     'nmsderp',
     'cesderp14',
 ].map(fromHardcodedGithub);
-const snContribute = [
-    {
-      image: "https://codeberg.org/avatars/7b7db239db951a3a298d6824a61972dfaede0d06871c43c77753aa993f435f31?size=512",
-      href: "https://codeberg.org/ACat",
-      text: "ACat"
-    }
+const snContributeCodeBerg = [
+    'ACat'
 
-].map(fromOther)
+].map(fromHardcodedCodeberg)
 
 const rubyDev = [
     "Gen1x-ALT",
@@ -178,6 +179,6 @@ export default {
     rubyDev: shuffle(rubyDev),
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers),
-    snContribute: shuffle(snContribute),
+    snContributeCodeBerg: shuffle(snContributeCodeBerg),
     fromOther: shuffle(fromOther)
 };
