@@ -45,19 +45,6 @@ const CustomExtensionModal = props => (
                 </div>
                 <div
                     className={styles.typeSelectorButton}
-                    data-active={props.type === 'file'}
-                    onClick={props.onSwitchToFile}
-                    tabIndex={0}
-                >
-                    <FormattedMessage
-                        defaultMessage="File"
-                        // eslint-disable-next-line max-len
-                        description="Button to choose to load an extension from a local file. Not much space, so keep this short."
-                        id="tw.customExtensionModal.file"
-                    />
-                </div>
-                <div
-                    className={styles.typeSelectorButton}
                     data-active={props.type === 'text'}
                     onClick={props.onSwitchToText}
                     tabIndex={0}
@@ -91,20 +78,7 @@ const CustomExtensionModal = props => (
                     />
                 </React.Fragment>
             ) : props.type === 'file' ? (
-                <React.Fragment key={props.type}>
-                    <p>
-                        <FormattedMessage
-                            defaultMessage="Select the extension's JavaScript file:"
-                            description="Label that appears when loading a custom extension from a file"
-                            id="tw.customExtensionModal.promptFile"
-                        />
-                    </p>
-                    <FileInput
-                        accept=".js"
-                        onChange={props.onChangeFile}
-                        file={props.file}
-                    />
-                </React.Fragment>
+                <p>how did you get here</p>
             ) : (
                 <React.Fragment key={props.type}>
                     <p>
