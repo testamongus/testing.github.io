@@ -296,24 +296,3 @@ We provide [Scratch](https://scratch.mit.edu) free of charge, and want to keep i
 ## e
 
 -->
-
-yeeeeouch
-goobert.poo
-  
-goobert.poo
-  
-goobert.poo
-    
-goobert.poo
-    
-goobert.poo
-    
-goobert.poo
-    
-goobert.poo
-    
-goobert.poo
-goobert
-    
-goobert.poo
-
