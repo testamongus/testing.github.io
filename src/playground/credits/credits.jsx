@@ -224,6 +224,9 @@ const Credits = () => (
             <p>"Sneaky Snitch" Kevin MacLeod (incompetech.com)
                     Licensed under Creative Commons: By Attribution 4.0 License
                     http://creativecommons.org/licenses/by/4.0/</p>
+            <p>"Inspired" Kevin MacLeod (incompetech.com)
+                    Licensed under Creative Commons: By Attribution 4.0 License
+                    http://creativecommons.org/licenses/by/4.0/</p>
         </section>
         <section>
             <p>

@@ -3490,6 +3490,18 @@
         "rate": 44100
     },
     {
+        "name": "Inspired",
+        "tags": [
+            "themes",
+            "loops"
+        ],
+        "assetId": "dca90a8fd548c1a71a78cc55d7f5b8ae",
+        "dataFormat": "",
+        "md5ext": "dca90a8fd548c1a71a78cc55d7f5b8ae.mp3",
+        "sampleCount": 26048,
+        "rate": 44100
+    },
+    {
         "name": "Moo",
         "tags": [
             "animals",
