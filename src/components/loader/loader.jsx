@@ -1,4 +1,4 @@
-// credit to  o97doge on codeberg for the tip system
+// credit to  ACat for the tip system
 
 import React from 'react';
 import {defineMessages, FormattedMessage, intlShape, injectIntl} from 'react-intl';
