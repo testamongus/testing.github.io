@@ -15,5 +15,6 @@ export const tip = [
     "If the creator of Snail IDE (Mr_rudy) enjoys your project, he will give you the COOL badge.",
     "The first project to be uploaded that still exists is SnailGPT by Mr_rudy, keep in mind this lasted through over 3 server changes",
     "Snail IDE Noticed ScratchDaPony :)",
-    "@redspacecat is remaking Geometry Dash in Snail IDE, with level sharing!"
+    "@redspacecat is remaking Geometry Dash in Snail IDE, with level sharing!",
+    "Blud is reading this tip 💀💀💀"
 ];
