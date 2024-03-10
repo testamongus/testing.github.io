@@ -179,4 +179,5 @@ export default {
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers),
     snContribute: shuffle(snContribute)
+    fromOther: shuffle(fromOther)
 };
