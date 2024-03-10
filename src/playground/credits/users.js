@@ -178,6 +178,6 @@ export default {
     rubyDev: shuffle(rubyDev),
     logoArtists: shuffle(logoArtists),
     extensionDevelopers: shuffle(extensionDevelopers),
-    snContribute: shuffle(snContribute)
+    snContribute: shuffle(snContribute),
     fromOther: shuffle(fromOther)
 };
