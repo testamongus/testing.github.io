@@ -7,9 +7,7 @@ import styles from './loader.css';
 import PropTypes from 'prop-types';
 import bindAll from 'lodash.bindall';
 import { tip } from '../../lib/randomUnhelpfulTip';
-import topBlock from './top-block.svg';
-import middleBlock from './middle-block.svg';
-import bottomBlock from './bottom-block.svg';
+import snail from './snail.svg'
 
 import * as progressMonitor from './tw-progress-monitor';
 
@@ -136,18 +134,7 @@ class LoaderComponent extends React.Component {
             >
                 <div className={styles.container}>
                     <div className={styles.blockAnimation}>
-                        <img
-                            className={styles.topBlock}
-                            src={topBlock}
-                        />
-                        <img
-                            className={styles.middleBlock}
-                            src={middleBlock}
-                        />
-                        <img
-                            className={styles.bottomBlock}
-                            src={bottomBlock}
-                        />
+                        <img src={snail} />
                     </div>
                     <div className={styles.title}>
                         {mainMessages[this.props.messageId]}
