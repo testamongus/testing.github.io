@@ -1,10 +1,12 @@
+// credit to  o97doge on codeberg for the tip system
+
 import React from 'react';
 import {defineMessages, FormattedMessage, intlShape, injectIntl} from 'react-intl';
 import classNames from 'classnames';
 import styles from './loader.css';
 import PropTypes from 'prop-types';
 import bindAll from 'lodash.bindall';
-
+import { tip } from '../../lib/randomUnhelpfulTip';
 import topBlock from './top-block.svg';
 import middleBlock from './middle-block.svg';
 import bottomBlock from './bottom-block.svg';
@@ -150,6 +152,7 @@ class LoaderComponent extends React.Component {
                     <div className={styles.title}>
                         {mainMessages[this.props.messageId]}
                     </div>
+                    <p>{tip[Math.round(Math.random() * tip.length)]}</p>
                     <div className={styles.messageContainerOuter}>
                         <div
                             className={styles.messageContainerInner}
@@ -162,6 +165,7 @@ class LoaderComponent extends React.Component {
                             ref={this.barInnerRef}
                         />
                     </div>
+
                 </div>
             </div>
         );
