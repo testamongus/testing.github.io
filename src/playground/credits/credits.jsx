@@ -107,7 +107,7 @@ const Credits = () => (
             </a>
             <h2>Domain Provider</h2>
             <p>
-                <a href="https://snail-ide.com">snail-ide.com</a> is provided by <a href="https://scratch.mit.edu/users/BA4X/">BA4X/thepython555/Dumo178</a>
+                <a href="https://snail-ide.com">snail-ide.com</a> is provided by <a href="https://scratch.mit.edu/users/dumorando/">dumorando</a>
             </p>
             <h2>Sound Effects</h2>
             <p>
