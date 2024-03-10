@@ -73,6 +73,7 @@ class LoaderComponent extends React.Component {
         this.progress = 0;
         this.complete = 0;
         this.total = 0;
+        this.unhelpfulTip = tip[Math.round(Math.random() * tip.length)];
         bindAll(this, [
             'barInnerRef',
             'handleProgressChange',
@@ -139,7 +140,7 @@ class LoaderComponent extends React.Component {
                     <div className={styles.title}>
                         {mainMessages[this.props.messageId]}
                     </div>
-                    <p>{tip[Math.round(Math.random() * tip.length)]}</p>
+                    <p dangerouslySetInnerHTML={{__html: this.unhelpfulTip}}/>
                     <div className={styles.messageContainerOuter}>
                         <div
                             className={styles.messageContainerInner}
