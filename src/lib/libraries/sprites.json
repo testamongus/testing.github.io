@@ -9523,6 +9523,37 @@
         "blocks": {}
     },
     {
+        "name": "Platformer...",
+        "tags": [
+            "fantasy"
+        ],
+        "isStage": false,
+        "variables": {},
+        "costumes": [
+            {
+                "assetId": "948bb86ca03e9f7e08a6c3d189f3a177",
+                "name": "Platformer...",
+                "bitmapResolution": 1,
+                "md5ext": "948bb86ca03e9f7e08a6c3d189f3a177.svg",
+                "dataFormat": "svg",
+                "rotationCenterX": 74,
+                "rotationCenterY": 78
+            }
+        ],
+        "sounds": [
+            {
+                "assetId": "45ffcf97ee2edca0199ff5aa71a5b72e",
+                "name": "horse",
+                "dataFormat": "wav",
+                "format": "",
+                "rate": 44100,
+                "sampleCount": 57856,
+                "md5ext": "45ffcf97ee2edca0199ff5aa71a5b72e.wav"
+            }
+        ],
+        "blocks": {}
+    },
+    {
         "name": "poo snail",
         "tags": [
             "animals",

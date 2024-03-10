@@ -3784,6 +3784,18 @@
         "rotationCenterY": 32
     },
     {
+        "name": "Platformer",
+        "tags": [
+            "fantasy"
+        ],
+        "assetId": "948bb86ca03e9f7e08a6c3d189f3a177",
+        "bitmapResolution": 1,
+        "dataFormat": "svg",
+        "md5ext": "948bb86ca03e9f7e08a6c3d189f3a177.svg",
+        "rotationCenterX": 21,
+        "rotationCenterY": 32
+    },
+    {
         "name": "Drum-snare-b",
         "tags": [
             "music",
