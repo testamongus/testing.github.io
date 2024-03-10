@@ -77,7 +77,6 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 import errorIcon from './tw-error.svg';
 import themeIcon from './tw-moon.svg';
-import homeS from './navicon.png';
 // cool icons ye
 import addonsIcon from './addons.svg';
 import settingsIcon from './settings.svg';
@@ -444,22 +443,19 @@ class MenuBar extends React.Component {
             >
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
-                        {this.props.onClickLogo ? (
-                            <div className={classNames(styles.menuBarItem)}>
+                        <div className={classNames(styles.menuBarItem)}>
+                            <a href="https://www.snail-ide.com" target="_blank">
                                 <img
                                     alt="Snail IDE"
                                     className={classNames(styles.scratchLogo, {
                                         [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
                                     })}
+                                    style={{ cursor: "pointer" }}
                                     draggable={false}
-                                    src={homeS}
-                                    onClick={() => { 
-                                        window.open('https://snail-ide.com', '_blank'); 
-                                        this.props.onClickLogo();
-                                    }}
+                                    src={scratchLogo}
                                 />
-                            </div>
-                        ) : null}
+                            </a>
+                        </div>
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
@@ -494,7 +490,7 @@ class MenuBar extends React.Component {
                             </div>
                         )}
 
-                        
+
 
 
                         {/* tw: display compile errors */}
@@ -894,22 +890,6 @@ class MenuBar extends React.Component {
                                 isShared={this.props.isShared}
                             />)
                             : (null)}
-                    </div>
-                    <div className={styles.menuBarItem}>
-                        <a
-                            className={styles.feedbackLink}
-                            href="https://snail-ide.com"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <Button className={styles.feedbackButton}>
-                                <FormattedMessage
-                                    defaultMessage="Back to Home"
-                                    description="Button to go back to the home page"
-                                    id="pm.backToHomeButton"
-                                />
-                            </Button>
-                        </a>
                     </div>
                 </div>
 
