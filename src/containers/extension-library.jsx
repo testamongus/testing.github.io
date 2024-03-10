@@ -55,7 +55,8 @@ class ExtensionLibrary extends React.PureComponent {
         const isCustomURL = !item.disabled && !id;
         if (isCustomURL) {
             // eslint-disable-next-line no-alert
-            url = prompt(this.props.intl.formatMessage(messages.extensionUrl));
+            this.props.onOpenCustomExtensionModal();
+            return;
         }
         if (url && !item.disabled) {
             if (this.props.vm.extensionManager.isExtensionLoaded(url)) {
@@ -65,17 +66,6 @@ class ExtensionLibrary extends React.PureComponent {
                 this.props.vm.extensionManager.loadExtensionURL(parsedURL)
                     .then(() => {
                         this.props.onCategorySelected(id);
-                        if (isCustomURL) {
-                            let newUrl = location.pathname;
-                            if (location.search) {
-                                newUrl += location.search;
-                                newUrl += '&';
-                            } else {
-                                newUrl += '?';
-                            }
-                            newUrl += `extension=${encodeURIComponent(url)}`;
-                            history.replaceState('', '', newUrl);
-                        }
                     })
                     .catch(err => {
                         // eslint-disable-next-line no-alert
@@ -108,6 +98,7 @@ class ExtensionLibrary extends React.PureComponent {
 ExtensionLibrary.propTypes = {
     intl: intlShape.isRequired,
     onCategorySelected: PropTypes.func,
+    onOpenCustomExtensionModal: PropTypes.func,
     onRequestClose: PropTypes.func,
     visible: PropTypes.bool,
     vm: PropTypes.instanceOf(VM).isRequired // eslint-disable-line react/no-unused-prop-types
