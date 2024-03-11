@@ -1287,7 +1287,7 @@ const menuItems = [
     {
         name: 'ISS',
         snailExt: true,
-        extensionId: '/iss.js',
+        extensionId: 'https://snail-ide.js.org/iss.js',
         iconURL: issIcon,
         tags: ['penguinmod'],
         description: 'Get the latitude and longitude of the International Space Station',
