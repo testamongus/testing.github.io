@@ -1,4 +1,5 @@
 // Simple file storage made with tools from Snap!
+// Be careful, data can be replaced
 
 class ServerExtension {
   constructor(runtime) {
