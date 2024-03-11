@@ -7,7 +7,7 @@ to run snail ide on your computer, you'll need nvm (node version manager).<br>
 type ``nvm install 16`` then ``nvm use 16`` in your terminal. (if your on windows, accept the uac prompts)<br>
 then your gonna need pnpm. there may be other ways to install snail ides dependencies without pnpm, but right now you'll need it. you can install it by typing ``npm install -g pnpm``. <br>
 after you install pnpm, clone the snail ide gui with ``git clone https://github.com/snail-ide/snail-ide.github.io``.<br>
-then run ``pnpm i --shamefully-hoist``. after that, you can type ``npm start`` or ``yarn start`` if you have yarn.
+then run ``pnpm i --shamefully-hoist``. after that, you can type ``npm start`` or ``pnpm start`` or ``yarn start`` if you have yarn.
 
 ## License
 
