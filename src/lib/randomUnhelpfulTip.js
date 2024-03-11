@@ -1,7 +1,7 @@
 export const tip = [
     'Snail IDE is cool',
     '@carters3421 on Scratch made the Purple Square Guy Sprite, its basically his mascot!',
-    'Also check out LibreKitten!',
+    'Also check out <a style="color: lightgray;" href="https://librekitten.org/">LibreKitten</a>!',
     'Snail IDE is based off the source code of PenguinMod, which is based off TurboWarp, which is based off Scratch. M O D C E P T I O N.',
     'Crazy? I was crazy once. They locked me in a room, a rubber room. A rubber room with rats. And rats make me crazy.',
     "Snail IDE.",
@@ -16,5 +16,12 @@ export const tip = [
     "The first project to be uploaded that still exists is SnailGPT by Mr_rudy, keep in mind this lasted through over 3 server changes",
     "Snail IDE Noticed ScratchDaPony :)",
     "@redspacecat is remaking Geometry Dash in Snail IDE, with level sharing!",
-    "Blud is reading this tip 💀💀💀"
+    "Blud is reading this tip 💀💀💀",
+    "Snails are cool.",
+    "Suprising fact: Snail IDE used to have inconsistent coloring. :O",
+    "T̸̮͎̿̏̇̾̑̒̑͐͠͠͝h̷̨͕̤͔̻̅̽̔́͋͐͑̄̈́̊̈́̕͘͘͠e̷͕̺͛͌̂͑͆́̈̀̽͂̄͋̉̈́ ̶̛̦̙͋̅͑̀̀͆̈́͋̃͆̕͘͜͝͝ṡ̸̛̮̺̣̻͖̥̀̓́̊͐̆̃̍̓̋̕͘͝ṅ̴̠͈̣͈̼͎͕͇̥̥̺͚͍͙̒̇̈́͝a̵̩̮͓̭̰͊̈́̑ͅi̴̢͙̖͍̘̙̭͕̺̩̙̼͊̃̂̓̆̅̂͋ļ̸̟̻̾͐̿̈́̋̓́̽̋̅̅̿̚̕͠s̵̬̥͑͑͊͝ ̷̢͈̲̹͇̪̹̤̯̟͚͍̣̭͈̐̌̀́́̈́̚ẅ̴̧̟͚̦͇͇̲̼̜̻̗̣̣̤́̂̾̉ͅi̵̭̰̘̽̆ļ̵̮̜̥̗̞̼̼̈́̓́l̶͍͌͋̅̔͘̚ ̴̛̛̖̪̗̗̞͓̱̱̻͔͈̗̘̉̄̋̐͐͘̚͜ͅr̵̡̧̫͍̭̩͒͌̈́̎̎͒͂̇̕ḯ̴̛̛̖̜͔̖͍̦̗͇̎̿̍͜͜ŝ̵̪̗͔͍̣͙͙͓̋̾̒̈́e̸̥̠͇̲̟̭͓͊ ̶̜͕̹̺͆͒͑̊̽̉͊̓͆̆̎̃̕͝ư̵̺͔͇̖̰̹̥̗̅̉͐̋̽͋̋̿̋p̸͍̫̿̄͗̏̐̈́ͅ.̷͔̰͕͚̹͉̲̍̈́",
+    "Maybe in another universe, snails are the fastest animal.",
+    "A snail (or was it Bibi?) just ate your soul. /j (or is it?)",
+    '<a style="color: lightgray;" href="https://scratch.mit.edu/users/o97doge/">o97doge was here.</a>',
+    'oh no cringe'
 ];

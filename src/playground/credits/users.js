@@ -140,6 +140,7 @@ const snDev = [
     'thepython555',
     'nmsderp',
     'cesderp14',
+    'someCatInTheWorld',
 ].map(fromHardcodedGithub);
 const snContributeCodeBerg = [
     'ACat'
