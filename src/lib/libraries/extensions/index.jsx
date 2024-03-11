@@ -84,6 +84,8 @@ import jwProtoExtensionIcon from './penguinmod/extensions/proto.png';
 
 import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
+import randomlyBlocksIcon from '.randomly/randomlyBlocks.svg';
+
 // cl waw
 // import cloudlinkThumb from './penguinmod/extensions/cloudlinkThumb.png';
 import cloudlinkIcon from './penguinmod/extensions/cloudlinkIcon.svg';
@@ -445,6 +447,15 @@ const menuItems = [
         iconURL: roku,
         tags: ['other_mods'],
         description: 'Interact with your Roku tv via the GM2Helper software!',
+        featured: true
+    },
+    {
+        name: 'Randomly Blocks',
+        extensionId: 'https://raw.githubusercontent.com/mariocraft987/RandomlyBlocks/main/version-1.7',
+        collaborator: 'mariocraft987',
+        iconURL: randomlyBlocksIcon,
+        tags: ['other_mods'],
+        description: 'Utilitys to have your project feel like a website',
         featured: true
     },
     // {
