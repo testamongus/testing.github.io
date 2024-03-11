@@ -329,14 +329,6 @@ const CustomStageSize = ({
                     >
                         16:9
                     </button>
-                    <button
-                        className={styles.customStageSizeButton}
-                        data-selected={stageWidth === 360 && stageHeight === 480}
-                        data-mobile={true}
-                        onClick={() => onStagePresetUsed(true)}
-                    >
-                        Mobile Game
-                    </button>
                 </div>
                 <div className={styles.customStageSizeContainer}>
                     <FormattedMessage
