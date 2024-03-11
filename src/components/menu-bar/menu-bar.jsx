@@ -829,16 +829,16 @@ class MenuBar extends React.Component {
                         </div>
                     </div>
                     <Divider className={classNames(styles.divider)} />
-                    {/* {(this.props.authorUsername && this.props.authorUsername !== this.props.username) ? (
+                    {(this.props.authorUsername && this.props.authorUsername !== this.props.username) ? (
                         <AuthorInfo
                             className={styles.authorInfo}
                             imageUrl={this.props.authorThumbnailUrl}
                             projectId={this.props.projectId}
-                            // projectTitle={this.props.projectTitle}
+                            projectTitle={this.props.projectTitle}
                             userId={this.props.authorId}
                             username={this.props.authorUsername}
                         />
-                    ) : null} */}
+                    ) : null}
                     {this.props.canEditTitle ? (
                         <div className={classNames(styles.menuBarItem, styles.growable)}>
                             <MenuBarItemTooltip
