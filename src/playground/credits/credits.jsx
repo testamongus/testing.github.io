@@ -75,7 +75,7 @@ const Credits = () => (
                 Donate to support TurboWarp.
             </a>
             <h2>Developers</h2>
-            <b>Fun Fact: Snail IDE was originally made only by @Mr_rudy/nmsderp, but he still makes a majority of the commits! Eventually, BA4X joined the dev team. Then, @o97doge/ACat/someCatInTheWorld joined the dev team as well after making a bunch of useful pull requests.</b>
+            <b>Fun Fact: Snail IDE was originally made only by @Mr_rudy/nmsderp, but he still makes a majority of the commits! Eventually, BA4X joined the dev team. Then, @o97doge/ACat/someCatInTheWorld joined the dev team as well, after making a bunch of useful pull requests.</b>
             <p>
                 Snail IDE is made by a small bunch of developers.
                 A list is below, but you can also check <a href="https://github.com/orgs/Snail-IDE/people">our GitHub</a> incase this one is out of date.
