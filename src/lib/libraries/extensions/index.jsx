@@ -84,7 +84,7 @@ import jwProtoExtensionIcon from './penguinmod/extensions/proto.png';
 
 import jwStructsExtensionIcon from './penguinmod/extensions/ooplogo.png';
 
-import randomlyBlocksIcon from '.randomly/randomlyBlocks.svg';
+import randomlyBlocksIcon from './randomly/randomlyBlocks.svg';
 
 // cl waw
 // import cloudlinkThumb from './penguinmod/extensions/cloudlinkThumb.png';
