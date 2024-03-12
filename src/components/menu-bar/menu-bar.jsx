@@ -443,8 +443,8 @@ class MenuBar extends React.Component {
             >
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
-                        <div className={classNames(styles.menuBarItem)}>
                             <a href="https://www.snail-ide.com" target="_blank">
+                            <div className={classNames(styles.menuBarItem, styles.hoverable)}>
                                 <img
                                     alt="Snail IDE"
                                     className={classNames(styles.scratchLogo, {
@@ -454,8 +454,8 @@ class MenuBar extends React.Component {
                                     draggable={false}
                                     src={scratchLogo}
                                 />
+                            </div>
                             </a>
-                        </div>
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
