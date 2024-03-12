@@ -451,7 +451,7 @@ const menuItems = [
     },
     {
         name: 'Randomly Blocks',
-        extensionId: 'https://raw.githubusercontent.com/mariocraft987/RandomlyBlocks/main/version-1.7',
+        extensionId: 'https://editor.snail-ide.com/randomlyBlocks.js',
         collaborator: 'mariocraft987',
         iconURL: randomlyBlocksIcon,
         tags: ['other_mods'],
