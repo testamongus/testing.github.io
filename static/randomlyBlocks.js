@@ -1,8 +1,6 @@
-/*
-Under @MIT LICENSE (C)
-Version 1.7
-Created by Mariocraft987 {https://scratch.mit.edu/users/mariocraft987/}
-*/
+// Under MIT LICENSE (C)
+// Version 1.7
+// Created by Mariocraft987 {https://scratch.mit.edu/users/mariocraft987/}
 
 (function (Scratch) {
   "use strict";
@@ -112,33 +110,28 @@ Created by Mariocraft987 {https://scratch.mit.edu/users/mariocraft987/}
           {
             opcode: 'getMilisecs',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'get Miliseconds',
+            text: 'get Milliseconds',
             disableMonitor: true,
           },
           {
             opcode: 'getTime1970',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'get Miliseconds since 1970',
+            text: 'get Milliseconds since 1970',
             disableMonitor: true,
           },
           {
-            opcode: 'currentHolliday',
+            opcode: 'currentHoliday',
             blockType: Scratch.BlockType.REPORTER,
-            text: 'current holliday',
+            text: 'current holiday',
             disableMonitor: true, 
           },
-            
         ],
       };
     }
     alertname(args) {
       alert(args.STR)
     }    
-      // Old Block Test
-    YNalert(args) {
-      return("hello!")
-    }
-
+      
     changeTitle(args) {
       document.title = args.STR
     }
@@ -194,51 +187,51 @@ Created by Mariocraft987 {https://scratch.mit.edu/users/mariocraft987/}
       }
     }
     
-    currentHolliday(args) {
+    currentHoliday(args) {
         let date = new Date();
         let month = date.getMonth()
         let day = date.getDate()
             if (month == 0) {
-                if (day == 1) {return "new year"}
-                if (day == 15) {return "martin luther king"}
+                if (day == 1) {return "New Year"}
+                if (day == 15) {return "Martin Luther King"}
             }else
             if (month == 1) {
-                if (day == 2) {return "groundhogs day"}
-                if (day == 19) {return "presidents day"}
+                if (day == 2) {return "Groundhog's Day"}
+                if (day == 19) {return "Presidents' Day"}
             }else
             if (month == 2) {
-                if (day == 31) {return "easter"}
+                if (day == 31) {return "Easter"}
             }else
             if (month == 3) {
-                if (day == 15) {return "tax day"}
+                if (day == 15) {return "Tax Day"}
             }else
             if (month == 4) {
-                if (day == 12) {return "mothers day"}
+                if (day == 12) {return "Mother's Day"}
             }else
             if (month == 5) {
-                if (day == 16) {return "fathers day"}
+                if (day == 16) {return "Father's Day"}
             }else
             if (month == 6) {
-                if (day == 4) {return "independence day"}
-                if (day == 28) {return "parents day"}
+                if (day == 4) {return "Independence Day"}
+                if (day == 28) {return "Parents' Day"}
             }else
             if (month == 7) {
                 /* Nothing much */
             }else
             if (month == 8) {
-                if (day == 2) {return "labor day"}
+                if (day == 2) {return "Labor Day"}
             }else
             if (month == 9) {
-                if (day == 31) {return "halloween"}
+                if (day == 31) {return "Halloween"}
             }else
             if (month == 10) {
-                if (day == 28) {return "thanksgiving"}
+                if (day == 28) {return "Thanksgiving"}
             }else
             if (month == 11) {
-                if (day == 25) {return "christmas"}
-                if (day == 31) {return "new years eve"}
+                if (day == 25) {return "Christmas"}
+                if (day == 31) {return "New Year's Eve"}
             }
-            return "No Importent Hollidays Today!"
+            return "No Important Holidays Today!"
         }
   }
   
