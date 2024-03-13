@@ -220,6 +220,20 @@ const Footer = () => (
                             id="tw.snail-studio"
                         />
                     </a>
+                    <a href="https://scratch.mit.edu/discuss/topic/689165/">
+                        <FormattedMessage
+                            defaultMessage="Scratch Forum Topic"
+                            description="Link to the Scratch forum topic for Snail IDE"
+                            id="si.scratch-forum-topic"
+                        />
+                    </a>
+                    <a href="https://www.snail-ide.com/forum">
+                        <FormattedMessage
+                            defaultMessage="Unoffical Forum"
+                            description="Link to the unoffical internet forum for Snail IDE"
+                            id="si.unofficial-forum"
+                        />
+                    </a>
                     <a href="https://snail-ide.com">
                         <FormattedMessage
                             defaultMessage="Homepage"
