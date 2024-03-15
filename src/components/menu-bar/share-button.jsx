@@ -60,7 +60,7 @@ class ShareButton extends React.Component {
         this.handleMessageEvent(e);
     }
     async handleMessageEvent(e) {
-        if (!e.origin.startsWith(`https://snail-ide.vercel.app`)) {
+        if (!e.origin.startsWith(`https://snail-ide.com`)) {
             return;
         }
 
@@ -138,7 +138,7 @@ class ShareButton extends React.Component {
             }
 
             const url = location.origin;
-            window.open(`https://snail-ide.com/upload?name=${this.props.projectTitle}${remixPiece}&external=${url}`, '_blank');
+            window.open(`https://snail-ide.com/upload?name=${this.props.projectTitle}${remixPiece}`, '_blank');
         });
     }
     render() {
