@@ -405,15 +405,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Rounding+',
-        extensionId: 'https://snail-ide-extensions-gallery.vercel.app/extensions/CharCoalAfterLife/rounding.js',
-        iconURL: 'https://snail-ide-extensions-gallery.vercel.app/images/CharCoalAfterLife/rounding.png',
-        tags: ['penguinmod', 'categoryexpansion'],
-        description: "Expansion of the rounding block.",
-        collaborator: 'CharcoalAfterlife',
-        featured: true
-    },
-    {
         name: 'Perlin Noise',
         extensionId: 'iygPerlin',
         iconURL: 'https://studio.penguinmod.com/static/assets/39f37f1b00fbf96926276701d8de4c89.png',
