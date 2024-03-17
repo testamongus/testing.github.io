@@ -959,6 +959,18 @@
         "rate": 22050
     },
     {
+        "name": "Cave Full",
+        "tags": [
+            "music",
+            "loops"
+        ],
+        "assetId": "cb16a06e6d768a554cb6bca46354474c",
+        "dataFormat": "adpcm",
+        "md5ext": "cb16a06e6d768a554cb6bca46354474c.mp3",
+        "sampleCount": 163577,
+        "rate": 22050
+    },
+    {
         "name": "Chatter",
         "tags": [
             "animals",
