@@ -58,8 +58,12 @@ const ThemeHOC = function (WrappedComponent) {
                 // Append at the start of <body> we override scratch-gui styles in <head>
                 // but are overridden by addon styles at the end of <body>
                 document.body.insertBefore(darkModeStylesheet, document.body.firstChild);
+                const meta = document.head.querySelector('meta[name="theme-color"]');
+                meta.setAttribute('content', '#57039c');
             } else if (!dark && darkModeStylesheet.parentNode) {
                 darkModeStylesheet.parentNode.removeChild(darkModeStylesheet);
+                const meta = document.head.querySelector('meta[name="theme-color"]');
+                meta.setAttribute('content', '#D414FF');
             }
         }
         handleQueryChange () {

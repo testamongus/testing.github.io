@@ -1,21 +1,21 @@
 {
   "short_name": "Snail IDE",
   "name": "Snail IDE",
-  "description": "Mod of TurboWarp that was made to allow for really cool projects.",
+  "description": "Mod of PenguinMod that was made to allow for really cool projects.",
   "icons": [
     {
-      "src": "images/192.png",
-      "type": "image/png",
+      "src": "images/applogo.svg",
+      "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "images/512.png",
-      "type": "image/png",
+      "src": "images/applogo.svg",
+      "type": "image/svg+xml",
       "sizes": "512x512"
     }
   ],
   "start_url": "editor",
-  "background_color": "#333333",
+  "background_color": "#D414FF",
   "display": "standalone",
-  "theme_color": "#333333"
+  "theme_color": "#D414FF"
 }
