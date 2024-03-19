@@ -1,0 +1,42 @@
+on:
+  workflow_dispatch:
+  repository_dispatch:
+  push:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+  #ci-${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup GitHub Pages
+      id: pages
+      uses: actions/configure-pages@v1
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+    - name: Install dependencies and build site
+      run: npm i -g pnpm && pnpm up && pnpm i --shamefully-hoist && webpack --bail
+    - name: Zip
+      run: zip -r release.zip build
+    - name: Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+          with:
+            repo_token: "${{ secrets.GITHUB_TOKEN }}"
+            automatic_release_tag: "latest"
+            prerelease: false
+            title: "Automatic Build"
+            files: |
+              LICENSE
+              release.zip
