@@ -27,11 +27,21 @@ jobs:
       with:
         node-version: 16.x
     - name: Install dependencies and build site
-      run: npm i -g pnpm && pnpm up && pnpm i --shamefully-hoist && webpack --bail
+      run: npm i -g pnpm && pnpm up && pnpm i --shamefully-hoist && webpack --bail && zip -r release.zip build
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
         path: ./build/
+    - name: Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Automatic Build"
+        files: |
+          LICENSE
+          release.zip
 
   deploy:
     environment:
