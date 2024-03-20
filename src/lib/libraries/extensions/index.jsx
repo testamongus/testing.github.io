@@ -352,7 +352,7 @@ const menuItems = [
     },
     {
         name: 'PenguinGPT',
-        extensionId: 'https://editor.snail-ide.com/gpt.js',
+        extensionId: 'https://editor.snail-ide.com/penguingpt.js',
         collaborator: 'cicerorph & Anonymous-cat1',
         iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
         tags: ['turbowarp', 'ai'],
