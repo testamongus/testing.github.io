@@ -288,6 +288,17 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'Scratch2WebSerialAPI',
+        extensionId: 'scratch2webserialapi',
+        iconURL: 'https://raw.githubusercontent.com/champierre/scratch2webserialapi/main/scratch-gui/src/lib/libraries/extensions/scratch2webserialapi/scratch2webserialapi.png',
+        insetIconURL: 'https://raw.githubusercontent.com/champierre/scratch2webserialapi/main/scratch-gui/src/lib/libraries/extensions/scratch2webserialapi/Icon.png',
+        collaborator: 'champierre',
+        internetConnectionRequired: true,
+        tags: ['other_mods'],
+        description: 'Do more complex things with hardware via the serial ports.',
+        featured: true
+    },
+    {
         name: 'scratch2maqueen',
         extensionId: 'scratch2maqueen', // update reference once file names are updated
         tags: ['other_mods'],
