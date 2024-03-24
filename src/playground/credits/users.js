@@ -137,7 +137,7 @@ const pmDevelopers = [
 ].map(fromHardcodedGithub);
 
 const snDev = [
-    'thepython555',
+    'dumorando',
     'nmsderp',
     'cesderp14',
     'someCatInTheWorld',
