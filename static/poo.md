@@ -75,3 +75,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 25 (dumo) 2/28/24 3:53 PM
 - nevermind
+
+- EDIT 25 (nmsderp) 3/30/2024 5:39 PM
+- trying to fix color stuff
