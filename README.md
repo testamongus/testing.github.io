@@ -9,6 +9,7 @@ then your gonna need pnpm. there may be other ways to install snail ides depende
 after you install pnpm, clone the snail ide gui with ``git clone https://github.com/snail-ide/snail-ide.github.io``.<br>
 then run ``pnpm i --shamefully-hoist``. after that, you can type ``npm start`` or ``pnpm start`` or ``yarn start`` if you have yarn.<br/>
 if you want to use node 17+ , you'll have to add the enviroment variable `NODE_OPTIONS` with the content `--openssl-legacy-provider` before the start command.<br/>
+on linux/github codespaces you can do that by running the command `export NODE_OPTIONS=--openssl-legacy-provider`.
 
 ## License
 
