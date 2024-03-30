@@ -276,6 +276,7 @@ const looks = function (isInitialSetup, isStage, targetId, costumeName, backdrop
                 </shadow>
             </value>
         </block>
+        <block type="looks_tutorialmod_alert">
             <value name="MESSAGE">
                 <shadow type="text">
                     <field name="TEXT">${hello}</field>
@@ -979,6 +980,7 @@ const sensing = function (isInitialSetup, isStage) {
             </value>
         </block>
         <block type="sensing_username"/>
+        <block type="sensing_unix"/>
         ${categorySeparator}
     </category>
     `;
