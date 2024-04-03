@@ -201,15 +201,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Screensharing',
-        extensionId: 'https://editor.snail-ide.com/screen-sharing.js',
-        iconURL: 'https://editor.snail-ide.com/Screensharing.png', // please forgive me the text is slightly offcenter
-        collaborator: 'pooiod7',
-        tags: ['penguinmod'],
-        description: 'Share your screen and get the current frame as a image.',
-        featured: true
-    },
-    {
         name: 'Lazy Collisions',
         extensionId: 'https://editor.snail-ide.com/Lazy-Collisions.js',
         iconURL: 'https://sharkpools-extensions.vercel.app/extension-thumbs/Lazy-Collisions.svg',
@@ -236,7 +227,15 @@ const menuItems = [
         description: 'Do many things via the Scratch API; you can even fetch cloud data from projects!',
         featured: true
     },
-
+    {
+        name: 'Screensharing',
+        extensionId: 'https://editor.snail-ide.com/screen-sharing.js',
+        iconURL: 'https://editor.snail-ide.com/Screensharing.png', // please forgive me the text is slightly offcenter
+        collaborator: 'pooiod7',
+        tags: ['penguinmod'],
+        description: 'Share your screen and get the current frame as a image.',
+        featured: true
+    },
     {
         name: 'Prompts',
         extensionId: 'https://editor.snail-ide.com/Prompts.js',
@@ -333,32 +332,12 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Key Simulator',
-        extensionId: 'https://editor.snail-ide.com/keysim.js',
-        iconURL: defaultExtensionIcon,
+        name: 'Key Simulation',
+        extensionId: 'https://extensions.turbowarp.org/CubesterYT/KeySimulation.js',
+        iconURL: 'https://extensions.turbowarp.org/images/CubesterYT/KeySimulation.svg',
         collaborator: 'CubesterYT',
         tags: ['turbowarp'],
-        description: 'Simulate pressing a key on the keyboard.',
-        featured: true
-    },
-    {
-        name: 'Site Runtime',
-        extensionId: 'https://gabsthecuriouskid.github.io/FirstExtension/extensions/webextension.js',
-        tags: ['other_mods'],
-        iconURL: 'https://gabsthecuriouskid.github.io/FirstExtension/images/site-runtime.png',
-        description: 'A Combined version of 2 Extensions: Packager Applications & AdaBrowser',
-        featured: true,
-        collaborator: 'MrIncredibleMaker',
-        internetConnectionRequired: true,
-    },
-    {
-        name: 'AdaBrowser',
-        extensionId: 'adabrowser',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/40998229311219c2117265d5e4bd9745.png',
-        tags: ['other_mods'],
-        customInsetColor: '#B200FF',
-        insetIconURL: turbowarpIcon,
-        description: 'Interact with the web browser, orginally in Adacraft.',
+        description: 'Simulate key presses and mouse clicks.',
         featured: true
     },
     {
@@ -703,16 +682,6 @@ const menuItems = [
                 id="gui.extension.makeymakey.description"
             />
         ),
-        featured: true
-    },
-    {
-        name: 'Streamilator',
-        extensionId: 'https://streamilator.github.io/Streamilator/extension.js',
-        twDeveloper: 'mdwalters',
-        iconURL: defaultExtensionIcon,
-        insetIconURL: turbowarpIcon,
-        tags: ['turbowarp'],
-        description: 'A better way to handle audio from urls.',
         featured: true
     },
     {
@@ -1130,41 +1099,7 @@ const menuItems = [
         description: "Play videos from URLs.",
         featured: true
     },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="micro:bit with USB"
-                description="Name for the 'Vitta micro:bit' extension"
-                id="gui.extension.vittamicrobit.name"
-            />
-        ),
-        tags: ['hardware'],
-        extensionId: 'vittamicrobit',
-        collaborator: 'Vittascience',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/36854ae363289b372d95a65546decb87.png',
-        insetIconURL: 'https://www.adacraft.org/studio/static/assets/42f568ea43bc3ccb3de1c575cfc04484.svg',
-        description: (
-            <FormattedMessage
-                defaultMessage="Blocks to interact with micro:bit through a USB cable connection"
-                description="Description for the 'Vitta micro:bit' extension"
-                id="gui.extension.vittamicrobit.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        usbConnectionRequired: true,
-        launchSerialConnectionFlow: true,
-        useAutoscan: false,
-    },
 
-    {
-        name: 'Adacraft Runtime',
-        extensionId: 'adaruntime',
-        iconURL: 'https://www.adacraft.org/studio/static/assets/53d3dbd30eb60a7860a3ffdb4753a43f.png',
-        tags: ['other_mods'],
-        description: "Special blocks that interact with the vm.",
-        featured: true
-    },
     {
         name: '3D VR',
         extensionId: 'jg3dVr',
