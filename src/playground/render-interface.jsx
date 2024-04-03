@@ -317,6 +317,9 @@ class Interface extends React.Component {
                     />
                     {isHomepage ? (
                         <React.Fragment>
+                        <div className={styles.remixWarningBox}>
+                                    <p>A few extensions have been removed from the editor, this will NOT break you're old projects it just means you can't access them in new projects, this was to stop Snail IDE from having too big of a copyright issue. All other extensions should be allowed on our site, if you would like you're extension removed please contact one of the devs.</p>
+                            </div>
                             {/* project not approved message */}
                             {(window.LastFetchedProject) != null && (window.LastFetchedProject.accepted == false) ? (
                                 <div className={styles.remixWarningBox}>
