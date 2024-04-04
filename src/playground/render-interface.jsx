@@ -413,27 +413,6 @@ class Interface extends React.Component {
                                     </a>
                                     </div>
                                     <div className={styles.centerSector}>
-                                    <a
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        href="#"
-                                        className={styles.profilelink}
-                                        onClick={() => {
-                                        const projectDetails = getProjectDetailsById(window.LastFetchedProject.remix);
-                                        if (projectDetails && projectDetails.author) {
-                                            const username = projectDetails.author.username;
-                                            const profileUrl = `https://www.snail-ide.com/profile?user=${username}`;
-                                            window.open(profileUrl);
-                                        } else {
-                                            console.error("Author details not available.");
-                                            // Optionally, you can handle this case by setting a default author name or showing a message to the user
-                                        }
-                                        }}
-                                    >
-                                        {'View Profile'}
-                                    </a>
-                                    </div>
-                                    <div className={styles.centerSector}>
                                     </div>
                                 </div>
                                 )}
