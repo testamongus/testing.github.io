@@ -1580,6 +1580,15 @@ if (IsLocal || IsLiveTests) {
             featured: true,
         },
         {
+            name: 'p5.js',
+            extensionId: 'https://editor.snail-ide.com/p5js.png',
+            collaborator: 'Mr_rudy/nmsderp',
+            iconURL: defaultExtensionIcon,
+            tags: ['penguinmod'],
+            description: 'A more powerful alternative to the Pen extension.',
+            featured: true,
+        },
+        {
             name: 'Handpose2scratch',
             extensionId: 'handpose2scratch',
             iconURL: 'https://raw.githubusercontent.com/champierre/handpose2scratch/master/scratch-gui/src/lib/libraries/extensions/handpose2scratch/handpose2scratch.png',
