@@ -170,7 +170,8 @@ const extensionDevelopers = [
     'Vadik1',
     'MikeDev101',
     'LilyMakesThings',
-    'CharcoalAfterlife'
+    'CharcoalAfterlife',
+    'pooiod'
 ].map(fromHardcodedGithub);
 
 export default {
