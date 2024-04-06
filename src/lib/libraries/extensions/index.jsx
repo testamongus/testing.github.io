@@ -1581,9 +1581,9 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'p5.js',
-            extensionId: 'https://editor.snail-ide.com/p5js.png',
+            extensionId: 'https://editor.snail-ide.com/p5.js',
             collaborator: 'Mr_rudy/nmsderp',
-            iconURL: defaultExtensionIcon,
+            iconURL: 'https://editor.snail-ide.com/p5js.png',
             tags: ['penguinmod'],
             description: 'A more powerful alternative to the Pen extension.',
             featured: true,
