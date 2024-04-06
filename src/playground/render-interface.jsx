@@ -317,8 +317,16 @@ class Interface extends React.Component {
                     />
                     {isHomepage ? (
                         <React.Fragment>
-                        <div className={styles.remixWarningBox}>
-                                    <p>A few extensions have been removed from the editor, this will <b>NOT</b> break your old projects, it just means you can't access them in new projects. This was to stop Snail IDE from having too big of a copyright issue. All other extensions should be allowed on our site, if you would like your extension removed please contact one of the devs.</p>
+                            {projectId && projectId !== '0' ? (
+                                <div className={styles.remixWarningBox}>
+                                    <p>This program is free software: you can redistribute it and/or modify
+                                        it under the terms of the GNU General Public License as published by
+                                        the Free Software Foundation, either version 3 of the License, or
+                                        (at your option) any later version.</p>
+                                </div>
+                            ) : null}
+                            <div className={styles.remixWarningBox}>
+                                <p>A few extensions have been removed from the editor, this will <b>NOT</b> break your old projects, it just means you can't access them in new projects. This was to stop Snail IDE from having too big of a copyright issue. All other extensions should be allowed on our site, if you would like your extension removed please contact one of the devs.</p>
                             </div>
                             {/* project not approved message */}
                             {(window.LastFetchedProject) != null && (window.LastFetchedProject.accepted == false) ? (
@@ -399,23 +407,23 @@ class Interface extends React.Component {
                             {projectId && projectId !== '0' && (
                                 <div>
                                     <div className={styles.centerSector}>
-                                    <a
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        href={`https://snail-ide.com/report?type=project&id=${projectId}`}
-                                        className={styles.reportLink}
-                                    >
-                                        <img
-                                        src="https://studio.penguinmod.com/report_flag.png"
-                                        alt="!"
-                                        />
-                                        {'Report'}
-                                    </a>
+                                        <a
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            href={`https://snail-ide.com/report?type=project&id=${projectId}`}
+                                            className={styles.reportLink}
+                                        >
+                                            <img
+                                                src="https://studio.penguinmod.com/report_flag.png"
+                                                alt="!"
+                                            />
+                                            {'Report'}
+                                        </a>
                                     </div>
                                     <div className={styles.centerSector}>
                                     </div>
                                 </div>
-                                )}
+                            )}
 
                             <div className={styles.section}>
                                 <FeaturedProjects />
