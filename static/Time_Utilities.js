@@ -147,7 +147,7 @@
     blocks.push({
         opcode: `h`,
         blockType: Scratch.BlockType.COMMAND,
-        text: `wait [hour] hours`,
+        text: `wait [hour] hour(s)`,
         arguments: {
             "hour": {
                 type: Scratch.ArgumentType.NUMBER,
@@ -165,7 +165,7 @@
     blocks.push({
         opcode: `m`,
         blockType: Scratch.BlockType.COMMAND,
-        text: `wait [minute] minutes`,
+        text: `wait [minute] minute(s)`,
         arguments: {
             "minute": {
                 type: Scratch.ArgumentType.NUMBER,
@@ -183,7 +183,7 @@
     blocks.push({
         opcode: `d`,
         blockType: Scratch.BlockType.COMMAND,
-        text: `wait [day] days`,
+        text: `wait [day] day(s)`,
         arguments: {
             "day": {
                 type: Scratch.ArgumentType.NUMBER,

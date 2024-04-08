@@ -167,6 +167,7 @@ const extensionDevelopers = [
     'griffpatch',
     'DT-is-not-available',
     'SharkPool-SP',
+    'GingerNinjaStickdudeWorld',
     'Vadik1',
     'MikeDev101',
     'LilyMakesThings',

@@ -1099,6 +1099,15 @@ const menuItems = [
         description: "Play videos from URLs.",
         featured: true
     },
+    {
+        name: 'Time Utils',
+        extensionId: 'https://editor.snail-ide.com/Time_Utilities.js',
+        iconURL: 'https://editor.snail-ide.com/time.svg',
+        collaborator: 'GingerNinjaStickdudeWorld',
+        tags: ['penguinmod'],
+        description: "Simple blocks to handle time.",
+        featured: true
+    },
 
     {
         name: '3D VR',
