@@ -141,6 +141,7 @@ const snDev = [
     'nmsderp',
     'cesderp14',
     'someCatInTheWorld',
+    'Plungebot',
 ].map(fromHardcodedGithub);
 const snContributeCodeBerg = [
     'ACat'
