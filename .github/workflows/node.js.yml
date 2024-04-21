@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: 20.x
     - name: Install dependencies and build site
-      run: npm i -g pnpm && pnpm up && pnpm i --shamefully-hoist && NODE_OPTIONS=--openssl-legacy-provider --bail
+      run: npm i -g pnpm && pnpm up && pnpm i --shamefully-hoist && NODE_OPTIONS=--openssl-legacy-provider webpack --bail
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
