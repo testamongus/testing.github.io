@@ -65,7 +65,7 @@ class ISSLocationExtension {
                     acceptReporters: false,
                     items: [
                         'New York', 'Cincinnati', 'Detroit', 'London', 'Paris', 'Tokyo', 'Sydney', // Cities
-                        'United States', 'United Kingdom', 'France', 'Japan', 'Australia' // Countries
+                        'United States', 'United Kingdom', 'France', 'Japan', 'Australia', 'Brazil', 'Germany' // Countries
                     ],
                 },
             },
