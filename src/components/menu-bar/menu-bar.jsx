@@ -31,7 +31,7 @@ import ChangeUsername from '../../containers/tw-change-username.jsx';
 import CloudVariablesToggler from '../../containers/tw-cloud-toggler.jsx';
 import TWSaveStatus from './tw-save-status.jsx';
 
-import { openTipsLibrary, openSettingsModal, openRestorePointModal } from '../../reducers/modals';
+import { openTipsLibrary, openSettingsModal, openRestorePointModal, openExtManagerModal } from '../../reducers/modals';
 import { setPlayer } from '../../reducers/mode';
 import {
     autoUpdateProject,
@@ -77,11 +77,6 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 import errorIcon from './tw-error.svg';
 import themeIcon from './tw-moon.svg';
-// cool icons ye
-import addonsIcon from './addons.svg';
-import settingsIcon from './settings.svg';
-import editIcon from './edit.svg';
-import fileIcon from './file.svg';
 
 import scratchLogo from './scratch-logo.svg';
 
@@ -790,6 +785,9 @@ class MenuBar extends React.Component {
                                     )}</CloudVariablesToggler>
                                 </MenuSection>
                                 <MenuSection>
+                                    <MenuItem onClick={this.props.onClickExtManager}>
+                                        Extension Manager
+                                    </MenuItem>
                                     <MenuItem onClick={this.props.onClickSettings}>
                                         <FormattedMessage
                                             defaultMessage="Gameplay Settings"
@@ -969,6 +967,7 @@ MenuBar.propTypes = {
     onClickSave: PropTypes.func,
     onClickSaveAsCopy: PropTypes.func,
     onClickSettings: PropTypes.func,
+    onClickExtManager: PropTypes.func,
     onClickErrors: PropTypes.func,
     onRequestCloseErrors: PropTypes.func,
     onLogOut: PropTypes.func,
@@ -1060,6 +1059,10 @@ const mapDispatchToProps = dispatch => ({
     onClickRestorePoints: () => dispatch(openRestorePointModal()),
     onClickSettings: () => {
         dispatch(openSettingsModal());
+        dispatch(closeEditMenu());
+    },
+    onClickExtManager: () => {
+        dispatch(openExtManagerModal());
         dispatch(closeEditMenu());
     },
     onSeeCommunity: () => dispatch(setPlayer(true))

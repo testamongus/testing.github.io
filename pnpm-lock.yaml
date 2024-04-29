@@ -183,8 +183,8 @@ dependencies:
     specifier: github:TurboWarp/scratch-svg-renderer#develop
     version: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
   scratch-vm:
-    specifier: github:Snail-IDE/Snail-IDE-Vm#develop
-    version: github.com/Snail-IDE/Snail-IDE-Vm/f22eea058229bcedad48308c9f946c4b202811bd(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
+    specifier: github:Snail-IDE-Dev/Snail-IDE-Vm#develop
+    version: github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
   startaudiocontext:
     specifier: 1.2.1
     version: 1.2.1
@@ -4088,7 +4088,7 @@ packages:
     resolution: {integrity: sha512-1JGp44NQCt5d1g+Yy+GeOnZP7xHo0ii8zsQp6PGzd+C1/dl0KGsp9A7Mxwp+1D1o4unbTTxVdU/ZOIEBoeZPbQ==}
     dependencies:
       d3-array: 2.12.1
-      d3-format: 1.3.2
+      d3-format: 2.0.0
       d3-interpolate: 2.0.1
       d3-time: 2.1.1
       d3-time-format: 3.0.0
@@ -4099,7 +4099,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       d3-array: 3.2.4
-      d3-format: 1.3.2
+      d3-format: 3.1.0
       d3-interpolate: 3.0.1
       d3-time: 3.1.0
       d3-time-format: 4.1.0
@@ -11263,8 +11263,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /sweetalert2@11.10.6:
-    resolution: {integrity: sha512-CINZPLZXZRSZqSOE7H7j1F7X8e8O1kLOiXPmtJn1DYxvXsKBr3d16d90+IcwTTs7dJww20h8r8QIxIwsLGX+6A==}
+  /sweetalert2@11.10.8:
+    resolution: {integrity: sha512-oAkYROBfXBY+4sVbQEIcN+ZxAx69lsmz5WEBwdEpyS4m59vOBNlRU5/fJpAI1MVfiDwFZiGwVzB/KBpOyfLNtg==}
     dev: false
 
   /symbol-observable@1.2.0:
@@ -11644,8 +11644,8 @@ packages:
   /typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  /typescript@5.4.2:
-    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
@@ -11903,7 +11903,7 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11940,8 +11940,8 @@ packages:
       d3-array: 2.12.1
       d3-interpolate: 2.0.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scale: 7.1.1
-      vega-util: 1.16.1
+      vega-scale: 7.3.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11963,7 +11963,7 @@ packages:
   /vega-expression@4.0.1:
     resolution: {integrity: sha512-ZrDj0hP8NmrCpdLFf7Rd/xMUHGoSYsAOTaYp7uXZ2dkEH5x0uPy5laECMc8TiQvL8W+8IrN2HAWCMRthTSRe2Q==}
     dependencies:
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     dev: false
 
   /vega-expression@5.1.0:
@@ -11978,7 +11978,7 @@ packages:
     dependencies:
       d3-force: 2.1.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11989,8 +11989,8 @@ packages:
       d3-array: 2.12.1
       d3-format: 2.0.0
       d3-time-format: 3.0.0
-      vega-time: 2.0.4
-      vega-util: 1.16.1
+      vega-time: 2.1.1
+      vega-util: 1.17.2
     dev: false
 
   /vega-format@1.1.1:
@@ -12011,12 +12011,12 @@ packages:
       d3-geo: 2.0.2
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-expression: 5.1.0
-      vega-scale: 7.1.1
-      vega-scenegraph: 4.9.4(encoding@0.1.13)
+      vega-scale: 7.3.1
+      vega-scenegraph: 4.11.2(encoding@0.1.13)
       vega-selections: 5.4.2
-      vega-statistics: 1.7.10
-      vega-time: 2.0.4
-      vega-util: 1.16.1
+      vega-statistics: 1.9.0
+      vega-time: 2.1.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12030,8 +12030,8 @@ packages:
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-projection: 1.4.5
-      vega-statistics: 1.7.10
-      vega-util: 1.16.1
+      vega-statistics: 1.9.0
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12041,7 +12041,7 @@ packages:
     dependencies:
       d3-hierarchy: 2.0.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12051,8 +12051,8 @@ packages:
     dependencies:
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scenegraph: 4.9.4(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-scenegraph: 4.11.2(encoding@0.1.13)
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12084,8 +12084,8 @@ packages:
       d3-dsv: 2.0.0
       node-fetch: 2.7.0(encoding@0.1.13)
       topojson-client: 3.1.0
-      vega-format: 1.0.4
-      vega-util: 1.16.1
+      vega-format: 1.1.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12108,8 +12108,8 @@ packages:
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-event-selector: 3.0.1
       vega-functions: 5.12.1(encoding@0.1.13)
-      vega-scale: 7.1.1
-      vega-util: 1.16.1
+      vega-scale: 7.3.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12126,8 +12126,8 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-statistics: 1.7.10
-      vega-util: 1.16.1
+      vega-statistics: 1.9.0
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12147,8 +12147,8 @@ packages:
       d3-array: 2.12.1
       d3-interpolate: 2.0.1
       d3-scale: 3.3.0
-      vega-time: 2.0.4
-      vega-util: 1.16.1
+      vega-time: 2.1.1
+      vega-util: 1.17.2
     dev: false
 
   /vega-scale@7.3.1:
@@ -12180,9 +12180,9 @@ packages:
       d3-path: 2.0.0
       d3-shape: 2.1.0
       vega-canvas: 1.2.7
-      vega-loader: 4.4.1(encoding@0.1.13)
-      vega-scale: 7.1.1
-      vega-util: 1.16.1
+      vega-loader: 4.5.1(encoding@0.1.13)
+      vega-scale: 7.3.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12226,7 +12226,7 @@ packages:
     dependencies:
       d3-array: 2.12.1
       d3-time: 2.1.1
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     dev: false
 
   /vega-time@2.1.1:
@@ -12248,9 +12248,9 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-statistics: 1.7.10
-      vega-time: 2.0.4
-      vega-util: 1.16.1
+      vega-statistics: 1.9.0
+      vega-time: 2.1.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12258,7 +12258,7 @@ packages:
   /vega-typings@0.20.0:
     resolution: {integrity: sha512-S+HIRN/3WYiS5zrQjJ4FDEOlvFVHLxPXMJerrnN3YZ6bxCDYo7tEvQUUuByGZ3d19GuKjgejczWS7XHvF3WjDw==}
     dependencies:
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     dev: false
 
   /vega-util@1.14.1:
@@ -12289,11 +12289,11 @@ packages:
       d3-array: 2.12.1
       d3-timer: 2.0.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-format: 1.0.4
+      vega-format: 1.1.1
       vega-functions: 5.12.1(encoding@0.1.13)
       vega-runtime: 6.1.4(encoding@0.1.13)
-      vega-scenegraph: 4.9.4(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-scenegraph: 4.11.2(encoding@0.1.13)
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12303,7 +12303,7 @@ packages:
     dependencies:
       d3-delaunay: 5.3.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.16.1
+      vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12957,6 +12957,54 @@ packages:
       - webpack
     dev: false
 
+  github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
+    resolution: {tarball: https://codeload.github.com/Snail-IDE-Dev/Snail-IDE-Vm/tar.gz/c083eb7fcb624f60d841f144c17f0e66596f7807}
+    id: github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807
+    name: scratch-vm
+    version: 0.2.0
+    peerDependencies:
+      scratch-svg-renderer: ^0.2.0-prerelease
+    dependencies:
+      '@turbowarp/json': 0.1.2
+      '@vernier/godirect': 1.5.0
+      arraybuffer-loader: 1.0.8
+      atob: 2.1.2
+      btoa: 1.2.1
+      cannon-es: 0.20.0
+      canvas-toBlob: 1.0.0
+      decode-html: 2.0.0
+      diff-match-patch: 1.0.4
+      encoding: 0.1.13
+      format-message: 6.2.1
+      htmlparser2: 3.10.1
+      immutable: 3.8.2
+      jsqr: 1.4.0
+      jszip: 3.10.1
+      leaflet: 1.9.4
+      mersenne-twister: 1.1.0
+      minilog: 3.1.0
+      ml5: 0.12.2(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(encoding@0.1.13)(seedrandom@2.4.4)
+      pathfinding: 0.4.18
+      scratch-parser: github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
+      scratch-sb1-converter: 0.2.7
+      scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+      scratch-translate-extension-languages: 0.0.20191118205314
+      simplex-noise: 4.0.1
+      sweetalert2: 11.10.8
+      text-encoding: 0.7.0
+      three: 0.153.0
+      three-mesh-bvh: 0.6.0(three@0.153.0)
+      tone: 14.7.77
+      typescript: 5.4.5
+      worker-loader: 1.1.1(webpack@4.46.0)
+    transitivePeerDependencies:
+      - '@tensorflow/tfjs-converter'
+      - '@tensorflow/tfjs-core'
+      - debug
+      - seedrandom
+      - webpack
+    dev: false
+
   github.com/Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272(react-dom@16.14.0)(react-intl-redux@0.7.0)(react-intl@2.9.0)(react-popover@0.5.10)(react-redux@5.0.7)(react-responsive@4.1.0)(react-style-proptype@3.2.2)(react-tooltip@3.8.0)(react@16.14.0)(redux@3.7.2)(scratch-render-fonts@1.0.0-prerelease.20210401210003):
     resolution: {tarball: https://codeload.github.com/Snail-IDE/Snail-IDE-Paint/tar.gz/599415de44e212ccb4753e22310c12a2cb104272}
     id: github.com/Snail-IDE/Snail-IDE-Paint/599415de44e212ccb4753e22310c12a2cb104272
@@ -13013,54 +13061,6 @@ packages:
       scratch-render-fonts: 1.0.0-prerelease.20210401210003
       scratch-svg-renderer: 0.2.0-prerelease.20210727023023(scratch-render-fonts@1.0.0-prerelease.20210401210003)
       twgl.js: 4.4.0
-    dev: false
-
-  github.com/Snail-IDE/Snail-IDE-Vm/f22eea058229bcedad48308c9f946c4b202811bd(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
-    resolution: {tarball: https://codeload.github.com/Snail-IDE/Snail-IDE-Vm/tar.gz/f22eea058229bcedad48308c9f946c4b202811bd}
-    id: github.com/Snail-IDE/Snail-IDE-Vm/f22eea058229bcedad48308c9f946c4b202811bd
-    name: scratch-vm
-    version: 0.2.0
-    peerDependencies:
-      scratch-svg-renderer: ^0.2.0-prerelease
-    dependencies:
-      '@turbowarp/json': 0.1.2
-      '@vernier/godirect': 1.5.0
-      arraybuffer-loader: 1.0.8
-      atob: 2.1.2
-      btoa: 1.2.1
-      cannon-es: 0.20.0
-      canvas-toBlob: 1.0.0
-      decode-html: 2.0.0
-      diff-match-patch: 1.0.4
-      encoding: 0.1.13
-      format-message: 6.2.1
-      htmlparser2: 3.10.1
-      immutable: 3.8.2
-      jsqr: 1.4.0
-      jszip: 3.10.1
-      leaflet: 1.9.4
-      mersenne-twister: 1.1.0
-      minilog: 3.1.0
-      ml5: 0.12.2(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(encoding@0.1.13)(seedrandom@2.4.4)
-      pathfinding: 0.4.18
-      scratch-parser: github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
-      scratch-sb1-converter: 0.2.7
-      scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
-      scratch-translate-extension-languages: 0.0.20191118205314
-      simplex-noise: 4.0.1
-      sweetalert2: 11.10.6
-      text-encoding: 0.7.0
-      three: 0.153.0
-      three-mesh-bvh: 0.6.0(three@0.153.0)
-      tone: 14.7.77
-      typescript: 5.4.2
-      worker-loader: 1.1.1(webpack@4.46.0)
-    transitivePeerDependencies:
-      - '@tensorflow/tfjs-converter'
-      - '@tensorflow/tfjs-core'
-      - debug
-      - seedrandom
-      - webpack
     dev: false
 
   github.com/Snail-IDE/snail-blocks/71363892a8e66981ceb63239243fa254e3002715:

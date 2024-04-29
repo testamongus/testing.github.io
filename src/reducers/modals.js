@@ -13,6 +13,7 @@ const MODAL_CONNECTION = 'connectionModal';
 const MODAL_TIPS_LIBRARY = 'tipsLibrary';
 const MODAL_USERNAME = 'usernameModal';
 const MODAL_SETTINGS = 'settingsModal';
+const MODAL_EXTS = 'extensionManagerModal';
 const MODAL_CUSTOM_EXTENSION = 'customExtensionModal';
 
 const initialState = {
@@ -28,6 +29,7 @@ const initialState = {
     [MODAL_TIPS_LIBRARY]: false,
     [MODAL_USERNAME]: false,
     [MODAL_SETTINGS]: false,
+    [MODAL_EXTS]: false,
     [MODAL_CUSTOM_EXTENSION]: false
 };
 
@@ -94,6 +96,9 @@ const openUsernameModal = function () {
 const openSettingsModal = function () {
     return openModal(MODAL_SETTINGS);
 };
+const openExtManagerModal = () => {
+    return openModal(MODAL_EXTS);
+}
 const openCustomExtensionModal = function () {
     return openModal(MODAL_CUSTOM_EXTENSION);
 };
@@ -133,6 +138,9 @@ const closeUsernameModal = function () {
 const closeSettingsModal = function () {
     return closeModal(MODAL_SETTINGS);
 };
+const closeExtManagerModal = () => {
+    return closeModal(MODAL_EXTS);
+}
 const closeCustomExtensionModal = function () {
     return closeModal(MODAL_CUSTOM_EXTENSION);
 };
@@ -151,6 +159,7 @@ export {
     openConnectionModal,
     openUsernameModal,
     openSettingsModal,
+    openExtManagerModal,
     openCustomExtensionModal,
     closeBackdropLibrary,
     closeCostumeLibrary,
@@ -164,5 +173,6 @@ export {
     closeConnectionModal,
     closeUsernameModal,
     closeSettingsModal,
+    closeExtManagerModal,
     closeCustomExtensionModal
 };

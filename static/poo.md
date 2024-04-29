@@ -78,3 +78,5 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 25 (nmsderp) 3/30/2024 5:39 PM
 - trying to fix color stuff
+- EDIT 26 (nmsderp) 4/26/2024 2:58 PM
+- lolz

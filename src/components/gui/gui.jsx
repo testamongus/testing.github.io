@@ -35,6 +35,7 @@ import TWUsernameModal from '../../containers/tw-username-modal.jsx';
 import TWSettingsModal from '../../containers/tw-settings-modal.jsx';
 import TWSecurityManager from '../../containers/tw-security-manager.jsx';
 import TWCustomExtensionModal from '../../containers/tw-custom-extension-modal.jsx';
+import ExtensionManagerModal from '../../containers/extensions-modal.jsx';
 
 import layout, {STAGE_SIZE_MODES} from '../../lib/layout-constants';
 import {resolveStageSize} from '../../lib/screen-utils';
@@ -143,6 +144,7 @@ const GUIComponent = props => {
         tipsLibraryVisible,
         usernameModalVisible,
         settingsModalVisible,
+        extensionsManagerModalVisible,
         customExtensionModalVisible,
         isPlayground,
         vm,
@@ -170,6 +172,7 @@ const GUIComponent = props => {
                 <TWSecurityManager />
                 {usernameModalVisible && <TWUsernameModal />}
                 {settingsModalVisible && <TWSettingsModal />}
+                {extensionsManagerModalVisible && <ExtensionManagerModal />}
                 {customExtensionModalVisible && <TWCustomExtensionModal />}
             </React.Fragment>
         );
@@ -202,6 +205,7 @@ const GUIComponent = props => {
                 </StageWrapper>
                 {usernameModalVisible && <TWUsernameModal />}
                 {settingsModalVisible && <TWSettingsModal />}
+                {extensionsManagerModalVisible && <ExtensionManagerModal />}
             </React.Fragment>
         ) : (
             <Box
@@ -211,6 +215,7 @@ const GUIComponent = props => {
             >
                 {usernameModalVisible && <TWUsernameModal />}
                 {settingsModalVisible && <TWSettingsModal />}
+                {extensionsManagerModalVisible && <ExtensionManagerModal />}
                 {customExtensionModalVisible && <TWCustomExtensionModal />}
                 {telemetryModalVisible ? (
                     <TelemetryModal
@@ -501,6 +506,7 @@ GUIComponent.propTypes = {
     tipsLibraryVisible: PropTypes.bool,
     usernameModalVisible: PropTypes.bool,
     settingsModalVisible: PropTypes.bool,
+    extensionsManagerModalVisible: PropTypes.bool,
     customExtensionModalVisible: PropTypes.bool,
     vm: PropTypes.instanceOf(VM).isRequired
 };
