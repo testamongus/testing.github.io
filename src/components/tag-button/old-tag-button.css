@@ -7,10 +7,6 @@
     border-radius: 1.375rem;
     color: $ui-white;
     height: $library-filter-bar-height;
-    transition: 0.3s ease;
-    text-overflow: ellipsis;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .tag-button-icon {
@@ -19,5 +15,5 @@
 }
 
 .active {
-    background: $motion-primary-dark;
+    background: $data-primary;
 }

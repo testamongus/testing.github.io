@@ -7,6 +7,7 @@ import {setFullScreen, setPlayer} from './reducers/mode';
 import {remixProject} from './reducers/project-state';
 import {setAppElement} from 'react-modal';
 import totallyNormalStrings from './lib/l10n.js';
+import {toast} from 'react-hot-toast';
 
 const guiReducers = {
     locales: LocalesReducer,

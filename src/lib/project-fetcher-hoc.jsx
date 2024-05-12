@@ -111,17 +111,11 @@ const ProjectFetcherHOC = function (WrappedComponent) {
             // the project shouldn't be running while fetching the new project
             this.props.vm.clear();
             this.props.vm.stop();
-
+        
             let assetPromise;
-            // In case running in node...
-            let projectUrl = typeof URLSearchParams === 'undefined' ?
-                null :
-                new URLSearchParams(location.search).get('project_url');
-            if (projectUrl) {
-                if (!projectUrl.startsWith('http:') && !projectUrl.startsWith('https:')) {
-                    projectUrl = `https://${projectUrl}`;
-                }
-                assetPromise = progressMonitor.fetchWithProgress(projectUrl)
+            if (projectId === '69420') {
+                const specifiedSourceUrl = 'https://editor.snail-ide.com/lol.snail';
+                assetPromise = progressMonitor.fetchWithProgress(specifiedSourceUrl)
                     .then(r => {
                         this.props.vm.runtime.renderer.setPrivateSkinAccess(false);
                         if (!r.ok) {
@@ -129,14 +123,19 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                         }
                         return r.arrayBuffer();
                     })
-                    .then(buffer => ({ data: buffer }));
+                    .then(buffer => ({ data: buffer }))
+                    .catch(error => {
+                        console.log(error);
+                    });
             } else {
-                // patch for default project
-                if (projectId === '0') {
-                    storage.setProjectToken(projectId);
-                    assetPromise = storage.load(storage.AssetType.Project, projectId, storage.DataFormat.JSON);
-                } else {
-                    projectUrl = `https://snailshare.xyz/api/projects/getPublished?type=file&id=${projectId}`
+                // In case running in node...
+                let projectUrl = typeof URLSearchParams === 'undefined' ?
+                    null :
+                    new URLSearchParams(location.search).get('project_url');
+                if (projectUrl) {
+                    if (!projectUrl.startsWith('http:') && !projectUrl.startsWith('https:')) {
+                        projectUrl = `https://${projectUrl}`;
+                    }
                     assetPromise = progressMonitor.fetchWithProgress(projectUrl)
                         .then(r => {
                             this.props.vm.runtime.renderer.setPrivateSkinAccess(false);
@@ -145,12 +144,30 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                             }
                             return r.arrayBuffer();
                         })
-                        .then(buffer => ({ data: buffer }))
-                        .catch(error => {
-                            console.log(error)
-                        })
+                        .then(buffer => ({ data: buffer }));
+                } else {
+                    // patch for default project
+                    if (projectId === '0') {
+                        storage.setProjectToken(projectId);
+                        assetPromise = storage.load(storage.AssetType.Project, projectId, storage.DataFormat.JSON);
+                    } else {
+                        projectUrl = `https://snailshare.xyz/api/projects/getPublished?type=file&id=${projectId}`
+                        assetPromise = progressMonitor.fetchWithProgress(projectUrl)
+                            .then(r => {
+                                this.props.vm.runtime.renderer.setPrivateSkinAccess(false);
+                                if (!r.ok) {
+                                    throw new Error(`Request returned status ${r.status}`);
+                                }
+                                return r.arrayBuffer();
+                            })
+                            .then(buffer => ({ data: buffer }))
+                            .catch(error => {
+                                console.log(error)
+                            })
+                    }
                 }
             }
+        
 
             return assetPromise
                 .then(projectAsset => {

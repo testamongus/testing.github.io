@@ -8,6 +8,7 @@ import { setAuthor, setDescription, setExtraProjectInfo, setRemixedProjectInfo }
 
 const API_URL = 'https://snailshare.xyz/api/projects/getPublished?id=$id';
 const API_REMIX_URL = 'https://snailshare.xyz/api/pmWrapper/remixes?id=$id';
+const LOL = 'https://editor.snail-ide.com/lol.json';
 
 function APIProjectToReadableProject(apiProject) {
     return {
@@ -67,6 +68,10 @@ const TWProjectMetaFetcherHOC = function (WrappedComponent) {
             // Don't try to load metadata for empty projects.
             if (projectId === '0') {
                 return;
+            }
+            if (projectId === '69420') {
+                fetchFunction = fetchProjectMeta;
+                source = LOL;
             }
             fetchProjectMeta(projectId)
                 .then(data => {
