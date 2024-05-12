@@ -89,7 +89,7 @@
     "scratch-storage": "github:PenguinMod/PenguinMod-Storage#develop",
     "scratch-svg-renderer": "github:TurboWarp/scratch-svg-renderer#develop",
     "scratch-translate-extension-languages": "",
-    "scratch-vm": "github:Snail-IDE-Dev/Snail-IDE-Vm#develop",
+    "scratch-vm": "github:Snail-IDE/Snail-IDE-Vm#develop",
     "startaudiocontext": "1.2.1",
     "style-loader": "^0.23.1",
     "sweetalert2": "^11.11.0",
