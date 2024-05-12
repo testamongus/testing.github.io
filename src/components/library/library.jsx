@@ -11,7 +11,19 @@ import Filter from '../filter/filter.jsx';
 import TagButton from '../../containers/tag-button.jsx';
 import Spinner from '../spinner/spinner.jsx';
 
-import styles from './library.css';
+import newStyles from './library.css';
+import oldStyles from './old-library.css';
+
+const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
+let styles;
+console.log(`random information that you wont use: ${useLegacyTheme}`)
+if (useLegacyTheme == "true") {
+    console.log(`usin old styles..`);
+    styles = oldStyles;
+} else {
+    console.log('usin new styles!');
+    styles = newStyles;
+}
 
 const messages = defineMessages({
     filterPlaceholder: {
@@ -222,9 +234,13 @@ class LibraryComponent extends React.Component {
                 <div
                     className={classNames(styles.libraryScrollGrid, {
                         [styles.withFilterBar]: this.props.filterable || this.props.tags
-                    })}
+                    }, styles.warningContainer)}
                     ref={this.setFilteredDataRef}
                 >
+                    {this.props.id == "extensionLibrary" ? (
+                        <div className={classNames(styles.warning)}>Some extensions in this library won't be able to load in the future. <a href="https://docs.snail-ide.com/important/experimental-extension-gallery" target="_blank">Read more.</a></div>
+                    ) : (<div></div>)}
+                    <div className={classNames(styles.libraryScrollGrid)}>
                     {this.state.loaded ? this.getFilteredData().map((dataItem, index) => (
                         <LibraryItem
                             bluetoothRequired={dataItem.bluetoothRequired}
@@ -265,6 +281,7 @@ class LibraryComponent extends React.Component {
                             />
                         </div>
                     )}
+                    </div>
                 </div>
             </Modal>
         );

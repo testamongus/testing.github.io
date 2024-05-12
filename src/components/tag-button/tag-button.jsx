@@ -5,7 +5,17 @@ import {FormattedMessage} from 'react-intl';
 
 import Button from '../button/button.jsx';
 
-import styles from './tag-button.css';
+import newStyles from './tag-button.css';
+import oldStyles from './old-tag-button.css';
+
+const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
+let styles;
+if (useLegacyTheme == "true") {
+    styles = oldStyles;
+} else {
+    styles = newStyles;
+}
+
 
 const TagButtonComponent = ({
     active,

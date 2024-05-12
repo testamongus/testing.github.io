@@ -13,33 +13,25 @@
     height: auto;
     padding: 0.5rem;
     height: calc(100% - $library-header-height);
-    flex-direction: row;
 }
 
 .library-scroll-grid.withFilterBar {
-    padding-left: 12rem; 
+    height: calc(100% - $library-header-height - $library-filter-bar-height - 2rem);
 }
 
 .filter-bar {
-    position: fixed;
-    top: $library-header-height;
-    left: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: flex-start;
-    height: calc(100% - $library-header-height);
-    width: 18rem;
+    align-items: center;
+    height: calc($library-filter-bar-height + 2rem); /* padding */
     background-color: $motion-transparent;
-    padding: 1rem 0;
+    padding: 0 1rem;
     font-size: .875rem;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
 }
 
 .filter-bar-item {
-    margin-bottom: .75rem;
+    margin-right: .75rem;
 }
 
 .filter {
@@ -47,21 +39,25 @@
 }
 
 .filter-input {
-    width: 100%;
+    width: 11.5rem;
     transition: .2s;
 }
 
+.filter-input:focus,
+.filter-input:not([value=""]) {
+    width: 18.75rem;
+}
+
 .divider {
-    transform: scaleX(1.39);
-    width: $library-filter-bar-height;
-    height: auto;
+    transform: scaleY(1.39);
+    height: $library-filter-bar-height;
 }
 
 .tag-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: auto;
+    height: $library-filter-bar-height;
     overflow: hidden;
 }
 
@@ -71,15 +67,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.library-scroll-grid.withFilterBar {
-    margin-left: 12rem;
-}
-
-.warningContainer {
-    display: flex;
-    flex-direction: column;
 }
 
 .warning {

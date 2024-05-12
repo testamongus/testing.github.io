@@ -16,7 +16,7 @@
       #splash {
         position: absolute; width: 100%; height: 100%; top: 0; left: 0;
         display: flex; align-items: center; justify-content: center;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: hsla(289, 100%, 54%, 1);
+        font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: hsla(289, 100%, 54%, 1);
       }
       .tw-loaded #splash, #splash-content { display: none; }
       #splash[splash-theme="dark"] { background-color: #333; color: #fff; }
@@ -28,6 +28,37 @@
       @keyframes splash-spinner {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
+      }
+      .colored-toast.swal2-icon-success {
+        background-color: #76a859 !important;
+      }
+
+      .colored-toast.swal2-icon-error {
+        background-color: #f27474 !important;
+      }
+
+      .colored-toast.swal2-icon-warning {
+        background-color: #f8bb86 !important;
+      }
+
+      .colored-toast.swal2-icon-info {
+        background-color: #3fc3ee !important;
+      }
+
+      .colored-toast.swal2-icon-question {
+        background-color: #87adbd !important;
+      }
+
+      .colored-toast .swal2-title {
+        color: white;
+      }
+
+      .colored-toast .swal2-close {
+        color: white;
+      }
+
+      .colored-toast .swal2-html-container {
+        color: white;
       }
     </style>
     <link rel="dns-prefetch" href="https://trampoline.turbowarp.org/">
@@ -51,6 +82,14 @@
         if (localTheme ? localTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches) document.querySelector('#splash').setAttribute('splash-theme', 'dark');
         <% } %>
       })();
+
+      //make it always dark theme if next theme is enabled cuz light theme is deprecated
+      setInterval(() => {
+        if (localStorage.getItem("tw:theme") !== "dark" && !localStorage.getItem("sn:useOldTheme") == true) {
+          localStorage.setItem("tw:theme", "dark");
+          location.reload();
+        }
+      }, 50);
     </script>
     <script src="./redirect.js"></script>
     <div id="app"></div>

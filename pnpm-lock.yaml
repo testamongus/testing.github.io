@@ -83,6 +83,9 @@ dependencies:
   minilog:
     specifier: 3.1.0
     version: 3.1.0
+  notyf:
+    specifier: ^3.10.0
+    version: 3.10.0
   omggif:
     specifier: 1.0.9
     version: 1.0.9
@@ -182,15 +185,21 @@ dependencies:
   scratch-svg-renderer:
     specifier: github:TurboWarp/scratch-svg-renderer#develop
     version: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
+  scratch-translate-extension-languages:
+    specifier: ''
+    version: 1.0.6
   scratch-vm:
     specifier: github:Snail-IDE-Dev/Snail-IDE-Vm#develop
-    version: github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
+    version: github.com/Snail-IDE-Dev/Snail-IDE-Vm/7d0941be2cad4da34aa63e838cf55ad7b8917231(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0)
   startaudiocontext:
     specifier: 1.2.1
     version: 1.2.1
   style-loader:
     specifier: ^0.23.1
     version: 0.23.1
+  sweetalert2:
+    specifier: ^11.11.0
+    version: 11.11.0
   text-encoding:
     specifier: 0.7.0
     version: 0.7.0
@@ -1479,6 +1488,13 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  /@babel/runtime@7.24.5:
+    resolution: {integrity: sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
   /@babel/template@7.24.0:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
     engines: {node: '>=6.9.0'}
@@ -1927,7 +1943,7 @@ packages:
   /@types/node-fetch@2.6.11:
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
     dependencies:
-      '@types/node': 20.11.30
+      '@types/node': 20.12.11
       form-data: 4.0.0
     dev: false
 
@@ -1935,6 +1951,12 @@ packages:
     resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
     dependencies:
       undici-types: 5.26.5
+
+  /@types/node@20.12.11:
+    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: false
 
   /@types/offscreencanvas@2019.3.0:
     resolution: {integrity: sha512-esIJx9bQg+QYF0ra8GnvfianIY8qWB0GBx54PK5Eps6m+xTj86KLavHv6qDhzKcu5UUOgNfJ2pWaIIV7TRUd9Q==}
@@ -2590,11 +2612,11 @@ packages:
       global: 4.4.0
     dev: false
 
-  /automation-events@7.0.1:
-    resolution: {integrity: sha512-Fmwxv+L19DdpGSrnXVHfFnEqhPFnGBMP3aZNvogDmgRu9nVCgh0iycb3bRcklYkd0FBp+khGk+JeVYcBx0Yzdg==}
+  /automation-events@7.0.5:
+    resolution: {integrity: sha512-Ni6vhZg0mKmVlew1kxWAzWL7QY1LYDdoYgp6yF9OHeskDrjyJp2SqoKoPQYeiMYjeIlbSpnxXm/JI55VcmX5Wg==}
     engines: {node: '>=18.2.0'}
     dependencies:
-      '@babel/runtime': 7.24.1
+      '@babel/runtime': 7.24.5
       tslib: 2.6.2
     dev: false
 
@@ -4084,11 +4106,19 @@ packages:
     resolution: {integrity: sha512-b0Ed2t1UUalJpc3qXzKi+cPGxeXRr4KU9YSlocN74aTzp6R/Ud43t79yLLqxHRWZfsvWXmbDWPpoENK1K539xw==}
     dev: false
 
+  /d3-scale-chromatic@3.1.0:
+    resolution: {integrity: sha512-A3s5PWiZ9YCXFye1o246KoscMWqf8BsD9eRiJ3He7C9OBaxKhAd5TFCdEx/7VbKtxxTsu//1mMJFrEt572cEyQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      d3-color: 3.1.0
+      d3-interpolate: 3.0.1
+    dev: false
+
   /d3-scale@3.3.0:
     resolution: {integrity: sha512-1JGp44NQCt5d1g+Yy+GeOnZP7xHo0ii8zsQp6PGzd+C1/dl0KGsp9A7Mxwp+1D1o4unbTTxVdU/ZOIEBoeZPbQ==}
     dependencies:
       d3-array: 2.12.1
-      d3-format: 2.0.0
+      d3-format: 1.3.2
       d3-interpolate: 2.0.1
       d3-time: 2.1.1
       d3-time-format: 3.0.0
@@ -4099,7 +4129,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       d3-array: 3.2.4
-      d3-format: 3.1.0
+      d3-format: 1.3.2
       d3-interpolate: 3.0.1
       d3-time: 3.1.0
       d3-time-format: 4.1.0
@@ -8738,6 +8768,10 @@ packages:
       sort-keys: 2.0.0
     dev: false
 
+  /notyf@3.10.0:
+    resolution: {integrity: sha512-Mtnp+0qiZxgrH+TzVlzhWyZceHdAZ/UWK0/ju9U0HQeDpap1mZ8cC7H5wSI5mwgni6yeAjaxsTw0sbMK+aSuHw==}
+    dev: false
+
   /npm-normalize-package-bin@1.0.1:
     resolution: {integrity: sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==}
     dev: false
@@ -10479,8 +10513,8 @@ packages:
       transformation-matrix: 1.15.0
     dev: false
 
-  /scratch-translate-extension-languages@0.0.20191118205314:
-    resolution: {integrity: sha512-r0lvpgQjPMjbhI2wROrgoXzBhCvWJdkbAqJMfl2CdNqrwBpUXqLvNNtI3VtNLPJAcp9VfxEylkU9lVZ0gvU46Q==}
+  /scratch-translate-extension-languages@1.0.6:
+    resolution: {integrity: sha512-lC0ohKbx1g+q5fvYUmG0sFxEdlWL7BUcUxkah5UzUAFE5eqhW+JS7U9bFm4HbwqSovuuI1Xpl4qyu/9yJtrW5w==}
     dev: false
 
   /seedrandom@2.4.3:
@@ -10537,6 +10571,12 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: false
+
+  /semver@7.6.2:
+    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+    engines: {node: '>=10'}
+    hasBin: true
     dev: false
 
   /send@0.18.0(supports-color@6.1.0):
@@ -10964,11 +11004,11 @@ packages:
       minipass: 3.3.6
     dev: false
 
-  /standardized-audio-context@25.3.66:
-    resolution: {integrity: sha512-5GkDUPiJp+7bdDMRQ/yE2cNtfHUaOVNzaajtAfrAhOqEwxYu7kRIAfn3SoY5vkpsXPx9mmn7lATry0n5bUtRGw==}
+  /standardized-audio-context@25.3.72:
+    resolution: {integrity: sha512-Dvwu2NuqafQqWxUWoo6G9ze/cvVNlFDpmIOA8XjuItrfR0h/REjgjoYCT3Y7nbkUJKGoz8SqqVzR7JATQV4XeQ==}
     dependencies:
-      '@babel/runtime': 7.24.1
-      automation-events: 7.0.1
+      '@babel/runtime': 7.24.5
+      automation-events: 7.0.5
       tslib: 2.6.2
     dev: false
 
@@ -11263,8 +11303,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /sweetalert2@11.10.8:
-    resolution: {integrity: sha512-oAkYROBfXBY+4sVbQEIcN+ZxAx69lsmz5WEBwdEpyS4m59vOBNlRU5/fJpAI1MVfiDwFZiGwVzB/KBpOyfLNtg==}
+  /sweetalert2@11.11.0:
+    resolution: {integrity: sha512-wKCTtoE6lQVDKaJ5FFq+znk/YykJmJlD8RnLZps8C7DyivctCoRlVeeOwnKfgwKS+QJYon7s++3dmNi3/am1tw==}
     dev: false
 
   /symbol-observable@1.2.0:
@@ -11492,10 +11532,10 @@ packages:
     engines: {node: '>=0.6'}
     dev: true
 
-  /tone@14.7.77:
-    resolution: {integrity: sha512-tCfK73IkLHyzoKUvGq47gyDyxiKLFvKiVCOobynGgBB9Dl0NkxTM2p+eRJXyCYrjJwy9Y0XCMqD3uOYsYt2Fdg==}
+  /tone@14.9.17:
+    resolution: {integrity: sha512-+Qb7M4NMua+tb5Z52+MEVmjye0fjJuIFBePx423pqr9E6/lHDqZAG+fUAvo+Ujm48q0s9bVLRAyT1ETJJglNtg==}
     dependencies:
-      standardized-audio-context: 25.3.66
+      standardized-audio-context: 25.3.72
       tslib: 2.6.2
     dev: false
 
@@ -11706,6 +11746,7 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    requiresBuild: true
 
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -11903,7 +11944,7 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11926,7 +11967,7 @@ packages:
     dependencies:
       fast-json-patch: 3.1.1
       json-stringify-pretty-compact: 3.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       vega: 5.20.0(encoding@0.1.13)
       vega-lite: 4.13.1(vega@5.20.0)
       vega-schema-url-parser: 2.2.0
@@ -11940,8 +11981,8 @@ packages:
       d3-array: 2.12.1
       d3-interpolate: 2.0.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scale: 7.3.1
-      vega-util: 1.17.2
+      vega-scale: 7.1.1
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11963,7 +12004,7 @@ packages:
   /vega-expression@4.0.1:
     resolution: {integrity: sha512-ZrDj0hP8NmrCpdLFf7Rd/xMUHGoSYsAOTaYp7uXZ2dkEH5x0uPy5laECMc8TiQvL8W+8IrN2HAWCMRthTSRe2Q==}
     dependencies:
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     dev: false
 
   /vega-expression@5.1.0:
@@ -11978,7 +12019,7 @@ packages:
     dependencies:
       d3-force: 2.1.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -11989,8 +12030,8 @@ packages:
       d3-array: 2.12.1
       d3-format: 2.0.0
       d3-time-format: 3.0.0
-      vega-time: 2.1.1
-      vega-util: 1.17.2
+      vega-time: 2.0.4
+      vega-util: 1.16.1
     dev: false
 
   /vega-format@1.1.1:
@@ -12011,12 +12052,12 @@ packages:
       d3-geo: 2.0.2
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-expression: 5.1.0
-      vega-scale: 7.3.1
-      vega-scenegraph: 4.11.2(encoding@0.1.13)
+      vega-scale: 7.1.1
+      vega-scenegraph: 4.9.4(encoding@0.1.13)
       vega-selections: 5.4.2
-      vega-statistics: 1.9.0
-      vega-time: 2.1.1
-      vega-util: 1.17.2
+      vega-statistics: 1.7.10
+      vega-time: 2.0.4
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12030,8 +12071,8 @@ packages:
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-projection: 1.4.5
-      vega-statistics: 1.9.0
-      vega-util: 1.17.2
+      vega-statistics: 1.7.10
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12041,7 +12082,7 @@ packages:
     dependencies:
       d3-hierarchy: 2.0.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12051,8 +12092,8 @@ packages:
     dependencies:
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scenegraph: 4.11.2(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-scenegraph: 4.9.4(encoding@0.1.13)
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12084,8 +12125,8 @@ packages:
       d3-dsv: 2.0.0
       node-fetch: 2.7.0(encoding@0.1.13)
       topojson-client: 3.1.0
-      vega-format: 1.1.1
-      vega-util: 1.17.2
+      vega-format: 1.0.4
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12108,8 +12149,8 @@ packages:
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-event-selector: 3.0.1
       vega-functions: 5.12.1(encoding@0.1.13)
-      vega-scale: 7.3.1
-      vega-util: 1.17.2
+      vega-scale: 7.1.1
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12126,8 +12167,8 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-statistics: 1.9.0
-      vega-util: 1.17.2
+      vega-statistics: 1.7.10
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12147,28 +12188,29 @@ packages:
       d3-array: 2.12.1
       d3-interpolate: 2.0.1
       d3-scale: 3.3.0
-      vega-time: 2.1.1
-      vega-util: 1.17.2
+      vega-time: 2.0.4
+      vega-util: 1.16.1
     dev: false
 
-  /vega-scale@7.3.1:
-    resolution: {integrity: sha512-tyTlaaCpHN2Ik/PPKl/j9ThadBDjPtypqW1D7IsUSkzfoZ7RPlI2jwAaoj2C/YW5jFRbEOx3njmjogp48I5CvA==}
+  /vega-scale@7.4.0:
+    resolution: {integrity: sha512-+GxjtToQiR2OqnlvRsnVTaX/HGLG9EPiFWkIwSG5ZCLSAxm0CRiqAQvvRmj0HEeIw8F92aGRX4rSoM8qyGAK5A==}
     dependencies:
       d3-array: 3.2.4
       d3-interpolate: 3.0.1
       d3-scale: 4.0.2
+      d3-scale-chromatic: 3.1.0
       vega-time: 2.1.1
       vega-util: 1.17.2
     dev: false
 
-  /vega-scenegraph@4.11.2(encoding@0.1.13):
-    resolution: {integrity: sha512-PXSvv/L7Ek+9mwOTPLpzgkXdfGCR+AcWV5aquPGrqCWoiIF49VJkKFNT1HWxj3RZJX0XKo2r7SuXvRBb9EJ1aA==}
+  /vega-scenegraph@4.12.0(encoding@0.1.13):
+    resolution: {integrity: sha512-l0Us6TLRV7AAd1CxB6mvxXt9/psknqgrr0+6d1zNWtHL8tGszPE4FqllZC5m4ZtUouvE4PWKGybd5uJR0dpchw==}
     dependencies:
       d3-path: 3.1.0
       d3-shape: 3.2.0
       vega-canvas: 1.2.7
       vega-loader: 4.5.1(encoding@0.1.13)
-      vega-scale: 7.3.1
+      vega-scale: 7.4.0
       vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
@@ -12180,9 +12222,9 @@ packages:
       d3-path: 2.0.0
       d3-shape: 2.1.0
       vega-canvas: 1.2.7
-      vega-loader: 4.5.1(encoding@0.1.13)
-      vega-scale: 7.3.1
-      vega-util: 1.17.2
+      vega-loader: 4.4.1(encoding@0.1.13)
+      vega-scale: 7.1.1
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12226,7 +12268,7 @@ packages:
     dependencies:
       d3-array: 2.12.1
       d3-time: 2.1.1
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     dev: false
 
   /vega-time@2.1.1:
@@ -12248,9 +12290,9 @@ packages:
     dependencies:
       d3-array: 2.12.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-statistics: 1.9.0
-      vega-time: 2.1.1
-      vega-util: 1.17.2
+      vega-statistics: 1.7.10
+      vega-time: 2.0.4
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12258,7 +12300,7 @@ packages:
   /vega-typings@0.20.0:
     resolution: {integrity: sha512-S+HIRN/3WYiS5zrQjJ4FDEOlvFVHLxPXMJerrnN3YZ6bxCDYo7tEvQUUuByGZ3d19GuKjgejczWS7XHvF3WjDw==}
     dependencies:
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     dev: false
 
   /vega-util@1.14.1:
@@ -12277,7 +12319,7 @@ packages:
     resolution: {integrity: sha512-NxEq4ZD4QwWGRrl2yDLnBRXM9FgCI+vvYb3ZC2+nVDtkUxOlEIKZsMMw31op5GZpfClWLbjCT3mVvzO2xaTF+g==}
     dependencies:
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scenegraph: 4.11.2(encoding@0.1.13)
+      vega-scenegraph: 4.12.0(encoding@0.1.13)
       vega-util: 1.17.2
     transitivePeerDependencies:
       - encoding
@@ -12289,11 +12331,11 @@ packages:
       d3-array: 2.12.1
       d3-timer: 2.0.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-format: 1.1.1
+      vega-format: 1.0.4
       vega-functions: 5.12.1(encoding@0.1.13)
       vega-runtime: 6.1.4(encoding@0.1.13)
-      vega-scenegraph: 4.11.2(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-scenegraph: 4.9.4(encoding@0.1.13)
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12303,7 +12345,7 @@ packages:
     dependencies:
       d3-delaunay: 5.3.0
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-util: 1.17.2
+      vega-util: 1.16.1
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -12313,7 +12355,7 @@ packages:
     dependencies:
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
-      vega-scale: 7.3.1
+      vega-scale: 7.4.0
       vega-statistics: 1.9.0
       vega-util: 1.17.2
     transitivePeerDependencies:
@@ -12957,9 +12999,9 @@ packages:
       - webpack
     dev: false
 
-  github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
-    resolution: {tarball: https://codeload.github.com/Snail-IDE-Dev/Snail-IDE-Vm/tar.gz/c083eb7fcb624f60d841f144c17f0e66596f7807}
-    id: github.com/Snail-IDE-Dev/Snail-IDE-Vm/c083eb7fcb624f60d841f144c17f0e66596f7807
+  github.com/Snail-IDE-Dev/Snail-IDE-Vm/7d0941be2cad4da34aa63e838cf55ad7b8917231(@tensorflow/tfjs-converter@1.7.4)(@tensorflow/tfjs-core@1.7.4)(@turbowarp/scratch-svg-renderer@1.0.0)(seedrandom@2.4.4)(webpack@4.46.0):
+    resolution: {tarball: https://codeload.github.com/Snail-IDE-Dev/Snail-IDE-Vm/tar.gz/7d0941be2cad4da34aa63e838cf55ad7b8917231}
+    id: github.com/Snail-IDE-Dev/Snail-IDE-Vm/7d0941be2cad4da34aa63e838cf55ad7b8917231
     name: scratch-vm
     version: 0.2.0
     peerDependencies:
@@ -12988,13 +13030,12 @@ packages:
       scratch-parser: github.com/PenguinMod/PenguinMod-Parser/c56c7aad93f71aa5d1a126bae1d5e663c161e8eb
       scratch-sb1-converter: 0.2.7
       scratch-svg-renderer: github.com/TurboWarp/scratch-svg-renderer/179d88810b6a3c581d2d9d0f924dc0ab1e0d0b82(scratch-render-fonts@1.0.0-prerelease.20210401210003)
-      scratch-translate-extension-languages: 0.0.20191118205314
       simplex-noise: 4.0.1
-      sweetalert2: 11.10.8
+      sweetalert2: 11.11.0
       text-encoding: 0.7.0
       three: 0.153.0
       three-mesh-bvh: 0.6.0(three@0.153.0)
-      tone: 14.7.77
+      tone: 14.9.17
       typescript: 5.4.5
       worker-loader: 1.1.1(webpack@4.46.0)
     transitivePeerDependencies:
