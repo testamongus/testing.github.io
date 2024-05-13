@@ -2,16 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import newStyles from './menu.css';
-import oldStyles from './old-menu.css';
-
-const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
-let styles;
-if (useLegacyTheme === "true") {
-    styles = oldStyles;
-} else {
-    styles = newStyles;
-}
+import styles from './menu.css';
 
 const MenuComponent = ({
     className = '',

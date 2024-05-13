@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     background-color: $motion-primary;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     color: white;
 }

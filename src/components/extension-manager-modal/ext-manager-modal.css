@@ -5,11 +5,15 @@
 }
 
 .body {
-    background: $ui-primary;
+    background: $ui-white;
     padding: 1.5rem 2.25rem;
     min-height: 150px;
     max-height: calc(100vh - 250px);
     overflow-y: auto;
+}
+[theme="dark"] .body {
+    color: $text-primary;
+    background: $ui-primary;
 }
 
 /* For small screens, such as in the embed */
