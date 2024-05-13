@@ -865,11 +865,6 @@ class MenuBar extends React.Component {
                                     onRequestClose={this.props.onRequestCloseOptions}
                                 >
                                     <MenuSection>
-                                        <MenuItem onClick={themesChanger}>
-                                            Change Theme
-                                        </MenuItem>
-                                    </MenuSection>
-                                    <MenuSection>
                                         <MenuItem onClick={this.props.onClickSettings}>
                                             <FormattedMessage
                                                 defaultMessage="Gameplay Settings"

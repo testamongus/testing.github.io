@@ -2,16 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import newStyles from './menu.css';
 import oldStyles from './old-menu.css';
-
-const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
-let styles;
-if (useLegacyTheme === "true") {
-    styles = oldStyles;
-} else {
-    styles = newStyles;
-}
 
 const MenuComponent = ({
     className = '',
@@ -21,11 +12,11 @@ const MenuComponent = ({
 }) => (
     <ul
         className={classNames(
-            styles.menu,
+            oldStyles.menu,
             className,
             {
-                [styles.left]: place === 'left',
-                [styles.right]: place === 'right'
+                [oldStyles.left]: place === 'left',
+                [oldStyles.right]: place === 'right'
             }
         )}
         ref={componentRef}
@@ -49,8 +40,8 @@ const MenuItem = ({
 }) => (
     <li
         className={classNames(
-            styles.menuItem,
-            styles.hoverable,
+            oldStyles.menuItem,
+            oldStyles.hoverable,
             className
         )}
         onClick={onClick}
@@ -69,8 +60,8 @@ MenuItem.propTypes = {
 const addDividerClassToFirstChild = (child, id) => (
     child && React.cloneElement(child, {
         className: classNames(
-            child.className,
-            {[styles.menuSection]: id === 0}
+            child.props.className,
+            {[oldStyles.menuSection]: id === 0}
         ),
         key: id
     })
