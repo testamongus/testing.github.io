@@ -88,10 +88,6 @@ class UsernameModal extends React.Component {
             this.props.vm.setStageSize(640, 360);
             return;
         }
-        if (mobile) {
-            this.props.vm.setStageSize(360, 480);
-            return;
-        }
         this.props.vm.setStageSize(480, 360);
     }
     handleStoreProjectOptions () {
