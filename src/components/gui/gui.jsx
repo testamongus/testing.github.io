@@ -42,58 +42,11 @@ import {resolveStageSize} from '../../lib/screen-utils';
 
 import {isRendererSupported, isBrowserSupported} from '../../lib/tw-environment-support-prober';
 
-import newStyles from './gui.css';
-import oldStyles from './old-gui.css';
+import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
-import newCodeIcon from './icon--code.svg';
-import newCostumesIcon from './icon--costumes.svg';
-import newSoundsIcon from './icon--sounds.svg';
-
-import oldCodeIcon from './icon--code.classic.svg';
-import oldCostumesIcon from './icon--costumes.classic.svg';
-import oldSoundsIcon from './icon--sounds.classic.svg';
-
-import Swal from 'sweetalert2';
-
-const Toast = Swal.mixin({
-    toast: true,
-    position: 'bottom-end',
-    iconColor: 'white',
-    customClass: {
-      popup: 'colored-toast',
-    },
-    showConfirmButton: false,
-    timer: 3500,
-    timerProgressBar: true,
-});
-
-const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
-const showNewUINotification = localStorage.getItem("sn:showNewUINotification");
-let styles, codeIcon, costumesIcon, soundsIcon;
-if (useLegacyTheme === "true") {
-    styles = oldStyles;
-    codeIcon = oldCodeIcon;
-    costumesIcon = oldCostumesIcon;
-    soundsIcon = oldSoundsIcon;
-} else {
-    styles = newStyles;
-    codeIcon = newCodeIcon;
-    costumesIcon = newCostumesIcon;
-    soundsIcon = newSoundsIcon;
-    if (!showNewUINotification) {
-        Toast.fire({
-            text: 'You are now using the Next theme!',
-            icon: 'success'
-        });
-        setTimeout(() => {
-            Toast.fire({
-                text: 'If you would like to disable the theme, click Options at the top.',
-                icon: 'info'
-            })
-        }, 4000);
-        localStorage.setItem("sn:showNewUINotification", "alreadyShown");
-    }
-}
+import codeIcon from './icon--code.svg';
+import costumesIcon from './icon--costumes.svg';
+import soundsIcon from './icon--sounds.svg';
 
 const messages = defineMessages({
     addExtension: {

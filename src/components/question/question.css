@@ -13,7 +13,7 @@
 .question-label {
     font-size: 0.75rem;
     font-weight: bold;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: $text-primary-light;
     padding-bottom: $space;
 }

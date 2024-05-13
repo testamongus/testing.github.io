@@ -16,7 +16,6 @@ const FilterComponent = props => {
         inputClassName
     } = props;
     return (
-        <>
         <div
             className={classNames(className, styles.filter, {
                 [styles.isActive]: filterQuery.length > 0
@@ -43,7 +42,6 @@ const FilterComponent = props => {
                 />
             </div>
         </div>
-        </>
     );
 };
 

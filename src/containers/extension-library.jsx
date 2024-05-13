@@ -81,7 +81,6 @@ class ExtensionLibrary extends React.PureComponent {
             ...extension
         }));
         return (
-            <>
             <LibraryComponent
                 data={extensionLibraryThumbnailData}
                 filterable={true}
@@ -92,7 +91,6 @@ class ExtensionLibrary extends React.PureComponent {
                 onItemSelected={this.handleItemSelect}
                 onRequestClose={this.props.onRequestClose}
             />
-            </>
         );
     }
 }

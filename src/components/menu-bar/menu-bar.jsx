@@ -30,7 +30,6 @@ import FramerateChanger from '../../containers/tw-framerate-changer.jsx';
 import ChangeUsername from '../../containers/tw-change-username.jsx';
 import CloudVariablesToggler from '../../containers/tw-cloud-toggler.jsx';
 import TWSaveStatus from './tw-save-status.jsx';
-import Swal from 'sweetalert2';
 
 import { openTipsLibrary, openSettingsModal, openRestorePointModal, openExtManagerModal } from '../../reducers/modals';
 import { setPlayer } from '../../reducers/mode';
@@ -64,49 +63,13 @@ import {
     languageMenuOpen,
     openLoginMenu,
     closeLoginMenu,
-    loginMenuOpen,
-    openSettingsMenu,
-    closeSettingsMenu,
-    settingsMenuOpen
+    loginMenuOpen
 } from '../../reducers/menus';
 import { setFileHandle } from '../../reducers/tw.js';
 
 import collectMetadata from '../../lib/collect-metadata';
 
-import newStyles from './menu-bar.css';
-import oldStyles from './old-menu-bar.css';
-
-const useLegacyTheme = localStorage.getItem("sn:useOldTheme") ?? "false";
-let styles;
-console.log(`random information that you wont use: ${useLegacyTheme}`)
-if (useLegacyTheme === "true") {
-    console.log(`usin old styles..`);
-    styles = oldStyles;
-} else {
-    console.log('usin new styles!');
-    styles = newStyles;
-}
-
-function themesChanger() {
-    Swal.fire({
-        title: "Which theme?",
-        showCancelButton: true,
-        confirmButtonText: 'Classic theme',
-        showDenyButton: true,
-        denyButtonText: 'Next theme',
-        icon: 'question'
-    })
-        .then(data => {
-            if (data.isDenied) {
-                localStorage.setItem("tw:theme", "dark"); //next theme requires dark mode
-                localStorage.removeItem("sn:useOldTheme");
-                location.reload();
-            } else if (data.isConfirmed) {
-                localStorage.setItem("sn:useOldTheme", "true");
-                location.reload();
-            }
-        })
-}
+import styles from './menu-bar.css';
 
 import remixIcon from './icon--remix.svg';
 import dropdownCaret from './dropdown-caret.svg';
@@ -507,21 +470,23 @@ class MenuBar extends React.Component {
                             </div>
                             <LanguageSelector label={this.props.intl.formatMessage(ariaMessages.language)} />
                         </div>)}
-
                         {/* tw: theme toggler */}
-                        {this.props.onClickTheme && useLegacyTheme && (
-                                    <div
-                                        className={classNames(styles.menuBarItem, styles.hoverable)}
-                                        onMouseUp={this.props.onClickTheme}
-                                    >
-                                        <img
-                                            src={themeIcon}
-                                            width="24"
-                                            height="24"
-                                            draggable={false}
-                                        />
-                                    </div>
+                        {this.props.onClickTheme && (
+                            <div
+                                className={classNames(styles.menuBarItem, styles.hoverable)}
+                                onMouseUp={this.props.onClickTheme}
+                            >
+                                <img
+                                    src={themeIcon}
+                                    width="24"
+                                    height="24"
+                                    draggable={false}
+                                />
+                            </div>
                         )}
+
+
+
 
                         {/* tw: display compile errors */}
                         {this.props.compileErrors.length > 0 && <div>
@@ -848,6 +813,7 @@ class MenuBar extends React.Component {
                                 </div>
                             </div>
                         )}
+<<<<<<< HEAD
                         {this.props.onClickOptions && (
                             <div
                                 className={classNames(styles.menuBarItem, styles.hoverable, {
@@ -874,8 +840,20 @@ class MenuBar extends React.Component {
                                         </MenuItem>
                                     </MenuSection>
                                 </MenuBarMenu>
+=======
+                        <div
+                            className={classNames(styles.menuBarItem, styles.hoverable)}
+                            onMouseUp={this.props.onClickSettings}
+                        >
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage="Settings"
+                                    description="Text for gameplay settings menu item"
+                                    id="pm.menuBar.gameplaySettings"
+                                />
+>>>>>>> parent of f7263e772 (next theme)
                             </div>
-                        )}
+                        </div>
                     </div>
                     <Divider className={classNames(styles.divider)} />
                     {(this.props.authorUsername && this.props.authorUsername !== this.props.username) ? (
@@ -1064,7 +1042,6 @@ const mapStateToProps = (state, ownProps) => {
         compileErrors: state.scratchGui.tw.compileErrors,
         fileMenuOpen: fileMenuOpen(state),
         editMenuOpen: editMenuOpen(state),
-        optionsMenuOpen: settingsMenuOpen(state),
         isPlayerOnly: state.scratchGui.mode.isPlayerOnly,
         isRtl: state.locales.isRtl,
         isUpdating: getIsUpdating(loadingState),
@@ -1093,8 +1070,6 @@ const mapDispatchToProps = dispatch => ({
     onRequestCloseFile: () => dispatch(closeFileMenu()),
     onClickEdit: () => dispatch(openEditMenu()),
     onRequestCloseEdit: () => dispatch(closeEditMenu()),
-    onClickOptions: () => dispatch(openSettingsMenu()),
-    onRequestCloseOptions: () => dispatch(closeSettingsMenu()),
     onClickLanguage: () => dispatch(openLanguageMenu()),
     onRequestCloseLanguage: () => dispatch(closeLanguageMenu()),
     onClickLogin: () => dispatch(openLoginMenu()),

@@ -22,7 +22,7 @@
   background-color: $motion-primary;
   color: $ui-white;
   border-radius: 50%;
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   user-select: none;
   cursor: pointer;
   transition: all 0.15s ease-out;
