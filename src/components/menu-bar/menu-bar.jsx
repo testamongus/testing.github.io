@@ -813,34 +813,6 @@ class MenuBar extends React.Component {
                                 </div>
                             </div>
                         )}
-<<<<<<< HEAD
-                        {this.props.onClickOptions && (
-                            <div
-                                className={classNames(styles.menuBarItem, styles.hoverable, {
-                                    [styles.active]: this.props.optionsMenuOpen
-                                })}
-                                onMouseUp={this.props.onClickOptions}
-                            >
-                                <div className={classNames(styles.optionsMenu)}>
-                                    Options
-                                </div>
-                                <MenuBarMenu
-                                    className={classNames(styles.menuBarMenu)}
-                                    open={this.props.optionsMenuOpen}
-                                    place={this.props.isRtl ? 'left' : 'right'}
-                                    onRequestClose={this.props.onRequestCloseOptions}
-                                >
-                                    <MenuSection>
-                                        <MenuItem onClick={this.props.onClickSettings}>
-                                            <FormattedMessage
-                                                defaultMessage="Gameplay Settings"
-                                                description="Menu bar item for gameplay settings"
-                                                id="pm.menuBar.moreSettings"
-                                            />
-                                        </MenuItem>
-                                    </MenuSection>
-                                </MenuBarMenu>
-=======
                         <div
                             className={classNames(styles.menuBarItem, styles.hoverable)}
                             onMouseUp={this.props.onClickSettings}
@@ -851,7 +823,6 @@ class MenuBar extends React.Component {
                                     description="Text for gameplay settings menu item"
                                     id="pm.menuBar.gameplaySettings"
                                 />
->>>>>>> parent of f7263e772 (next theme)
                             </div>
                         </div>
                     </div>
