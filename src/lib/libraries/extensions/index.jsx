@@ -2,6 +2,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
+import VideoSharing from './VidShare/VideoSharing.svg';
 import NoahgptThumb from './noahgpt/costume1.svg';
 import typescriptIcon from './snail-ide/typescript.svg';
 import twGalleryIcon from './snail-ide/turbowarpgallery.svg';
@@ -234,6 +235,15 @@ const menuItems = [
         collaborator: 'pooiod7',
         tags: ['penguinmod'],
         description: 'Share your screen and get the current frame as a image.',
+        featured: true
+    },
+    {
+        name: 'VideoSharing',
+        extensionId: 'https://editor.snail-ide.com/VideoSharing.js',
+        iconURL: VideoSharing,
+        tags: ['penguinmod'],
+        description: 'Share your screen and camera.',
+        collaborator: 'pooiod7',
         featured: true
     },
     {
