@@ -23,6 +23,7 @@ import { FormattedMessage, defineMessages, injectIntl, intlShape } from 'react-i
 import { getIsLoading } from '../reducers/project-state.js';
 import DOMElementRenderer from '../containers/dom-element-renderer.jsx';
 import AppStateHOC from '../lib/app-state-hoc.jsx';
+import Comments from '../components/comments/comments.jsx';
 import ErrorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
 import TWProjectMetaFetcherHOC from '../lib/tw-project-meta-fetcher-hoc.jsx';
 import TWStateManagerHOC from '../lib/tw-state-manager-hoc.jsx';
@@ -426,6 +427,7 @@ class Interface extends React.Component {
                                 <FeaturedProjects />
                             </div>
                             <a target="_blank" href="https://snail-ide.com/search?q=all:projects">View projects in new tab</a>
+                            <Comments project={projectId} />
                         </React.Fragment>
                     ) : null}
                 </div>
