@@ -427,7 +427,6 @@ class Interface extends React.Component {
                                 <FeaturedProjects />
                             </div>
                             <a target="_blank" href="https://snail-ide.com/search?q=all:projects">View projects in new tab</a>
-                            <Comments project={projectId} />
                         </React.Fragment>
                     ) : null}
                 </div>
