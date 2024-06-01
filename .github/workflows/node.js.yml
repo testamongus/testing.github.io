@@ -4,7 +4,7 @@ on:
   push:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,6 +32,16 @@ jobs:
       uses: actions/upload-pages-artifact@v1
       with:
         path: ./build/
+    - name: Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Automatic Build"
+        files: |
+          LICENSE
+          release.zip
 
   deploy:
     environment:
