@@ -351,15 +351,6 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'PenguinGPT',
-        extensionId: 'https://editor.snail-ide.com/penguingpt.js',
-        collaborator: 'cicerorph & Anonymous-cat1',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguingpt.png',
-        tags: ['turbowarp', 'ai'],
-        description: 'ChatGPT in Snail IDE/PenguinMod has been taken to a whole new level with PenguinGPT. (This replaces the ChatGPT extension and is backwards compatible)',
-        featured: true
-    },
-    {
         name: 'Gemini',
         extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
         collaborator: 'cicerorph',

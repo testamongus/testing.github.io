@@ -169,7 +169,7 @@ const extensionDevelopers = [
     'DT-is-not-available',
     'SharkPool-SP',
     'GingerNinjaStickdudeWorld',
-    'Vadik1',
+    'Xeltalliv',
     'MikeDev101',
     'LilyMakesThings',
     'CharcoalAfterlife',

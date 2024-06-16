@@ -25,5 +25,6 @@ export const tip = [
     '<a style="color: lightgray;" href="https://scratch.mit.edu/users/o97doge/">o97doge was here.</a>',
     'oh no cringe',
     'me when i wake up in the middle of the night<br/><img src="https://corsproxy.io/?https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFZyQ8-eagAAunGr%3Fformat%3Djpg%26name%3Dmedium" width="50" height="50"/>',
-    'The name of Snail IDE was inspired by an old Scratch 1.4 mod <small>(not gandi ide)</small>'
+    'The name of Snail IDE was inspired by an old Scratch 1.4 mod <small>(not gandi ide)</small>',
+    'You have lost The Game.'
 ];
