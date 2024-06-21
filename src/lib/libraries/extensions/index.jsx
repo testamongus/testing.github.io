@@ -696,9 +696,9 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Numerical Encoding',
-        extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
-        twDeveloper: 'cs2627883',
+        name: 'Numerical Encoding V2',
+        extensionId: 'https://extensions.turbowarp.org/numerical-encoding-2.js',
+      // tw dosen't specify who made it
         iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
@@ -1617,6 +1617,16 @@ if (IsLocal || IsLiveTests) {
             description: 'Use maps in your project. W.I.P Extension.',
             featured: true,
             internetConnectionRequired: true
+        },
+        {
+            name: 'Numerical Encoding',
+            extensionId: 'https://extensions.turbowarp.org/cs2627883/numericalencoding.js',
+            twDeveloper: 'cs2627883',
+            iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
+            insetIconURL: turbowarpIcon,
+            tags: ['turbowarp'],
+            description: 'Encode strings as numbers for cloud variables',
+            featured: true
         },
         
     {
