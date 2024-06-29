@@ -5,7 +5,7 @@ import log from './log';
 import {getIsShowingProject} from '../reducers/project-state';
 
 const PACKAGER_URL = 'https://snail-ide.js.org/Snail-IDE-Packager';
-const PACKAGER_ORIGIN = "https://snail-ide.js.org";
+const PACKAGER_ORIGIN = "https://editor.snail-ide.com";
 
 const readBlobAsArrayBuffer = blob => new Promise((resolve, reject) => {
     const fr = new FileReader();
@@ -29,7 +29,6 @@ const PackagerIntegrationHOC = function (WrappedComponent) {
         }
         handleClickPackager () {
             if (this.props.canOpenPackager) {
-                window.open(`${PACKAGER_URL}/?import_from=${location.origin}`);
                 window.open(`${PACKAGER_URL}/?import_from=${location.origin}`);
             }
         }
