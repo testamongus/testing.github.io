@@ -60,7 +60,7 @@ class ShareButton extends React.Component {
         this.handleMessageEvent(e);
     }
     async handleMessageEvent(e) {
-        if (!e.origin.startsWith(`https://snail-ide.com`)) {
+        if (!e.origin.startsWith(`https://www.snail-ide.com`)) {
             return;
         }
 
@@ -138,7 +138,7 @@ class ShareButton extends React.Component {
             }
 
             const url = location.origin;
-            const popup = window.open(`https://snail-ide.com/upload?name=${this.props.projectTitle}${remixPiece}`, '_blank');
+            const popup = window.open(`https://www.snail-ide.com/upload?name=${this.props.projectTitle}${remixPiece}`, '_blank');
             const imageUri = this.state.imageUri;
             popup.onload(async () => {
                 popup.postMessage({
