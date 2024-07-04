@@ -451,13 +451,24 @@ const menuItems = [
     //    featured: true
     // },
     {
-        name: 'TurboBuilder',
-        href: 'https://turbobuilder-steel.vercel.app',
+        name: 'TurboBuilder - Dev Branch',
+        href: 'https://turbobuilder-dev.vercel.app/',
         extensionId: 'special_turboBuilder',
-        iconURL: 'https://studio.penguinmod.com/static/assets/93db39f338237e6a51790829ba22a879.png',
+        iconURL: 'https://studio.penguinmod.com/static/assets/78d464ee4e15000ce44b841ff2f4c518.png',
         description: 'Create your own amazing extensions using a scratch-based UI!',
         collaborator: 'Started by JeremyGamer13, continued by jwklong',
         tags: ['builders'],
+        featured: true
+    },
+    {
+        name: 'TurboBuilder',
+        href: 'https://turbobuilder-dev.vercel.app/',
+        extensionId: 'special_turboBuilder',
+        iconURL: 'https://studio.penguinmod.com/static/assets/78d464ee4e15000ce44b841ff2f4c518.png',
+        description: 'Create your own amazing extensions using a scratch-based UI!',
+        collaborator: 'Started by JeremyGamer13, continued by jwklong',
+        tags: ['builders'],
+        disabled: true,
         featured: true
     },
     {
@@ -699,7 +710,7 @@ const menuItems = [
         name: 'Numerical Encoding V2',
         extensionId: 'https://extensions.turbowarp.org/numerical-encoding-2.js',
       // tw dosen't specify who made it
-        iconURL: 'https://extensions.turbowarp.org/images/cs2627883/numericalencoding.svg',
+        iconURL: 'https://extensions.turbowarp.org/images/numerical-encoding-2.svg',
         insetIconURL: turbowarpIcon,
         tags: ['turbowarp'],
         description: 'Encode strings as numbers for cloud variables',
@@ -970,7 +981,7 @@ const menuItems = [
         name: 'Longman Dictionary',
         extensionId: 'https://extensions.turbowarp.org/veggiecan/LongmanDictionary.js', // update reference once file names are updated
         tags: ['turbowarp'],
-        iconURL: 'https://extensions.turbowarp.org/images/veggiecan/LongmanDictionary.png',
+        iconURL: 'https://extensions.turbowarp.org/images/veggiecan/LongmanDictionary.svg',
         insetIconURL: turbowarpIcon,
         description: 'Get the definitions of words from the Longman Dictionary',
         featured: true,
