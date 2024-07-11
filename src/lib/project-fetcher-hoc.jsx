@@ -49,6 +49,7 @@ const fetchProjectToken = projectId => {
         })
         .then(dataOrNull => {
             const token = dataOrNull ? dataOrNull.id : null;
+            window.LastFetchedProject = dataOrNull ? dataOrNull : null;
             return token;
         })
         .catch(err => {
