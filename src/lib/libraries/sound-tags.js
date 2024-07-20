@@ -11,5 +11,6 @@ export default [
     {tag: 'voice', intlLabel: messages.voice},
     {tag: 'wacky', intlLabel: messages.wacky},
     {tag: 'swords', intlLabel: messages.swords},
-    {tag: 'penguinmod', intlLabel: messages.penguinmod}
+    {tag: 'penguinmod', intlLabel: messages.penguinmod},
+    {tag: 'ncs', intlLabel: messages.ncs}
 ];

@@ -5134,5 +5134,71 @@
         "md5ext": "01f5372ddac43001a2db4c82d71f37bb.wav",
         "sampleCount": 11056,
         "rate": 44100
+    },
+    {
+        "name": "Fade",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "17b42a2c5bc43b6b41fdae3d82f1958a",
+        "dataFormat": "",
+        "md5ext": "17b42a2c5bc43b6b41fdae3d82f1958a.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
+    },
+    {
+        "name": "Symbolism",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "66f2238722723472478db27fd0fae5b9",
+        "dataFormat": "",
+        "md5ext": "66f2238722723472478db27fd0fae5b9.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
+    },
+    {
+        "name": "Mortals",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "795f99677f45fe21b1c2db1c0185773a",
+        "dataFormat": "",
+        "md5ext": "795f99677f45fe21b1c2db1c0185773a.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
+    },
+    {
+        "name": "On & On",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "c778feea56ae24472ff6b51602485af2",
+        "dataFormat": "",
+        "md5ext": "c778feea56ae24472ff6b51602485af2.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
+    },
+    {
+        "name": "Time Leap",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "e47aeaae404d5cc4d7ace3791c1582e5",
+        "dataFormat": "",
+        "md5ext": "e47aeaae404d5cc4d7ace3791c1582e5.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
+    },
+    {
+        "name": "Invicible",
+        "tags": [
+            "ncs"
+        ],
+        "assetId": "f99d0c768f3fda6e2095fb723c5a2353",
+        "dataFormat": "",
+        "md5ext": "f99d0c768f3fda6e2095fb723c5a2353.mp3",
+        "sampleCount": 77217,
+        "rate": 22050
     }
 ]

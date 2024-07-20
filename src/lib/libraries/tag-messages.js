@@ -180,5 +180,10 @@ export default defineMessages({
         defaultMessage: 'Extension Builders',
         description: 'Tag for filtering a library by categorybuilders',
         id: 'gui.libraryTags.extenionbuilders'
+    },
+    ncs: {
+        defaultMessage: 'NCS',
+        description: 'Tag for filtering a library by NCS',
+        id: 'gui.libraryTags.ncs'
     }
 });
