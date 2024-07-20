@@ -988,14 +988,13 @@ const menuItems = [
         twDeveloper: 'veggiecan0419'
     },
     {
-        name: 'Beepbox',
-        extensionId: 'beepboxsynth', // update reference once file names are updated
-        tags: ['turbowarp'],
-        iconURL: 'https://jasonglenevans.github.io/GvbvdxxMod2/static/assets/d0a53858e0c079c8b99e85a652b4d1d9.png',
-        insetIconURL: 'https://jasonglenevans.github.io/GvbvdxxMod2/static/assets/ba43bca2715721d8cb5ddbdb38267da0.png',
-        description: 'Make some moosic',
+        name: 'Beepbox Player',
+        extensionId: 'https://extensions.penguinmod.com/extensions/DogeisCut/BeepBoxPlayer.js',
+        tags: ['penguinmod'],
+        iconURL: 'https://extensions.penguinmod.com/images/DogeisCut/BeepBoxPlayer.svg',
+        description: 'Play, edit, and read songs from any BeepBox mod directly from the URL or JSON!',
         featured: true,
-        twDeveloper: 'jasonglenevans'
+        collaborator: 'DogeisCut'
     },
     {
         name: (
