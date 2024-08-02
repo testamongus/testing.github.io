@@ -438,7 +438,7 @@ class MenuBar extends React.Component {
             >
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
-                            <a href="https://www.snail-ide.com" target="_blank">
+                        <a href="https://www.snail-ide.com" target="_blank">
                             <div className={classNames(styles.menuBarItem, styles.hoverable)}>
                                 <img
                                     alt="Snail IDE"
@@ -450,7 +450,7 @@ class MenuBar extends React.Component {
                                     src={scratchLogo}
                                 />
                             </div>
-                            </a>
+                        </a>
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
@@ -895,6 +895,12 @@ class MenuBar extends React.Component {
                     <div className={styles.menuBarItem}>
                         <TWSaveStatus />
                     </div>
+
+                    <a href={this.props.username ? `https://www.snail-ide.com/profile?user=${this.props.username}` : `https://www.snail-ide.com/sign-in`}>
+                        <div className={classNames(styles.menuBarItem, styles.hoverable)}>
+                            {this.props.username ? this.props.username : 'Sign in/Join'}
+                        </div>
+                    </a>
                 </div>
 
                 {aboutButton}
@@ -1024,7 +1030,6 @@ const mapStateToProps = (state, ownProps) => {
         projectTitle: state.scratchGui.projectTitle,
         sessionExists: state.session && typeof state.session.session !== 'undefined',
         errorsMenuOpen: errorsMenuOpen(state),
-        username: user ? user.username : null,
         userOwnsProject: ownProps.authorUsername && user &&
             (ownProps.authorUsername === user.username),
         vm: state.scratchGui.vm

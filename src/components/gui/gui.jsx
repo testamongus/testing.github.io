@@ -147,6 +147,7 @@ const GUIComponent = props => {
         extensionsManagerModalVisible,
         customExtensionModalVisible,
         isPlayground,
+        username,
         vm,
         ...componentProps
     } = omit(props, 'dispatch');
@@ -303,6 +304,7 @@ const GUIComponent = props => {
                         onShare={onShare}
                         onStartSelectingFileUpload={onStartSelectingFileUpload}
                         onToggleLoginOpen={onToggleLoginOpen}
+                        username={username}
                     />
                 ) : null}
                 <Box className={styles.bodyWrapper}>
@@ -508,7 +510,8 @@ GUIComponent.propTypes = {
     settingsModalVisible: PropTypes.bool,
     extensionsManagerModalVisible: PropTypes.bool,
     customExtensionModalVisible: PropTypes.bool,
-    vm: PropTypes.instanceOf(VM).isRequired
+    vm: PropTypes.instanceOf(VM).isRequired,
+    username: PropTypes.string
 };
 GUIComponent.defaultProps = {
     backpackHost: null,

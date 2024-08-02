@@ -42,6 +42,18 @@ import GUIComponent from '../components/gui/gui.jsx';
 import {setIsScratchDesktop} from '../lib/isScratchDesktop.js';
 
 class GUI extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loginData: {}
+        }
+        window.addEventListener('message', (event) => {
+            if (event.origin !== 'http://localhost:5173') return;
+               this.setState({ loginData: event.data });
+               console.log(event.data);
+            }
+        );
+    }
     componentDidMount () {
         setIsScratchDesktop(this.props.isScratchDesktop);
         this.props.onStorageInit(storage);
@@ -88,6 +100,7 @@ class GUI extends React.Component {
             <GUIComponent
                 loading={fetchingProject || isLoading || loadingStateVisible}
                 isPlayground={isPlayground}
+                username={this.state.loginData.packet?.username}
                 {...componentProps}
             >
                 {children}
@@ -119,7 +132,8 @@ GUI.propTypes = {
     projectHost: PropTypes.string,
     projectId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     telemetryModalVisible: PropTypes.bool,
-    vm: PropTypes.instanceOf(VM).isRequired
+    vm: PropTypes.instanceOf(VM).isRequired,
+    username: PropTypes.string
 };
 
 GUI.defaultProps = {

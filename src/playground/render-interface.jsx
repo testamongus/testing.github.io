@@ -16,7 +16,7 @@
 
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { FormattedMessage, defineMessages, injectIntl, intlShape } from 'react-intl';
@@ -252,6 +252,15 @@ class Interface extends React.Component {
     constructor(props) {
         super(props);
         this.handleUpdateProjectTitle = this.handleUpdateProjectTitle.bind(this);
+        this.state = {
+            loginData: {}
+        }
+        window.addEventListener('message', (event) => {
+            if (event.origin !== 'http://localhost:5173') return;
+               this.setState({ loginData: event.data });
+               console.log(event.data);
+            }
+        );
     }
     componentDidUpdate(prevProps) {
         if (prevProps.isLoading && !this.props.isLoading) {
@@ -289,6 +298,11 @@ class Interface extends React.Component {
                     [styles.editor]: isEditor
                 })}
             >
+                <iframe
+                    id='login'
+                    style={{ display: 'none' }}
+                    src={`http://localhost:5173/embed/editor?external=${window.location}`}
+                ></iframe>
                 {isHomepage ? (
                     <div className={styles.menu}>
                         <WrappedMenuBar
@@ -297,6 +311,7 @@ class Interface extends React.Component {
                             enableSeeInside
                             onClickAddonSettings={handleClickAddonSettings}
                             onClickTheme={onClickTheme}
+                            username={this.state.loginData.packet?.username}
                         />
                     </div>
                 ) : null}
@@ -314,6 +329,7 @@ class Interface extends React.Component {
                         onUpdateProjectTitle={this.handleUpdateProjectTitle}
                         backpackVisible
                         backpackHost="_local_"
+                        username={this.state.loginData.packet?.username}
                         {...props}
                     />
                     {isHomepage ? (
