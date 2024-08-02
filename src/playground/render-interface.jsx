@@ -256,7 +256,7 @@ class Interface extends React.Component {
             loginData: {}
         }
         window.addEventListener('message', (event) => {
-            if (event.origin !== 'http://localhost:5173') return;
+            if (event.origin !== 'https://www.snail-ide.com') return;
                this.setState({ loginData: event.data });
                console.log(event.data);
             }
@@ -301,7 +301,7 @@ class Interface extends React.Component {
                 <iframe
                     id='login'
                     style={{ display: 'none' }}
-                    src={`http://localhost:5173/embed/editor?external=${window.location}`}
+                    src={`https://www.snail-ide.com/embed/editor?external=${window.location}`}
                 ></iframe>
                 {isHomepage ? (
                     <div className={styles.menu}>

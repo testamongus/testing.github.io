@@ -48,7 +48,7 @@ class GUI extends React.Component {
             loginData: {}
         }
         window.addEventListener('message', (event) => {
-            if (event.origin !== 'http://localhost:5173') return;
+            if (event.origin !== 'https://www.snail-ide.com') return;
                this.setState({ loginData: event.data });
                console.log(event.data);
             }
