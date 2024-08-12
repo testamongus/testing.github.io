@@ -7,7 +7,6 @@ import NoahgptThumb from './noahgpt/costume1.svg';
 import typescriptIcon from './snail-ide/typescript.svg';
 import twGalleryIcon from './snail-ide/turbowarpgallery.svg';
 import pmGalleryIcon from './snail-ide/penguinmodgallery.svg';
-import rubyDevsGalleryIcon from './snail-ide/ruby.png';
 import musicIconURL from './music/music.png';
 import roku from './roku/roku.png';
 import share from './share/share.svg';
@@ -349,42 +348,6 @@ const menuItems = [
         tags: ['turbowarp'],
         description: 'Simulate key presses and mouse clicks.',
         featured: true
-    },
-    {
-        name: 'Gemini',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/geminiai.js',
-        collaborator: 'cicerorph',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/turbogemini.webp',
-        tags: ['turbowarp', 'ai'],
-        description: 'Use Google Gemini in your projects',
-        featured: true
-    },
-    {
-        name: 'Analytics',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/analytics.js',
-        collaborator: 'cicerorph',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/analytics.webp',
-        tags: ['turbowarp', 'penguinmod'],
-        description: 'Measure how many people are using your projects using the Ruby API.',
-        featured: true
-    },
-    {
-        name: 'PenguinPedia',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/penguinpedia.js',
-        collaborator: 'Gen1X',
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/penguinpedia.webp',
-        tags: ['penguinmod'],
-        description: 'Get a lot of data from Wikipedia, like definitions and images!',
-        featured: true,
-    },
-    {
-        name: '1MB Shortener',
-        extensionId: 'https://rubyteam.tech/cdn/extensions/1mb.js', // update reference once file names are updated
-        tags: ['turbowarp'],
-        iconURL: 'https://rubyteam.tech/cdn/thumbnails/1mb.svg',
-        description: 'Using 1mb Api you can now share links without it being long!',
-        featured: true,
-        collaborator: 'cicerorph'
     },
     {
         name: 'Random Utils',
@@ -1167,30 +1130,6 @@ const menuItems = [
                 defaultMessage="We list many TurboWarp extensions here for convenience, but you can find even more on extensions.turbowarp.org."
                 description="Description of extensions.turbowarp.org in extension library"
                 id="tw.extensionGallery.description"
-            />
-        ),
-        tags: ['penguinmod'],
-        featured: true
-    },
-
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Ruby Extension Gallery"
-                description="Name of https://rubyteam.tech/gallery in extension library"
-                id="ruby.extensionGallery.name"
-            />
-        ),
-        href: 'https://rubyteam.tech/gallery',
-        extensionId: 'special_rubyGallery',
-        insetIconURL: 'https://rubyteam.tech/logo.svg',
-        iconURL: rubyDevsGalleryIcon,
-        description: (
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="View Other Useful Ruby Team Extensions!"
-                description="Description of extensions.turbowarp.org in extension library"
-                id="ruby.extensionGallery.description"
             />
         ),
         tags: ['penguinmod'],
