@@ -30,7 +30,7 @@ const ExtensionsManagerModalComponent = props => {
         >
             <Box className={styles.body}>
                 {loadedExtensions.map((ext, i) => (
-                    <button key={i} class={styles.button} onClick={() => handleRemoveBtnClick(ext, props)}>Remove {ext[0]}</button>
+                    <button key={i} class={styles.button} onClick={() => handleRemoveBtnClick(ext, props)}>Remove {props.vm.runtime["ext_" + ext[0]]["getInfo"]().name}</button>
                 ))}
             </Box>
         </Modal>
