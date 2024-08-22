@@ -61,12 +61,13 @@
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    margin: 0;
+    margin: 4px;
     border-radius: 4px;
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
 }
+
 .button:active, .button:focus-within {
     box-shadow: 0 0 0 3px $motion-transparent;
 }

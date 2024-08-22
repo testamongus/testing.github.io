@@ -6,9 +6,10 @@ import Modal from '../../containers/modal.jsx';
 import styles from './ext-manager-modal.css';
 
 const handleRemoveBtnClick = (ext, props) => {
-    props.vm.extensionManager.removeExtension(ext[0]);
-
-    props.onClose();
+    if (confirm("Are you sure?")) {
+        props.vm.extensionManager.removeExtension(ext[0]);
+        props.onClose();
+    }
 }
 
 const ExtensionsManagerModalComponent = props => {
@@ -30,7 +31,7 @@ const ExtensionsManagerModalComponent = props => {
         >
             <Box className={styles.body}>
                 {loadedExtensions.map((ext, i) => (
-                    <button key={i} class={styles.button} onClick={() => handleRemoveBtnClick(ext, props)}>Remove {ext[0]}</button>
+                    <button key={i} class={styles.button} onClick={() => handleRemoveBtnClick(ext, props)}>Remove {props.vm.runtime["ext_" + ext[0]]["getInfo"]().name}</button>
                 ))}
             </Box>
         </Modal>
