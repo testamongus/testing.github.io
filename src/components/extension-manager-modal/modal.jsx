@@ -6,9 +6,10 @@ import Modal from '../../containers/modal.jsx';
 import styles from './ext-manager-modal.css';
 
 const handleRemoveBtnClick = (ext, props) => {
-    props.vm.extensionManager.removeExtension(ext[0]);
-
-    props.onClose();
+    if (confirm("Are you sure?")) {
+        props.vm.extensionManager.removeExtension(ext[0]);
+        props.onClose();
+    }
 }
 
 const ExtensionsManagerModalComponent = props => {
