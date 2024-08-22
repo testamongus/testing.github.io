@@ -21,6 +21,7 @@ import issIcon from './snail-ide/iss.jpg';
 import musicInsetIconURL from './music/music-small.svg';
 import clfiveIcon from './cloudlink/cl5.svg';
 import clomegaIcon from './cloudlink/clomega.svg';
+import browserAndOSInfoIcon from './browserandosinfo/browserandosinfo.png';
 
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
@@ -1187,6 +1188,16 @@ const menuItems = [
         iconURL: issIcon,
         tags: ['penguinmod'],
         description: 'Get the latitude and longitude of the International Space Station',
+        featured: true
+    },
+    {
+        name: 'Browser & OS Information',
+        snailExt: true,
+        extensionId: 'https://editor.snail-ide.com/browserandosinfo.js',
+        iconURL: browserAndOSInfoIcon,
+        tags: ['penguinmod'],
+        collaborator: 'redspacecat',
+        description: 'Get information about the user\'s browser and operating system',
         featured: true
     },
     {
