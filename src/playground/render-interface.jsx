@@ -336,10 +336,14 @@ class Interface extends React.Component {
                         <React.Fragment>
                             {projectId && projectId !== '0' ? (
                                 <div className={styles.remixWarningBox}>
-                                    <p>This program is free software: you can redistribute it and/or modify
-                                        it under the terms of the GNU General Public License as published by
-                                        the Free Software Foundation, either version 3 of the License, or
-                                        (at your option) any later version.</p>
+                                    <p>
+                                        <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+                                            This program is free software: you can redistribute it and/or modify
+                                            it under the terms of the GNU General Public License as published by
+                                            the Free Software Foundation, either version 3 of the License, or
+                                            (at your option) any later version.
+                                        </a>
+                                    </p>
                                 </div>
                             ) : null}
                             {/* project not approved message */}
