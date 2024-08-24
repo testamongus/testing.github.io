@@ -86,3 +86,6 @@ im thinking about making a page to read this entire file cuz why not
 
 - EDIT 27 (someCatInTheWorld) 27/7/2024 AEST
 - Help, a race condition just happened.
+
+- EDIT 29 (someCatInTheWorld) 25/8/2024 AEST
+- Added preliminal error handling.
