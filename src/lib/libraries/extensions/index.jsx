@@ -22,6 +22,7 @@ import musicInsetIconURL from './music/music-small.svg';
 import clfiveIcon from './cloudlink/cl5.svg';
 import clomegaIcon from './cloudlink/clomega.svg';
 import browserAndOSInfoIcon from './browserandosinfo/browserandosinfo.png';
+import URLInfoIcon from './urlinfo/urlinfo.png';
 
 import penIconURL from './pen/pen.png';
 import penInsetIconURL from './pen/pen-small.svg';
@@ -1192,12 +1193,20 @@ const menuItems = [
     },
     {
         name: 'Browser & OS Information',
-        snailExt: true,
         extensionId: 'https://editor.snail-ide.com/browserandosinfo.js',
         iconURL: browserAndOSInfoIcon,
         tags: ['penguinmod'],
         collaborator: 'redspacecat',
         description: 'Get information about the user\'s browser and operating system',
+        featured: true
+    },
+    {
+        name: 'URL Information',
+        extensionId: 'https://editor.snail-ide.com/urlinfo.js',
+        iconURL: URLInfoIcon,
+        tags: ['penguinmod'],
+        collaborator: 'redspacecat',
+        description: 'Get information about the URL',
         featured: true
     },
     {
